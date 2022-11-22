@@ -1,0 +1,4 @@
+Exercise 3:
+        Write a program to read an integer with max 3 digits and print the value in words(111 will be printed as one hundred and eleven)
+3.c is made without functions while 3_f.c is made with functions!
+        
