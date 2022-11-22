@@ -9,13 +9,13 @@ while(n<0||n>=1000)
 	printf("number= ");
 	scanf("%d",&n);
 			}
-int nr_c=3;
-if(n==0)
-    nr_c=-2;
-if(n/100%100==0)
-    nr_c=2;
-if(n/10%10==0)
-    nr_c=1;
+int nr_c=0;
+int nr_m=n;
+     while(nr_m)
+    {
+        nr_m/=10;
+        nr_c++;
+    }
 ultn=n%10;
 penn=(n/10)%10;
 last_two=n%100;
@@ -154,18 +154,21 @@ if(nr_c==2)
         printf("Number %d reads as:\n%sty-%s",n,pen,ult);
     }
 
-if(nr_c>=3)
+if(nr_c==3)
 {   if(last_two>=10 && last_two<20)
                 {if(last_two>=10 && last_two<13)
                     printf("Number %d reads as:\n%s hundred and %s",n,first,lastc);
                 if(last_two>=13 && last_two<20)
                     printf("Number %d reads as:\n%s hundred and %steen",n,first,lastc);}
     if(last_two>=20||last_two<10)
-            {if(penn==0)
+            {if(n%100==0)
+                    printf("Number %d reads as:\n%s hundred",n,first);
+            else{
+            if(penn==0)
                     printf("Number %d reads as:\n%s hundred and %s",n,first,ult);
-            if(last_two%10==0)
+            if(n%10==0)
                     printf("Number %d reads as:\n%s hundred and %sty",n,first,pen);
-            if(last_two%10!=0)
-                    printf("Number %d reads as:\n%s hundred and %sty- %s",n,first,pen,ult); }
+            if(n%10!=0&&penn!=0)
+                    printf("Number %d reads as:\n%s hundred and %sty- %s",n,first,pen,ult);} }
 }
 return 0;}

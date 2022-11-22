@@ -117,13 +117,15 @@ while(n<0||n>=1000)
 			}
 return n;}
 int nr_cifre(int n)
-    {int nr_c=3;
-     if(n/100%100==0)
-            nr_c=2;
-     if(n/10%10==0)
-            nr_c=1;
-    if(n==0)
+    {if(n==0)
         return -1;
+        int nr_c=0;
+        while(n)
+    {
+        n/=10;
+        nr_c++;
+    }
+
     return nr_c;
     }
 void print(int n,int nr_c,char ult[],char lastc[],char pen[],int last_two,char first[],int penn)
@@ -141,7 +143,10 @@ void print(int n,int nr_c,char ult[],char lastc[],char pen[],int last_two,char f
          if(n>=20&&n%10==0)
             printf("Number %d reads as:\n%sty",n,pen);
     }
-    else if(nr_c>=3)
+    if(nr_c==3)
+        if(n%100==0)
+                    printf("Number %d reads as:\n%s hundred",n,first);
+    else{
         {if(last_two>=10 && last_two<20)
             {if(last_two>=10 && last_two<13)
                     printf("Number %d reads as:\n%s hundred and %s",n,first,lastc);
@@ -150,17 +155,15 @@ void print(int n,int nr_c,char ult[],char lastc[],char pen[],int last_two,char f
         if(last_two>=20||last_two<10)
             {if(penn==0)
                     printf("Number %d reads as:\n%s hundred and %s",n,first,ult);
-            if(last_two%10==0)
+             else{if(last_two%10==0)
                     printf("Number %d reads as:\n%s hundred and %sty",n,first,pen);
             if(last_two%10!=0)
-                    printf("Number %d reads as:\n%s hundred and %sty- %s",n,first,pen,ult); }
+                    printf("Number %d reads as:\n%s hundred and %sty- %s",n,first,pen,ult); }}}
 }}
 int main()
 {
 int n,firstn,ultn,penn,last_two,nr_c;
 char first[10],pen[10],ult[10],lastc[10];
-
-
 n=enter_number();
 nr_c=nr_cifre(n);//nr de cifre
 firstn=n/100;
