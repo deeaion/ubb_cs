@@ -3,12 +3,19 @@
 int main()
 {
 int n,firstn,ultn,penn,last_two;
-n=0;
-while(n<=0||(n>=0&&n<=99)||n>=1000)
-{	printf("\nPlease enter a 3 digit number!\n");
+n=-1;
+while(n<0||n>=1000)
+{	printf("\nPlease enter a number with maximum 3 digits!\n");
 	printf("number= ");
 	scanf("%d",&n);
 			}
+int nr_c=3;
+if(n==0)
+    nr_c=-2;
+if(n/100%100==0)
+    nr_c=2;
+if(n/10%10==0)
+    nr_c=1;
 ultn=n%10;
 penn=(n/10)%10;
 last_two=n%100;
@@ -16,7 +23,7 @@ firstn=n/100;
 char first[10],pen[10],ult[10],lastc[10];
 switch (firstn)
 { case 1:
-       strcpy(first,"one"); 
+       strcpy(first,"one");
 		break;
  case 2:
 	strcpy(first,"two");
@@ -50,7 +57,7 @@ else if(last_two==12)
 	strcpy(lastc,"twelve");
 else if(13<=last_two&&last_two<=19)
 	switch(last_two)
-		{ 
+		{
 		case 13:
         		strcpy(lastc,"thir");
                 	break;
@@ -106,7 +113,7 @@ else
 	switch(ultn)
 {
 case 1:
-       strcpy(ult,"one"); 
+       strcpy(ult,"one");
 		break;
  case 2:
 	strcpy(ult,"two");
@@ -133,16 +140,32 @@ case 1:
 	strcpy(ult,"nine");
 		break;}
 						}
+if(n==0)
+    printf("Number %d reads as:\nzero",n);
 
-if(last_two>=10 && last_two<20)
-	{if(last_two>=10 && last_two<13)
-		printf("Number %d reads as:\n %s hundred and %s",n,first,lastc);
-	if(last_two>=13 && last_two<20)
-		printf("Number %d reads as:\n %s hundred and %steen",n,first,lastc);}
-if(last_two>=20||last_two<10)
-      {if(penn==0)
-	printf("Number %d reads as:\n %s hundred and %s",n,first,ult);
-      else
-       printf("Number %d reads as:\n %s hundred %sty- %s",n,first,pen,ult); }
+if(nr_c==1&&n!=0)
+        printf("Number %d reads as:\n%s",n,ult);
+if(nr_c==2)
+   {if(n<13)
+        printf("Number %d reads as:\n%s",n,lastc);
+    if (n<20&&n>=13)
+        printf("Number %d reads as:\n%steen",n,lastc);
+    if(n>=20)
+        printf("Number %d reads as:\n%sty-%s",n,pen,ult);
+    }
 
+if(nr_c>=3)
+{   if(last_two>=10 && last_two<20)
+                {if(last_two>=10 && last_two<13)
+                    printf("Number %d reads as:\n%s hundred and %s",n,first,lastc);
+                if(last_two>=13 && last_two<20)
+                    printf("Number %d reads as:\n%s hundred and %steen",n,first,lastc);}
+    if(last_two>=20||last_two<10)
+            {if(penn==0)
+                    printf("Number %d reads as:\n%s hundred and %s",n,first,ult);
+            if(last_two%10==0)
+                    printf("Number %d reads as:\n%s hundred and %sty",n,first,pen);
+            if(last_two%10!=0)
+                    printf("Number %d reads as:\n%s hundred and %sty- %s",n,first,pen,ult); }
+}
 return 0;}
