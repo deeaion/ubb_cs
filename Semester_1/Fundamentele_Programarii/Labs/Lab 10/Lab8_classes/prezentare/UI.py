@@ -493,6 +493,11 @@ class UI():
                 else:
                     continue
     def run(self):
+        self.__service_rentals.get_all_rentals()
+        self.__service_client.get_all_clients()
+        self.__service_movie.get_all_movies()
+        self.__service_rentals.adding_the_DTOS()
+        print("All Data has been imported!")
         choice=int(input("What kind of menu do you desire? Enter the number corresponding to your choice.\n1. Command Menu\n2. User-friendly menu where you write the command you want\n3. User-friendly menu where you write the number corresponding to the command\n"))
         if(choice==1):
             self.command_menu()

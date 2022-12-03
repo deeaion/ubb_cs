@@ -29,9 +29,9 @@ class FileRepoClients(RepoClient):
         RepoClient.len(self)
         return RepoClient.len(self)
     def __read_all_from_file(self):
+        self._clients.clear()  # sterge datele fisierulu
         with open(self.__path_to_file_clients, "r") as f: #deschide fisierul pentru citire
             lines=f.readlines() #citeste liniile
-            self._clients.clear()#sterge datele fisierulu
 
             for line in lines:
                 line=line.strip()
