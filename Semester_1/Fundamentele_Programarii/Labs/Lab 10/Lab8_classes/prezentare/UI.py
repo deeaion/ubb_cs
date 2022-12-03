@@ -84,8 +84,6 @@ class UI():
             print("nr paramteri invalid")
             return
         self.__service_client.random_client_generator()
-    def __ui_random_movie(self):
-        pass
     ####printing######
     #done
     def __ui_print_clients(self):
@@ -98,7 +96,6 @@ class UI():
             return
         for client in clients:
             print(client)
-    #tdone
     def __ui_print_movies(self):
         if len(self.__params) != 0:
             print("nr paramteri invalid")
@@ -110,7 +107,6 @@ class UI():
         for movie in movies:
             print(movie)
     #######adding###
-    #done
     def __ui_add_client(self):
         if len(self.__params)!=3:
             print("numar parametri invalid")
@@ -119,7 +115,6 @@ class UI():
         name_client=self.__params[1]
         CNP_client=self.__params[2]
         self.__service_client.add_client(id_client,name_client,CNP_client)
-    #tdone
     def __ui_add_movie(self):
         if(len(self.__params)!=4):
             print("Invalid number of parameters")
@@ -198,7 +193,6 @@ class UI():
     def __ui_print_rentals(self):
         if(len(self.__params)!=0):
             print("Invalid number of Parameters")
-
         rentals=self.__service_rentals.get_all_rentals()
         if(len(rentals)==0):
             print("There are no rentals registered")

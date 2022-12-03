@@ -2,9 +2,9 @@ from domain.domain_client import Client
 from domain.domain_movie import Movie
 from domain.domain_rentals import Rental
 from errors.repo_error import RepoError
-from infrastuctura.repo_client import RepoClient
-from infrastuctura.repo_movie import RepoMovie
-from infrastuctura.repo_rentals import RepoRentals
+from Persistent_Memory.repo_client import RepoClient
+from Persistent_Memory.repo_movie import RepoMovie
+from Persistent_Memory.repo_rentals import RepoRentals
 
 
 class Repo_tests:

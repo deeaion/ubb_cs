@@ -26,4 +26,4 @@ class Rental:
     def __equ__(self,other):
         return self.__id_rental==other.__id_rental or (self.__client==other.__client and self.__movie==other.__movie)
     def __str__(self):
-        return f"Rental id:{self.__id_rental}\nDays rented:{self.__rental}\nClient that has rented it:{self.__client}\nThe movie rented:{self.__movie}"
+        return f"{self.__id_rental}, {self.__client}, {self.__movie}, {self.__rental}"

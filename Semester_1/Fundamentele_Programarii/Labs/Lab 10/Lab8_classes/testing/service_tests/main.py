@@ -3,9 +3,9 @@ from business.service_movies import ServiceMovies
 from business.service_rentals import ServiceRentals
 from domain.domain_client import Client
 from errors.repo_error import RepoError
-from infrastuctura.repo_client import RepoClient
-from infrastuctura.repo_movie import RepoMovie
-from infrastuctura.repo_rentals import RepoRentals
+from Persistent_Memory.repo_client import RepoClient
+from Persistent_Memory.repo_movie import RepoMovie
+from Persistent_Memory.repo_rentals import RepoRentals
 from validation.validate_client import ValidatingClient
 from validation.validate_movie import ValidatingMovie
 from validation.validate_rentals import ValidatingRentals

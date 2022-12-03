@@ -13,4 +13,4 @@ class Most_Rents_DTO:
         return self.__number_of_rentals
 
     def __str__(self):
-        return f"id Client:{self.__id_client}\nmovie name: {self.__movie}\nnumber_of_rentals: {self.__number_of_rentals}"
+        return f"{self.__id_client}, {self.__movie}, {self.__number_of_rentals}"

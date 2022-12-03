@@ -24,4 +24,4 @@ class Movie:
     def __eq__(self,other):
         return self.__id_movie==other.__id_movie
     def __str__(self):
-        return f"Movie id: {self.__id_movie}\nName of the movie: {self.__name_movie}\nThe genre: {self.__genre_movie}\n Description: {self.__description_movie}"
+        return f"{self.__id_movie}, {self.__name_movie}, {self.__genre_movie}, {self.__description_movie}"
