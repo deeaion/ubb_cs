@@ -4,8 +4,6 @@ class Client:
         self.__name_client=name_client
         self.__CNP_client=CNP_client
         self.__deleted= False
-    def deleted(self):
-        self.__deleted=True
     def get_id_client(self):
         return self.__id_client
     def get_name_client(self):

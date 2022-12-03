@@ -1,16 +1,11 @@
 from errors.repo_error import RepoError
-
-
 class RepoClient:
     def __init__(self):
         self._clients={}
-
-
     def add_client(self,client):
         if client.get_id_client() in self._clients:
             raise RepoError("client existent")
         self._clients[client.get_id_client()]=client
-
     def delete_client_by_id(self,id_client):
         if id_client not in self._clients:
             raise RepoError("client does not exist")

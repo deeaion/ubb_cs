@@ -21,7 +21,7 @@ class FileRepoClients(RepoClient):
     def get_all(self):
         self.__read_all_from_file()
         return RepoClient.get_all(self)
-    def search_client_by_id(self,id_client):
+    def search_client_by_id_f(self,id_client):
         self.__read_all_from_file()
         RepoClient.search_client_by_id(self,id_client)
     def len(self):

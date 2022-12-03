@@ -2,6 +2,7 @@ class Rental:
     def __init__(self,id_rental,client,movie,rental_time):
         self.__id_rental=id_rental
         self.__client= client
+
         self.__movie=movie
         self.__rental=rental_time #aici ti cate zile are clientul voie sa aiba filmul rented
         self.__deleted=False
@@ -12,7 +13,6 @@ class Rental:
         return self.__id_rental
     def get_movie(self):
         return self.__movie
-
     def get_client(self):
         return self.__client
     def get_days_rental(self):
@@ -26,4 +26,4 @@ class Rental:
     def __equ__(self,other):
         return self.__id_rental==other.__id_rental or (self.__client==other.__client and self.__movie==other.__movie)
     def __str__(self):
-        return f"{self.__id_rental}, {self.__client}, {self.__movie}, {self.__rental}"
+        return f"The Rental is:{self.__id_rental}\nClient: {self.__client}\nMovie{self.__movie}\nDay_of_rental:{self.__rental}"

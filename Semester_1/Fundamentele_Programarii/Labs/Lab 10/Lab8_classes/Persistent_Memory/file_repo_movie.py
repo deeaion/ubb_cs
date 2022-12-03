@@ -1,9 +1,6 @@
 from Persistent_Memory.repo_movie import RepoMovie
 from domain.domain_movie import Movie
-
-
 class FileRepoMovie(RepoMovie):
-
     def __init__(self,path_to_file):
         RepoMovie.__init__(self)
         self.__path_to_file=path_to_file
@@ -20,7 +17,7 @@ class FileRepoMovie(RepoMovie):
         self.__read_all_from_file()
         RepoMovie.delete_movie_by_id(self,id_movie)
         self.__write_all_to_file()
-    def search_movie_by_id(self,id_movie):
+    def search_movie_by_id_f(self,id_movie):
         self.__read_all_from_file()
         RepoMovie.search_movie_by_id(self,id_movie)
         self.__write_all_to_file()
