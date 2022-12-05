@@ -21,6 +21,8 @@ from validation.validate_rentals import ValidatingRentals
 
 
 class Teste(TestCase):
+    def tearDown(self):
+        pass
     def remove_all(self,path):
         with open(path,"w"):
             pass

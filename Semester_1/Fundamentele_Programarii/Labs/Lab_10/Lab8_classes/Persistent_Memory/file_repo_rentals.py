@@ -9,7 +9,6 @@ class FileRepoRentals():
         self.__read_all_from_file()
         self._dto_list[rental.get_id_rental()]=rental
         self.__write_all_to_file()
-        print(self._dto_list)
     def len(self):
         return len(self.get_all())
     def delete_rental_file(self,id_rental):
