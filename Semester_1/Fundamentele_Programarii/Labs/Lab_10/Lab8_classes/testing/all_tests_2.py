@@ -75,11 +75,7 @@ class TestWithSetupA(unittest.TestCase):
         #VAL#
     def test_val_c(self):
         self.val_c.validate(self.client)
-        try:
-            self.val_c.validate(Client(-5,"",""))
-            assert False
-        except ValueError as ve:
-            pass
+        self.assertRaises(ValueError,self.val_c.validate,Client(-5,"",""))
     def test_val_m(self):
         self.val_m.validate(self.movie)
         try:
