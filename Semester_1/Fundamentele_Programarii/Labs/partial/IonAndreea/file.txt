@@ -1,0 +1,11 @@
+iPhone X,phone,Apple,50,supply
+Smart TV,tv,LG,10,sale
+Galaxy S,phone,Samsung,20,supply
+iPhone,phone,Apple,20,sale
+iPhone 12,phone,Apple,40,sale
+Samsung 10,phone,Samsung,20,supply
+Smart Watch,watch,Apple,10,supply
+Airpods,pods,Apple,20,sale
+iPhone 5,phone,Apple,10,supply
+Macbook,laptop,Apple,20,sale
+Galaxy 3,phone,Samsung,10,sale

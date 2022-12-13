@@ -3,7 +3,7 @@ from domain.domain_client import Client
 
 
 class FileRepoClients(RepoClient):
-    def __init__(self, path_to_file: object) -> object:
+    def __init__(self, path_to_file):
         RepoClient.__init__(self)
         self.__path_to_file_clients=path_to_file
     def add_client(self,client):
