@@ -1,0 +1,42 @@
+P3. Închiriere filme Scrieți o aplicație pentru o firmă de închiriere de filme Aplicația stochează:
+  filme: <id>,<titlu>,<descriere>,<gen>,etc; 4
+  clienți: <id>, <nume>, <CNP>,etc;3
+ Creați o aplicație care permite:
+                 gestiunea listei de filme și clienți. .
+                 adaugă, șterge, modifică, lista de filme, lista de clienți
+                 căutare film, căutare clienți.
+     Închiriere/returnare filme
+     Rapoarte:
+         Clienți cu filme închiriate ordonat dupa: nume,  după numărul de filme închiriate
+
+      \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Cele mai inchiriate filme.
+        Primi 30% clienti cu cele mai multe filme (nume client și numărul de filme închiriate)
+
+
+        ///////////////////////////ui_sort_by_name(): dto ? neah fol add client
+        ////////////////////ui_sort)name_nr(): dto? da. ce are? id-cl,nume,cnp,nr filme//sortezi dupa numbe si in cazul in care sunt egale compari number of rentals
+       //////////////////////// ui_sort_number; dto ? da. il fol pe cel anterior. sort dupa numar inc
+        ///////////////ui_30_per():nume client ai nr de fil,e inchiriat
+ For help
+     print("If you chose the command- menu know that the format is:\n       command_name, parameter_1, parameter_2, parameter 3....\n If you want to enter multiple commands at once put \"; "\ between commands except the last one!\n"
+     printf("Commands:\n")
+     printf("  print_clients\nprint_movies\nprint_rentals\nadd_client, id, name, cnp\nadd_movie, id, name, genre, description\ndelete_client_and_their_rentals, id_client\ndelete_movie, id_movie
+        \nmodify_client, id_client, new_name, new_cnp\nmodify_movie, id_movie, new_name, new_genre, new_description\nsearch_for_client, id\nsearch_for_movie, id\nclient_has_returned, id_rental\nclient_has_rented, id_rental, id_client, id_movie, number_of_days\nprint_clients_alphabetically\nprint_clients_by_name_and_rents\nprint_clients_by_number_of_rented_movies\nprint_the_most_rented_movies\nprint_the_first_30%_of_clients\nhelp\nrandom_client"
+ Commands menu
+ if(command=="Print Clients" or command=="Print Movies" or command=="Print Rentals" or command=="Sort clients by name" or command=="Sort clients by name and rents" or command=="Sort clients by rents" or command=="Top 3 Movies" or command=="The 30%" or command=="Help" or command=="Create random client")
+            ###############
+if(command=="Delete all Client data" or command=="Delete all Movie data" or command=="Client returned" or command=="Search client" or command=="Search Movie")
+           ########################################
+elif(command=="Add Client"):
+elif(command=="Modify Client"):
+elif(command=="Add Movie"):
+elif(command=="Modify Movie"):
+elif(command=="Add New Rental"):
+
+            command=="Add Client" or
+
+            ##################################
+            command=="Add Movie" or
+            command=="Modify Movie"
+            ########
+            command=="Add New Rental"
