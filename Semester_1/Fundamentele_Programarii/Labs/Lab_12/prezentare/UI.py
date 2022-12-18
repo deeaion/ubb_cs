@@ -67,7 +67,8 @@ class UI():
         "print_the_first_30%_of_clients":self.__ui_print_the_30_precent,
         "help":self.__ui_help,
         "random_client":self.__ui_random_client,
-        "least_rentals":self.__ui_least_rentals
+        "least_rentals":self.__ui_least_rentals,
+        "random_movie":self.__ui_random_movie
         }
     def __ui_least_rentals(self):
         if (len(self.__params) != 0):
@@ -84,6 +85,11 @@ class UI():
             print("nr paramteri invalid")
             return
         self.__service_client.random_client_generator()
+    def __ui_random_movie(self):
+        if len(self.__params) != 0:
+            print("nr paramteri invalid")
+            return
+        self.__service_movie.random_movie()
     ####printing######
     #done
     def __ui_print_clients(self):
