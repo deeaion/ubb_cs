@@ -93,7 +93,7 @@ class ServiceRentals:
             number_of_rentals = the_movies[id_movie]
             Number_of_rentals = Most_Rents_DTO(id_movie, name, number_of_rentals)
             rez.append(Number_of_rentals)
-        rez_sorted = sorted(rez, key=lambda x: x.get_number_of_rentals(), reverse=True)
+        rez_sorted = self.bingo_sort(rez, key=lambda x: x.get_number_of_rentals(), reverse=True)
         return rez_sorted[:3]
 
     def first_30(self):
@@ -157,6 +157,8 @@ class ServiceRentals:
                 tot se apeleaza bingo_sort pana cand au fost swaped toti termeni in ordinea pe care o doresti
                 la final e returnata lista
         Functia este foarte neeficienta ca si complexitate in the Worst CASE are O(n^2)
+                                                                  Average Case is O(n^2)
+                                                                  Best Case is O(n)
         :param lista:lista pentru sortare
         :param key:daca nu e declarata se sorteaza pur si simplu lista dupa el daca nu dupa cheia respectiva ceea ce ne trebuie si noua
         :param reverse:daca e False ca si prestabilit se sorteaza crescator daca e True atunci e False

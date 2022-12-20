@@ -40,6 +40,14 @@ class ServiceClients:
         return self.__repo_client.search_client_by_id(id_client)
 
     def merge_sort(self, arr, key=None, reverse=False, cmp=None):
+        '''
+        Merge sort are o complexitate liniara el avand mereu O(n*logn)
+        :param arr:lista
+        :param key:cheie
+        :param reverse:False? True?
+        :param cmp:won't be called
+        :return:sorted list
+        '''
         if len(arr) <= 1:
             return arr
         mid = len(arr) // 2
