@@ -1,0 +1,41 @@
+adauga_cheltuiala 
+printeaza_lista_cheltuieli
+actualizeaza_cheltuiala 24 imbracaminte 26 telefon 424.2
+printeaza_lista_cheltuieli
+stergere_cheltuieli_zi 24
+printeaza_lista_cheltuieli
+stergere_cheltuieli_interval_zilele 24 25
+printeaza_lista_cheltuieli
+stergere_cheltuieli_de_tipul altele
+printeaza_lista_cheltuieli
+print_cheltuieli_mai_mari_ca_suma 234
+print_cheltuieli_mai_mici_si_mai_devreme 1000 226
+print_cheltuieli_same_type imbracaminte
+print_cheltuieli_suma_tip_cheltuiala imbracaminte
+zi_cheltuieli_maxima
+print_aceasi_sum 242.2
+print_sortate_dupa_tip
+elimina_cheltuieli_mai_mici_ca_suma 290
+printeaza_lista_cheltuieli
+elimina_cheltuieli_de_tipul altele
+printeaza_lista_cheltuieli
+help
+tipuri=["mancare","altele","intretinere","telefon","imbracaminte"]
+adauga_cheltuiala 24 imbracaminte 242.2;adauga_cheltuiala 25 imbracaminte 242.2;adauga_cheltuiala 24 telefon 242.2;adauga_cheltuiala 5 altele 24242.2;adauga_cheltuiala 30 imbracaminte 24242.2;adauga_cheltuiala 30 intretinere 24242.2;adauga_cheltuiala 1 mancare 21.32;adauga_cheltuiala 6 mancare 21.32;printeaza_lista_cheltuieli;stergere_cheltuieli_interval_zilele 24 25;elimina_cheltuieli_mai_mici_ca_suma 290;actualizeaza_cheltuiala 5 altele 26 telefon 2342.2;printeaza_lista_cheltuieli
+
+adauga_cheltuiala 5 altele 24242.2
+adauga_cheltuiala 30 imbracaminte 24242.2
+adauga_cheltuiala 30 intretinere 24242.2
+adauga_cheltuiala 1 mancare 21.32
+adauga_cheltuiala 6 mancare 21.32
+printeaza_lista_cheltuieli
+stergere_cheltuieli_interval_zilele 24 25
+printeaza_lista_cheltuieli
+undo;printeaza_lista_cheltuieli
+elimina_cheltuieli_mai_mici_ca_suma 290
+
+elimina_cheltuieli_de_tipul altele
+printeaza_lista_cheltuieli
+actualizeaza_cheltuiala 5 altele 26 telefon 2342.2
+printeaza_lista_cheltuieli
+v=[42,

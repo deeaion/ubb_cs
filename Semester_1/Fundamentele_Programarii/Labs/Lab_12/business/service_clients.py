@@ -74,7 +74,7 @@ class ServiceClients:
         result = []
         left_index = 0 #index vector stang
         right_index = 0 #index vector drept
-        #FIRST AND FIRST CREEAM UN COMPARATOR . De ce avem nevoie de el? din cauza parametriilor in plus
+        #FIRST AND FIRST LETS CREATE UN COMPARATOR . De ce avem nevoie de el? din cauza parametriilor in plus
         #prima oara trebuie sa vedem daca sortam dupa o cheie ca atunci se complica lucruriile
         if key is not None:
             #verficam cum va fi ordinea
