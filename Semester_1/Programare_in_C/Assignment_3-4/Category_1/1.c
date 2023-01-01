@@ -45,9 +45,9 @@ void merge_sort(int *arr, int l,int r)
     merge_sort(arr,l,m);
     merge_sort(arr,m+1,r);
     //and then we merge the sorted halves
-    merge(arr,l,m,r);}
+    merges(arr,l,m,r);}
 }
-void merge(int *arr,int l,int m,int r)
+void merges(int *arr,int l,int m,int r)
 {
     int i,j,k;
     int m1,m2;

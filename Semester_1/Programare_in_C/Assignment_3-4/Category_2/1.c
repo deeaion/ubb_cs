@@ -24,7 +24,7 @@ int main()
     scanf("%d",&col2);
     if(col1!=row2)
     {
-        printf("\nYou can't multiply two matrices.");
+        printf("\nYou can't multiply the two matrices. The number of columns of the first matrix should be equal with the number of rows of the second one!");
         return 0;
     }
     int rowf,colf;
