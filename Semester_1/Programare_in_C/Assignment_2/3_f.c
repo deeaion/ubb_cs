@@ -10,7 +10,7 @@ char first_last(int c,char number[])
        strcpy(number,"one");
 		break;
  case 2:
-	strcpy(number,"two");
+	strcpy(number,c"two");
 		break;
  case 3:
 	strcpy(number,"three");
