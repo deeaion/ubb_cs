@@ -10,9 +10,14 @@ to input two arrays and merge them */
 int read_array(int *arr)
 {
     int i,n;
-    printf("Insert the length of the array:");
+    n=0;
+    while(n<=0)
+    {printf("Insert the length of the array:");
     scanf("%d",&n);
     printf("\n");
+    if(n<=0)
+        printf("Invalid number . Please enter a valid one.\n");
+    }
     for(i=0; i<n; i++)
     {
         printf("Give number:");

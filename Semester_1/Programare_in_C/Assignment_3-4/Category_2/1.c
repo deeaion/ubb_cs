@@ -9,19 +9,30 @@ int main()
     int **ptr1,**ptr2,**ptrf;
     //cerem nr randuri si coloane
     int row1,row2,col1,col2;
+    row1=-1;
+    row2=-1;
+    col1=-1;
+    col2=-1;
     //indexes
     int i,j,k;
     //prima matrice
-    printf("\nFirst matrix:");
+    while(row1<0||col1<0)
+    {printf("\nFirst matrix:");
     printf("\nRow:");
     scanf("%d",&row1);
     printf("\nColumn:");
     scanf("%d",&col1);
-    printf("\nSecond matrix:");
+    if(row1<0||col1<0)
+        printf("\nThe value of a row/column must be equal or above 0. Please renter your data!");
+    }
+    while(row2<0||col2<0)
+   {printf("\nSecond matrix:");
     printf("\nRow:");
     scanf("%d",&row2);
     printf("\nColumn:");
     scanf("%d",&col2);
+    if(row2<0||col2<0)
+        printf("\nThe value of a row/column must be equal or above 0. Please renter your data!");}
     if(col1!=row2)
     {
         printf("\nYou can't multiply the two matrices. The number of columns of the first matrix should be equal with the number of rows of the second one!");
