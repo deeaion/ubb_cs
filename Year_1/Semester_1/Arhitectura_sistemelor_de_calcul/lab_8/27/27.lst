@@ -1,0 +1,65 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  extern exit              
+     4                                  import exit msvcrt.dll    
+     5                                  segment data use32 class=data
+     6 00000000 030004000100050006-         s dw 3,4,1,5,6,7,5,6,1,5,2
+     6 00000009 000700050006000100-
+     6 00000012 05000200           
+     7                                      nr_e equ ($-s)/2
+     8 00000016 00000000                    i_max dd 0
+     9 0000001A 00000000                    max dd 0
+    10 0000001E 0000<rept>                  d times nr_e dw 0; facem un sir de lungime maxima
+    11                                  ; our code starts here
+    12                                  segment code use32 class=code
+    13                                      start:
+    14                                       ;Un sir de cuvinte dword sa se calc cel mai lung subsird de cuvinte ordonate crescator din acest sir
+    15 00000000 BE[00000000]                 mov esi,s;mutam sirul de cuvinte pentru prelucrare
+    16 00000005 B90B000000                   mov ecx,nr_e; nr de el
+    17 0000000A E35E                         jecxz final
+    18 0000000C BB00000000                   mov ebx,0;el va fi indicele din sir
+    19 00000011 BA01000000                   mov edx,1;maximul fiecarui subsir testat
+    20 00000016 FC                           cld
+    21 00000017 66AD                         lodsw;incarcam in ax primul word
+    22 00000019 43                           inc ebx
+    23                                       repeta:
+    24 0000001A 663B06                          cmp ax,[esi];comparam pe ax unde ne aflam in sir cu urmatorul
+    25 0000001D 7E19                            jng nu_schimba; daca nu e mai mare vom parcurge normal sirul 
+    26 0000001F 3915[1A000000]                          cmp [max],edx; daca maximul este mai mare vom sari peste modificarea lui si doar vom face un max nou mai mic; daca nu muta max n in max si i max in i max
+    27 00000025 7F0C                                    jg nu_e_nevoie
+    28 00000027 8915[1A000000]                          mov [max],edx
+    29 0000002D 891D[16000000]                          mov [i_max],ebx;retine urmatorul dupa cuvantul dat; pentru indicele dorit facem i_max-max
+    30                                                  nu_e_nevoie: 
+    31 00000033 BA00000000                               mov edx,0;schimbam maximul din nou 
+    32                                                   
+    33                                          nu_schimba:
+    34 00000038 43                              inc ebx;deoarece eu voi creste dupa pana ajung la poz dorita retin doar 1 cu 1
+    35 00000039 42                              inc edx;incrementam maximul
+    36                                          
+    37                                                  
+    38 0000003A 66AD                            lodsw
+    39                                                  
+    40 0000003C E2DC                             loop repeta            
+    41 0000003E 8B15[1A000000]               mov edx,[max]; nr de elemente din 
+    42 00000044 8B1D[16000000]               mov ebx,[i_max]
+    43 0000004A 2B1D[1A000000]               sub ebx,[max]; cat trebuie sa ne mutam in sir ca sa ajungem la pozitia de unde luam sirul
+    44                                       ;am aflat cele doua acum putem sa ne mutam la poz de unde luam elementele din sir
+    45 00000050 BE[00000000]                 mov esi,s;mutam din nou sirul in esi
+    46                                       ;nu ne trebuie nr elemente din el dar vom face ca ecx ul sa fie nr de elemente de cat tre sa ne mutam
+    47 00000055 89D9                         mov ecx,ebx
+    48                                       ;parcurgem sirul pana la pozitia dorita
+    49                                       muta:
+    50 00000057 83C602                          add esi,2
+    51 0000005A E2FB                         loop muta
+    52 0000005C FC                           cld
+    53 0000005D 89D1                         mov ecx,edx; de data asta o vom face de max ori deci pentru loop si pentru lungimea sirului efectiva o declaram aici
+    54 0000005F BF[1E000000]                 mov edi,d
+    55                                       adauga_in_sir:
+    56 00000064 66AD                                lodsw
+    57 00000066 66AB                                stosw
+    58 00000068 E2FA                         loop adauga_in_sir
+    59                                       
+    60                                              
+    61                                       final:
+    62 0000006A 6A00                             push    dword 0      
+    63 0000006C FF15[00000000]                   call    [exit]      

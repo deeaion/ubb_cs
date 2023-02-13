@@ -1,0 +1,42 @@
+     1                                  bits  32
+     2                                  global  start
+     3                                  extern  printf, exit
+     4                                  import  printf msvcrt.dll
+     5                                  import  exit msvcrt.dll
+     6                                   
+     7                                  segment  data use32 class=data
+     8 00000000 666163746F7269616C-         	format_string db "factorial=%d",  10, 13, 0
+     8 00000009 3D25640A0D00       
+     9                                   
+    10                                  segment  code use32 class=code
+    11                                  ;  urmeaza definirea procedurii
+    12                                  factorial:
+    13 00000000 B801000000                  	mov eax, 1
+    14 00000005 8B4C2404                    	mov ecx, [esp + 4]
+    15                                      	; mov ecx, [esp + 4] scoate de pe stiva  parametrul procedurii
+    16                                      	; ATENTIE!!! in capul stivei este adresa de retur
+    17                                      	; parametrul procedurii este imediat dupa adresa de retur
+    18                                      	; a se vedea desenul de mai jos
+    19                                      	;
+    20                                      	; stiva:
+    21                                      	;|-------------------|
+    22                                      	;| adresa retur  |  <-  esp
+    23                                      	;|-------------------|
+    24                                      	;|   00000006h  |  <- parametrul pasat procedurii, esp+4
+    25                                      	;|-------------------|
+    26                                      	; ....
+    27                                      	.repet:
+    28 00000009 F7E1                               	mul ecx
+    29 0000000B E2FC                        	loop .repet ; atentie, cazul ecx = 0 nu e  tratat!
+    30 0000000D C3                       	ret
+    31                                  ;  programul "principal"   	
+    32                                  start:
+    33 0000000E 6A06                        	push dword 6  ; se salveaza pe stiva numarul (parametrul procedurii)
+    34 00000010 E8EBFFFFFF                  	call factorial  	; apel procedura
+    35                                      	; afisare rezultat
+    36 00000015 50                          	push eax
+    37 00000016 68[00000000]                	push format_string
+    38 0000001B FF15[00000000]              	call [printf]
+    39 00000021 83C408                      	add esp, 4*2
+    40 00000024 6A00                        	push 0
+    41 00000026 FF15[00000000]              	call [exit]

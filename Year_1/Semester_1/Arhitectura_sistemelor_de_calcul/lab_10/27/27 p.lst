@@ -1,0 +1,46 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  import printf msvcrt.dll
+     4                                  import scanf msvcrt.dll
+     5                                  extern exit,printf,scanf           
+     6                                  import exit msvcrt.dll  
+     7                                  segment data use32 class=data
+     8 00000000 326162636465666738-         s db '2','a','b','c','d','e','f','g','8','1','&','c','c','c'
+     8 00000009 3126636363         
+     9                                      ls equ $-s
+    10 0000000E 0000                        c dw 0
+    11 00000010 256300                      format db "%c",0
+    12 00000013 4E7220657374652025-         formatt db "Nr este %c",0
+    12 0000001C 6300               
+    13 0000001E 436172616374657275-         formatp db "Caracterul %c apare de %d ori in sirul dat",0
+    13 00000027 6C2025632061706172-
+    13 00000030 65206465202564206F-
+    13 00000039 726920696E20736972-
+    13 00000042 756C2064617400     
+    14                                  ; our code starts here
+    15                                  segment code use32 class=code
+    16                                  ;Se dă un sir de caractere (definit in segmentul de date). Să se citească de la tastatură un caracter, să se determine numărul de apariţii al acelui caracter în şirul dat şi să se afişeze acel caracter �
+    17                                      start:
+    18 00000000 68[0E000000]                    push dword c
+    19 00000005 68[10000000]                    push dword format
+    20 0000000A FF15[00000000]                  call [scanf]
+    21 00000010 83C408                          add esp,4*2
+    22 00000013 BE[00000000]                    mov esi,s
+    23 00000018 B90E000000                      mov ecx,ls
+    24 0000001D BA00000000                      mov edx,0; numarul de aparitii
+    25 00000022 E30C                            jecxz final
+    26                                          repeta:
+    27 00000024 AC                                  lodsb;pune in al caracterul !!!! si uh incrementeaza esi
+    28 00000025 3A05[0E000000]                      cmp al,[c]
+    29 0000002B 7501                                jne continua
+    30 0000002D 42                                  inc edx
+    31                                              continua:
+    32 0000002E E2F4                                loop repeta
+    33                                             final:
+    34 00000030 52                              push dword edx
+    35 00000031 FF35[0E000000]                  push dword [c]
+    36 00000037 68[1E000000]                    push dword formatp
+    37 0000003C FF15[00000000]                  call [printf]
+    38 00000042 83C40C                          add esp,4*3
+    39 00000045 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    40 00000047 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

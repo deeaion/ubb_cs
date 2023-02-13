@@ -1,0 +1,32 @@
+     1                                  bits 32 
+     2                                  global start        
+     3                                  extern exit              
+     4                                  import exit msvcrt.dll    
+     5                                  segment data use32 class=data
+     6 00000000 010306020302                S1 db 1,3,6,2,3,2
+     7                                      nr_e equ $-S1; se determina lungimea s1 pe care o au si s2 si sirul destinatie d
+     8 00000006 060308010205                S2 db 6,3,8,1,2,5
+     9 0000000C 00<rept>                    d times nr_e db 0; se creeaza un sir cu nr_e elemente pe care le initializam cu 0
+    10                                      ;rez: d : -5 0 -2 1 1 -3
+    11                                  
+    12                                  ; our code starts here
+    13                                  segment code use32 class=code
+    14                                      start:
+    15                                          ;Se dau 2 siruri de octeti S1 si S2 de aceeasi lungime. Sa se construiasca sirul D astfel incat fiecare element din D sa reprezinte diferenta dintre elementele de pe pozitiile corespunzatoare din S1 si S2.
+    16 00000000 BE[00000000]                    mov esi,S1;        vom adauga in esi pe s1 pentru a aduna intai fiecare element din s1 in sirul destinatie
+    17 00000005 BB[06000000]                    mov ebx,S2; adaugam si pe s2 in esi pentru a face scaderea dintre cele doua
+    18 0000000A B906000000                      mov ecx,nr_e; initializam ecx cu nr_e pentru a utiliza instructiunea loop
+    19 0000000F BF[0C000000]                    mov edi,d; adaugam in edi sirul destinatie
+    20 00000014 E30B                            jecxz final ; daca sirurile date sunt de lungimea 0 atunci nu avem nimic de schimbat in sirul destinatie care este de astfel vid. Vom face jump la final.
+    21                                          creeare_d:
+    22 00000016 8A06                                 mov al,[esi];il adaugam la al pe octetul de la adresa esi
+    23 00000018 2A03                                 sub al,[ebx];scadem octetul de la adresa cu acelasi index a sirului s2
+    24 0000001A 8807                                 mov [edi],al; adaugam valoarea obtinuta la sirul edi
+    25 0000001C 46                                   inc esi
+    26 0000001D 43                                   inc ebx
+    27 0000001E 47                                   inc edi; se incrementeaza toate pentru a merge pe acelasi index
+    28 0000001F E2F5                            loop creeare_d
+    29                                          
+    30                                                      final:
+    31 00000021 6A00                             push    dword 0      
+    32 00000023 FF15[00000000]                   call    [exit]      

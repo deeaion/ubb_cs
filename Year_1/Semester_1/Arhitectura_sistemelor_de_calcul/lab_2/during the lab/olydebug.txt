@@ -1,0 +1,10 @@
+Inseram Sablon
+save as asm
+build asm
+debug oly
+in stanga avem BL 32
+instructiuniile
+Partea dreapta sus avem registrii
+stanga jos zona de memorie
+pe mijloc jos e zona destiva
+Step into F7 in oly

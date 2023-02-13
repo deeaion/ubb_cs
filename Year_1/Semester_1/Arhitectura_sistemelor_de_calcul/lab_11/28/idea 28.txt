@@ -1,0 +1,44 @@
+Pentru problema 28:
+Enunt: 
+		Se citeste de la tastatura un sir de caractere 
+(litere mici si litere mari, cifre, caractere speciale, etc).
+ Sa se formeze un sir nou doar cu literele mici si un sir nou doar cu literele mari.
+ Sa se afiseze cele 2 siruri rezultate pe ecran.
+main():
+	optiune: sir normal fara spatii- Say 1
+		   inserare propozitie. Se cere sa se termine propozitia cu \N- Say 2
+      se introduce in esi.
+	call functie pentru caractere mari
+	obtine sirul in esi/eax
+	retine in esi
+	muta in variabila
+	call functie pentru caractere mici
+	obtine sirul in esi/eax
+	retine in variabila
+
+creeaza doua subprograme pentru litere mari si mici!
+CREEAZA UN SUBPROGRAM PENTRU DETERMINARE LENGHT OF STRING!
+cum? compara pana cand da deNull cmp [esi],0
+		return in ecx
+		save in main in variabila lenght
+
+	litere_mari(primeste sirul si length) 
+cmp ecx,0
+je final
+repeta while lenght:
+		testeaza daca 'A'<=ch
+				   false? jl to nope
+						'Z'>=ch
+							false? ja to nope			
+							    lodsb; mov in al,ch
+								   STOSB	
+								 create a lenght as well for it. choose a register :)	
+									loop repeta
+				nope:
+					inc esi
+				loop repeta
+final:
+	ret;			
+	litere_mici(la fel ca litere mari numai ca el compara cu literele mici)
+	
+	 
