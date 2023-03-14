@@ -1,0 +1,19 @@
+# ninja log v5
+12	95	7004398080857659	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	dcbe0abe3ba15578
+19	119	7003690011348076	CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj	1a0fd913643ae7f4
+2	87	7004400945848070	CMakeFiles/lab_2_4.dir/ui/ui.c.obj	bf051404be9a0d59
+10	134	7003591794913898	CMakeFiles/lab_2_4.dir/model/electronic.c.obj	2b218413360c62f4
+2	95	7004400645579393	CMakeFiles/lab_2_4.dir/service/service.c.obj	a18cbf8396728e5c
+55	152	7003591795083548	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	d9939dbdc425d4d9
+91	193	7004401444496468	lab_2_4.exe	138bbadc3ac63945
+2	90	7004401443591640	CMakeFiles/lab_2_4.dir/repository/repository.c.obj	1cfd7d0161244cbd
+1	318	7004405821072452	build.ninja	dd8b5e3af0a010b4
+12	83	7003674628808998	CMakeFiles/lab_2_4.dir/service/sorter.c.obj	ef9e1882c0794359
+2	92	7004409326462334	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	dcbe0abe3ba15578
+13	111	7004409326652330	CMakeFiles/lab_2_4.dir/ui/ui.c.obj	bf051404be9a0d59
+20	116	7004409326692340	CMakeFiles/lab_2_4.dir/service/service.c.obj	a18cbf8396728e5c
+29	120	7004409326752344	CMakeFiles/lab_2_4.dir/repository/repository.c.obj	1cfd7d0161244cbd
+37	123	7004409326772347	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	d9939dbdc425d4d9
+123	229	7004409327734898	lab_2_4.exe	88d58b8013d9a577
+3	87	7004413722278586	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	d9939dbdc425d4d9
+87	193	7004413723236770	lab_2_4.exe	88d58b8013d9a577

@@ -84,6 +84,20 @@ build CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj: C_COMPILER__lab_2_4_Debug C$:
   OBJECT_DIR = CMakeFiles\lab_2_4.dir
   OBJECT_FILE_DIR = CMakeFiles\lab_2_4.dir\my_list
 
+build CMakeFiles/lab_2_4.dir/repository/repository.c.obj: C_COMPILER__lab_2_4_Debug C$:/Users/Deea/Desktop/DOCUMENTS/UNI/First$ year/Semester$ 2/OOP/Labs/lab_2_4/repository/repository.c || cmake_object_order_depends_target_lab_2_4
+  DEP_FILE = CMakeFiles\lab_2_4.dir\repository\repository.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4/src"
+  OBJECT_DIR = CMakeFiles\lab_2_4.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_2_4.dir\repository
+
+build CMakeFiles/lab_2_4.dir/validation/validate.c.obj: C_COMPILER__lab_2_4_Debug C$:/Users/Deea/Desktop/DOCUMENTS/UNI/First$ year/Semester$ 2/OOP/Labs/lab_2_4/validation/validate.c || cmake_object_order_depends_target_lab_2_4
+  DEP_FILE = CMakeFiles\lab_2_4.dir\validation\validate.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4/src"
+  OBJECT_DIR = CMakeFiles\lab_2_4.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_2_4.dir\validation
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab_2_4
@@ -92,7 +106,7 @@ build CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj: C_COMPILER__lab_2_4_Debug C$:
 #############################################
 # Link the executable lab_2_4.exe
 
-build lab_2_4.exe: C_EXECUTABLE_LINKER__lab_2_4_Debug CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj CMakeFiles/lab_2_4.dir/ui/ui.c.obj CMakeFiles/lab_2_4.dir/service/service.c.obj CMakeFiles/lab_2_4.dir/model/electronic.c.obj CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj
+build lab_2_4.exe: C_EXECUTABLE_LINKER__lab_2_4_Debug CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj CMakeFiles/lab_2_4.dir/ui/ui.c.obj CMakeFiles/lab_2_4.dir/service/service.c.obj CMakeFiles/lab_2_4.dir/model/electronic.c.obj CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj CMakeFiles/lab_2_4.dir/repository/repository.c.obj CMakeFiles/lab_2_4.dir/validation/validate.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_2_4.dir

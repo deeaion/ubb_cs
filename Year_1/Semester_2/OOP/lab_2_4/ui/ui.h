@@ -33,5 +33,5 @@ void ui_sort_by_price_and_quantity(MyList* store);
  * List filtered by a criteria
  */
 void ui_filter_by_criterea(MyList* store);
-
+void print_all(MyList* store);
 #endif //LAB_2_4_UI_H

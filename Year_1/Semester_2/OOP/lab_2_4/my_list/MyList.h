@@ -7,10 +7,9 @@
 #pragma once
 #include "../model/electronic.h"
 
-typedef Electronic ElemType;
 typedef struct
 {
-    ElemType* elems;
+    Electronic* elems;
     int size;//lungimea listei
     int capacity;//capacity
 } MyList;
@@ -29,7 +28,7 @@ void destroy(MyList* l);
 /*
  *adding element to my list
  */
-void addToList(MyList* current_list, ElemType element_to_add);
+void addToList(MyList* current_list, Electronic* element_to_add);
 /*
  * if we want to add and we have already used all of the capacity of the list we will resize it!
  * returns: MyList' <- with a new capacity and size
@@ -38,7 +37,7 @@ void resize(MyList* list);
 /*
  * Used for searching a certain element from My list
  */
-ElemType get(MyList* lista, int pozitie);
+Electronic get(MyList* lista, int pozitie);
 /*
  * return: number of elements in the list
  */
@@ -47,5 +46,6 @@ int size(MyList* l);
  * Make a shallow copy of the list
  * return: My list containing the same elements as l
  */
-MyList copyList(MyList* l);
+MyList* copyList(MyList* l);
+Electronic set(MyList*l ,int poz,Electronic e);
 #endif //LAB_2_4_MYLIST_H
