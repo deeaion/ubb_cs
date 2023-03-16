@@ -31,5 +31,5 @@ int searchElectronic(int id, MyList * electronic_store);
  * modifies the element of the respective id!
  */
 int modifyElectronic(int id, Electronic* modified_electronic, MyList* store);
-MyList get_all_electronics( MyList *electronic_store);
+MyList * get_all_electronics(MyList *electronic_store);
 #endif //LAB_2_4_REPOSITORY_H

@@ -8,18 +8,25 @@ int add_electronic_service(MyList* store, int id, char*type, char*producer, char
     int position;
     Electronic* e= createElectronic(id,type,producer,model,price,quantity);
     if(validate(e)!=0)
-        return -1;
+    {   destroyElectronic(e);
+        return -1;}
     position= searchElectronic(id,store);
-    addElectronic(store,e,position);
-    return 1;
+    if(position==-1)
+        addElectronic(store,e,position);
+    else
+    {
+        modify_electronic_quantity_by_id(store,id, get_quantity_electronic(store->elems[searchElectronic(id,store)])+quantity);
+        destroyElectronic(e);
+    }
 
+    return 1;
 }
 int delete_product_by_id(MyList* store, int id)
 {
     return deleteElectronic(id,store);
 }
 
-MyList get_all_service(MyList* store)
+MyList* get_all_service(MyList* store)
 {
     return get_all_electronics(store);
 
@@ -30,8 +37,12 @@ int modify_electronic_price_by_id(MyList* store,int id, double price)
     position= searchElectronic(id,store);
     if(position==-1)
         return -1;
-    Electronic* modified_electronic= createElectronic(store->elems[position].id,store->elems[position].type,store->elems[position].producer,store->elems[position].model,price,store->elems[position].quantity);
-    validate(modified_electronic);
+    Electronic* modified_electronic= createElectronic(get_id_electronic(store->elems[position]),
+                                                      get_type_electronic(store->elems[position]), get_producer_electronic(store->elems[position]), get_model_electronic(store->elems[position]),price, get_quantity_electronic(store->elems[position]));
+    if(validate(modified_electronic))
+    {destroyElectronic(modified_electronic);
+        return -1;
+        }
     modifyElectronic(position,modified_electronic,store);
     return 1;
 }
@@ -41,12 +52,20 @@ int modify_electronic_quantity_by_id(MyList* store,int id, int quantity)
     position= searchElectronic(id,store);
     if(position==-1)
         return -1;
-    store->elems[position].quantity=quantity;
+    Electronic* modified_electronic= createElectronic(get_id_electronic(store->elems[position]),
+                                                      get_type_electronic(store->elems[position]), get_producer_electronic(store->elems[position]), get_model_electronic(store->elems[position]),
+                                                      get_price_electronic(store->elems[position]), quantity);
+    if(validate(modified_electronic))
+    {
+        destroyElectronic(modified_electronic);
+        return -1;
+    }
+    modifyElectronic(position,modified_electronic,store);
     return 1;
 }
 void swap(MyList* list,int index1,int index2)
 {
-    Electronic temp=list->elems[index1];
+    Electronic* temp=list->elems[index1];
     list->elems[index1]=list->elems[index2];
     list->elems[index2]=temp;
 }
@@ -59,23 +78,24 @@ MyList* sort_in_stock_electronics(MyList* store, int way)
         {
             if(way==1)
             {
-                if(copy_store->elems[i].price>copy_store->elems[j].price)
+                if(get_price_electronic(copy_store->elems[i])>get_price_electronic(copy_store->elems[j]))
                 {
                     swap(copy_store,i,j);
                 }
-                if(equal_floats(copy_store->elems[i].price,copy_store->elems[j].price))
-                {   if(copy_store->elems[i].quantity>copy_store->elems[j].quantity)
+                if(equal_floats(get_price_electronic(copy_store->elems[i]),get_price_electronic(copy_store->elems[j])))
+                {   if(get_quantity_electronic(copy_store->elems[i])>get_quantity_electronic(copy_store->elems[j]))
                     {swap(copy_store,i,j);
                 }}
 
             }
             if(way==-1)
             {
-                if(copy_store->elems[i].price<copy_store->elems[j].price)
+                if(get_price_electronic(copy_store->elems[i])<get_price_electronic(copy_store->elems[j]))
                 {
-                    swap(copy_store,i,j);}
-                if(equal_floats(copy_store->elems[i].price,copy_store->elems[j].price))
-                {   if(copy_store->elems[i].quantity<copy_store->elems[j].quantity)
+                    swap(copy_store,i,j);
+                }
+                if(equal_floats(get_price_electronic(copy_store->elems[i]),get_price_electronic(copy_store->elems[j])))
+                {   if(get_quantity_electronic(copy_store->elems[i])<get_quantity_electronic(copy_store->elems[j]))
                     {swap(copy_store,i,j);
                     }}
             }
@@ -90,25 +110,25 @@ MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,
     {
         if(criteria==1)
         {
-            if(!strcmp(store->elems[i].producer,name))
-            {Electronic* copy= copyElectronic(&store->elems[i]);
+            if(!strcmp(get_producer_electronic(store->elems[i]),name))
+            {Electronic* copy= copyElectronic(store->elems[i]);
                 addToList(new_list,copy);
                                                              }
         }
         else if(criteria==2)
         {
-            if(equal_floats(store->elems[i].price,price))
+            if(equal_floats(get_price_electronic(store->elems[i]),price))
             {
-                Electronic* copy= copyElectronic(&store->elems[i]);
+                Electronic* copy= copyElectronic(store->elems[i]);
                 addToList(new_list,copy);
             }
 
         }
         else if(criteria==3)
         {
-            if(store->elems[i].quantity==quantity)
+            if(get_quantity_electronic(store->elems[i])==quantity)
             {
-                Electronic* copy= copyElectronic(&store->elems[i]);
+                Electronic* copy= copyElectronic(store->elems[i]);
                 addToList(new_list,copy);
             }
         }

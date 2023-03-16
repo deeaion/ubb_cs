@@ -1,0 +1,308 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/service/service.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\service\service.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\service\service.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/11/2023.
+        -:    3://
+        -:    4:#include "../service/service.h"
+        -:    5:
+function add_electronic_service called 8 returned 100% blocks executed 100%
+        8:    6:int add_electronic_service(MyList* store, int id, char*type, char*producer, char*model, double price, int quantity)
+        -:    7:{
+        -:    8:    int position;
+        8:    9:    Electronic* e= createElectronic(id,type,producer,model,price,quantity);
+        8:    9-block  0
+call    0 returned 8
+        8:   10:    if(validate(e)!=0)
+call    0 returned 8
+branch  1 taken 1 (fallthrough)
+branch  2 taken 7
+        1:   11:    {   destroyElectronic(e);
+        1:   11-block  0
+call    0 returned 1
+        1:   12:        return -1;}
+        7:   13:    position= searchElectronic(id,store);
+        7:   13-block  0
+call    0 returned 7
+        7:   14:    if(position==-1)
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+        6:   15:        addElectronic(store,e,position);
+        6:   15-block  0
+call    0 returned 6
+        -:   16:    else
+        -:   17:    {
+        1:   18:        modify_electronic_quantity_by_id(store,id, get_quantity_electronic(store->elems[searchElectronic(id,store)])+quantity);
+        1:   18-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        1:   19:        destroyElectronic(e);
+call    0 returned 1
+        -:   20:    }
+        -:   21:
+        7:   22:    return 1;
+        7:   22-block  0
+        -:   23:}
+function delete_product_by_id called 3 returned 100% blocks executed 100%
+        3:   24:int delete_product_by_id(MyList* store, int id)
+        -:   25:{
+        3:   26:    return deleteElectronic(id,store);
+        3:   26-block  0
+call    0 returned 3
+        -:   27:}
+        -:   28:
+function get_all_service called 1 returned 100% blocks executed 100%
+        1:   29:MyList* get_all_service(MyList* store)
+        -:   30:{
+        1:   31:    return get_all_electronics(store);
+        1:   31-block  0
+call    0 returned 1
+        -:   32:
+        -:   33:}
+function modify_electronic_price_by_id called 3 returned 100% blocks executed 100%
+        3:   34:int modify_electronic_price_by_id(MyList* store,int id, double price)
+        -:   35:{
+        -:   36:    int position;
+        3:   37:    position= searchElectronic(id,store);
+        3:   37-block  0
+call    0 returned 3
+        3:   38:    if(position==-1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   39:        return -1;
+        1:   39-block  0
+        2:   40:    Electronic* modified_electronic= createElectronic(get_id_electronic(store->elems[position]),
+call    0 returned 2
+call    1 returned 2
+        2:   41:                                                      get_type_electronic(store->elems[position]), get_producer_electronic(store->elems[position]), get_model_electronic(store->elems[position]),price, get_quantity_electronic(store->elems[position]));
+        2:   41-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+        2:   42:    if(validate(modified_electronic))
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   43:    {destroyElectronic(modified_electronic);
+        1:   43-block  0
+call    0 returned 1
+        1:   44:        return -1;
+        -:   45:        }
+        1:   46:    modifyElectronic(position,modified_electronic,store);
+        1:   46-block  0
+call    0 returned 1
+        1:   47:    return 1;
+        -:   48:}
+function modify_electronic_quantity_by_id called 4 returned 100% blocks executed 100%
+        4:   49:int modify_electronic_quantity_by_id(MyList* store,int id, int quantity)
+        -:   50:{
+        -:   51:    int position;
+        4:   52:    position= searchElectronic(id,store);
+        4:   52-block  0
+call    0 returned 4
+        4:   53:    if(position==-1)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:   54:        return -1;
+        1:   54-block  0
+        3:   55:    Electronic* modified_electronic= createElectronic(get_id_electronic(store->elems[position]),
+call    0 returned 3
+call    1 returned 3
+        3:   56:                                                      get_type_electronic(store->elems[position]), get_producer_electronic(store->elems[position]), get_model_electronic(store->elems[position]),
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:   57:                                                      get_price_electronic(store->elems[position]), quantity);
+        3:   57-block  0
+call    0 returned 3
+        3:   58:    if(validate(modified_electronic))
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        -:   59:    {
+        1:   60:        destroyElectronic(modified_electronic);
+        1:   60-block  0
+call    0 returned 1
+        1:   61:        return -1;
+        -:   62:    }
+        2:   63:    modifyElectronic(position,modified_electronic,store);
+        2:   63-block  0
+call    0 returned 2
+        2:   64:    return 1;
+        -:   65:}
+function swap called 10 returned 100% blocks executed 100%
+       10:   66:void swap(MyList* list,int index1,int index2)
+        -:   67:{
+       10:   68:    Electronic* temp=list->elems[index1];
+       10:   69:    list->elems[index1]=list->elems[index2];
+       10:   70:    list->elems[index2]=temp;
+       10:   71:}
+function sort_in_stock_electronics called 2 returned 100% blocks executed 100%
+        2:   72:MyList* sort_in_stock_electronics(MyList* store, int way)
+        -:   73:{
+        2:   74:    MyList* copy_store= copyList(store);
+        2:   74-block  0
+call    0 returned 2
+        8:   75:    for(int i=0;i< copy_store->size-1;i++)
+        6:   75-block  0
+        8:   75-block  1
+branch  0 taken 6
+branch  1 taken 2 (fallthrough)
+        -:   76:    {
+       19:   77:        for(int j=i+1; j<copy_store->size;j++)
+        6:   77-block  0
+       13:   77-block  1
+       19:   77-block  2
+branch  0 taken 13
+branch  1 taken 6 (fallthrough)
+        -:   78:        {
+       13:   79:            if(way==1)
+       13:   79-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 10
+        -:   80:            {
+        3:   81:                if(get_price_electronic(copy_store->elems[i])>get_price_electronic(copy_store->elems[j]))
+        3:   81-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        -:   82:                {
+        2:   83:                    swap(copy_store,i,j);
+        2:   83-block  0
+call    0 returned 2
+        -:   84:                }
+        3:   85:                if(equal_floats(get_price_electronic(copy_store->elems[i]),get_price_electronic(copy_store->elems[j])))
+        3:   85-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 1 (fallthrough)
+branch  4 taken 2
+        1:   86:                {   if(get_quantity_electronic(copy_store->elems[i])>get_quantity_electronic(copy_store->elems[j]))
+        1:   86-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   87:                    {swap(copy_store,i,j);
+        1:   87-block  0
+call    0 returned 1
+        -:   88:                }}
+        -:   89:
+        -:   90:            }
+       13:   91:            if(way==-1)
+       13:   91-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 3
+        -:   92:            {
+       10:   93:                if(get_price_electronic(copy_store->elems[i])<get_price_electronic(copy_store->elems[j]))
+       10:   93-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 2 (fallthrough)
+branch  3 taken 8
+        -:   94:                {
+        2:   95:                    swap(copy_store,i,j);
+        2:   95-block  0
+call    0 returned 2
+        -:   96:                }
+       10:   97:                if(equal_floats(get_price_electronic(copy_store->elems[i]),get_price_electronic(copy_store->elems[j])))
+       10:   97-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 5 (fallthrough)
+branch  4 taken 5
+        5:   98:                {   if(get_quantity_electronic(copy_store->elems[i])<get_quantity_electronic(copy_store->elems[j]))
+        5:   98-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 4 (fallthrough)
+branch  3 taken 1
+        4:   99:                    {swap(copy_store,i,j);
+        4:   99-block  0
+call    0 returned 4
+        -:  100:                    }}
+        -:  101:            }
+        -:  102:        }
+        -:  103:    }
+        2:  104:    return copy_store;
+        2:  104-block  0
+        -:  105:
+        -:  106:}
+function filter_by_criteria called 3 returned 100% blocks executed 100%
+        3:  107:MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,int quantity) {
+        3:  108:    MyList* new_list= createList(1);
+        3:  108-block  0
+call    0 returned 3
+       18:  109:    for(int i=0;i<store->size;i++)
+       15:  109-block  0
+       18:  109-block  1
+branch  0 taken 15
+branch  1 taken 3 (fallthrough)
+        -:  110:    {
+       15:  111:        if(criteria==1)
+       15:  111-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 10
+        -:  112:        {
+        5:  113:            if(!strcmp(get_producer_electronic(store->elems[i]),name))
+        5:  113-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0
+        5:  114:            {Electronic* copy= copyElectronic(store->elems[i]);
+        5:  114-block  0
+call    0 returned 5
+        5:  115:                addToList(new_list,copy);
+call    0 returned 5
+        -:  116:                                                             }
+        -:  117:        }
+       10:  118:        else if(criteria==2)
+       10:  118-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 5
+        -:  119:        {
+        5:  120:            if(equal_floats(get_price_electronic(store->elems[i]),price))
+        5:  120-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 3 (fallthrough)
+branch  3 taken 2
+        -:  121:            {
+        3:  122:                Electronic* copy= copyElectronic(store->elems[i]);
+        3:  122-block  0
+call    0 returned 3
+        3:  123:                addToList(new_list,copy);
+call    0 returned 3
+        -:  124:            }
+        -:  125:
+        -:  126:        }
+        5:  127:        else if(criteria==3)
+        5:  127-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        -:  128:        {
+        5:  129:            if(get_quantity_electronic(store->elems[i])==quantity)
+        5:  129-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        -:  130:            {
+        1:  131:                Electronic* copy= copyElectronic(store->elems[i]);
+        1:  131-block  0
+call    0 returned 1
+        1:  132:                addToList(new_list,copy);
+call    0 returned 1
+        -:  133:            }
+        -:  134:        }
+        -:  135:
+        -:  136:
+        -:  137:    }
+        3:  138:    return new_list;
+        3:  138-block  0
+        -:  139:}

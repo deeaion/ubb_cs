@@ -6,7 +6,19 @@
 /*
  * Commands!
  */
-
+void ui_print_menu()
+{
+    printf("******** MENU ********\n");
+    printf("\nPlease enter one of the numbers coressponding to the option you want!\n");
+    printf("\t1. Add Electronic product!\n");
+    printf("\t2. Modify Electronic product:\n\t\t1.Modify price.\n\t\t2.Modify quantity.\n");
+    printf("\t3. Delete Electronic product by id. \n");
+    printf("\t4. Sort by price, quantity. (if the price is equal the quantity will be the one that determines the order!)\n");
+    printf("\t5. Filter by a criteria. \n \t\t Choices are:\n\t\t\t1.By producer's name.\n\t\t\t2.By price\n\t\t\t3.By quantity\n");
+    printf("\t0.Exit\n");
+    printf("****************************************************************************");
+    printf("\n");
+}
 void ui_add_electronic(MyList* store)
 {   int id_electronic,quantity,success;
     double price;
@@ -76,7 +88,7 @@ void print_all(MyList* store)
 {
     for(int i=0;i<store->size;i++)
     {char stringToConcatenate[100];
-        toString(&store->elems[i],stringToConcatenate);
+        toString(store->elems[i],stringToConcatenate);
         printf_s(stringToConcatenate);
         printf("\n");
     }
@@ -133,7 +145,7 @@ void ui_sort_by_price_and_quantity(MyList* store)
 }
 void runConsole(MyList* store)
 {  while(1) {
-        printf("%d\n",store->size);
+        ui_print_menu();
         print_all(store);
         int command = 0;
         scanf_s("%d",&command);

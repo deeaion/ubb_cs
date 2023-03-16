@@ -1,0 +1,177 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/model/electronic.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\model\electronic.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\model\electronic.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/11/2023.
+        -:    3://
+        -:    4:#include "../model/electronic.h"
+        -:    5:
+function equal_floats called 40 returned 100% blocks executed 100%
+       40:    6:int equal_floats(double a,double b)
+       40:    7:    { double epsilon=0.000001;
+       40:    8:        if(fabs(a-b)< epsilon)
+       40:    8-block  0
+branch  0 taken 30 (fallthrough)
+branch  1 taken 10
+       30:    9:            return 1;
+       30:    9-block  0
+       10:   10:        return 0;
+       10:   10-block  0
+        -:   11:    }
+function createElectronic called 30 returned 100% blocks executed 100%
+       30:   12:Electronic* createElectronic(int id,char* type,char* producer, char* model,double price,int quantity)
+        -:   13:{
+       30:   14:    Electronic* electronic=(Electronic*)malloc(sizeof(Electronic));
+       30:   15:    electronic->id=id;
+       30:   16:    electronic->type=(char*)malloc(sizeof (char)*(strlen(type)+1));
+       30:   17:    strcpy(electronic->type,type);
+       30:   18:    electronic->producer=(char*)malloc(sizeof (char)*(strlen(producer)+1));
+       30:   19:    strcpy(electronic->producer,producer);
+       30:   20:    electronic->model=(char*)malloc(sizeof (char)*(strlen(model)+1));
+       30:   21:    strcpy(electronic->model,model);
+       30:   22:    electronic->price=price;
+       30:   23:    electronic->quantity=quantity;
+       30:   24:    return electronic;
+       30:   24-block  0
+        -:   25:
+        -:   26:
+        -:   27:}
+        -:   28:
+function get_id_electronic called 76 returned 100% blocks executed 100%
+       76:   29:int get_id_electronic(Electronic *e)
+        -:   30:{
+       76:   31:    return e->id;
+       76:   31-block  0
+        -:   32:}
+        -:   33:
+function get_producer_electronic called 46 returned 100% blocks executed 100%
+       46:   34:char* get_producer_electronic(Electronic *e)
+        -:   35:{
+       46:   36:    return e->producer;
+       46:   36-block  0
+        -:   37:}
+function get_type_electronic called 41 returned 100% blocks executed 100%
+       41:   38:char* get_type_electronic(Electronic *e)
+        -:   39:{
+       41:   40:    return e->type;
+       41:   40-block  0
+        -:   41:}
+function get_model_electronic called 41 returned 100% blocks executed 100%
+       41:   42:char* get_model_electronic(Electronic *e)
+        -:   43:{
+       41:   44:    return e->model;
+       41:   44-block  0
+        -:   45:}
+        -:   46:
+function get_price_electronic called 97 returned 100% blocks executed 100%
+       97:   47:double get_price_electronic(Electronic *e)
+        -:   48:{
+       97:   49:    return e->price;
+       97:   49-block  0
+        -:   50:}
+        -:   51:
+function get_quantity_electronic called 24 returned 100% blocks executed 100%
+       24:   52:int get_quantity_electronic(Electronic *e)
+        -:   53:{
+       24:   54:    return e->quantity;
+       24:   54-block  0
+        -:   55:}
+function toString called 1 returned 100% blocks executed 100%
+        1:   56:void toString(Electronic* print_e,char stringToConcatenate[])
+        -:   57:{
+        -:   58:    char auxiliary[41];
+        -:   59:    char num[10],price_s[20];
+        -:   60:
+        1:   61:    sprintf(num, "%d", print_e->id);
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    sprintf(price_s,"%.2f",print_e->price);
+call    0 returned 1
+        -:   63:
+        -:   64:    char q[10];
+        1:   65:    sprintf(q,"%d",print_e->quantity);
+call    0 returned 1
+        1:   66:    strcpy(auxiliary,num);
+        1:   67:    strcpy(stringToConcatenate,auxiliary);
+        1:   68:    strcat(stringToConcatenate,", ");
+        1:   69:    strcat(stringToConcatenate,print_e->type);
+        1:   70:    strcat(stringToConcatenate,", ");
+        1:   71:    strcat(stringToConcatenate,print_e->producer);
+        1:   72:    strcat(stringToConcatenate,", ");
+        1:   73:    strcat(stringToConcatenate,print_e->model);
+        1:   74:    strcat(stringToConcatenate,", ");
+        1:   75:    strcat(stringToConcatenate,price_s );
+        1:   76:    strcat(stringToConcatenate,", ");
+        1:   77:    strcat(stringToConcatenate,q);
+        1:   78:}
+function copyElectronic called 44 returned 100% blocks executed 100%
+       44:   79:Electronic* copyElectronic(Electronic* e)
+        -:   80:{
+       44:   81:    Electronic* copy=(Electronic*)malloc(sizeof(Electronic));
+       44:   82:    copy->id=e->id;
+       44:   83:    copy->type=(char*)malloc(sizeof(char)*(strlen(e->type)+1));
+       44:   84:    strcpy(copy->type,e->type);
+       44:   85:    copy->producer=(char*)malloc(sizeof(char)*(strlen(e->producer)+1));
+       44:   86:    strcpy(copy->producer,e->producer);
+       44:   87:    copy->model=(char*)malloc(sizeof(char)*(strlen(e->model)+1));
+       44:   88:    strcpy(copy->model,e->model);
+       44:   89:    copy->price=e->price;
+       44:   90:    copy->quantity=e->quantity;
+       44:   91:    return copy;
+       44:   91-block  0
+        -:   92:}
+function equality called 17 returned 100% blocks executed 100%
+       17:   93:int equality(Electronic* first_electronic, Electronic* second_electronic)
+        -:   94:{
+       17:   95:    if (get_id_electronic(first_electronic)== get_id_electronic(second_electronic))
+       17:   95-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 16 (fallthrough)
+branch  3 taken 1
+       16:   96:        if(strcmp(get_type_electronic(first_electronic),get_type_electronic(second_electronic))==0)
+       16:   96-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0
+       16:   97:            if(strcmp(get_producer_electronic(first_electronic), get_producer_electronic(second_electronic))==0)
+       16:   97-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0
+       16:   98:                if(strcmp(get_model_electronic(first_electronic), get_model_electronic(second_electronic))==0)
+       16:   98-block  0
+call    0 returned 16
+call    1 returned 16
+branch  2 taken 16 (fallthrough)
+branch  3 taken 0
+       16:   99:                    if(equal_floats(get_price_electronic(first_electronic), get_price_electronic(second_electronic)))
+       16:   99-block  0
+call    0 returned 16
+call    1 returned 16
+call    2 returned 16
+branch  3 taken 16 (fallthrough)
+branch  4 taken 0
+       16:  100:                            return 1;
+       16:  100-block  0
+        1:  101:    return 0;
+        1:  101-block  0
+        -:  102:}
+function destroyElectronic called 75 returned 100% blocks executed 100%
+       75:  103:int destroyElectronic(Electronic* e)
+       75:  104:{   if(e==NULL)
+       75:  104-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 74
+        1:  105:        return 1;
+        1:  105-block  0
+       74:  106:    free(e->type);
+       74:  107:    free(e->producer);
+       74:  108:    free(e->model);
+       74:  109:    free(e);
+       74:  110:    return  0;
+       74:  110-block  0
+        -:  111:}

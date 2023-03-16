@@ -1,0 +1,70 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/validation/validate.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\validation\validate.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\validation\validate.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/11/2023.
+        -:    3://
+        -:    4:#include "../model/electronic.h"
+        -:    5://type->laptop,frigider,televizor,altele
+function validate called 20 returned 100% blocks executed 100%
+       20:    6:int validate(Electronic* electronic)
+        -:    7:{
+       20:    8:    if(electronic->id<0)
+       20:    8-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 18
+        2:    9:        return 1;
+        2:    9-block  0
+       18:   10:    int ok=-1;
+       18:   11:    if(strcmp(electronic->type, "laptop") == 0 ||
+       18:   11-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 17
+        1:   12:       strcmp(electronic->type, "frigider") == 0 ||
+        1:   12-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   13:       strcmp(electronic->type, "televizor") == 0 ||
+        1:   13-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   14:       strcmp(electronic->type, "altele") == 0)
+        1:   14-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+       17:   15:        ok=1;
+       17:   15-block  0
+       18:   16:    if(ok==-1)
+       18:   16-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 17
+        1:   17:        return 2;
+        1:   17-block  0
+       17:   18:    if(strlen(electronic->producer)==0)
+       17:   18-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 16
+        1:   19:        return 3;
+        1:   19-block  0
+       16:   20:    if(strlen(electronic->model)==0)
+       16:   20-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 15
+        1:   21:        return 4;
+        1:   21-block  0
+       15:   22:    if(electronic->price<0)
+       15:   22-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 13
+        2:   23:        return 5;
+        2:   23-block  0
+       13:   24:    if(electronic->quantity<0)
+       13:   24-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 11
+        2:   25:        return 6;
+        2:   25-block  0
+       11:   26:    return 0;
+       11:   26-block  0
+        -:   27:}

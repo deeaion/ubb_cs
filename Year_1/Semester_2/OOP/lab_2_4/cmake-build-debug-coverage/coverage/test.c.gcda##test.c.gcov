@@ -1,0 +1,955 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/tests/test.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\tests\test.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\tests\test.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/14/2023.
+        -:    3://
+        -:    4:#include "test.h"
+        -:    5:
+function test_all called 1 returned 100% blocks executed 100%
+        1:    6:void test_all()
+        -:    7:{
+        1:    8:    test_electronic();
+        1:    8-block  0
+call    0 returned 1
+        1:    9:    test_validate();
+call    0 returned 1
+        1:   10:    test_my_list();
+call    0 returned 1
+        1:   11:    test_repo();
+call    0 returned 1
+        1:   12:    test_service();
+call    0 returned 1
+        1:   13:}
+        -:   14:
+function test_my_list called 1 returned 100% blocks executed 62%
+        1:   15:void test_my_list()
+        -:   16:{
+        1:   17:    MyList* test_list= createList(1);
+        1:   17-block  0
+call    0 returned 1
+       1*:   18:    assert(test_list->capacity==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   18-block  0
+call    2 never executed
+        1:   18-block  1
+       1*:   19:    assert(test_list->size==0);
+        1:   19-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   19-block  1
+call    2 never executed
+        1:   19-block  2
+        1:   20:    int id=1;
+        1:   21:    char type[]="laptop";
+        1:   22:    char producer[]="heh";
+        1:   23:    char model[]="1";
+        1:   24:    double price=3;
+        1:   25:    int quantity=100;
+        1:   26:    Electronic *test_electronic=createElectronic(id,type,producer,model,price,quantity);
+        1:   26-block  0
+call    0 returned 1
+        1:   27:    addToList(test_list,test_electronic);
+call    0 returned 1
+       1*:   28:    assert(test_list->capacity==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   28-block  0
+call    2 never executed
+        1:   28-block  1
+       1*:   29:    assert(test_list->size==1);
+        1:   29-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   29-block  1
+call    2 never executed
+        1:   29-block  2
+       1*:   30:    assert(size(test_list)==1);
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   30-block  1
+call    3 never executed
+        1:   30-block  2
+        1:   31:    MyList* copy_list= copyList(test_list);
+        1:   31-block  0
+call    0 returned 1
+       1*:   32:    assert(copy_list->capacity==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   32-block  0
+call    2 never executed
+        1:   32-block  1
+       1*:   33:    assert(copy_list->size==1);
+        1:   33-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   33-block  1
+call    2 never executed
+        1:   33-block  2
+        -:   34:    //trying to add more ->rezise no
+        -:   35:    // Adding another element to the list that requires resizing
+        1:   36:    int id2 = 2;
+        1:   37:    char type2[] = "smartphone";
+        1:   38:    char producer2[] = "hmm";
+        1:   39:    char model2[] = "2";
+        1:   40:    double price2 = 5;
+        1:   41:    int quantity2 = 50;
+        1:   42:    Electronic *test_electronic3 = createElectronic(id2, type2, producer2, model2, price2, quantity2);
+        1:   42-block  0
+call    0 returned 1
+        1:   43:    addToList(test_list, test_electronic3);
+call    0 returned 1
+       1*:   44:    assert(test_list->capacity == 11);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   44-block  0
+call    2 never executed
+        1:   44-block  1
+       1*:   45:    assert(test_list->size == 2);
+        1:   45-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   45-block  1
+call    2 never executed
+        1:   45-block  2
+        -:   46:    //destroy
+        1:   47:    MyList* test_null=NULL;
+       1*:   48:    assert(destroy(test_null)==1);
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   48-block  1
+call    3 never executed
+        1:   48-block  2
+       1*:   49:    assert(destroy(test_list)==0);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   49-block  1
+call    3 never executed
+        1:   49-block  2
+        1:   50:    destroy(copy_list);
+        1:   50-block  0
+call    0 returned 1
+        -:   51:    //resize
+        1:   52:    MyList* test_resize= createList(1);
+call    0 returned 1
+        1:   53:    Electronic *test_electronic_2=createElectronic(id,type,producer,model,price,quantity);
+call    0 returned 1
+        1:   54:    addToList(test_resize,test_electronic_2);
+call    0 returned 1
+        1:   55:    resize(test_resize);
+call    0 returned 1
+       1*:   56:    assert(test_resize->capacity==11);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   56-block  0
+call    2 never executed
+        1:   56-block  1
+        -:   57:
+       1*:   58:    assert(test_resize->size==1);
+        1:   58-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   58-block  1
+call    2 never executed
+        1:   58-block  2
+        1:   59:    destroy(test_resize);
+        1:   59-block  0
+call    0 returned 1
+        -:   60:
+        1:   61:}
+        -:   62:
+function test_electronic called 1 returned 100% blocks executed 64%
+        1:   63:void test_electronic()
+        -:   64:{   //Electronic* createElectronic(int id,char* type,char* producer, char* model,double price,int quantity)
+        1:   65:    int id=1;
+        1:   66:    char type[]="laptop";
+        1:   67:    char producer[]="heh";
+        1:   68:    char model[]="1";
+        1:   69:    double price=3;
+        1:   70:    int quantity=100;
+        1:   71:    Electronic *test_electronic=createElectronic(id,type,producer,model,price,quantity);
+        1:   71-block  0
+call    0 returned 1
+       1*:   72:    assert(get_id_electronic(test_electronic)==id);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   72-block  0
+call    3 never executed
+        1:   72-block  1
+       1*:   73:    assert(strcmp(get_type_electronic(test_electronic),type)==0);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   73-block  1
+call    3 never executed
+        1:   73-block  2
+       1*:   74:    assert(strcmp(get_producer_electronic(test_electronic),producer)==0);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   74-block  1
+call    3 never executed
+        1:   74-block  2
+       1*:   75:    assert(strcmp(get_model_electronic(test_electronic),model)==0);
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   75-block  1
+call    3 never executed
+        1:   75-block  2
+       1*:   76:    assert(equal_floats(get_price_electronic(test_electronic),price)==1);
+        1:   76-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   76-block  1
+call    4 never executed
+        1:   76-block  2
+       1*:   77:    assert(quantity== get_quantity_electronic(test_electronic));
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   77-block  1
+call    3 never executed
+        1:   77-block  2
+        1:   78:    int id_2=1;
+        1:   79:    char type_2[]="laptop";
+        1:   80:    char producer_2[]="heh";
+        1:   81:    char model_2[]="1";
+        1:   82:    double price_2=3;
+        1:   83:    int quantity_2=300;
+        1:   84:    Electronic *test_electronic_2=createElectronic(id_2,type_2,producer_2,model_2,price_2,quantity_2);
+        1:   84-block  0
+call    0 returned 1
+       1*:   85:    assert(equality(test_electronic,test_electronic_2));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   85-block  0
+call    3 never executed
+        1:   85-block  1
+        -:   86:
+        -:   87:
+       1*:   88:    assert(equal_floats(2.9,2.1)==0);
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   88-block  1
+call    3 never executed
+        1:   88-block  2
+        1:   89:    Electronic *test_null=NULL;
+       1*:   90:    assert(destroyElectronic(test_null)==1);
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   90-block  1
+call    3 never executed
+        1:   90-block  2
+        -:   91:    //test_electronic
+        1:   92:    Electronic *test_electronic_3=createElectronic(2,type_2,producer_2,model_2,price_2,quantity_2);
+        1:   92-block  0
+call    0 returned 1
+        -:   93:
+       1*:   94:    assert(equality(test_electronic,test_electronic_3)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   94-block  0
+call    3 never executed
+        1:   94-block  1
+       1*:   95:    assert(destroyElectronic(test_electronic)==0);
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   95-block  1
+call    3 never executed
+        1:   95-block  2
+        -:   96://test to string
+        -:   97:    char stringToConcatenate[100];
+        1:   98:    toString(test_electronic_2,stringToConcatenate);
+        1:   98-block  0
+call    0 returned 1
+       1*:   99:    assert(strcmp(stringToConcatenate,"1, laptop, heh, 1, 3.00, 300")==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   99-block  0
+call    2 never executed
+        1:   99-block  1
+        1:  100:    destroyElectronic(test_electronic_2);
+        1:  100-block  0
+call    0 returned 1
+        1:  101:    destroyElectronic(test_electronic_3);
+call    0 returned 1
+        1:  102:}
+        -:  103:
+function test_repo called 1 returned 100% blocks executed 67%
+        1:  104:void test_repo()
+        -:  105:{//add
+        1:  106:    MyList* test_list= createList(1);
+        1:  106-block  0
+call    0 returned 1
+        1:  107:    int id=1;
+        1:  108:    char type[]="laptop";
+        1:  109:    char producer[]="heh";
+        1:  110:    char model[]="1";
+        1:  111:    double price=3;
+        1:  112:    int quantity=100;
+        1:  113:    Electronic *test_electronic=createElectronic(id,type,producer,model,price,quantity);
+call    0 returned 1
+        1:  114:    addElectronic(test_list,test_electronic,-1);
+call    0 returned 1
+       1*:  115:    assert(test_list->size==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  115-block  0
+call    2 never executed
+        1:  115-block  1
+        -:  116:
+        1:  117:    Electronic *add_equal= createElectronic(id,type,producer,model,price,quantity);
+        1:  117-block  0
+call    0 returned 1
+        1:  118:    addElectronic(test_list,add_equal,0);
+call    0 returned 1
+        -:  119:    //search
+        -:  120:    int position;
+        1:  121:    position=(searchElectronic(1,test_list));
+call    0 returned 1
+       1*:  122:    assert(position==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  122-block  0
+call    2 never executed
+        1:  122-block  1
+       1*:  123:    assert(searchElectronic(4,test_list)==-1);
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  123-block  1
+call    3 never executed
+        1:  123-block  2
+        -:  124:    //modify
+        1:  125:    int id_2=1;
+        1:  126:    char type_2[]="laptop";
+        1:  127:    char producer_2[]="heh";
+        1:  128:    char model_2[]="1";
+        1:  129:    double price_2=3;
+        1:  130:    int quantity_2=300;
+        1:  131:    Electronic *test_modified=createElectronic(id_2,type_2,producer_2,model_2,price_2,quantity_2);
+        1:  131-block  0
+call    0 returned 1
+        1:  132:    Electronic *save_data= copyElectronic(test_modified);
+call    0 returned 1
+        1:  133:    modifyElectronic(position,test_modified,test_list);
+call    0 returned 1
+       1*:  134:    assert(get_id_electronic(save_data)==id_2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  134-block  0
+call    3 never executed
+        1:  134-block  1
+       1*:  135:    assert(strcmp(get_type_electronic(save_data),type_2)==0);
+        1:  135-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  135-block  1
+call    3 never executed
+        1:  135-block  2
+       1*:  136:    assert(strcmp(get_producer_electronic(save_data),producer_2)==0);
+        1:  136-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  136-block  1
+call    3 never executed
+        1:  136-block  2
+       1*:  137:    assert(strcmp(get_model_electronic(save_data),model_2)==0);
+        1:  137-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  137-block  1
+call    3 never executed
+        1:  137-block  2
+       1*:  138:    assert(equal_floats(get_price_electronic(save_data),price_2)==1);
+        1:  138-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  138-block  1
+call    4 never executed
+        1:  138-block  2
+        -:  139:    //getall
+       1*:  140:    assert(test_list== get_all_electronics(test_list));
+        1:  140-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  140-block  1
+call    3 never executed
+        1:  140-block  2
+       1*:  141:    assert(quantity_2== save_data->quantity);
+        1:  141-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  141-block  1
+call    2 never executed
+        1:  141-block  2
+        1:  142:    destroyElectronic(save_data);
+        1:  142-block  0
+call    0 returned 1
+        -:  143:    //delete
+        -:  144:    //mai adaug
+        1:  145:    int id2 = 2;
+        1:  146:    char type2[] = "smartphone";
+        1:  147:    char producer2[] = "hmm";
+        1:  148:    char model2[] = "2";
+        1:  149:    double price2 = 5;
+        1:  150:    int quantity2 = 50;
+        1:  151:    Electronic *test_electronic3 = createElectronic(id2, type2, producer2, model2, price2, quantity2);
+call    0 returned 1
+        1:  152:    Electronic *pastrare_copie= copyElectronic(test_electronic3);//eu eliberEZ MEMORIA !!!! DECI NU MAI GASESC VALORIILE DUPA!
+call    0 returned 1
+        1:  153:    addElectronic(test_list,test_electronic3,-1);
+call    0 returned 1
+        -:  154:
+       1*:  155:    assert(deleteElectronic(5,test_list)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  155-block  0
+call    3 never executed
+        1:  155-block  1
+       1*:  156:    assert(deleteElectronic(1,test_list)==1);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  156-block  1
+call    3 never executed
+        1:  156-block  2
+       1*:  157:    assert(test_list->size==1);
+        1:  157-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  157-block  1
+call    2 never executed
+        1:  157-block  2
+       1*:  158:    assert(equality(test_list->elems[0],pastrare_copie));
+        1:  158-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  158-block  1
+call    3 never executed
+        1:  158-block  2
+        1:  159:    destroyElectronic(pastrare_copie);
+        1:  159-block  0
+call    0 returned 1
+        1:  160:    destroy(test_list);
+call    0 returned 1
+        1:  161:    destroyElectronic(add_equal);
+call    0 returned 1
+        1:  162:}
+        -:  163:
+function test_validate called 1 returned 100% blocks executed 72%
+        1:  164:void test_validate()
+        -:  165:{
+        1:  166:    int id=1;
+        1:  167:    char type[]="laptop";
+        1:  168:    char producer[]="heh";
+        1:  169:    char model[]="1";
+        1:  170:    double price=3;
+        1:  171:    int quantity=100;
+        1:  172:    Electronic *test_electronic=createElectronic(id,type,producer,model,price,quantity);
+        1:  172-block  0
+call    0 returned 1
+       1*:  173:    assert(validate(test_electronic)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  173-block  0
+call    3 never executed
+        1:  173-block  1
+        1:  174:    destroyElectronic(test_electronic);
+        1:  174-block  0
+call    0 returned 1
+        1:  175:    Electronic *test_electronic_1= createElectronic(-2,type,producer,model,price,quantity);
+call    0 returned 1
+       1*:  176:    assert(validate(test_electronic_1)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  176-block  0
+call    3 never executed
+        1:  176-block  1
+        1:  177:    destroyElectronic(test_electronic_1);
+        1:  177-block  0
+call    0 returned 1
+        1:  178:    Electronic *test_electronic_2= createElectronic(id,"1",producer,model,price,quantity);
+call    0 returned 1
+       1*:  179:    assert(validate(test_electronic_2)==2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  179-block  0
+call    3 never executed
+        1:  179-block  1
+        1:  180:    destroyElectronic(test_electronic_2);
+        1:  180-block  0
+call    0 returned 1
+        1:  181:    Electronic *test_electronic_3= createElectronic(id,type,"",model,price,quantity);
+call    0 returned 1
+       1*:  182:    assert(validate(test_electronic_3)==3);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  182-block  0
+call    3 never executed
+        1:  182-block  1
+        1:  183:    destroyElectronic(test_electronic_3);
+        1:  183-block  0
+call    0 returned 1
+        1:  184:    Electronic *test_electronic_4= createElectronic(id,type,producer,"",price,quantity);
+call    0 returned 1
+       1*:  185:    assert(validate(test_electronic_4)==4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  185-block  0
+call    3 never executed
+        1:  185-block  1
+        1:  186:    destroyElectronic(test_electronic_4);
+        1:  186-block  0
+call    0 returned 1
+        1:  187:    Electronic *test_electronic_5= createElectronic(id,type,producer,model,-2,quantity);
+call    0 returned 1
+       1*:  188:    assert(validate(test_electronic_5)==5);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  188-block  0
+call    3 never executed
+        1:  188-block  1
+        1:  189:    destroyElectronic(test_electronic_5);
+        1:  189-block  0
+call    0 returned 1
+        1:  190:    Electronic *test_electronic_6= createElectronic(id,type,producer,model,price,-100);
+call    0 returned 1
+       1*:  191:    assert(validate(test_electronic_6)==6);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  191-block  0
+call    3 never executed
+        1:  191-block  1
+        1:  192:    destroyElectronic(test_electronic_6);
+        1:  192-block  0
+call    0 returned 1
+        -:  193:
+        1:  194:}
+        -:  195:
+function test_service called 1 returned 100% blocks executed 64%
+        1:  196:void test_service()
+        -:  197:{
+        1:  198:    MyList* test_list= createList(1);
+        1:  198-block  0
+call    0 returned 1
+       1*:  199:    assert(test_list->capacity==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  199-block  0
+call    2 never executed
+        1:  199-block  1
+       1*:  200:    assert(test_list->size==0);
+        1:  200-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  200-block  1
+call    2 never executed
+        1:  200-block  2
+        1:  201:    int id=1;
+        1:  202:    char type[]="laptop";
+        1:  203:    char producer[]="heh";
+        1:  204:    char model[]="1";
+        1:  205:    double price=3;
+        1:  206:    int quantity=100;
+       1*:  207:    assert(add_electronic_service(test_list,id,type,producer,model,price,quantity)==1);
+        1:  207-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  207-block  1
+call    3 never executed
+        1:  207-block  2
+       1*:  208:    assert(add_electronic_service(test_list,id,type,producer,model,price,quantity)==1);
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  208-block  1
+call    3 never executed
+        1:  208-block  2
+       1*:  209:    assert(get_id_electronic(test_list->elems[0])==id);
+        1:  209-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  209-block  1
+call    3 never executed
+        1:  209-block  2
+       1*:  210:    assert(strcmp(get_type_electronic(test_list->elems[0]),type)==0);
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  210-block  1
+call    3 never executed
+        1:  210-block  2
+       1*:  211:    assert(strcmp(get_producer_electronic(test_list->elems[0]),producer)==0);
+        1:  211-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  211-block  1
+call    3 never executed
+        1:  211-block  2
+       1*:  212:    assert(strcmp(get_model_electronic(test_list->elems[0]),model)==0);
+        1:  212-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  212-block  1
+call    3 never executed
+        1:  212-block  2
+       1*:  213:    assert(equal_floats(get_price_electronic(test_list->elems[0]),price)==1);
+        1:  213-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  213-block  1
+call    4 never executed
+        1:  213-block  2
+       1*:  214:    assert(200== get_quantity_electronic(test_list->elems[0]));
+        1:  214-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  214-block  1
+call    3 never executed
+        1:  214-block  2
+       1*:  215:    assert(add_electronic_service(test_list,-5,type,producer,model,price,quantity)==-1);
+        1:  215-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  215-block  1
+call    3 never executed
+        1:  215-block  2
+       1*:  216:    assert(test_list== get_all_service(test_list));
+        1:  216-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  216-block  1
+call    3 never executed
+        1:  216-block  2
+        -:  217:    //modifyprice
+       1*:  218:    assert(modify_electronic_price_by_id(test_list,id,5)==1);
+        1:  218-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  218-block  1
+call    3 never executed
+        1:  218-block  2
+       1*:  219:    assert(equal_floats(get_price_electronic(test_list->elems[0]),5)==1);
+        1:  219-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  219-block  1
+call    4 never executed
+        1:  219-block  2
+       1*:  220:    assert(modify_electronic_price_by_id(test_list,10,201)==-1);
+        1:  220-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  220-block  1
+call    3 never executed
+        1:  220-block  2
+       1*:  221:    assert(modify_electronic_price_by_id(test_list,1,-5)==-1);
+        1:  221-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  221-block  1
+call    3 never executed
+        1:  221-block  2
+       1*:  222:    assert(modify_electronic_quantity_by_id(test_list,1,-100)==-1);
+        1:  222-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  222-block  1
+call    3 never executed
+        1:  222-block  2
+        -:  223://modify id
+       1*:  224:    assert(modify_electronic_quantity_by_id(test_list,10,100)==-1);
+        1:  224-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  224-block  1
+call    3 never executed
+        1:  224-block  2
+       1*:  225:    assert(modify_electronic_quantity_by_id(test_list,1,200)==1);
+        1:  225-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  225-block  1
+call    3 never executed
+        1:  225-block  2
+       1*:  226:    assert(get_quantity_electronic(test_list->elems[0])==200);
+        1:  226-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  226-block  1
+call    3 never executed
+        1:  226-block  2
+        -:  227:    //swap
+        1:  228:    add_electronic_service(test_list,3,type,producer,model,price,quantity);
+        1:  228-block  0
+call    0 returned 1
+        1:  229:    swap(test_list,0,1);
+call    0 returned 1
+       1*:  230:    assert(get_id_electronic(test_list->elems[1])==id);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  230-block  0
+call    3 never executed
+        1:  230-block  1
+       1*:  231:    assert(strcmp(get_type_electronic(test_list->elems[1]),type)==0);
+        1:  231-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  231-block  1
+call    3 never executed
+        1:  231-block  2
+       1*:  232:    assert(strcmp(get_producer_electronic(test_list->elems[1]),producer)==0);
+        1:  232-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  232-block  1
+call    3 never executed
+        1:  232-block  2
+       1*:  233:    assert(strcmp(get_model_electronic(test_list->elems[1]),model)==0);
+        1:  233-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  233-block  1
+call    3 never executed
+        1:  233-block  2
+       1*:  234:    assert(equal_floats(get_price_electronic(test_list->elems[1]),5)==1);
+        1:  234-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  234-block  1
+call    4 never executed
+        1:  234-block  2
+       1*:  235:    assert(200== get_quantity_electronic(test_list->elems[1]));
+        1:  235-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  235-block  1
+call    3 never executed
+        1:  235-block  2
+       1*:  236:    assert(delete_product_by_id(test_list,1)==1);
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  236-block  1
+call    3 never executed
+        1:  236-block  2
+        -:  237:    //sort in stock electronics
+        -:  238:    MyList* sorted_1;
+        1:  239:    add_electronic_service(test_list,5,type,producer,model,2.1,51);
+        1:  239-block  0
+call    0 returned 1
+        1:  240:    add_electronic_service(test_list,6,type,producer,model,2.1,50);
+call    0 returned 1
+        1:  241:    sorted_1= sort_in_stock_electronics(test_list,1);
+call    0 returned 1
+       1*:  242:    assert(equality(sorted_1->elems[1],test_list->elems[1])==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  242-block  0
+call    3 never executed
+        1:  242-block  1
+       1*:  243:    assert(equality(sorted_1->elems[0],test_list->elems[2])==1);
+        1:  243-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  243-block  1
+call    3 never executed
+        1:  243-block  2
+        1:  244:    destroy(sorted_1);
+        1:  244-block  0
+call    0 returned 1
+        -:  245:
+        -:  246:    //sort descendingly
+        1:  247:    add_electronic_service(test_list,7,type,producer,model,2.1,100);
+call    0 returned 1
+        1:  248:    add_electronic_service(test_list,10,type,producer,model,500,100);
+call    0 returned 1
+        -:  249:    MyList* sorted_2;
+        1:  250:    sorted_2= sort_in_stock_electronics(test_list,-1);
+call    0 returned 1
+       1*:  251:    assert(equality(sorted_2->elems[0],test_list->elems[4]));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  251-block  0
+call    3 never executed
+        1:  251-block  1
+       1*:  252:    assert(equality(sorted_2->elems[1],test_list->elems[0]));
+        1:  252-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  252-block  1
+call    3 never executed
+        1:  252-block  2
+       1*:  253:    assert(equality(sorted_2->elems[2],test_list->elems[3]));
+        1:  253-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  253-block  1
+call    3 never executed
+        1:  253-block  2
+       1*:  254:    assert(equality(sorted_2->elems[3],test_list->elems[1]));
+        1:  254-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  254-block  1
+call    3 never executed
+        1:  254-block  2
+       1*:  255:    assert(equality(sorted_2->elems[4],test_list->elems[2]));
+        1:  255-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  255-block  1
+call    3 never executed
+        1:  255-block  2
+        1:  256:    destroy(sorted_2);
+        1:  256-block  0
+call    0 returned 1
+        -:  257:    //filtered
+        -:  258:    MyList* filter_name;
+        1:  259:    filter_name= filter_by_criteria(test_list,1,"heh",-1,-1);
+call    0 returned 1
+        6:  260:    for(int i=0;i<filter_name->size;i++)
+        5:  260-block  0
+        6:  260-block  1
+branch  0 taken 5
+branch  1 taken 1 (fallthrough)
+       5*:  261:        assert(equality(filter_name->elems[i],test_list->elems[i]));
+        5:  261-block  0
+call    0 returned 5
+branch  1 taken 0 (fallthrough)
+branch  2 taken 5
+    %%%%%:  261-block  1
+call    3 never executed
+        5:  261-block  2
+        -:  262:
+        1:  263:    destroy(filter_name);
+        1:  263-block  0
+call    0 returned 1
+        -:  264:    MyList * filter_price;
+        -:  265:
+        1:  266:    filter_price= filter_by_criteria(test_list,2,"",2.1,-1);
+call    0 returned 1
+        -:  267:
+       1*:  268:    assert(equality(filter_price->elems[0],test_list->elems[1])==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  268-block  0
+call    3 never executed
+        1:  268-block  1
+        -:  269:
+        1:  270:    destroy(filter_price);
+        1:  270-block  0
+call    0 returned 1
+        -:  271:
+        -:  272:    //criteria==3
+        -:  273:
+        -:  274:    MyList* filter_quantity;
+        1:  275:    filter_quantity= filter_by_criteria(test_list,3,"",-1,51);
+call    0 returned 1
+       1*:  276:    assert(equality(test_list->elems[1],filter_quantity->elems[0]));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  276-block  0
+call    3 never executed
+        1:  276-block  1
+        -:  277:    //delete
+        1:  278:    destroy(filter_quantity);
+        1:  278-block  0
+call    0 returned 1
+       1*:  279:    assert(delete_product_by_id(test_list,100)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  279-block  0
+call    3 never executed
+        1:  279-block  1
+        -:  280:
+        1:  281:    delete_product_by_id(test_list,3);
+        1:  281-block  0
+call    0 returned 1
+        1:  282:    destroy(test_list);
+call    0 returned 1
+        -:  283:
+        -:  284:
+        1:  285:}
+        -:  286:

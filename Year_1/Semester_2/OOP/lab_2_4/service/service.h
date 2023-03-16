@@ -31,6 +31,7 @@ int delete_product_by_id(MyList* store, int id);
  *
  */
 
+
 MyList* sort_in_stock_electronics(MyList* store, int way);
 
 /*
@@ -39,5 +40,6 @@ MyList* sort_in_stock_electronics(MyList* store, int way);
  *
  */
 MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,int quantity);
-MyList get_all_service(MyList* store);
+void swap(MyList* list,int index1,int index2);
+MyList* get_all_service(MyList* store);
 #endif //LAB_2_4_SERVICE_H

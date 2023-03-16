@@ -29,7 +29,7 @@ Electronic* createElectronic(int id,char* type,char* producer, char* model,doubl
 /*
  * Dealocate memory occupied by product
  */
-void destroyElectronic(Electronic *e);
+int destroyElectronic(Electronic *e);
 
 /*
  * Create a copy for the electronic product

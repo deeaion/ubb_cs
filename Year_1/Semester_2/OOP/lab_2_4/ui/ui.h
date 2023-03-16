@@ -6,6 +6,10 @@
 #define LAB_2_4_UI_H
 #include "../service/service.h"
 /*
+ * prints out the meno for the user
+ */
+void ui_print_menu();
+/*
  * Used to run console
  */
 void runConsole(MyList* store);
@@ -33,5 +37,8 @@ void ui_sort_by_price_and_quantity(MyList* store);
  * List filtered by a criteria
  */
 void ui_filter_by_criterea(MyList* store);
+/*
+ * to print out the items of a list
+ */
 void print_all(MyList* store);
 #endif //LAB_2_4_UI_H

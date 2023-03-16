@@ -1,0 +1,17 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/magazin_de_electronice.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcda
+        -:    0:Runs:1
+        -:    1:
+        -:    2:#include "ui/ui.h"
+        -:    3:#include "tests/test.h"
+function main called 1 returned 100% blocks executed 100%
+        1:    4:int main() {
+        1:    5:    MyList* store= createList(1);
+        1:    5-block  0
+call    0 returned 1
+        1:    6:    test_all();
+call    0 returned 1
+        -:    7:    //runConsole(store);
+        1:    8:    return 0;
+        -:    9:}

@@ -57,10 +57,10 @@ void toString(Electronic* print_e,char stringToConcatenate[])
 {
     char auxiliary[41];
     char num[10],price_s[20];
-    int count;
-    count=(int)(((print_e->price)==0)?1:log10(print_e->price)+1);
+
     sprintf(num, "%d", print_e->id);
-    gcvt (print_e->price, count, price_s);
+    sprintf(price_s,"%.2f",print_e->price);
+
     char q[10];
     sprintf(q,"%d",print_e->quantity);
     strcpy(auxiliary,num);
@@ -97,15 +97,15 @@ int equality(Electronic* first_electronic, Electronic* second_electronic)
             if(strcmp(get_producer_electronic(first_electronic), get_producer_electronic(second_electronic))==0)
                 if(strcmp(get_model_electronic(first_electronic), get_model_electronic(second_electronic))==0)
                     if(equal_floats(get_price_electronic(first_electronic), get_price_electronic(second_electronic)))
-                        if(get_quantity_electronic(first_electronic)== get_quantity_electronic(second_electronic))
                             return 1;
     return 0;
 }
-void destroyElectronic(Electronic* e)
+int destroyElectronic(Electronic* e)
 {   if(e==NULL)
-        return;
+        return 1;
     free(e->type);
     free(e->producer);
     free(e->model);
-    //free(e);
+    free(e);
+    return  0;
 }

@@ -1,0 +1,353 @@
+        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/ui/ui.c
+        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/11/2023.
+        -:    3://
+        -:    4:#include "../ui/ui.h"
+        -:    5:#include <stdio.h>
+        -:    6:/*
+        -:    7: * Commands!
+        -:    8: */
+function ui_print_menu called 0 returned 0% blocks executed 0%
+    #####:    9:void ui_print_menu()
+        -:   10:{
+    #####:   11:    printf("******** MENU ********\n");
+    %%%%%:   11-block  0
+call    0 never executed
+    #####:   12:    printf("\nPlease enter one of the numbers coressponding to the option you want!\n");
+call    0 never executed
+    #####:   13:    printf("\t1. Add Electronic product!\n");
+call    0 never executed
+    #####:   14:    printf("\t2. Modify Electronic product:\n\t\t1.Modify price.\n\t\t2.Modify quantity.\n");
+call    0 never executed
+    #####:   15:    printf("\t3. Delete Electronic product by id. \n");
+call    0 never executed
+    #####:   16:    printf("\t4. Sort by price, quantity. (if the price is equal the quantity will be the one that determines the order!)\n");
+call    0 never executed
+    #####:   17:    printf("\t5. Filter by a criteria. \n \t\t Choices are:\n\t\t\t1.By producer's name.\n\t\t\t2.By price\n\t\t\t3.By quantity\n");
+call    0 never executed
+    #####:   18:    printf("\t0.Exit\n");
+call    0 never executed
+    #####:   19:    printf("****************************************************************************");
+call    0 never executed
+    #####:   20:    printf("\n");
+call    0 never executed
+    #####:   21:}
+function ui_add_electronic called 0 returned 0% blocks executed 0%
+    #####:   22:void ui_add_electronic(MyList* store)
+        -:   23:{   int id_electronic,quantity,success;
+        -:   24:    double price;
+        -:   25:    char type[21],producer[22],model[23];
+    #####:   26:    printf("You chose to add and electronic. Please enter your data\n");
+    %%%%%:   26-block  0
+call    0 never executed
+    #####:   27:    printf("id=\n");
+call    0 never executed
+    #####:   28:    scanf_s("%d",&id_electronic);
+call    0 never executed
+    #####:   29:    printf("type=\n");
+call    0 never executed
+    #####:   30:    scanf_s("%s",type);
+call    0 never executed
+    #####:   31:    printf("producer=\n");
+call    0 never executed
+    #####:   32:    scanf_s("%s",producer);
+call    0 never executed
+    #####:   33:    printf("model=\n");
+call    0 never executed
+    #####:   34:    scanf_s("%s",model);
+call    0 never executed
+    #####:   35:    printf("price=\n");
+call    0 never executed
+    #####:   36:    scanf_s("%lf",&price);
+call    0 never executed
+    #####:   37:    printf("quantity=\n");
+call    0 never executed
+    #####:   38:    scanf_s("%d",&quantity);
+call    0 never executed
+    #####:   39:    success=add_electronic_service(store,id_electronic,type,producer,model,price,quantity);
+call    0 never executed
+    #####:   40:    if(success==1)
+branch  0 never executed
+branch  1 never executed
+    #####:   41:        printf(" Action has been done successfully!");
+    %%%%%:   41-block  0
+call    0 never executed
+        -:   42:    else
+    #####:   43:        printf("An error has occurred!");
+    %%%%%:   43-block  0
+call    0 never executed
+        -:   44:
+    #####:   45:}
+        -:   46:
+function ui_delete_electronic called 0 returned 0% blocks executed 0%
+    #####:   47:void ui_delete_electronic(MyList* store)
+        -:   48:{   int id,success;
+    #####:   49:    printf("Delete electronic. Please enter id\n");
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:    printf("id= ");
+call    0 never executed
+    #####:   51:    scanf_s("%d",&id);
+call    0 never executed
+    #####:   52:    success=delete_product_by_id(store,id);
+call    0 never executed
+    #####:   53:    if(success==1)
+branch  0 never executed
+branch  1 never executed
+    #####:   54:        printf(" Action has been done successfully!");
+    %%%%%:   54-block  0
+call    0 never executed
+        -:   55:    else
+    #####:   56:        printf("An error has occurred!");
+    %%%%%:   56-block  0
+call    0 never executed
+    #####:   57:}
+function ui_filter_by_criterea called 0 returned 0% blocks executed 0%
+    #####:   58:void ui_filter_by_criterea(MyList* store)
+        -:   59:{   MyList* filtered;
+        -:   60:    int type;
+        -:   61:    char name[30];
+    #####:   62:    strcpy(name,"");
+    #####:   63:    int quantity=-1;
+    #####:   64:    double price=-1;
+    #####:   65:    printf("Filter by:\n choice=");
+    %%%%%:   65-block  0
+call    0 never executed
+    #####:   66:    scanf_s("%d",&type);
+call    0 never executed
+    #####:   67:    if(type==1)
+branch  0 never executed
+branch  1 never executed
+        -:   68:    {
+    #####:   69:        printf("\nname=");
+    %%%%%:   69-block  0
+call    0 never executed
+    #####:   70:        scanf_s("%s",&name);
+call    0 never executed
+        -:   71:    }
+    #####:   72:    if(type==2)
+    %%%%%:   72-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   73:    {
+    #####:   74:        printf("\nprice=");
+    %%%%%:   74-block  0
+call    0 never executed
+    #####:   75:        scanf_s("%lf",&price);
+call    0 never executed
+        -:   76:    }
+    #####:   77:    if(type==3)
+    %%%%%:   77-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   78:    {
+    #####:   79:        printf("\nquantity=");
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:        scanf_s("%d",&quantity);
+call    0 never executed
+        -:   81:    }
+        -:   82:
+    #####:   83:    filtered= filter_by_criteria(store,type,name,price,quantity);
+    %%%%%:   83-block  0
+call    0 never executed
+    #####:   84:    print_all(filtered);
+call    0 never executed
+    #####:   85:    destroy(filtered);
+call    0 never executed
+    #####:   86:}
+function print_all called 0 returned 0% blocks executed 0%
+    #####:   87:void print_all(MyList* store)
+        -:   88:{
+    #####:   89:    for(int i=0;i<store->size;i++)
+    %%%%%:   89-block  0
+    %%%%%:   89-block  1
+branch  0 never executed
+branch  1 never executed
+        -:   90:    {char stringToConcatenate[100];
+    #####:   91:        toString(store->elems[i],stringToConcatenate);
+    %%%%%:   91-block  0
+call    0 never executed
+    #####:   92:        printf_s(stringToConcatenate);
+call    0 never executed
+    #####:   93:        printf("\n");
+call    0 never executed
+        -:   94:    }
+    #####:   95:}
+        -:   96:
+function ui_modify_electronic called 0 returned 0% blocks executed 0%
+    #####:   97:void ui_modify_electronic(MyList* store)
+        -:   98:{   int id;
+    #####:   99:    int success=-1;
+        -:  100:    double price;
+        -:  101:    int quantity;
+        -:  102:    int opt;
+    #####:  103:    printf("You chose to modify an electronics's price or quantity. Please know that you can only modify one or the other!\n");
+    %%%%%:  103-block  0
+call    0 never executed
+    #####:  104:    printf("Please enter \"1\" for modifying the price\n\t\"2\" for modifying the quantity");
+call    0 never executed
+    #####:  105:    scanf_s("%d",&opt);
+call    0 never executed
+    #####:  106:    printf("id=");
+call    0 never executed
+    #####:  107:    scanf_s("%d",&id);
+call    0 never executed
+        -:  108:
+    #####:  109:    if (opt==1)
+branch  0 never executed
+branch  1 never executed
+    #####:  110:    {    printf("new price= ");
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:        scanf_s("%lf",&price);
+call    0 never executed
+    #####:  112:        success=modify_electronic_price_by_id(store,id,price);
+call    0 never executed
+        -:  113:    }
+    #####:  114:    if(opt==2)
+    %%%%%:  114-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  115:    {
+    #####:  116:        printf("new quantity= ");
+    %%%%%:  116-block  0
+call    0 never executed
+    #####:  117:        scanf_s("%d",&quantity);
+call    0 never executed
+    #####:  118:        success=modify_electronic_quantity_by_id(store,id,quantity);
+call    0 never executed
+        -:  119:    }
+    #####:  120:    if(success==1)
+    %%%%%:  120-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  121:        printf(" Action has been done successfully!");
+    %%%%%:  121-block  0
+call    0 never executed
+        -:  122:    else
+    #####:  123:        printf("An error has occurred!");
+    %%%%%:  123-block  0
+call    0 never executed
+    #####:  124:}
+        -:  125:
+function ui_sort_by_price_and_quantity called 0 returned 0% blocks executed 0%
+    #####:  126:void ui_sort_by_price_and_quantity(MyList* store)
+        -:  127:{   int opt;
+        -:  128:    MyList* to_sort;
+    #####:  129:    printf("Do you want to see the list sorted in descending order or ascending order\n1- ascending, 2-descending\n");
+    %%%%%:  129-block  0
+call    0 never executed
+    #####:  130:    scanf_s("%d",&opt);
+call    0 never executed
+    #####:  131:    if(opt==1)
+branch  0 never executed
+branch  1 never executed
+        -:  132:    {
+    #####:  133:        to_sort=sort_in_stock_electronics(store,opt);
+    %%%%%:  133-block  0
+call    0 never executed
+    #####:  134:    } else if (opt==2)
+    %%%%%:  134-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  135:    {
+    #####:  136:        opt=-1;
+    #####:  137:        to_sort=sort_in_stock_electronics(store,opt);
+    %%%%%:  137-block  0
+call    0 never executed
+        -:  138:    } else
+        -:  139:    {
+    #####:  140:        printf("Invalid option");
+    %%%%%:  140-block  0
+call    0 never executed
+    #####:  141:        return;
+        -:  142:    }
+    #####:  143:    print_all(to_sort);
+    %%%%%:  143-block  0
+call    0 never executed
+    #####:  144:    destroy(to_sort);
+call    0 never executed
+        -:  145:}
+function runConsole called 0 returned 0% blocks executed 0%
+    #####:  146:void runConsole(MyList* store)
+    #####:  147:{  while(1) {
+    %%%%%:  147-block  0
+    #####:  148:        ui_print_menu();
+    %%%%%:  148-block  0
+call    0 never executed
+    #####:  149:        print_all(store);
+call    0 never executed
+    #####:  150:        int command = 0;
+    #####:  151:        scanf_s("%d",&command);
+call    0 never executed
+        -:  152:        //adding
+    #####:  153:        if(command==1)
+branch  0 never executed
+branch  1 never executed
+        -:  154:        {
+    #####:  155:            ui_add_electronic(store);
+    %%%%%:  155-block  0
+call    0 never executed
+        -:  156:
+        -:  157:
+        -:  158:        }
+    #####:  159:        else if(command==3)
+    %%%%%:  159-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  160:        {
+    #####:  161:            ui_delete_electronic(store);
+    %%%%%:  161-block  0
+call    0 never executed
+        -:  162:        }
+    #####:  163:        else if(command==2)
+    %%%%%:  163-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  164:        {
+    #####:  165:            ui_modify_electronic(store);
+    %%%%%:  165-block  0
+call    0 never executed
+        -:  166:        }
+    #####:  167:        else if(command==4)
+    %%%%%:  167-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  168:        {
+    #####:  169:            ui_sort_by_price_and_quantity(store);
+    %%%%%:  169-block  0
+call    0 never executed
+        -:  170:        }
+    #####:  171:        else if(command==5)
+    %%%%%:  171-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  172:        {
+    #####:  173:            ui_filter_by_criterea(store);
+    %%%%%:  173-block  0
+call    0 never executed
+        -:  174:        }
+    #####:  175:        else if (command==0)
+    %%%%%:  175-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  176:        {   destroy(store);
+    %%%%%:  176-block  0
+call    0 never executed
+    #####:  177:            printf("Program will now end!\n");
+call    0 never executed
+    #####:  178:            return;
+        -:  179:        } else
+        -:  180:        {
+    #####:  181:            printf("Invalid command\n");
+    %%%%%:  181-block  0
+call    0 never executed
+        -:  182:        }
+        -:  183:    }
+        -:  184:
+        -:  185:
+        -:  186:}
