@@ -1,0 +1,6 @@
+5
+0  10 inf 20 inf
+inf 0  30 inf inf
+inf inf 0  40 50
+inf inf inf 0  60
+inf inf inf inf 0

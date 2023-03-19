@@ -1,5 +1,0 @@
-name1,type1,1,i a
-name2,type2,2,fsfs sff
-name3,fsfs,3,fsfs sf
-a,s,5,rw,2
-a,er,2,rw,1
