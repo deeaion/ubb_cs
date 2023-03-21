@@ -1,6 +1,6 @@
-        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/magazin_de_electronice.c
-        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcno
-        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcda
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4/magazin_de_electronice.c
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\magazin_de_electronice.c.gcda
         -:    0:Runs:1
         -:    1:
         -:    2:#include "ui/ui.h"

@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 5,
+				"line" : 6,
 				"parent" : 0
 			}
 		]
@@ -45,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fdiagnostics-color=always"
+					"fragment" : "--coverage -g -fdiagnostics-color=always"
 				}
 			],
 			"includes" : 
@@ -72,7 +72,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				14
 			]
 		}
 	],
@@ -82,7 +83,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "--coverage -g",
 				"role" : "flags"
 			},
 			{
@@ -115,7 +116,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				14
 			]
 		},
 		{
@@ -127,7 +129,8 @@
 				3,
 				4,
 				5,
-				12
+				12,
+				13
 			]
 		}
 	],
@@ -204,6 +207,17 @@
 			"backtrace" : 1,
 			"path" : "validation/validate.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "tests/test.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/test.c",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

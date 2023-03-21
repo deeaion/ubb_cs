@@ -1,6 +1,6 @@
         -:    0:Source:C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h
-        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcno
-        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcda
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcda
         -:    0:Runs:1
         -:    1:/**
         -:    2: * This file has no copyright assigned and is placed in the Public Domain.
@@ -302,13 +302,17 @@
         -:  298:
         -:  299:__mingw_ovr
         -:  300:__attribute__((__format__ (gnu_scanf, 1, 2))) __MINGW_ATTRIB_NONNULL(1)
-        -:  301:int scanf(const char *__format, ...)
+function scanf called 0 returned 0% blocks executed 0%
+    #####:  301:int scanf(const char *__format, ...)
         -:  302:{
         -:  303:  int __retval;
-        -:  304:  __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
-        -:  305:  __retval = __mingw_vfscanf( stdin, __format, __local_argv );
-        -:  306:  __builtin_va_end( __local_argv );
-        -:  307:  return __retval;
+    #####:  304:  __builtin_va_list __local_argv; __builtin_va_start( __local_argv, __format );
+    #####:  305:  __retval = __mingw_vfscanf( stdin, __format, __local_argv );
+    %%%%%:  305-block  0
+call    0 never executed
+call    1 never executed
+    #####:  306:  __builtin_va_end( __local_argv );
+    #####:  307:  return __retval;
         -:  308:}
         -:  309:
         -:  310:__mingw_ovr

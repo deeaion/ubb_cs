@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.24"
+						"string" : "3.22.1"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "lab_2_4::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab_2_4-Debug-9fc12d92774bd6c32f21.json",
+					"jsonFile" : "target-lab_2_4-Debug-b0d9b27f39536844480b.json",
 					"name" : "lab_2_4",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4/cmake-build-debug",
-		"source" : "C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4"
+		"build" : "C:/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_2_4/cmake-build-debug-coverage",
+		"source" : "C:/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_2_4"
 	},
 	"version" : 
 	{

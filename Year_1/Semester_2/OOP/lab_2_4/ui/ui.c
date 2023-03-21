@@ -31,7 +31,7 @@ void ui_add_electronic(MyList* store)
     printf("producer=\n");
     scanf_s("%s",producer);
     printf("model=\n");
-    scanf_s("%s",model);
+    scanf("%s",model);
     printf("price=\n");
     scanf_s("%lf",&price);
     printf("quantity=\n");

@@ -1,6 +1,6 @@
-        -:    0:Source:C:/Users/Deea/Desktop/lab_2_4/ui/ui.c
-        -:    0:Graph:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcno
-        -:    0:Data:C:\Users\Deea\Desktop\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcda
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_2_4/ui/ui.c
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_2_4\cmake-build-debug-coverage\CMakeFiles\lab_2_4.dir\ui\ui.c.gcda
         -:    0:Runs:1
         -:    1://
         -:    2:// Created by Deea on 3/11/2023.
@@ -57,7 +57,7 @@ call    0 never executed
 call    0 never executed
     #####:   33:    printf("model=\n");
 call    0 never executed
-    #####:   34:    scanf_s("%s",model);
+    #####:   34:    scanf("%s",model);
 call    0 never executed
     #####:   35:    printf("price=\n");
 call    0 never executed

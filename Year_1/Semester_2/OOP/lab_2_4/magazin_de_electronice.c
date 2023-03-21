@@ -4,6 +4,6 @@
 int main() {
     MyList* store= createList(1);
     test_all();
-    //runConsole(store);
+    runConsole(store);
     return 0;
 }
