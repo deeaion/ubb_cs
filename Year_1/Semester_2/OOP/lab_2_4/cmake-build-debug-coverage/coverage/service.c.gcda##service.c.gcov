@@ -28,18 +28,18 @@ call    0 returned 7
         7:   14:    if(position==-1)
 branch  0 taken 6 (fallthrough)
 branch  1 taken 1
-        6:   15:        addElectronic(store,e,position);
+        6:   15:    {addElectronic(store,e,position);}
         6:   15-block  0
 call    0 returned 6
         -:   16:    else
-        -:   17:    {
+        1:   17:    {   destroyElectronic(e);
+        1:   17-block  0
+call    0 returned 1
         1:   18:        modify_electronic_quantity_by_id(store,id, get_quantity_electronic(store->elems[searchElectronic(id,store)])+quantity);
-        1:   18-block  0
 call    0 returned 1
 call    1 returned 1
 call    2 returned 1
-        1:   19:        destroyElectronic(e);
-call    0 returned 1
+        -:   19:
         -:   20:    }
         -:   21:
         7:   22:    return 1;
@@ -258,7 +258,7 @@ branch  2 taken 0
         5:  114:            {Electronic* copy= copyElectronic(store->elems[i]);
         5:  114-block  0
 call    0 returned 5
-        5:  115:                addToList(new_list,copy);
+        5:  115:                addElectronic(new_list,copy,-1);
 call    0 returned 5
         -:  116:                                                             }
         -:  117:        }
@@ -277,7 +277,7 @@ branch  3 taken 2
         3:  122:                Electronic* copy= copyElectronic(store->elems[i]);
         3:  122-block  0
 call    0 returned 3
-        3:  123:                addToList(new_list,copy);
+        3:  123:                addElectronic(new_list,copy,-1);
 call    0 returned 3
         -:  124:            }
         -:  125:
@@ -296,7 +296,7 @@ branch  2 taken 4
         1:  131:                Electronic* copy= copyElectronic(store->elems[i]);
         1:  131-block  0
 call    0 returned 1
-        1:  132:                addToList(new_list,copy);
+        1:  132:                addElectronic(new_list,copy,-1);
 call    0 returned 1
         -:  133:            }
         -:  134:        }

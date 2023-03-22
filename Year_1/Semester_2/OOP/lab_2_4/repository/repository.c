@@ -4,8 +4,8 @@
 #include "../repository/repository.h"
 
 int addElectronic(MyList *store, Electronic *electronic, int position) {
-    if (position == -1) {
-        addToList(store, electronic);}
+    if (position == -1)
+        {addToList(store, electronic);}
     return 0;
 
 }

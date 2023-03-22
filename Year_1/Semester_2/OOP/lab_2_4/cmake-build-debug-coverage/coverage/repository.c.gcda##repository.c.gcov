@@ -7,17 +7,17 @@
         -:    3://
         -:    4:#include "../repository/repository.h"
         -:    5:
-function addElectronic called 9 returned 100% blocks executed 100%
-        9:    6:int addElectronic(MyList *store, Electronic *electronic, int position) {
-        9:    7:    if (position == -1) {
-        9:    7-block  0
-branch  0 taken 8 (fallthrough)
+function addElectronic called 18 returned 100% blocks executed 100%
+       18:    6:int addElectronic(MyList *store, Electronic *electronic, int position) {
+       18:    7:    if (position == -1)
+       18:    7-block  0
+branch  0 taken 17 (fallthrough)
 branch  1 taken 1
-        8:    8:        addToList(store, electronic);}
-        8:    8-block  0
-call    0 returned 8
-        9:    9:    return 0;
-        9:    9-block  0
+       17:    8:        {addToList(store, electronic);}
+       17:    8-block  0
+call    0 returned 17
+       18:    9:    return 0;
+       18:    9-block  0
         -:   10:
         -:   11:}
         -:   12:

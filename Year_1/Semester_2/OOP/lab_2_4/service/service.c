@@ -12,11 +12,11 @@ int add_electronic_service(MyList* store, int id, char*type, char*producer, char
         return -1;}
     position= searchElectronic(id,store);
     if(position==-1)
-        addElectronic(store,e,position);
+    {addElectronic(store,e,position);}
     else
-    {
+    {   destroyElectronic(e);
         modify_electronic_quantity_by_id(store,id, get_quantity_electronic(store->elems[searchElectronic(id,store)])+quantity);
-        destroyElectronic(e);
+
     }
 
     return 1;
@@ -112,7 +112,7 @@ MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,
         {
             if(!strcmp(get_producer_electronic(store->elems[i]),name))
             {Electronic* copy= copyElectronic(store->elems[i]);
-                addToList(new_list,copy);
+                addElectronic(new_list,copy,-1);
                                                              }
         }
         else if(criteria==2)
@@ -120,7 +120,7 @@ MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,
             if(equal_floats(get_price_electronic(store->elems[i]),price))
             {
                 Electronic* copy= copyElectronic(store->elems[i]);
-                addToList(new_list,copy);
+                addElectronic(new_list,copy,-1);
             }
 
         }
@@ -129,7 +129,7 @@ MyList* filter_by_criteria(MyList* store, int criteria,char name[],double price,
             if(get_quantity_electronic(store->elems[i])==quantity)
             {
                 Electronic* copy= copyElectronic(store->elems[i]);
-                addToList(new_list,copy);
+                addElectronic(new_list,copy,-1);
             }
         }
 
