@@ -1,21 +1,10 @@
 # ninja log v5
-2	128	7011115403210601	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	2c685946a4f4806b
-38	176	7011115403695878	CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj	575cfa813cd0f562
-60	195	7011115403925874	CMakeFiles/lab_2_4.dir/repository/repository.c.obj	c67324b907897e61
-3	104	7011163984464396	CMakeFiles/lab_2_4.dir/ui/ui.c.obj	324e7626779460bf
-29	179	7011115403745889	CMakeFiles/lab_2_4.dir/model/electronic.c.obj	f94910868b182d8f
-48	185	7011115403805860	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	56d6e369b3314c1
-105	243	7011163985677888	lab_2_4.exe	a653cf32f09a3700
-20	155	7011115403490672	CMakeFiles/lab_2_4.dir/service/service.c.obj	314277e01cc4ef75
-70	229	7011115404275866	CMakeFiles/lab_2_4.dir/tests/test.c.obj	36eb47678daf3aca
-2	106	7011395522733874	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	2c685946a4f4806b
-23	126	7011395522943871	CMakeFiles/lab_2_4.dir/model/electronic.c.obj	f94910868b182d8f
-32	128	7011395522953861	CMakeFiles/lab_2_4.dir/service/service.c.obj	314277e01cc4ef75
-50	139	7011395523083862	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	56d6e369b3314c1
-40	141	7011395523083862	CMakeFiles/lab_2_4.dir/ui/ui.c.obj	324e7626779460bf
+2	89	7011395640323665	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	2c685946a4f4806b
 57	149	7011395523163926	CMakeFiles/lab_2_4.dir/my_list/MyList.c.obj	575cfa813cd0f562
 65	154	7011395523223910	CMakeFiles/lab_2_4.dir/repository/repository.c.obj	c67324b907897e61
-76	184	7011395523519471	CMakeFiles/lab_2_4.dir/tests/test.c.obj	36eb47678daf3aca
-184	294	7011395524545681	lab_2_4.exe	a653cf32f09a3700
-2	89	7011395640323665	CMakeFiles/lab_2_4.dir/magazin_de_electronice.c.obj	2c685946a4f4806b
+40	141	7011395523083862	CMakeFiles/lab_2_4.dir/ui/ui.c.obj	324e7626779460bf
+23	126	7011395522943871	CMakeFiles/lab_2_4.dir/model/electronic.c.obj	f94910868b182d8f
+50	139	7011395523083862	CMakeFiles/lab_2_4.dir/validation/validate.c.obj	56d6e369b3314c1
 89	210	7011395641444134	lab_2_4.exe	a653cf32f09a3700
+32	128	7011395522953861	CMakeFiles/lab_2_4.dir/service/service.c.obj	314277e01cc4ef75
+76	184	7011395523519471	CMakeFiles/lab_2_4.dir/tests/test.c.obj	36eb47678daf3aca

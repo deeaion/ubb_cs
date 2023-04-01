@@ -1,0 +1,9 @@
+# ninja log v5
+26	100	7020545578869691	CMakeFiles/lab_6_7.dir/service/SubjectsService.cpp.obj	163b1b8896b2e44e
+10	385	7020545581702517	CMakeFiles/lab_6_7.dir/main.cpp.obj	ba4ef3132e2232ef
+448	563	7020545583419999	lab_6_7.exe	fb1dc524699a2e10
+35	109	7020545578954198	CMakeFiles/lab_6_7.dir/ui/SubjectsUi.cpp.obj	50b127b0aaf2047e
+45	115	7020545579039416	CMakeFiles/lab_6_7.dir/validator/ValidatorSubject.cpp.obj	6e1cfb374a4f1663
+18	420	7020545582068954	CMakeFiles/lab_6_7.dir/repository/SubjectsRepo.cpp.obj	ac74a4a0c601fd4c
+3	448	7020545582319175	CMakeFiles/lab_6_7.dir/domain/Subject.cpp.obj	8e613a1099047db2
+3	413	7020551246292076	CMakeFiles/lab_6_7.dir/repository/SubjectsRepo.cpp.obj	ac74a4a0c601fd4c

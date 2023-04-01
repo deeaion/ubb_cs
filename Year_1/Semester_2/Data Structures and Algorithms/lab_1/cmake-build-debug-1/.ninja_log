@@ -1,0 +1,9 @@
+# ninja log v5
+19	113	7012939102252354	CMakeFiles/lab_1.dir/Iterator/IteratorColectie.cpp.obj	4398c19efa1e0d3a
+1	329	7012939104407656	CMakeFiles/lab_1.dir/main.cpp.obj	2fa3676d74e13029
+9	352	7012939104662840	CMakeFiles/lab_1.dir/Colectie/Colectie.cpp.obj	cd86c0f819cc9923
+27	362	7012939104762850	CMakeFiles/lab_1.dir/Teste_(cu_relatie)/TestExtins.cpp.obj	4f556befe5cbd8d4
+38	373	7012939104882866	CMakeFiles/lab_1.dir/Teste_(cu_relatie)/TestScurt.cpp.obj	b0d7313e75aa6e0e
+374	485	7012939105904699	lab_1.exe	420c008fd35f52c7
+2	74	7012939476346129	CMakeFiles/lab_1.dir/Colectie/Colectie.cpp.obj	cd86c0f819cc9923
+75	185	7012939477361300	lab_1.exe	420c008fd35f52c7

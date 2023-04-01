@@ -1,0 +1,53 @@
+Creați o aplicație care permite:
+· gestiunea unei liste de discipline. Disciplina: denumire, ore pe săptămâna, tip, cadru
+didactic
+· adăugare, ștergere, modificare și afișare discipline
+· căutare disciplina
+· filtrare discipline după: nr ore, cadru didactic
+· sortare discipline după: denumire, nr ore, cadru didactic + tip
+
+
+
+Disciplina : -> denumire: string
+             -> ore pe saptamana: int
+             ->tip: string : ->suplimentara
+                             ->obligatorie
+             ->cadru didactic : string
+             ->id : denumirecadru
+
+Operatii legate de repo: -> adaugare
+                         ->stergere dupa id
+                         ->modificare
+                         ->cautare dupa id
+
+Operatii legate de service:
+->adaugare: verfica id daca e egal
+->stergere : nu exista -> throw exceptiosns
+->modificare: -//-
+->cautare
+->filtrare: nr ore
+            cadru didactic
+->sortare: denumire
+           nr de ore
+           cadru didactic+tip
+
+
+
+Validator:  -> denumire: string
+                        -> ore pe saptamana: int<0
+                        ->tip: string : ->suplimentara -> strlen =0 | sau sa nu fie una din ele
+                                        ->obligatorie --> strlen =0 |
+                        ->cadru didactic : string . string<0
+
+Iterație 1:
+        – Folosiți clasa std::string si clasa std::vector din STL (librăria standard C++)
+        – Nu folosiți pointeri.
+        – Nu alocați dinamic.
+ Iterația 2:
+        – Înlocuiți clasa std::vector cu o clasa proprie parametrizata (Template) care
+            implementează o lista folosind structura de date lista înlănțuita sau vector
+                    dinamic (la alegere).
+        Asta o fac it1:– Validarea datelor. Utilizatorul este anunțat printr-un mesaj daca: introduce
+                valori de intrare greșite; încearcă sa adauge o entitate de doua ori, încearcă
+                sa șteargă / modifice o entitate inexistenta (se vor folosi excepții)
+–        Creați o diagramă UML a claselor pentru a schița arhitectura aplicației
