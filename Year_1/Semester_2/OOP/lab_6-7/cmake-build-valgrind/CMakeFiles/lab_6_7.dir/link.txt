@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -g CMakeFiles/lab_6_7.dir/main.cpp.o CMakeFiles/lab_6_7.dir/domain/Subject.cpp.o CMakeFiles/lab_6_7.dir/repository/SubjectsRepo.cpp.o CMakeFiles/lab_6_7.dir/service/SubjectsService.cpp.o CMakeFiles/lab_6_7.dir/ui/SubjectsUi.cpp.o CMakeFiles/lab_6_7.dir/validator/ValidatorSubject.cpp.o CMakeFiles/lab_6_7.dir/Exceptions/Exceptions.cpp.o -o lab_6_7 

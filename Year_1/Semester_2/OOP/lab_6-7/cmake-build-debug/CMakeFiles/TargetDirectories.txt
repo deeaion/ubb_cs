@@ -1,3 +1,0 @@
-C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6-7/cmake-build-debug/CMakeFiles/lab_6_7.dir
-C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6-7/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6-7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
