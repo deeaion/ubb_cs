@@ -1,8 +1,17 @@
 # ninja log v5
 32	499	7020838113586541	CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj	aa8a2ffaac59ecec
+24	1108	7020860604382569	CMakeFiles/lab_6.dir/ui/SubjectsUi.cpp.obj	f76de22a87d520d7
 1	546	7020838114062944	CMakeFiles/lab_6.dir/domain/Subject.cpp.obj	743382193c56cfc
 17	564	7020838114253708	CMakeFiles/lab_6.dir/repository/SubjectsRepo.cpp.obj	5fe19216f1e4ebf6
-10	607	7020838114683046	CMakeFiles/lab_6.dir/main.cpp.obj	e274ce52736663e4
-41	656	7020838115168267	CMakeFiles/lab_6.dir/ui/SubjectsUi.cpp.obj	f76de22a87d520d7
-25	700	7020838115604815	CMakeFiles/lab_6.dir/service/SubjectsService.cpp.obj	ba34262c743a5933
-700	839	7020838116892484	lab_6.exe	b37b77adc6076e2f
+3	714	7020862584533176	CMakeFiles/lab_6.dir/main.cpp.obj	e274ce52736663e4
+14	1163	7020860604953152	CMakeFiles/lab_6.dir/service/SubjectsService.cpp.obj	ba34262c743a5933
+12	736	7020862584753552	CMakeFiles/lab_6.dir/tests/Tests.cpp.obj	4d07a91749b6f0b5
+736	956	7020862586743986	lab_6.exe	40afac00b30ad974
+68	822	7021271997348016	CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj	aa8a2ffaac59ecec
+14	859	7021271997678006	CMakeFiles/lab_6.dir/domain/Subject.cpp.obj	743382193c56cfc
+3	928	7021271998403252	CMakeFiles/lab_6.dir/main.cpp.obj	e274ce52736663e4
+55	972	7021271998823367	CMakeFiles/lab_6.dir/repository/SubjectsRepo.cpp.obj	5fe19216f1e4ebf6
+40	1026	7021271999388549	CMakeFiles/lab_6.dir/ui/SubjectsUi.cpp.obj	f76de22a87d520d7
+26	1161	7021272000733723	CMakeFiles/lab_6.dir/service/SubjectsService.cpp.obj	ba34262c743a5933
+84	1207	7021272001188916	CMakeFiles/lab_6.dir/tests/Tests.cpp.obj	4d07a91749b6f0b5
+1207	1407	7021272003072079	lab_6.exe	40afac00b30ad974

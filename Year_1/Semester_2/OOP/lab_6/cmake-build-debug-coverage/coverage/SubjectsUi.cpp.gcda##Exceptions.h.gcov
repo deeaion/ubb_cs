@@ -1,0 +1,45 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/Exceptions/Exceptions.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\ui\SubjectsUi.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\ui\SubjectsUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/1/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_7_EXCEPTIONS_H
+        -:    6:#define LAB_6_7_EXCEPTIONS_H
+        -:    7://includes
+        -:    8:#pragma once
+        -:    9:
+        -:   10:#include <exception>
+        -:   11:#include <string>
+        -:   12:#include <utility>
+        -:   13:
+        -:   14:using std::string;
+        -:   15:
+        -:   16:class RepositoryException : public std::exception {
+        -:   17:    string message;
+        -:   18:
+        -:   19:public:
+        -:   20:    explicit RepositoryException(string message) : message{std::move(message)} {};
+        -:   21:
+function _ZN19RepositoryException10getMessageB5cxx11Ev called 7 returned 100% blocks executed 100%
+        7:   22:    string getMessage() { return this->message; };
+        7:   22-block  0
+call    0 returned 7
+        -:   23:
+        -:   24:};
+        -:   25:
+        -:   26:class ValidatorException : public std::exception {
+        -:   27:    std::string message;
+        -:   28:public:
+        -:   29:    explicit ValidatorException(string message) : message(std::move(message)) {};
+        -:   30:
+function _ZN18ValidatorException10getMessageB5cxx11Ev called 5 returned 100% blocks executed 100%
+        5:   31:    std::string getMessage() { return this->message; };
+        5:   31-block  0
+call    0 returned 5
+        -:   32:};
+        -:   33:
+        -:   34:
+        -:   35:#endif //LAB_6_7_EXCEPTIONS_H

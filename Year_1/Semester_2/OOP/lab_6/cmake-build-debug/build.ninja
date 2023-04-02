@@ -85,6 +85,12 @@ build CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj: CXX_COMPILER__lab
   OBJECT_DIR = CMakeFiles\lab_6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab_6.dir\validator
 
+build CMakeFiles/lab_6.dir/tests/Tests.cpp.obj: CXX_COMPILER__lab_6_Debug C$:/Users/Deea/Desktop/DOCUMENTS/UNI/First$ year/Semester$ 2/OOP/Labs/lab_6/tests/Tests.cpp || cmake_object_order_depends_target_lab_6
+  DEP_FILE = CMakeFiles\lab_6.dir\tests\Tests.cpp.obj.d
+  FLAGS = -Wall -Wextra -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\lab_6.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab_6.dir\tests
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab_6
@@ -93,7 +99,7 @@ build CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj: CXX_COMPILER__lab
 #############################################
 # Link the executable lab_6.exe
 
-build lab_6.exe: CXX_EXECUTABLE_LINKER__lab_6_Debug CMakeFiles/lab_6.dir/main.cpp.obj CMakeFiles/lab_6.dir/domain/Subject.cpp.obj CMakeFiles/lab_6.dir/repository/SubjectsRepo.cpp.obj CMakeFiles/lab_6.dir/service/SubjectsService.cpp.obj CMakeFiles/lab_6.dir/ui/SubjectsUi.cpp.obj CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj
+build lab_6.exe: CXX_EXECUTABLE_LINKER__lab_6_Debug CMakeFiles/lab_6.dir/main.cpp.obj CMakeFiles/lab_6.dir/domain/Subject.cpp.obj CMakeFiles/lab_6.dir/repository/SubjectsRepo.cpp.obj CMakeFiles/lab_6.dir/service/SubjectsService.cpp.obj CMakeFiles/lab_6.dir/ui/SubjectsUi.cpp.obj CMakeFiles/lab_6.dir/validator/ValidatorSubject.cpp.obj CMakeFiles/lab_6.dir/tests/Tests.cpp.obj
   FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab_6.dir

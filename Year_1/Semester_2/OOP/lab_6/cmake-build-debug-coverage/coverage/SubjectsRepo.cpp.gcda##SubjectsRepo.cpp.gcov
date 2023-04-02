@@ -1,0 +1,214 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/repository/SubjectsRepo.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\repository\SubjectsRepo.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\repository\SubjectsRepo.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "SubjectsRepo.h"
+        -:    6:
+        -:    7:#include <iostream>
+        -:    8:
+        -:    9:using std::cout;
+        -:   10:
+function _ZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 23 returned 100% blocks executed 90%
+       23:   11:int SubjectsRepo::searchForSubject(const string &name, const string &teacher) {
+        -:   12:
+       23:   13:    vector<Subject> sbjs = this->subjects;
+       23:   13-block  0
+call    0 returned 23
+branch  1 taken 23 (fallthrough)
+branch  2 taken 0 (throw)
+       29:   14:    for (int i = 0; i < (int) this->subjects.size(); i++)
+       23:   14-block  0
+        6:   14-block  1
+       29:   14-block  2
+call    0 returned 29
+branch  1 taken 17
+branch  2 taken 12 (fallthrough)
+       17:   15:        if (subjects[i].get_name() == name)
+       17:   15-block  0
+call    0 returned 17
+call    1 returned 17
+branch  2 taken 17 (fallthrough)
+branch  3 taken 0 (throw)
+       17:   15-block  1
+call    4 returned 17
+branch  5 taken 11 (fallthrough)
+branch  6 taken 6
+       11:   16:            if (subjects[i].get_teacher() == teacher)
+       11:   16-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 11 (fallthrough)
+branch  3 taken 0 (throw)
+       11:   16-block  1
+call    4 returned 11
+branch  5 taken 11 (fallthrough)
+branch  6 taken 0
+       11:   17:                return i;
+       11:   17-block  0
+       12:   18:    return -1;
+       12:   18-block  0
+       23:   19:}
+       23:   19-block  0
+call    0 returned 23
+    $$$$$:   19-block  1
+call    1 never executed
+        -:   20:
+function _ZN12SubjectsRepo5storeERK7Subject called 8 returned 75% blocks executed 78%
+        8:   21:void SubjectsRepo::store(const Subject &SubjectToAdd) {
+        8:   22:    const string &name = SubjectToAdd.get_name();
+        8:   22-block  0
+call    0 returned 8
+        8:   23:    const string &teacher = SubjectToAdd.get_teacher();
+call    0 returned 8
+        8:   24:    if (searchForSubject(name, teacher) == -1) {
+call    0 returned 8
+branch  1 taken 6 (fallthrough)
+branch  2 taken 2
+        6:   25:        this->subjects.push_back(SubjectToAdd);
+        6:   25-block  0
+call    0 returned 6
+        -:   26:    } else {
+        2:   27:        throw RepositoryException("Subject already exists\n");
+        2:   27-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   27-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   27-block  2
+call    9 never executed
+    $$$$$:   27-block  3
+    $$$$$:   27-block  4
+call   10 never executed
+        -:   28:
+        -:   29:    }
+        6:   30:}
+        -:   31:
+function _ZNK12SubjectsRepo6getAllEv called 8 returned 100% blocks executed 100%
+        8:   32:const vector<Subject> &SubjectsRepo::getAll() const noexcept {
+        8:   33:    return this->subjects;
+        8:   33-block  0
+        -:   34:}
+        -:   35:
+function _ZN12SubjectsRepo17removeSubjectRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 6 returned 67% blocks executed 70%
+        6:   36:void SubjectsRepo::removeSubjectRepo(const string &name, const string &teacher) {
+        6:   37:    int index = searchForSubject(name, teacher);
+        6:   37-block  0
+call    0 returned 6
+        6:   38:    if (index != -1) {
+branch  0 taken 4 (fallthrough)
+branch  1 taken 2
+        4:   39:        auto first = this->subjects.begin();
+        4:   39-block  0
+call    0 returned 4
+        4:   40:        this->subjects.erase(first + index);
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        4:   40-block  0
+    $$$$$:   40-block  1
+    $$$$$:   40-block  2
+        -:   41:    } else {
+        2:   42:        throw RepositoryException("Subject does not exist!");
+        2:   42-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   42-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   42-block  2
+call    9 never executed
+    $$$$$:   42-block  3
+    $$$$$:   42-block  4
+call   10 never executed
+        -:   43:
+        -:   44:    }
+        4:   45:}
+        4:   45-block  0
+        -:   46:
+function _ZN12SubjectsRepo17updateSubjectRepoERK7Subject called 4 returned 50% blocks executed 79%
+        4:   47:void SubjectsRepo::updateSubjectRepo(const Subject &subjectToUpdate) {
+        4:   48:    const string &name = subjectToUpdate.get_name();
+        4:   48-block  0
+call    0 returned 4
+        4:   49:    const string &teacher = subjectToUpdate.get_teacher();
+call    0 returned 4
+        4:   50:    int index = searchForSubject(name, teacher);
+call    0 returned 4
+        4:   51:    if (index != -1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   52:        this->subjects[index] = subjectToUpdate;
+        2:   52-block  0
+call    0 returned 2
+call    1 returned 2
+        -:   53:    } else {
+        2:   54:        throw RepositoryException("Subject does not exist!");
+        2:   54-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   54-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   54-block  2
+call    9 never executed
+    $$$$$:   54-block  3
+    $$$$$:   54-block  4
+call   10 never executed
+        -:   55:
+        -:   56:    }
+        2:   57:}
+        -:   58:
+function _ZN12SubjectsRepo10getSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 3 returned 67% blocks executed 75%
+        3:   59:const Subject &SubjectsRepo::getSubject(const string &name, const string &teacher) {
+        3:   60:    int index = searchForSubject(name, teacher);
+        3:   60-block  0
+call    0 returned 3
+        3:   61:    if (index != -1) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:   62:        return this->subjects[index];
+        2:   62-block  0
+call    0 returned 2
+        -:   63:    } else {
+        1:   64:        throw RepositoryException("Subject does not exist!");
+        1:   64-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   64-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   64-block  2
+call    9 never executed
+    $$$$$:   64-block  3
+    $$$$$:   64-block  4
+call   10 never executed
+        -:   65:
+        -:   66:    }
+        -:   67:}

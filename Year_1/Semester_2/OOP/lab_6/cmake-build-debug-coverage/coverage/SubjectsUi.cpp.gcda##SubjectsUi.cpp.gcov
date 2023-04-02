@@ -1,0 +1,1102 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/ui/SubjectsUi.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\ui\SubjectsUi.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\ui\SubjectsUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:
+        -:    6:#include "SubjectsUi.h"
+        -:    7:
+        -:    8:using std::ws;
+        -:    9:
+function _ZN10SubjectsUi5UiAddEv called 0 returned 0% blocks executed 0%
+    #####:   10:void SubjectsUi::UiAdd() {
+    #####:   11:    cout << "You chose to add a subject:\n";
+    %%%%%:   11-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   12:    string name;
+    %%%%%:   12-block  0
+call    0 never executed
+    #####:   13:    string teacher;
+call    0 never executed
+    #####:   14:    string type;
+call    0 never executed
+        -:   15:    int hours;
+    #####:   16:    cout << "\n\tname: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   17:    cin >> name;
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    cout << "\n\thours: ";
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   19:    cin >> hours;
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:    cout << "\n\tteacher: ";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:    cin >> teacher;
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   22:    cout << "\n\ttype: ";
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:    cin >> type;
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:    ctr.addSubject(name, hours, teacher, type);
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   25:
+    #####:   26:}
+    %%%%%:   26-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   26-block  1
+call    3 never executed
+    $$$$$:   26-block  2
+call    4 never executed
+    $$$$$:   26-block  3
+call    5 never executed
+        -:   27:
+function _ZN10SubjectsUi8UideleteEv called 0 returned 0% blocks executed 0%
+    #####:   28:void SubjectsUi::Uidelete() {
+    #####:   29:    string name, teacher;
+    %%%%%:   29-block  0
+call    0 never executed
+call    1 never executed
+    #####:   30:    cout << "You chose to delete a subject!\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:    cout << "name :";
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:    cin >> name;
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:    cout << "\nteacher: ";
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   34:    cin >> teacher;
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   35:    ctr.deleteSubject(name, teacher);
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   36:}
+    %%%%%:   36-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   36-block  1
+call    2 never executed
+    $$$$$:   36-block  2
+call    3 never executed
+        -:   37:
+function _ZN10SubjectsUi8UifilterEv called 0 returned 0% blocks executed 0%
+    #####:   38:void SubjectsUi::Uifilter() {
+    #####:   39:    string option;
+    %%%%%:   39-block  0
+call    0 never executed
+    #####:   40:    cout << "You chose to filter. Please enter your option";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   41:    cin >> option;
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   42:    if (option == "hours") {
+    %%%%%:   42-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   43:        int hours;
+    #####:   44:        cout << "\nHours input: ";
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:        cin >> hours;
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:        vector<Subject> subjects_filtered = ctr.filterByHours(hours);
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:        print_subjects(subjects_filtered);
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:    } else if (option == "teacher") {
+    %%%%%:   48-block  0
+call    0 never executed
+    %%%%%:   48-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   48-block  2
+call    4 never executed
+    #####:   49:        string teacher;
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:        cout << "\nTeacher input: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   51:        cin >> teacher;
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:        vector<Subject> subjects_filtered = ctr.filterByTeacher(teacher);
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   53:        print_subjects(subjects_filtered);
+    %%%%%:   53-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   54:    } else {
+    %%%%%:   54-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   54-block  1
+call    2 never executed
+    $$$$$:   54-block  2
+call    3 never executed
+    #####:   55:        cout << "Invalid input!";
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   56:    }
+        -:   57:
+    #####:   58:}
+    %%%%%:   58-block  0
+call    0 never executed
+    $$$$$:   58-block  1
+call    1 never executed
+        -:   59:
+function _ZN10SubjectsUi8UisearchEv called 0 returned 0% blocks executed 0%
+    #####:   60:void SubjectsUi::Uisearch() {
+    #####:   61:    string name, teacher;
+    %%%%%:   61-block  0
+call    0 never executed
+call    1 never executed
+    #####:   62:    cout << "You chose to search for a subject!\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   63:    cout << "name :";
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   64:    cin >> name;
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   65:    cout << "\nteacher: ";
+    %%%%%:   65-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   66:    cin >> teacher;
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:    Subject to_print = ctr.searchForSubject(name, teacher);
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   67-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   68:    cout << "\nYour subject is: " << std::endl << to_print.to_string_print() << std::endl;
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   68-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   68-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   68-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   68-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   68-block  5
+call   15 never executed
+    $$$$$:   68-block  6
+call   16 never executed
+    $$$$$:   68-block  7
+    #####:   69:}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   69-block  0
+call    3 never executed
+    $$$$$:   69-block  1
+call    4 never executed
+    $$$$$:   69-block  2
+call    5 never executed
+        -:   70:
+function _ZN10SubjectsUi8UiupdateEv called 0 returned 0% blocks executed 0%
+    #####:   71:void SubjectsUi::Uiupdate() {
+    #####:   72:    string name, teacher;
+    %%%%%:   72-block  0
+call    0 never executed
+call    1 never executed
+    #####:   73:    cout << "You chose to update a subject! Please enter the name and teacher.\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:    cout << "name :";
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:    cin >> name;
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   76:    cout << "\nteacher: ";
+    %%%%%:   76-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   77:    cin >> teacher;
+    %%%%%:   77-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   78:
+        -:   79:    int hours;
+    #####:   80:    string type;
+    %%%%%:   80-block  0
+call    0 never executed
+    #####:   81:    cout << "\n new/old hours: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   82:    cin >> hours;
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   83:    cout << "\n new/old type: ";
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:    cin >> type;
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:    ctr.updateSubject(name, teacher, hours, type);
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   86:    Subject to_print = ctr.searchForSubject(name, teacher);
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   86-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   87:    cout << "\nYour modified subject is: " << std::endl << to_print.to_string_print() << std::endl;
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   87-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   87-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   87-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   87-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   87-block  5
+call   15 never executed
+    $$$$$:   87-block  6
+call   16 never executed
+    $$$$$:   87-block  7
+    #####:   88:}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   88-block  0
+call    4 never executed
+    $$$$$:   88-block  1
+call    5 never executed
+    $$$$$:   88-block  2
+call    6 never executed
+    $$$$$:   88-block  3
+call    7 never executed
+        -:   89:
+function _ZN10SubjectsUi6UisortEv called 0 returned 0% blocks executed 0%
+    #####:   90:void SubjectsUi::Uisort() {
+    #####:   91:    cout << "You chose to sort the list\n";
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:    cout << "Your criteria is: ";
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   93:    vector<Subject> sorted_list;
+    %%%%%:   93-block  0
+call    0 never executed
+    #####:   94:    string criteria;
+call    0 never executed
+    #####:   95:    cin >> criteria;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   96:    if (criteria == "name") {
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   97:
+    #####:   98:        sorted_list = ctr.sortByName();
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   98-block  1
+call    3 never executed
+call    4 never executed
+    #####:   99:        print_subjects(sorted_list);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  100:
+        -:  101:    }
+    #####:  102:    if (criteria == "hours") {
+    %%%%%:  102-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  103:
+    #####:  104:        sorted_list = ctr.sortByHours();
+    %%%%%:  104-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  104-block  1
+call    3 never executed
+call    4 never executed
+    #####:  105:        print_subjects(sorted_list);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  106:
+        -:  107:    }
+    #####:  108:    if (criteria == "teacher+type") {
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  109:
+    #####:  110:        sorted_list = ctr.sortByTeacherandType();
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  110-block  1
+call    3 never executed
+call    4 never executed
+    #####:  111:        print_subjects(sorted_list);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  112:
+        -:  113:    }
+        -:  114:
+        -:  115:
+    #####:  116:}
+    %%%%%:  116-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  116-block  1
+call    2 never executed
+    $$$$$:  116-block  2
+call    3 never executed
+        -:  117:
+function _ZN10SubjectsUi14print_subjectsERKSt6vectorI7SubjectSaIS1_EE called 0 returned 0% blocks executed 0%
+    #####:  118:void SubjectsUi::print_subjects(const vector<Subject> &subjects) {
+    #####:  119:    if (!subjects.empty()) {
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  120:        for (Subject subject: subjects) {
+    %%%%%:  120-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  120-block  1
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+    %%%%%:  120-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  121:            cout << subject.to_string_print() << "\n";
+    %%%%%:  121-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  121-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  121-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  121-block  3
+call    9 never executed
+    $$$$$:  121-block  4
+call   10 never executed
+    $$$$$:  121-block  5
+        -:  122:
+    #####:  123:        }
+call    0 never executed
+    $$$$$:  123-block  0
+call    1 never executed
+        -:  124:    } else {
+    #####:  125:        cout << "There are no subjects.\n";
+    %%%%%:  125-block  0
+call    0 never executed
+        -:  126:    }
+    #####:  127:}
+    %%%%%:  127-block  0
+        -:  128:
+function _ZN10SubjectsUi9print_allEv called 0 returned 0% blocks executed 0%
+    #####:  129:void SubjectsUi::print_all() {
+    #####:  130:    const vector<Subject> &subjects = ctr.getAll();
+    %%%%%:  130-block  0
+call    0 never executed
+    #####:  131:    if (!subjects.empty()) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  132:        cout << "Here is all your subject:\n";
+    %%%%%:  132-block  0
+call    0 never executed
+    #####:  133:        for (Subject subject: subjects) {
+call    0 never executed
+call    1 never executed
+    %%%%%:  133-block  0
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+    %%%%%:  133-block  1
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    #####:  134:            cout << subject.to_string_print() << "\n";
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  134-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  134-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  134-block  3
+call    9 never executed
+    $$$$$:  134-block  4
+call   10 never executed
+    $$$$$:  134-block  5
+        -:  135:
+    #####:  136:        }
+call    0 never executed
+    $$$$$:  136-block  0
+call    1 never executed
+    #####:  137:        cout << "~~END OF LIST~~\n";
+    %%%%%:  137-block  0
+call    0 never executed
+        -:  138:    } else
+    #####:  139:        cout << "There are no subjects.\n";
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:}
+    %%%%%:  140-block  0
+        -:  141:
+function _ZN10SubjectsUi4menuEv called 0 returned 0% blocks executed 0%
+    #####:  142:void SubjectsUi::menu() {
+    #####:  143:    cout << "\n";
+    %%%%%:  143-block  0
+call    0 never executed
+    #####:  144:    cout << "---------Menu---------\n";
+call    0 never executed
+    #####:  145:    cout << "||||COMMANDS||||\n";
+call    0 never executed
+    #####:  146:    cout << "\t0.End program!\n";
+call    0 never executed
+    #####:  147:    cout << "\t1.Add Subject.\n";
+call    0 never executed
+    #####:  148:    cout << "\t2.Delete Subject.\n";
+call    0 never executed
+    #####:  149:    cout << "\t3.Show all Subjects.\n";
+call    0 never executed
+    #####:  150:    cout << "\t4.Update a Subject.\n";
+call    0 never executed
+    #####:  151:    cout << "\t5.Search for an object\n";
+call    0 never executed
+    #####:  152:    cout << "\t----------------------------------\n";
+call    0 never executed
+    #####:  153:    cout << "\t\tFILTERS AND SORTING OPERATIONS\n";
+call    0 never executed
+    #####:  154:    cout << "\t\t\t6.Filter by: number of hours or teacher\n";
+call    0 never executed
+        -:  155:    cout
+    #####:  156:            << "\t\t\t7.Sort by name of Subject or number of hours or teacher and type of subject\n";
+call    0 never executed
+    #####:  157:    cout << "Print menu~!\n";
+call    0 never executed
+    #####:  158:    cout << "\n---------------------------------------------------------------------------------------------------\n";
+call    0 never executed
+        -:  159:
+    #####:  160:}
+        -:  161:
+function _ZN10SubjectsUi5startEv called 0 returned 0% blocks executed 0%
+    #####:  162:void SubjectsUi::start() {
+    #####:  163:    int command = -1;
+    #####:  164:    menu();
+    %%%%%:  164-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  165:    while (true) {
+        -:  166:
+    #####:  167:        cout << "Your input is\n";
+    %%%%%:  167-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  168:        cin >> command;
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  169:        if (command == 0)
+    %%%%%:  169-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  170:            return;
+    %%%%%:  170-block  0
+    %%%%%:  170-block  1
+    #####:  171:        if (command == 1) {
+    %%%%%:  171-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  172:            try {
+    #####:  173:                UiAdd();
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  174:            }
+    =====:  175:            catch (RepositoryException &e) {
+    $$$$$:  175-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  175-block  1
+call    3 never executed
+    =====:  176:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  176-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  176-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  176-block  2
+call    9 never executed
+    $$$$$:  176-block  3
+call   10 never executed
+    $$$$$:  176-block  4
+    =====:  177:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  177-block  0
+call    3 never executed
+    =====:  178:            catch (ValidatorException &ve) {
+    $$$$$:  178-block  0
+call    0 never executed
+    =====:  179:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  179-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  179-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  179-block  2
+call    9 never executed
+    $$$$$:  179-block  3
+call   10 never executed
+    $$$$$:  179-block  4
+    =====:  180:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  180-block  0
+call    3 never executed
+        -:  181:        }
+    #####:  182:        if (command == 2) {
+    %%%%%:  182-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  183:            try {
+    #####:  184:                Uidelete();
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  185:            }
+    =====:  186:            catch (RepositoryException &e) {
+    $$$$$:  186-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  186-block  1
+call    3 never executed
+    =====:  187:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  187-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  187-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  187-block  2
+call    9 never executed
+    $$$$$:  187-block  3
+call   10 never executed
+    $$$$$:  187-block  4
+    =====:  188:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  188-block  0
+call    3 never executed
+    =====:  189:            catch (ValidatorException &ve) {
+    $$$$$:  189-block  0
+call    0 never executed
+    =====:  190:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  190-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  190-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  190-block  2
+call    9 never executed
+    $$$$$:  190-block  3
+call   10 never executed
+    $$$$$:  190-block  4
+    =====:  191:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  191-block  0
+call    3 never executed
+        -:  192:        }
+    #####:  193:        if (command == 3) {
+    %%%%%:  193-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  194:            print_all();
+    %%%%%:  194-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  195:        }
+    #####:  196:        if (command == 4) {
+    %%%%%:  196-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  197:            try {
+    #####:  198:                Uiupdate();
+    %%%%%:  198-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  199:            }
+    =====:  200:            catch (RepositoryException &e) {
+    $$$$$:  200-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  200-block  1
+call    3 never executed
+    =====:  201:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  201-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  201-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  201-block  2
+call    9 never executed
+    $$$$$:  201-block  3
+call   10 never executed
+    $$$$$:  201-block  4
+    =====:  202:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  202-block  0
+call    3 never executed
+    =====:  203:            catch (ValidatorException &ve) {
+    $$$$$:  203-block  0
+call    0 never executed
+    =====:  204:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  204-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  204-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  204-block  2
+call    9 never executed
+    $$$$$:  204-block  3
+call   10 never executed
+    $$$$$:  204-block  4
+    =====:  205:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  205-block  0
+call    3 never executed
+        -:  206:        }
+    #####:  207:        if (command == 5) {
+    %%%%%:  207-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  208:            try {
+    #####:  209:                Uisearch();
+    %%%%%:  209-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  210:            }
+    =====:  211:            catch (RepositoryException &e) {
+    $$$$$:  211-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  211-block  1
+call    3 never executed
+    =====:  212:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  212-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  212-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  212-block  2
+call    9 never executed
+    $$$$$:  212-block  3
+call   10 never executed
+    $$$$$:  212-block  4
+    =====:  213:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  213-block  0
+call    3 never executed
+    =====:  214:            catch (ValidatorException &ve) {
+    $$$$$:  214-block  0
+call    0 never executed
+    =====:  215:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  215-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  215-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  215-block  2
+call    9 never executed
+    $$$$$:  215-block  3
+call   10 never executed
+    $$$$$:  215-block  4
+    =====:  216:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  216-block  0
+call    3 never executed
+        -:  217:        }
+    #####:  218:        if (command == 6) {
+    %%%%%:  218-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  219:            try {
+    #####:  220:                Uifilter();
+    %%%%%:  220-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  221:            }
+    =====:  222:            catch (RepositoryException &e) {
+    $$$$$:  222-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  222-block  1
+call    3 never executed
+    =====:  223:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  223-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  223-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  223-block  2
+call    9 never executed
+    $$$$$:  223-block  3
+call   10 never executed
+    $$$$$:  223-block  4
+    =====:  224:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  224-block  0
+call    3 never executed
+    =====:  225:            catch (ValidatorException &ve) {
+    $$$$$:  225-block  0
+call    0 never executed
+    =====:  226:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  226-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  226-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  226-block  2
+call    9 never executed
+    $$$$$:  226-block  3
+call   10 never executed
+    $$$$$:  226-block  4
+    =====:  227:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  227-block  0
+call    3 never executed
+        -:  228:        }
+    #####:  229:        if (command == 7) {
+    %%%%%:  229-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  230:            try {
+    #####:  231:                Uisort();
+    %%%%%:  231-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  232:            }
+    =====:  233:            catch (RepositoryException &e) {
+    $$$$$:  233-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  233-block  1
+call    3 never executed
+    =====:  234:                cout << e.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  234-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  234-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  234-block  2
+call    9 never executed
+    $$$$$:  234-block  3
+call   10 never executed
+    $$$$$:  234-block  4
+    =====:  235:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  235-block  0
+call    3 never executed
+    =====:  236:            catch (ValidatorException &ve) {
+    $$$$$:  236-block  0
+call    0 never executed
+    =====:  237:                cout << ve.getMessage() << std::endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  237-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  237-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  237-block  2
+call    9 never executed
+    $$$$$:  237-block  3
+call   10 never executed
+    $$$$$:  237-block  4
+    =====:  238:            }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  238-block  0
+call    3 never executed
+        -:  239:        }
+    #####:  240:        if (command == 8) {
+    %%%%%:  240-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  241:            menu();
+    %%%%%:  241-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  242:        }
+    #####:  243:    }
+    %%%%%:  243-block  0
+        -:  244:}

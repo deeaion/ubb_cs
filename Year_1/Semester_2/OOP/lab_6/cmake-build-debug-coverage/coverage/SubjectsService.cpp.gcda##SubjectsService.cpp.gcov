@@ -1,0 +1,248 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/service/SubjectsService.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\service\SubjectsService.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\service\SubjectsService.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "SubjectsService.h"
+        -:    6:
+function _ZN15SubjectsService13updateSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_iS7_ called 2 returned 50% blocks executed 100%
+        2:    7:void SubjectsService::updateSubject(const string &name, const string &teacher, int hours, const string &type) {
+        2:    8:    Subject modifiecObject{name, hours, type, teacher};
+        2:    8-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    9:    ValidatorSubject::validateSubject(modifiecObject);
+        2:    9-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   10:    repo.updateSubjectRepo(modifiecObject);
+        2:   10-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   11:}
+        1:   11-block  0
+call    0 returned 1
+        1:   11-block  1
+call    1 returned 1
+        -:   12:
+function _ZN15SubjectsService10addSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 5 returned 80% blocks executed 100%
+        5:   13:void SubjectsService::addSubject(const std::string &name, int hours, const string &teacher,
+        -:   14:                                 const string &type) {
+        5:   15:    Subject subjectToAdd{name, hours, type, teacher};
+        5:   15-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   16:    ValidatorSubject::validateSubject(subjectToAdd);
+        5:   16-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   17:    repo.store(subjectToAdd);
+        5:   17-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1 (throw)
+        5:   18:}
+        4:   18-block  0
+call    0 returned 4
+        1:   18-block  1
+call    1 returned 1
+        -:   19:
+function _ZN15SubjectsService13deleteSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 4 returned 75% blocks executed 100%
+        4:   20:void SubjectsService::deleteSubject(const std::string &name, const std::string &teacher) {
+        4:   21:    repo.removeSubjectRepo(name, teacher);
+        4:   21-block  0
+call    0 returned 3
+        3:   22:}
+        -:   23:
+function _ZN15SubjectsService16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 1 returned 100% blocks executed 100%
+        1:   24:const Subject &SubjectsService::searchForSubject(const std::string &name, const std::string &teacher) {
+        1:   25:    return repo.getSubject(name, teacher);
+        1:   25-block  0
+call    0 returned 1
+        -:   26:}
+        -:   27:
+        -:   28:
+function _ZN15SubjectsService6getAllEv called 1 returned 100% blocks executed 100%
+        1:   29:const vector<Subject> &SubjectsService::getAll() noexcept {
+        1:   30:    return this->repo.getAll();
+        1:   30-block  0
+call    0 returned 1
+        -:   31:}
+        -:   32:
+function _ZN15SubjectsService11generalSortEPFbRK7SubjectS2_E called 4 returned 100% blocks executed 87%
+        4:   33:vector<Subject> SubjectsService::generalSort(bool(*cmpKey)(const Subject &, const Subject &)) {
+        4:   34:    vector<Subject> subjects{repo.getAll()};
+        4:   34-block  0
+call    0 returned 4
+call    1 returned 4
+       11:   35:    for (size_t i = 0; i < subjects.size(); i++) {
+        7:   35-block  0
+       11:   35-block  1
+call    0 returned 11
+branch  1 taken 7
+branch  2 taken 4 (fallthrough)
+       10:   36:        for (size_t j = i + 1; j < subjects.size(); j++) {
+        7:   36-block  0
+        3:   36-block  1
+       10:   36-block  2
+call    0 returned 10
+branch  1 taken 3
+branch  2 taken 7 (fallthrough)
+        3:   37:            if (!cmpKey(subjects[i], subjects[j])) {
+        3:   37-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   37-block  1
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0
+        -:   38:                //interschimbam
+        3:   39:                Subject aux = subjects[i];
+        3:   39-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   40:                subjects[i] = subjects[j];
+        3:   40-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        3:   41:                subjects[j] = aux;
+        3:   41-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   42:            }
+        3:   42-block  0
+call    0 returned 3
+    $$$$$:   42-block  1
+call    1 never executed
+        -:   43:        }
+        -:   44:    }
+        4:   45:    return subjects;}
+        4:   45-block  0
+        4:   45-block  1
+    $$$$$:   45-block  2
+call    0 never executed
+        -:   46:
+function _ZN15SubjectsService6filterERKSt8functionIFbRK7SubjectEE called 2 returned 100% blocks executed 88%
+        2:   47:vector<Subject> SubjectsService::filter(const function<bool(const Subject &)> &fct) {
+        2:   48:    vector<Subject> result;
+        2:   48-block  0
+call    0 returned 2
+        6:   49:    for (const auto &subject: repo.getAll()) {
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+        4:   49-block  0
+call    3 returned 4
+        4:   49-block  1
+call    4 returned 4
+        6:   49-block  2
+call    5 returned 6
+branch  6 taken 4
+branch  7 taken 2 (fallthrough)
+        4:   50:        if (fct(subject)) {
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   50-block  0
+branch  3 taken 2 (fallthrough)
+branch  4 taken 2
+        2:   51:            result.push_back(subject);
+        2:   51-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   52:        }
+        -:   53:    }
+        2:   54:    return result;}
+        2:   54-block  0
+        2:   54-block  1
+    $$$$$:   54-block  2
+call    0 never executed
+        -:   55:
+function _ZN15SubjectsService13filterByHoursEi called 1 returned 100% blocks executed 75%
+        1:   56:vector<Subject> SubjectsService::filterByHours(int hours) {
+function _ZZN15SubjectsService13filterByHoursEiENKUlRK7SubjectE_clES2_ called 2 returned 100% blocks executed 100%
+        4:   57:    return filter([hours](const Subject &sbj) {
+        2:   58:        return sbj.get_hours() == hours;
+        2:   58-block  0
+call    0 returned 2
+        1:   59:    });
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+call    4 returned 1
+        1:   59-block  2
+    $$$$$:   59-block  3
+call    5 never executed
+        -:   60:}
+        -:   61:
+function _ZN15SubjectsService15filterByTeacherERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 62%
+        1:   62:vector<Subject> SubjectsService::filterByTeacher(const string &teacher) {
+function _ZZN15SubjectsService15filterByTeacherERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK7SubjectE_clESA_ called 2 returned 100% blocks executed 100%
+        2:   63:    return filter([teacher](const Subject &sbj) {
+        2:   64:        return sbj.get_teacher() == teacher;
+        2:   64-block  0
+call    0 returned 2
+call    1 returned 2
+        1:   65:    });
+        1:   65-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   65-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   65-block  2
+call    7 returned 1
+call    8 returned 1
+        1:   65-block  3
+    $$$$$:   65-block  4
+call    9 never executed
+    $$$$$:   65-block  5
+    $$$$$:   65-block  6
+call   10 never executed
+        -:   66:}
+        -:   67:
+function _ZN15SubjectsService10sortByNameEv called 2 returned 100% blocks executed 100%
+        2:   68:vector<Subject> SubjectsService::sortByName() {
+        2:   69:    return generalSort(cmpName);
+        2:   69-block  0
+call    0 returned 2
+        -:   70:}
+        -:   71:
+function _ZN15SubjectsService11sortByHoursEv called 1 returned 100% blocks executed 100%
+        1:   72:vector<Subject> SubjectsService::sortByHours() {
+        1:   73:    return generalSort(cmpHours);
+        1:   73-block  0
+call    0 returned 1
+        -:   74:}
+        -:   75:
+function _ZN15SubjectsService20sortByTeacherandTypeEv called 1 returned 100% blocks executed 100%
+        1:   76:vector<Subject> SubjectsService::sortByTeacherandType() {
+        1:   77:    return generalSort(cmpTeacherandType);
+        1:   77-block  0
+call    0 returned 1
+        -:   78:
+        -:   79:}

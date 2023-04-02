@@ -39,7 +39,7 @@ void SubjectsRepo::removeSubjectRepo(const string &name, const string &teacher) 
         auto first = this->subjects.begin();
         this->subjects.erase(first + index);
     } else {
-        throw RepositoryException("Tape does not exist!");
+        throw RepositoryException("Subject does not exist!");
 
     }
 }
@@ -51,7 +51,7 @@ void SubjectsRepo::updateSubjectRepo(const Subject &subjectToUpdate) {
     if (index != -1) {
         this->subjects[index] = subjectToUpdate;
     } else {
-        throw RepositoryException("Tape does not exist!");
+        throw RepositoryException("Subject does not exist!");
 
     }
 }
@@ -61,7 +61,7 @@ const Subject &SubjectsRepo::getSubject(const string &name, const string &teache
     if (index != -1) {
         return this->subjects[index];
     } else {
-        throw RepositoryException("Tape does not exist!");
+        throw RepositoryException("Subject does not exist!");
 
     }
 }

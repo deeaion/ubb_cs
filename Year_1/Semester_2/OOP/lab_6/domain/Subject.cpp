@@ -8,7 +8,7 @@
 /**DEFAULT CONSTRUCTOR*/
 Subject::Subject() {
     this->name = "";
-    this->hours = 0;
+    this->hours = -1;
     this->type = "";
     this->teacher = "";
 }
@@ -65,7 +65,7 @@ const string &Subject::get_teacher() const {
 
 /**TO STRING*/
 string Subject::to_string_print() {
-    return "Subject " + this->name + "\n\tHours: " + std::to_string(this->hours) + "\n\tType: " + this->type +
+    return "\tSubject " + this->name + "\n\tHours: " + std::to_string(this->hours) + "\n\tType: " + this->type +
            "\n\tTeacher: " + this->teacher;
 }
 
@@ -108,14 +108,14 @@ bool cmpType(const Subject &sbj_1, const Subject &sbj_2) {
 }
 
 bool cmpTeacherandType(const Subject &sbj_1, const Subject &sbj_2) {
-    if (!cmpTeacher(sbj_1, sbj_2))
+    if (sbj_1.get_teacher()>sbj_2.get_teacher())
         return false;
-    if (cmpTeacher(sbj_1, sbj_2))
+    if (sbj_1.get_teacher()<sbj_2.get_teacher())
         return true;
-    else if (sbj_1.get_teacher() == sbj_2.get_teacher()) {
-        if (cmpType(sbj_1, sbj_2))
+    if (sbj_1.get_teacher() == sbj_2.get_teacher()) {
+        if (sbj_1.get_type() < sbj_2.get_type())
             return true;
-        else
+        else if (sbj_1.get_type() > sbj_2.get_type())
             return false;
     }
     return false;

@@ -1,0 +1,43 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/main.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "domain/Subject.h"
+        -:    3:#include "repository/SubjectsRepo.h"
+        -:    4:#include "service/SubjectsService.h"
+        -:    5:#include "ui/SubjectsUi.h"
+        -:    6:#include "tests/Tests.h"
+        -:    7:using std::cout;
+        -:    8:
+function main called 1 returned 100% blocks executed 85%
+        1:    9:int main() {
+        1:   10:    Tests tests;
+        1:   10-block  0
+call    0 returned 1
+        1:   11:    tests.testAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:    cout << "Program is starting\n";
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    SubjectsRepo rep;
+        1:   13-block  0
+call    0 returned 1
+        -:   14:    ValidatorSubject val;
+        1:   15:    SubjectsService ctr{rep, val};
+call    0 returned 1
+        1:   16:    SubjectsUi ui{ctr};
+call    0 returned 1
+        -:   17:
+        -:   18:    //ui.start();
+        -:   19:
+        1:   20:    return 0;
+        1:   21:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   21-block  0
+call    2 never executed

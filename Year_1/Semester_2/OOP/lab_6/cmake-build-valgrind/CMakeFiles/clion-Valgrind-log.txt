@@ -1,6 +1,4 @@
-C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/cmake-build-valgrind' && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'Unix Makefiles' '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6'"
-CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
-  CMake 3.25 or higher is required.  You are running version 3.22.1
-
-
--- Configuring incomplete, errors occurred!
+C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/cmake-build-valgrind' && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'Unix Makefiles' -S '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6' -B '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/cmake-build-valgrind'"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/cmake-build-valgrind

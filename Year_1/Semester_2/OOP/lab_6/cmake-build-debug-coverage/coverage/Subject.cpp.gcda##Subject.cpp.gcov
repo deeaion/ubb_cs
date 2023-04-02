@@ -1,0 +1,373 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/domain/Subject.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\domain\Subject.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\domain\Subject.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Subject.h"
+        -:    6:#include <iostream>
+        -:    7:
+        -:    8:/**DEFAULT CONSTRUCTOR*/
+function _ZN7SubjectC2Ev called 3 returned 100% blocks executed 62%
+        3:    9:Subject::Subject() {
+        3:    9-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:   10:    this->name = "";
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   11:    this->hours = -1;
+        3:   12:    this->type = "";
+        3:   12-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   13:    this->teacher = "";
+        3:   13-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   14:}
+        3:   14-block  0
+    $$$$$:   14-block  1
+call    0 never executed
+    $$$$$:   14-block  2
+call    1 never executed
+    $$$$$:   14-block  3
+call    2 never executed
+        -:   15:
+        -:   16:
+        -:   17:/**CONSTRUCTOR OF SUBJECT*/
+function _ZN7SubjectC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_S7_ called 28 returned 100% blocks executed 62%
+       28:   18:Subject::Subject(const std::string &n, int h, const std::string &t, const std::string &te) {
+       28:   18-block  0
+call    0 returned 28
+call    1 returned 28
+call    2 returned 28
+       28:   19:    this->name = n;
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   20:    this->hours = h;
+       28:   21:    this->type = t;
+       28:   21-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   22:    this->teacher = te;
+       28:   22-block  0
+call    0 returned 28
+branch  1 taken 28 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   23:}
+       28:   23-block  0
+    $$$$$:   23-block  1
+call    0 never executed
+    $$$$$:   23-block  2
+call    1 never executed
+    $$$$$:   23-block  3
+call    2 never executed
+        -:   24:
+        -:   25:/**DESTRUCTOR*/
+function _ZN7SubjectD2Ev called 68 returned 100% blocks executed 100%
+       68:   26:Subject::~Subject() = default;
+       68:   26-block  0
+call    0 returned 68
+call    1 returned 68
+call    2 returned 68
+        -:   27:
+        -:   28:/**COPY CONSTRUCTOR*/
+function _ZN7SubjectC2ERKS_ called 37 returned 100% blocks executed 62%
+       37:   29:Subject::Subject(const Subject &subject) {
+       37:   29-block  0
+call    0 returned 37
+call    1 returned 37
+call    2 returned 37
+       37:   30:    this->name = subject.name;
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:   31:    this->hours = subject.hours;
+       37:   32:    this->type = subject.type;
+       37:   32-block  0
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:   33:    this->teacher = subject.teacher;
+       37:   33-block  0
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:   34:}
+       37:   34-block  0
+    $$$$$:   34-block  1
+call    0 never executed
+    $$$$$:   34-block  2
+call    1 never executed
+    $$$$$:   34-block  3
+call    2 never executed
+        -:   35:
+        -:   36:/**
+        -:   37: * GETTERS
+        -:   38: *
+        -:   39: */
+function _ZNK7Subject9get_hoursEv called 22 returned 100% blocks executed 100%
+       22:   40:int Subject::get_hours() const {
+       22:   41:    return this->hours;
+       22:   41-block  0
+        -:   42:}
+        -:   43:
+function _ZNK7Subject8get_nameB5cxx11Ev called 48 returned 100% blocks executed 100%
+       48:   44:const string &Subject::get_name() const {
+       48:   45:    return this->name;
+       48:   45-block  0
+        -:   46:}
+        -:   47:
+function _ZNK7Subject8get_typeB5cxx11Ev called 36 returned 100% blocks executed 100%
+       36:   48:const string &Subject::get_type() const {
+       36:   49:    return this->type;
+       36:   49-block  0
+        -:   50:}
+        -:   51:
+function _ZNK7Subject11get_teacherB5cxx11Ev called 92 returned 100% blocks executed 100%
+       92:   52:const string &Subject::get_teacher() const {
+       92:   53:    return this->teacher;
+       92:   53-block  0
+        -:   54:}
+        -:   55:
+        -:   56:/**SETTERS*/
+        -:   57:
+function _ZN7Subject9set_hoursEi called 1 returned 100% blocks executed 100%
+        1:   58:[[maybe_unused]] void Subject::set_hours(int new_hours) {
+        1:   59:    this->hours = new_hours;
+        1:   60:}
+        -:   61:
+function _ZN7Subject8set_typeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   62:[[maybe_unused]] void Subject::set_type(const std::string &new_type) {
+        1:   63:    this->type = new_type;
+        1:   63-block  0
+call    0 returned 1
+        1:   64:}
+        -:   65:
+        -:   66:/**TO STRING*/
+function _ZN7Subject15to_string_printB5cxx11Ev called 1 returned 100% blocks executed 49%
+        1:   67:string Subject::to_string_print() {
+        2:   68:    return "\tSubject " + this->name + "\n\tHours: " + std::to_string(this->hours) + "\n\tType: " + this->type +
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   68-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   68-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   68-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   68-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   68-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   68-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:   68-block  6
+call   25 never executed
+    $$$$$:   68-block  7
+    $$$$$:   68-block  8
+call   26 never executed
+    $$$$$:   68-block  9
+    $$$$$:   68-block 10
+call   27 never executed
+    $$$$$:   68-block 11
+    $$$$$:   68-block 12
+call   28 never executed
+    $$$$$:   68-block 13
+    $$$$$:   68-block 14
+call   29 never executed
+    $$$$$:   68-block 15
+    $$$$$:   68-block 16
+call   30 never executed
+    $$$$$:   68-block 17
+    $$$$$:   68-block 18
+call   31 never executed
+        3:   69:           "\n\tTeacher: " + this->teacher;
+        1:   69-block  0
+call    0 returned 1
+        1:   69-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   69-block  2
+        -:   70:}
+        -:   71:
+        -:   72:/**OPERATORS*/
+        -:   73:
+function _ZN7SubjectaSERKS_ called 9 returned 100% blocks executed 100%
+        9:   74:Subject &Subject::operator=(const Subject &other) = default;
+        9:   74-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+        -:   75:
+function _ZN7SubjecteqERKS_ called 12 returned 100% blocks executed 88%
+       12:   76:bool Subject::operator==(const Subject &other) {
+      12*:   77:    return this->name == other.name && this->teacher == other.teacher;
+       12:   77-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0
+       12:   77-block  1
+call    3 returned 12
+branch  4 taken 12 (fallthrough)
+branch  5 taken 0
+       12:   77-block  2
+    %%%%%:   77-block  3
+       12:   77-block  4
+        -:   78:}
+        -:   79:
+        -:   80:/**COMPARATORS*/
+        -:   81:
+function _Z7cmpNameRK7SubjectS1_ called 3 returned 100% blocks executed 100%
+        3:   82:bool cmpName(const Subject &sbj_1, const Subject &sbj_2) {
+        3:   83:    if (sbj_1.get_name() < sbj_2.get_name())
+        3:   83-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
+        1:   84:        return true;
+        1:   84-block  0
+        -:   85:    else
+        2:   86:        return false;
+        2:   86-block  0
+        -:   87:}
+        -:   88:
+function _Z8cmpHoursRK7SubjectS1_ called 3 returned 100% blocks executed 100%
+        3:   89:bool cmpHours(const Subject &sbj_1, const Subject &sbj_2) {
+        3:   90:    if (sbj_1.get_hours() < sbj_2.get_hours())
+        3:   90-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:   91:        return true;
+        1:   91-block  0
+        -:   92:    else
+        2:   93:        return false;
+        2:   93-block  0
+        -:   94:}
+        -:   95:
+function _Z10cmpTeacherRK7SubjectS1_ called 2 returned 100% blocks executed 100%
+        2:   96:bool cmpTeacher(const Subject &sbj_1, const Subject &sbj_2) {
+        2:   97:    if (sbj_1.get_teacher() < sbj_2.get_teacher())
+        2:   97-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:   98:        return true;
+        1:   98-block  0
+        -:   99:    else
+        1:  100:        return false;
+        1:  100-block  0
+        -:  101:}
+        -:  102:
+function _Z7cmpTypeRK7SubjectS1_ called 2 returned 100% blocks executed 100%
+        2:  103:bool cmpType(const Subject &sbj_1, const Subject &sbj_2) {
+        2:  104:    if (sbj_1.get_type() < sbj_2.get_type())
+        2:  104-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 1 (fallthrough)
+branch  6 taken 1
+        1:  105:        return true;
+        1:  105-block  0
+        -:  106:    else
+        1:  107:        return false;
+        1:  107-block  0
+        -:  108:}
+        -:  109:
+function _Z17cmpTeacherandTypeRK7SubjectS1_ called 11 returned 100% blocks executed 100%
+       11:  110:bool cmpTeacherandType(const Subject &sbj_1, const Subject &sbj_2) {
+       11:  111:    if (sbj_1.get_teacher()>sbj_2.get_teacher())
+       11:  111-block  0
+call    0 returned 11
+call    1 returned 11
+call    2 returned 11
+call    3 returned 11
+call    4 returned 11
+branch  5 taken 3 (fallthrough)
+branch  6 taken 8
+        3:  112:        return false;
+        3:  112-block  0
+        8:  113:    if (sbj_1.get_teacher()<sbj_2.get_teacher())
+        8:  113-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+call    3 returned 8
+call    4 returned 8
+branch  5 taken 2 (fallthrough)
+branch  6 taken 6
+        2:  114:        return true;
+        2:  114-block  0
+        6:  115:    if (sbj_1.get_teacher() == sbj_2.get_teacher()) {
+        6:  115-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 6 (fallthrough)
+branch  4 taken 0
+        6:  116:        if (sbj_1.get_type() < sbj_2.get_type())
+        6:  116-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+call    3 returned 6
+call    4 returned 6
+branch  5 taken 3 (fallthrough)
+branch  6 taken 3
+        3:  117:            return true;
+        3:  117-block  0
+        3:  118:        else if (sbj_1.get_type() > sbj_2.get_type())
+        3:  118-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
+        1:  119:            return false;
+        1:  119-block  0
+        -:  120:    }
+        2:  121:    return false;
+        2:  121-block  0
+        -:  122:}

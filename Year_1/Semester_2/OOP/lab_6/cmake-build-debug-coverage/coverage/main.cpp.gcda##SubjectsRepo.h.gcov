@@ -1,0 +1,82 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_6/repository/SubjectsRepo.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_6\cmake-build-debug-coverage\CMakeFiles\lab_6.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_7_SUBJECTSREPO_H
+        -:    6:#define LAB_6_7_SUBJECTSREPO_H
+        -:    7:
+        -:    8://inclusions
+        -:    9:#pragma once
+        -:   10:
+        -:   11:#include <vector>
+        -:   12:#include <string>
+        -:   13:#include "../Exceptions/Exceptions.h"
+        -:   14:#include "../domain/Subject.h"
+        -:   15:
+        -:   16://std
+        -:   17:using std::vector;
+        -:   18:using std::string;
+        -:   19:
+        -:   20:class SubjectsRepo {
+        -:   21:private:
+        -:   22:    //this will be our vector!
+        -:   23:    vector<Subject> subjects;
+        -:   24:
+        -:   25:public:
+        -:   26:
+function _ZN12SubjectsRepoC1Ev called 6 returned 100% blocks executed 100%
+        6:   27:    SubjectsRepo() = default;
+        6:   27-block  0
+call    0 returned 6
+        -:   28:
+        -:   29:    //we do not permit to copy the objects
+        -:   30:    SubjectsRepo(const SubjectsRepo &ot) = delete;
+        -:   31:    /** store subject to list of subjects*/
+        -:   32:    /*
+        -:   33:     * /params: sbj
+        -:   34:     * throws exceptions if there is an already existing subject like sbj
+        -:   35:     *
+        -:   36:     */
+        -:   37:    void store(const Subject &sbj);
+        -:   38:
+        -:   39:    /*
+        -:   40:     * returns all saved animals
+        -:   41:     */
+        -:   42:    [[nodiscard]] const vector<Subject> &getAll() const noexcept;
+        -:   43:
+        -:   44:    /*
+        -:   45:     * update Subject
+        -:   46:     * //params: new Tape
+        -:   47:     * throws exceptions if tape doesn't exist
+        -:   48:     */
+        -:   49:    void updateSubjectRepo(const Subject &subjectToUpdate);
+        -:   50:
+        -:   51:    /*
+        -:   52:     * delete Subkect
+        -:   53:     * //params: title and teacher
+        -:   54:     * deletes the subject if it has the same title and teacher
+        -:   55:     */
+        -:   56:    void removeSubjectRepo(const string &name, const string &teacher);
+        -:   57:
+        -:   58:    /*
+        -:   59:     * search position in vector
+        -:   60:     * params: string name,string teacher
+        -:   61:     * returns : i!=1 if subject exists
+        -:   62:     *              else i=-1 if it doesnt exist
+        -:   63:     */
+        -:   64:    int searchForSubject(const string &name, const string &teacher);
+        -:   65:
+        -:   66:    /*
+        -:   67:     * returns: Subject else throws exception
+        -:   68:     */
+        -:   69:    const Subject &getSubject(const string &name, const string &teacher);
+        -:   70:
+        -:   71:
+        -:   72:};
+        -:   73:
+        -:   74:
+        -:   75:#endif //LAB_6_7_SUBJECTSREPO_H

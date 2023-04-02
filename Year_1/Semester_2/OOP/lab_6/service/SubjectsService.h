@@ -18,7 +18,7 @@ using std::function;
 
 class SubjectsService {
     SubjectsRepo &repo;
-    [[maybe_unused]] ValidatorSubject &val;
+     ValidatorSubject &val;
 
     /*
      *Function that sorts the list it is given of Subjects

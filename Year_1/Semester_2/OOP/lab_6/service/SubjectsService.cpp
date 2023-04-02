@@ -42,8 +42,7 @@ vector<Subject> SubjectsService::generalSort(bool(*cmpKey)(const Subject &, cons
             }
         }
     }
-    return subjects;
-}
+    return subjects;}
 
 vector<Subject> SubjectsService::filter(const function<bool(const Subject &)> &fct) {
     vector<Subject> result;
@@ -52,8 +51,7 @@ vector<Subject> SubjectsService::filter(const function<bool(const Subject &)> &f
             result.push_back(subject);
         }
     }
-    return result;
-}
+    return result;}
 
 vector<Subject> SubjectsService::filterByHours(int hours) {
     return filter([hours](const Subject &sbj) {
