@@ -1,0 +1,112 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_7_SUBJECTSSERVICE_H
+        -:    6:#define LAB_6_7_SUBJECTSSERVICE_H
+        -:    7:#pragma once
+        -:    8:
+        -:    9:#include "../validator/ValidatorSubject.h"
+        -:   10:#include "../repository/SubjectsRepo.h"
+        -:   11:#include <string>
+        -:   12:#include <vector>
+        -:   13:#include <functional>
+        -:   14:
+        -:   15:using std::string;
+        -:   16:using std::vector;
+        -:   17:using std::function;
+        -:   18:
+        -:   19:class SubjectsService {
+        -:   20:    SubjectsRepo &repo;
+        -:   21:     ValidatorSubject &val;
+        -:   22:
+        -:   23:    /*
+        -:   24:     *Function that sorts the list it is given of Subjects
+        -:   25:     * it compares two Subjects
+        -:   26:     * it is given a key tehnically which is one of the functions that the file subject
+        -:   27:     * has
+        -:   28:     * returns: a copied list of the subjects but sorted
+        -:   29:     *
+        -:   30:     */
+        -:   31:    DynamicVector<Subject> generalSort(bool(*cmpKey)(const Subject &, const Subject &));
+        -:   32:
+        -:   33:    /*
+        -:   34:     * Generic Function
+        -:   35:     * fct-> can be a function or lambda ( function <> allows lambda functions!)
+        -:   36:     * returns: only the subjects that satisfy the criteria
+        -:   37:     *
+        -:   38:     */
+        -:   39:    DynamicVector<Subject> filter(const function<bool(const Subject &)> &fct);
+        -:   40:
+        -:   41:public:
+function _ZN15SubjectsServiceC1ER12SubjectsRepoR16ValidatorSubject called 0 returned 0% blocks executed 0%
+    #####:   42:    SubjectsService(SubjectsRepo &repo, ValidatorSubject &val) : repo{repo}, val{val} {
+        -:   43:
+    #####:   44:    }
+        -:   45:
+        -:   46:    //we don't allow the copy of objects in SubjectsService
+        -:   47:    SubjectsService(const SubjectsService &ot) = delete;
+        -:   48:
+        -:   49:    /*
+        -:   50:     * returns: all the subjects in the order they were added
+        -:   51:     */
+        -:   52:    const DynamicVector<Subject>& getAll() noexcept;
+        -:   53:
+        -:   54:    /*
+        -:   55:     * Add the Subjects
+        -:   56:     * Throws Exception if: it already exists or is not valid
+        -:   57:     */
+        -:   58:    void addSubject(const string &name, int hours, const string &teacher, const string &type);
+        -:   59:
+        -:   60:    /*
+        -:   61:     * Delete the subject
+        -:   62:     * Throws Exception if : subject does not exist
+        -:   63:     */
+        -:   64:    void deleteSubject(const string &name, const string &teacher);
+        -:   65:
+        -:   66:    /*
+        -:   67:     * Update the subject
+        -:   68:     * Throws Exception if: the subject does not exist
+        -:   69:     *                      the new parameters are not valid
+        -:   70:     */
+        -:   71:    void updateSubject(const string &name, const string &teacher, int hours, const string &type);
+        -:   72:
+        -:   73:    /*
+        -:   74:     * Search for the subject by name and teacher
+        -:   75:     * Throws Exception if : the subject does not exist
+        -:   76:     *
+        -:   77:     */
+        -:   78:    const Subject &searchForSubject(const string &name, const string &teacher);
+        -:   79:
+        -:   80:    /**FILTERS*/
+        -:   81:
+        -:   82:    /*Filter by number of hours*/
+        -:   83:    DynamicVector<Subject> filterByHours(int hours);
+        -:   84:
+        -:   85:    /*Filter by teacher's name*/
+        -:   86:    DynamicVector<Subject> filterByTeacher(const string &teacher);
+        -:   87:
+        -:   88:    /** SORT*/
+        -:   89:    /*
+        -:   90:     * Sort by name of subject
+        -:   91:     */
+        -:   92:    DynamicVector<Subject> sortByName();
+        -:   93:
+        -:   94:    /*
+        -:   95:     * Sort by number of hours
+        -:   96:     */
+        -:   97:    DynamicVector<Subject> sortByHours();
+        -:   98:
+        -:   99:    /*
+        -:  100:     * Sort by teacher and type
+        -:  101:     */
+        -:  102:    DynamicVector<Subject> sortByTeacherandType();
+        -:  103:
+        -:  104:};
+        -:  105:
+        -:  106:
+        -:  107:#endif //LAB_6_7_SUBJECTSSERVICE_H

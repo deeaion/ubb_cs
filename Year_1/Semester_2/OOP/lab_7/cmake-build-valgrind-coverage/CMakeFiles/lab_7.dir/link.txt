@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage -O3 -DNDEBUG CMakeFiles/lab_7.dir/main.cpp.o CMakeFiles/lab_7.dir/domain/Subject.cpp.o CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o CMakeFiles/lab_7.dir/tests/Tests.cpp.o CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o -o lab_7 

@@ -1,0 +1,487 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/DynamicVector.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/2/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_DYNAMICVECTO_H
+        -:    6:#define LAB_6_DYNAMICVECTO_H
+        -:    7:#define INITIAL_CAPACITY 2
+        -:    8:
+        -:    9:template <typename GenericElement>
+        -:   10:        class IteratorVector;
+        -:   11:template <typename GenericElement>
+        -:   12:class DynamicVector{
+        -:   13:private:
+        -:   14:    GenericElement* genericElements;//this is the vector
+        -:   15:    int size;
+        -:   16:    int capacity;
+        -:   17:    void ensureCapacity([[maybe_unused]] int factor=2);
+        -:   18:public:
+        -:   19:    //CONSTRUCTOR -implemented
+        -:   20:    DynamicVector();
+        -:   21:    //DESTRUCTOR - implemented
+        -:   22:    ~DynamicVector();
+        -:   23:    //COPY VECTOR -implemented
+        -:   24:    DynamicVector(const DynamicVector& ot);
+        -:   25:    //size
+        -:   26:
+        -:   27:    /**OPERATORS*/
+        -:   28:    /**asignare*/
+        -:   29:    /*Assignment operator
+        -:   30:     * dealocate current object and ensurecapacity for the new elements
+        -:   31:     * copies all the elements of other*/
+        -:   32:    DynamicVector& operator=(const DynamicVector& ot);
+        -:   33:    /**
+        -:   34:     * Move constructor
+        -:   35:     */
+        -:   36:    DynamicVector(DynamicVector &&ot) noexcept;
+        -:   37:    //move assignment
+        -:   38:    DynamicVector& operator=( DynamicVector&& ot) noexcept;
+        -:   39:    //add to vector
+        -:   40:    void push_back(const GenericElement& el);
+        -:   41:    //get a certian element
+        -:   42:    [[maybe_unused]] GenericElement& get(int poz) const;
+        -:   43:    //set
+        -:   44:    [[maybe_unused]] void set(int poz,const GenericElement& el);
+        -:   45:    //size
+        -:   46:    [[nodiscard]] int getSize() const noexcept;
+        -:   47:    //delete function
+        -:   48:    void erase(int position);
+        -:   49:    //declare iterator as a friend class
+        -:   50:    friend class IteratorVector<GenericElement>;
+        -:   51:    //vector iterators
+        -:   52:    IteratorVector<GenericElement> begin () const;
+        -:   53:    //get last el
+        -:   54:    IteratorVector<GenericElement> end() const;
+        -:   55:    [[nodiscard]] bool empty() const noexcept;
+        -:   56:
+        -:   57:    [[maybe_unused]] IteratorVector<GenericElement> iterator(){
+        -:   58:        return IteratorVector(*this);
+        -:   59:    };
+        -:   60:    GenericElement& operator[](int poz) const;
+        -:   61:
+        -:   62:};
+        -:   63:/**OPERATOR SUBSCRIPTION*/
+        -:   64:template<typename  GenericElement>
+function _ZNK13DynamicVectorI7SubjectEixEi called 0 returned 0% blocks executed 0%
+    #####:   65:GenericElement &DynamicVector<GenericElement>::operator[](int poz) const {
+    #####:   66:    return  genericElements[poz];
+    %%%%%:   66-block  0
+        -:   67:}
+        -:   68:/**CONSTRUCTOR*/
+        -:   69:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectEC1Ev called 0 returned 0% blocks executed 0%
+    #####:   70:DynamicVector<GenericElement>::DynamicVector():size(0),capacity(INITIAL_CAPACITY) {
+    #####:   71:    this->genericElements=new GenericElement[INITIAL_CAPACITY];
+    %%%%%:   71-block  0
+call    0 never executed
+    %%%%%:   71-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   71-block  2
+    %%%%%:   71-block  3
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   71-block  4
+    $$$$$:   71-block  5
+call    6 never executed
+    $$$$$:   71-block  6
+call    7 never executed
+        -:   72:
+    #####:   73:}
+    %%%%%:   73-block  0
+        -:   74:/*
+        -:   75: * COPY CONSTRUCTOR . We copy all elements from the ot to our current one
+        -:   76: */
+        -:   77:/** COPY CONSTRUCTOR*/
+        -:   78:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectEC1ERKS1_ called 0 returned 0% blocks executed 0%
+    #####:   79:DynamicVector<GenericElement>::DynamicVector(const DynamicVector<GenericElement> &ot) {
+    #####:   80:    this->genericElements=new GenericElement[ot.capacity];
+    %%%%%:   80-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   80-block  1
+    %%%%%:   80-block  2
+    %%%%%:   80-block  3
+call    2 never executed
+    %%%%%:   80-block  4
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   80-block  5
+    %%%%%:   80-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   80-block  7
+    $$$$$:   80-block  8
+call    8 never executed
+    $$$$$:   80-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   80-block 10
+    $$$$$:   80-block 11
+    $$$$$:   80-block 12
+call   11 never executed
+        -:   81:    //copy elements
+    #####:   82:    for (int i=0;i<ot.size;i++)
+    %%%%%:   82-block  0
+    %%%%%:   82-block  1
+branch  0 never executed
+branch  1 never executed
+        -:   83:    {
+    #####:   84:        genericElements[i]=ot.genericElements[i];
+    %%%%%:   84-block  0
+call    0 never executed
+        -:   85:    }
+    #####:   86:    size=ot.size;
+    #####:   87:    capacity=ot.capacity;
+    #####:   88:}
+    %%%%%:   88-block  0
+        -:   89:
+        -:   90:/*
+        -:   91: * Asignment operator.
+        -:   92: * Delete everything from the other
+        -:   93: * Copy all
+        -:   94: */
+        -:   95:template<typename GenericElement>
+function _ZNK13DynamicVectorI7SubjectE5emptyEv called 1 returned 100% blocks executed 100%
+        1:   96:bool DynamicVector<GenericElement>::empty() const noexcept {
+        1:   97:    return size==0;
+        1:   97-block  0
+        -:   98:}
+        -:   99:/*** ASSIGNMENT OPERATOR*/
+        -:  100:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectEaSERKS1_ called 2 returned 100% blocks executed 68%
+        2:  101:DynamicVector<GenericElement> &DynamicVector<GenericElement>::operator=(const DynamicVector<GenericElement> &ot) {
+        -:  102:
+        2:  103:    if(this==&ot){
+        2:  103-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  104:        return *this; //ele sunt egale deci nu are rost sa mai faci altceva
+        1:  104-block  0
+        -:  105:    }
+        3:  106:    delete [] genericElements;
+        1:  106-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  106-block  1
+        3:  106-block  2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        2:  106-block  3
+call    4 returned 2
+        1:  106-block  4
+call    5 returned 1
+       5*:  107:    genericElements=new GenericElement[ot.capacity];
+        1:  107-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  107-block  1
+    %%%%%:  107-block  2
+        1:  107-block  3
+call    2 returned 1
+        4:  107-block  4
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  107-block  5
+        5:  107-block  6
+branch  6 taken 4
+branch  7 taken 1 (fallthrough)
+    $$$$$:  107-block  7
+    $$$$$:  107-block  8
+call    8 never executed
+    $$$$$:  107-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  107-block 10
+    $$$$$:  107-block 11
+    $$$$$:  107-block 12
+call   11 never executed
+        -:  108:    //copy all elements
+        4:  109:    for (int i=0;i<ot.size;i++)
+        1:  109-block  0
+        4:  109-block  1
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        -:  110:    {
+        3:  111:        genericElements[i]=ot.genericElements[i];
+        3:  111-block  0
+call    0 returned 3
+        -:  112:    }
+        1:  113:    size=ot.size;
+        1:  114:    capacity=ot.capacity;
+        1:  115:    return *this;
+        1:  115-block  0
+        -:  116:
+        -:  117:}
+        -:  118://DESTRUCTOR
+        -:  119:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectED1Ev called 0 returned 0% blocks executed 0%
+    #####:  120:DynamicVector<GenericElement>::~DynamicVector(){
+    #####:  121:    delete[] genericElements;
+    %%%%%:  121-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  121-block  1
+    %%%%%:  121-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  121-block  3
+call    4 never executed
+    %%%%%:  121-block  4
+call    5 never executed
+    #####:  122:    size=0;
+    #####:  123:    capacity=0;
+    #####:  124:}
+        -:  125:template<typename GenericElement>
+        -:  126://MOVE CONSTRUCTOR
+        -:  127:DynamicVector<GenericElement>::DynamicVector(DynamicVector &&ot) noexcept {
+        -:  128:    //Copy data
+        -:  129:    genericElements=ot.genericElements;
+        -:  130:    size=ot.size;
+        -:  131:    capacity=ot.capacity;
+        -:  132:
+        -:  133:    //Release all from the ot
+        -:  134:    ot.genericElements= nullptr;
+        -:  135:    ot.size=0;
+        -:  136:    ot.capacity=0;
+        -:  137:
+        -:  138:
+        -:  139:}
+        -:  140://Move assignment
+        -:  141:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectEaSEOS1_ called 2 returned 100% blocks executed 100%
+        2:  142:DynamicVector<GenericElement>& DynamicVector<GenericElement>::operator=(DynamicVector<GenericElement>&& ot) noexcept
+        -:  143:{
+        2:  144:    if(this==&ot)
+        2:  144-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        -:  145:    {
+        1:  146:        return *this;
+        1:  146-block  0
+        -:  147:    }
+        3:  148:    delete [] genericElements;
+        1:  148-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  148-block  1
+        3:  148-block  2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        2:  148-block  3
+call    4 returned 2
+        1:  148-block  4
+call    5 returned 1
+        -:  149:    //copy all data from the other
+        1:  150:    genericElements=ot.genericElements;
+        1:  151:    size=ot.size;
+        1:  152:    capacity=ot.capacity;
+        -:  153:
+        -:  154:    //release all data from the other ofc because we moved them
+        1:  155:    ot.genericElements= nullptr;
+        1:  156:    ot.size=0;
+        1:  157:    ot.capacity=0;
+        1:  158:    return *this;
+        1:  158-block  0
+        -:  159:}
+        -:  160:
+        -:  161://ALTE OPERATII
+        -:  162:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectE5eraseEi called 0 returned 0% blocks executed 0%
+    #####:  163:void DynamicVector<GenericElement>::erase(int position)
+        -:  164:{
+    #####:  165:    this->size--;
+    #####:  166:    for (int i = position; i < this->size; i++) {
+    %%%%%:  166-block  0
+    %%%%%:  166-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  167:        this->genericElements[i] = this->genericElements[i + 1];
+    %%%%%:  167-block  0
+call    0 never executed
+        -:  168:    }
+    #####:  169:}
+        -:  170:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectE9push_backERKS0_ called 0 returned 0% blocks executed 0%
+    #####:  171:void DynamicVector<GenericElement>::push_back(const GenericElement &el) {
+    #####:  172:    ensureCapacity();
+    %%%%%:  172-block  0
+call    0 never executed
+    #####:  173:    genericElements[size++]=el;
+call    0 never executed
+    #####:  174:}
+        -:  175:
+        -:  176://getter
+        -:  177:template<typename GenericElement>
+        -:  178:[[maybe_unused]] GenericElement &DynamicVector<GenericElement>::get(int poz) const {
+        -:  179:    return genericElements[poz];
+        -:  180:}
+        -:  181:
+        -:  182://set
+        -:  183:
+        -:  184:template<typename GenericElement>
+        -:  185:[[maybe_unused]] void DynamicVector<GenericElement>::set(int poz, const GenericElement &el) {
+        -:  186:    genericElements[poz]=el;
+        -:  187:}
+        -:  188:
+        -:  189://size
+        -:  190:template<typename GenericElement>
+function _ZNK13DynamicVectorI7SubjectE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:  191:int DynamicVector<GenericElement>::getSize() const noexcept {
+    #####:  192:    return size;
+    %%%%%:  192-block  0
+        -:  193:}
+        -:  194:
+        -:  195://ensure capacity
+        -:  196:
+        -:  197:template<typename GenericElement>
+function _ZN13DynamicVectorI7SubjectE14ensureCapacityEi called 0 returned 0% blocks executed 0%
+    #####:  198:void DynamicVector<GenericElement>::ensureCapacity([[maybe_unused]] int factor) {
+    #####:  199:    if(size<capacity){
+    %%%%%:  199-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  200:        return; //stim sigur ca avem destul spatiu
+    %%%%%:  200-block  0
+        -:  201:    }
+    #####:  202:    capacity*=2;
+    #####:  203:    auto* aux=new GenericElement[capacity];
+    %%%%%:  203-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  203-block  1
+    %%%%%:  203-block  2
+    %%%%%:  203-block  3
+call    2 never executed
+    %%%%%:  203-block  4
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  203-block  5
+    %%%%%:  203-block  6
+branch  6 never executed
+branch  7 never executed
+    $$$$$:  203-block  7
+    $$$$$:  203-block  8
+call    8 never executed
+    $$$$$:  203-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  203-block 10
+    $$$$$:  203-block 11
+    $$$$$:  203-block 12
+call   11 never executed
+        -:  204:    //copiem totul in vectorul now
+    #####:  205:    for(int i=0;i<size;i++)
+    %%%%%:  205-block  0
+    %%%%%:  205-block  1
+branch  0 never executed
+branch  1 never executed
+        -:  206:    {
+    #####:  207:        aux[i]=genericElements[i];
+    %%%%%:  207-block  0
+call    0 never executed
+        -:  208:    }
+    #####:  209:    delete [] genericElements;
+    %%%%%:  209-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  209-block  1
+    %%%%%:  209-block  2
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  209-block  3
+call    4 never executed
+    %%%%%:  209-block  4
+call    5 never executed
+    #####:  210:    genericElements=aux;
+    %%%%%:  210-block  0
+        -:  211:}
+        -:  212:
+        -:  213:template<typename GenericElement>
+        -:  214://begin for iterator
+        -:  215:IteratorVector<GenericElement> DynamicVector<GenericElement>::begin() const {
+        -:  216:    return IteratorVector<GenericElement>(*this);
+        -:  217:}
+        -:  218:
+        -:  219:template<typename GenericElement>
+        -:  220://begin for iterator
+        -:  221:IteratorVector<GenericElement> DynamicVector<GenericElement>::end() const {
+        -:  222:    return IteratorVector<GenericElement>(*this,size);
+        -:  223:}
+        -:  224:
+        -:  225:template <typename GenericElement>
+        -:  226:class IteratorVector{
+        -:  227:    private:
+        -:  228:        const DynamicVector<GenericElement>& vector; //referinta la vectorul dinamic
+        -:  229:        int poz=0; //prima pozitie o sa fie chiar 0
+        -:  230:    public:
+        -:  231:        explicit IteratorVector(const DynamicVector<GenericElement>& v) ;
+        -:  232:        IteratorVector(const DynamicVector<GenericElement>& v,int poz)noexcept;
+        -:  233:
+        -:  234:    [[maybe_unused]] [[nodiscard]] bool valid()const;//inca se poate itera
+        -:  235:        GenericElement& element() const; //get element
+        -:  236:        void next();//to go to the next iterator
+        -:  237:        GenericElement& operator*();//ca sa simulam pointer
+        -:  238:        IteratorVector& operator++();//iterare continua
+        -:  239:        //verificare egalitate
+        -:  240:        bool operator==(const IteratorVector& ot ) noexcept;
+        -:  241:         bool operator!=(const IteratorVector& ot ) noexcept;
+        -:  242:
+        -:  243:
+        -:  244:    };
+        -:  245://functions implemented
+        -:  246:template <typename GenericElement>
+        -:  247:IteratorVector<GenericElement>::IteratorVector(const DynamicVector<GenericElement>& vec) : vector(vec){}
+        -:  248:
+        -:  249:template <typename GenericElement>
+        -:  250:IteratorVector<GenericElement>::IteratorVector(const DynamicVector<GenericElement> &v, int poz) noexcept: vector{v},poz{poz} {}
+        -:  251:template <typename GenericElement>
+        -:  252:[[maybe_unused]] bool IteratorVector<GenericElement>::valid() const {
+        -:  253:    return poz<vector.size;
+        -:  254:}
+        -:  255:template <typename GenericElement>
+        -:  256:GenericElement &IteratorVector<GenericElement>::element() const {
+        -:  257:    return vector.genericElements[poz];
+        -:  258:}
+        -:  259:
+        -:  260:template <typename GenericElement>
+        -:  261:void IteratorVector<GenericElement>::next() {
+        -:  262:    poz++;
+        -:  263:}
+        -:  264:
+        -:  265:template <typename GenericElement>
+        -:  266:GenericElement &IteratorVector<GenericElement>::operator*() {
+        -:  267:    return element();
+        -:  268:}
+        -:  269:
+        -:  270:template <typename GenericElement>
+        -:  271:IteratorVector<GenericElement> &IteratorVector<GenericElement>::operator++() {
+        -:  272:    next();
+        -:  273:    return *this;
+        -:  274:}
+        -:  275:
+        -:  276:template <typename GenericElement>
+        -:  277:bool IteratorVector<GenericElement>:: operator==(const IteratorVector<GenericElement>& ot) noexcept
+        -:  278:{
+        -:  279:    return ot.poz==poz;
+        -:  280:}
+        -:  281:
+        -:  282:template <typename GenericElement>
+        -:  283:bool IteratorVector<GenericElement>:: operator!=(const IteratorVector<GenericElement>& ot) noexcept
+        -:  284:{
+        -:  285:    return !(*this == ot);
+        -:  286:}
+        -:  287:
+        -:  288:
+        -:  289:
+        -:  290:
+        -:  291:#endif //LAB_6_DYNAMICVECTO_H

@@ -1,0 +1,57 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_7_SUBJECTSUI_H
+        -:    6:#define LAB_6_7_SUBJECTSUI_H
+        -:    7:#pragma once
+        -:    8:
+        -:    9:#include "../service/SubjectsService.h"
+        -:   10:#include <iostream>
+        -:   11:#include <string>
+        -:   12:
+        -:   13:using std::string;
+        -:   14:
+        -:   15:using std::cout;
+        -:   16:using std::cin;
+        -:   17:using std::getline;
+        -:   18:
+        -:   19:class SubjectsUi {
+        -:   20:    SubjectsService &ctr;
+        -:   21:
+        -:   22:    void UiAdd();
+        -:   23:
+        -:   24:    void Uidelete();
+        -:   25:
+        -:   26:    void Uiupdate();
+        -:   27:
+        -:   28:    void Uisearch();
+        -:   29:
+        -:   30:    void Uifilter();
+        -:   31:
+        -:   32:    void Uisort();
+        -:   33:
+        -:   34:    static void print_subjects(const DynamicVector<Subject> &subjects);
+        -:   35:
+        -:   36:    void print_all();
+        -:   37:
+        -:   38:    static void menu();
+        -:   39:
+        -:   40:public:
+function _ZN10SubjectsUiC1ER15SubjectsService called 1 returned 100% blocks executed 100%
+        1:   41:    explicit SubjectsUi(SubjectsService &ctr) : ctr{ctr} {
+        -:   42:
+        1:   43:    }
+        -:   44:
+        -:   45:    //we dont allow to copy the objects
+        -:   46:    SubjectsUi(const SubjectsUi &ot) = delete;
+        -:   47:
+        -:   48:    void start();
+        -:   49:};
+        -:   50:
+        -:   51:
+        -:   52:#endif //LAB_6_7_SUBJECTSUI_H

@@ -1,0 +1,301 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\validator\ValidatorSubject.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\validator\ValidatorSubject.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 3/31/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "ValidatorSubject.h"
+        -:    6:
+function _ZN16ValidatorSubject12validateNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 89% blocks executed 73%
+        9:    7:void ValidatorSubject::validateName(const std::string &name) {
+        9:    8:    if (name.empty())
+        9:    8-block  0
+call    0 returned 9
+branch  1 taken 1 (fallthrough)
+branch  2 taken 8
+        1:    9:        throw ValidatorException("\nInvalid name ");
+        1:    9-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:    9-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:    9-block  2
+call    9 never executed
+    $$$$$:    9-block  3
+    $$$$$:    9-block  4
+call   10 never executed
+        8:   10:}
+        8:   10-block  0
+        -:   11:
+function _ZN16ValidatorSubject15validateTeacherERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 89% blocks executed 73%
+        9:   12:void ValidatorSubject::validateTeacher(const std::string &teacher) {
+        9:   13:    if (teacher.empty())
+        9:   13-block  0
+call    0 returned 9
+branch  1 taken 1 (fallthrough)
+branch  2 taken 8
+        1:   14:        throw ValidatorException("\nInvalid teacher.");
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   14-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   14-block  2
+call    9 never executed
+    $$$$$:   14-block  3
+    $$$$$:   14-block  4
+call   10 never executed
+        -:   15:
+        8:   16:}
+        8:   16-block  0
+        -:   17:
+function _ZN16ValidatorSubject13validateHoursEi called 9 returned 89% blocks executed 71%
+        9:   18:void ValidatorSubject::validateHours(int hours) {
+        9:   19:    if (hours < 0)
+        9:   19-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 8
+        1:   20:        throw ValidatorException("\n Invalid number of hours.");
+        1:   20-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   20-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   20-block  2
+call    9 never executed
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+call   10 never executed
+        -:   21:
+        8:   22:}
+        8:   22-block  0
+        -:   23:
+function _ZN16ValidatorSubject12validateTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 89% blocks executed 73%
+        9:   24:void ValidatorSubject::validateType(const std::string &type) {
+        9:   25:    if (type.empty())
+        9:   25-block  0
+call    0 returned 9
+branch  1 taken 1 (fallthrough)
+branch  2 taken 8
+        1:   26:        throw ValidatorException("\nInvalid type ");
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   26-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   26-block  2
+call    9 never executed
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+call   10 never executed
+        8:   27:}
+        8:   27-block  0
+        -:   28:
+function _ZN16ValidatorSubject15validateSubjectERK7Subject called 9 returned 89% blocks executed 63%
+        9:   29:void ValidatorSubject::validateSubject(const Subject &subject) {
+        9:   30:    const string &name = subject.get_name();
+        9:   30-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   31:    const string &teacher = subject.get_teacher();
+        9:   31-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   32:    const string &type = subject.get_type();
+        9:   32-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   33:    int hours = subject.get_hours();
+        9:   33-block  0
+call    0 returned 9
+branch  1 taken 9 (fallthrough)
+branch  2 taken 0 (throw)
+        9:   34:    string exceptions;
+        9:   34-block  0
+call    0 returned 9
+        -:   35:    try {
+        9:   36:        validateName(name);
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   37:    }
+        1:   38:    catch (ValidatorException &ve) {
+        1:   38-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   38-block  1
+call    2 returned 1
+        1:   39:        exceptions += ve.getMessage();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   39-block  1
+call    6 returned 1
+    $$$$$:   39-block  2
+call    7 never executed
+    $$$$$:   39-block  3
+        1:   40:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   40-block  0
+call    3 never executed
+        -:   41:
+        -:   42:
+        -:   43:    try {
+        9:   44:        validateHours(hours);
+        9:   44-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   45:    }
+        1:   46:    catch (ValidatorException &ve) {
+        1:   46-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   46-block  1
+call    2 returned 1
+        1:   47:        exceptions += ve.getMessage();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   47-block  1
+call    6 returned 1
+    $$$$$:   47-block  2
+call    7 never executed
+    $$$$$:   47-block  3
+        1:   48:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   48-block  0
+call    3 never executed
+        -:   49:
+        -:   50:
+        -:   51:    try {
+        9:   52:        validateTeacher(teacher);
+        9:   52-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   53:    }
+        1:   54:    catch (ValidatorException &ve) {
+        1:   54-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   54-block  1
+call    2 returned 1
+        1:   55:        exceptions += ve.getMessage();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  1
+call    6 returned 1
+    $$$$$:   55-block  2
+call    7 never executed
+    $$$$$:   55-block  3
+        1:   56:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   56-block  0
+call    3 never executed
+        -:   57:
+        -:   58:    try {
+        9:   59:        validateType(type);
+        9:   59-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1 (throw)
+        -:   60:    }
+        1:   61:    catch (ValidatorException &ve) {
+        1:   61-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   61-block  1
+call    2 returned 1
+        1:   62:        exceptions += ve.getMessage();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   62-block  1
+call    6 returned 1
+    $$$$$:   62-block  2
+call    7 never executed
+    $$$$$:   62-block  3
+        1:   63:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   63-block  0
+call    3 never executed
+        -:   64:
+        9:   65:    if (!exceptions.empty()) {
+        9:   65-block  0
+call    0 returned 9
+branch  1 taken 1 (fallthrough)
+branch  2 taken 8
+        1:   66:        throw ValidatorException(exceptions);
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   66-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   66-block  2
+call    7 never executed
+        -:   67:    }
+        -:   68:
+        9:   69:}
+        8:   69-block  0
+call    0 returned 8
+        1:   69-block  1
+call    1 returned 1

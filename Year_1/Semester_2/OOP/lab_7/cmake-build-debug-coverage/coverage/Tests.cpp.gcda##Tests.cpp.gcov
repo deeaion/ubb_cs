@@ -1,0 +1,3320 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_7\cmake-build-debug-coverage\CMakeFiles\lab_7.dir\tests\Tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/1/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Tests.h"
+function _ZN5Tests7testAllEv called 1 returned 100% blocks executed 100%
+        1:    6:void Tests::testAll() {
+        1:    7:    testDomain();
+        1:    7-block  0
+call    0 returned 1
+        1:    8:    testRepository();
+call    0 returned 1
+        1:    9:    testValidators();
+call    0 returned 1
+        1:   10:    testService();
+call    0 returned 1
+        1:   11:    testDynamicVector();
+call    0 returned 1
+        1:   12:}
+function _ZN5Tests10testDomainEv called 1 returned 100% blocks executed 100%
+        1:   13:void Tests::testDomain() {
+        1:   14:    testConstructorsandgetters();
+        1:   14-block  0
+call    0 returned 1
+        1:   15:    testCopyConstructor();
+call    0 returned 1
+        1:   16:    testtoString();
+call    0 returned 1
+        1:   17:    testOperators();
+call    0 returned 1
+        1:   18:    testComparators();
+call    0 returned 1
+        1:   19:    testSetters();
+call    0 returned 1
+        1:   20:}
+        -:   21:
+function _ZN5Tests26testConstructorsandgettersEv called 1 returned 100% blocks executed 56%
+        1:   22:void Tests::testConstructorsandgetters() {
+        2:   23:    Subject testsubject{"1",1,"1","1"};
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   23-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   23-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   23-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   23-block  4
+    $$$$$:   23-block  5
+    $$$$$:   23-block  6
+    $$$$$:   23-block  7
+    $$$$$:   23-block  8
+    $$$$$:   23-block  9
+       1*:   24:    assert(testsubject.get_type()=="1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   24-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   24-block  2
+    %%%%%:   24-block  3
+       1*:   25:    assert(testsubject.get_teacher()=="1");
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   25-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   25-block  3
+    %%%%%:   25-block  4
+       1*:   26:    assert(testsubject.get_hours()==1);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   26-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   26-block  3
+    %%%%%:   26-block  4
+       1*:   27:    assert(testsubject.get_name()=="1");
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   27-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   27-block  3
+    %%%%%:   27-block  4
+        1:   28:    Subject testimplicit{};
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   29:    assert(testimplicit.get_type().empty());
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   29-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   29-block  3
+    %%%%%:   29-block  4
+       1*:   30:    assert(testimplicit.get_teacher().empty());
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   30-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   30-block  3
+    %%%%%:   30-block  4
+       1*:   31:    assert(testimplicit.get_hours()==-1);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   31-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   31-block  3
+    %%%%%:   31-block  4
+       1*:   32:    assert(testimplicit.get_name().empty());
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   32-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   32-block  3
+    %%%%%:   32-block  4
+        -:   33:
+        -:   34:
+        1:   35:}
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   35-block  1
+call    2 never executed
+    $$$$$:   35-block  2
+call    3 never executed
+function _ZN5Tests19testCopyConstructorEv called 1 returned 100% blocks executed 52%
+        1:   36:void Tests::testCopyConstructor() {
+        2:   37:    Subject testsubject{"1",1,"1","1"};
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   37-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   37-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+    $$$$$:   37-block  6
+    $$$$$:   37-block  7
+    $$$$$:   37-block  8
+    $$$$$:   37-block  9
+        1:   38:    Subject testcopySubject(testsubject);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   39:    assert(testcopySubject.get_type()=="1");
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   39-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   39-block  3
+    %%%%%:   39-block  4
+       1*:   40:    assert(testcopySubject.get_teacher()=="1");
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   40-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   40-block  3
+    %%%%%:   40-block  4
+       1*:   41:    assert(testcopySubject.get_hours()==1);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   41-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   41-block  3
+    %%%%%:   41-block  4
+       1*:   42:    assert(testcopySubject.get_name()=="1");
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   42-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   42-block  3
+    %%%%%:   42-block  4
+        -:   43:
+        -:   44:
+        1:   45:}
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   45-block  1
+call    2 never executed
+    $$$$$:   45-block  2
+call    3 never executed
+function _ZN5Tests11testSettersEv called 1 returned 100% blocks executed 49%
+        1:   46:void Tests::testSetters() {
+        2:   47:    Subject testsubject{"1",1,"1","1"};
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   47-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   47-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+    $$$$$:   47-block  6
+    $$$$$:   47-block  7
+    $$$$$:   47-block  8
+    $$$$$:   47-block  9
+        1:   48:    testsubject.set_type("new");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   48-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   48-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   48-block  2
+call    9 never executed
+    $$$$$:   48-block  3
+    $$$$$:   48-block  4
+call   10 never executed
+    $$$$$:   48-block  5
+       1*:   49:    assert(testsubject.get_type()=="new");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   49-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   49-block  2
+    %%%%%:   49-block  3
+        1:   50:    testsubject.set_hours(3);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   51:    assert(testsubject.get_hours()==3);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   51-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   51-block  3
+    %%%%%:   51-block  4
+        1:   52:}
+        1:   52-block  0
+call    0 returned 1
+    $$$$$:   52-block  1
+call    1 never executed
+function _ZN5Tests12testtoStringEv called 1 returned 100% blocks executed 46%
+        1:   53:void Tests::testtoString() {
+        2:   54:    Subject testsubject{"1",1,"1","1"};
+        1:   54-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   54-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   54-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   54-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   54-block  4
+    $$$$$:   54-block  5
+    $$$$$:   54-block  6
+    $$$$$:   54-block  7
+    $$$$$:   54-block  8
+    $$$$$:   54-block  9
+       1*:   55:    assert(testsubject.to_string_print()=="\tSubject 1\n\tHours: 1\n\tType: 1\n\tTeacher: 1");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   55-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   55-block  2
+    %%%%%:   55-block  3
+        1:   55-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   55-block  5
+call   11 returned 1
+    $$$$$:   55-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   55-block  7
+call   14 never executed
+    $$$$$:   55-block  8
+        -:   56:
+        1:   57:}
+        1:   57-block  0
+call    0 returned 1
+    $$$$$:   57-block  1
+call    1 never executed
+function _ZN5Tests13testOperatorsEv called 1 returned 100% blocks executed 54%
+        1:   58:void Tests::testOperators() {
+        2:   59:    Subject test1{"1",1,"1","1"};
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   59-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   59-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   59-block  4
+    $$$$$:   59-block  5
+    $$$$$:   59-block  6
+    $$$$$:   59-block  7
+    $$$$$:   59-block  8
+    $$$$$:   59-block  9
+       1*:   60:    assert(test1.operator==(test1));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   60-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   60-block  2
+    %%%%%:   60-block  3
+        1:   61:    Subject test2;
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62:    test2.operator=(test1);
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   63:    assert(test2.get_type()=="1");
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   63-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   63-block  3
+    %%%%%:   63-block  4
+       1*:   64:    assert(test2.get_teacher()=="1");
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   64-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   64-block  3
+    %%%%%:   64-block  4
+       1*:   65:    assert(test2.get_hours()==1);
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   65-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   65-block  3
+    %%%%%:   65-block  4
+       1*:   66:    assert(test2.get_name()=="1");
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   66-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   66-block  3
+    %%%%%:   66-block  4
+        -:   67:
+        1:   68:}
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   68-block  1
+call    2 never executed
+    $$$$$:   68-block  2
+call    3 never executed
+function _ZN5Tests15testComparatorsEv called 1 returned 100% blocks executed 47%
+        1:   69:void Tests::testComparators() {
+        2:   70:    Subject test1{"1",1,"1","1"};
+        1:   70-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   70-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   70-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   70-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+    $$$$$:   70-block  9
+        2:   71:    Subject test2{"2",2,"2","2"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   71-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   71-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   71-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   71-block  3
+    $$$$$:   71-block  4
+    $$$$$:   71-block  5
+    $$$$$:   71-block  6
+    $$$$$:   71-block  7
+    $$$$$:   71-block  8
+       1*:   72:    assert(cmpName(test1,test2)== true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   72-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   72-block  2
+    %%%%%:   72-block  3
+       1*:   73:    assert(cmpName(test2,test1)== false);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   73-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   73-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   73-block  3
+    %%%%%:   73-block  4
+       1*:   74:    assert(cmpHours(test1,test2)== true);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   74-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   74-block  3
+    %%%%%:   74-block  4
+       1*:   75:    assert(cmpHours(test2,test1)== false);
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   75-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   75-block  3
+    %%%%%:   75-block  4
+       1*:   76:    assert(cmpTeacher(test1,test2)== true);
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   76-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   76-block  3
+    %%%%%:   76-block  4
+       1*:   77:    assert(cmpTeacher(test2,test1)== false);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   77-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   77-block  3
+    %%%%%:   77-block  4
+       1*:   78:    assert(cmpType(test1,test2)== true);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   78-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   78-block  3
+    %%%%%:   78-block  4
+       1*:   79:    assert(cmpType(test2,test1)== false);
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   79-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   79-block  3
+    %%%%%:   79-block  4
+       1*:   80:    assert(cmpTeacherandType(test1,test2)==true);
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   80-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   80-block  3
+    %%%%%:   80-block  4
+       1*:   81:    assert(cmpTeacherandType(test2,test1)==false);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   81-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   81-block  3
+    %%%%%:   81-block  4
+        2:   82:    Subject test3{"2",1,"2","1"};
+        1:   82-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   82-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   82-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   82-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   82-block  4
+    $$$$$:   82-block  5
+    $$$$$:   82-block  6
+    $$$$$:   82-block  7
+    $$$$$:   82-block  8
+    $$$$$:   82-block  9
+       1*:   83:    assert(cmpTeacherandType(test1,test3)==true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   83-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   83-block  2
+    %%%%%:   83-block  3
+       1*:   84:    assert(cmpTeacherandType(test1,test3)==true);
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   84-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   84-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   84-block  3
+    %%%%%:   84-block  4
+       1*:   85:    assert(cmpTeacherandType(test3,test1)==false);
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   85-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   85-block  3
+    %%%%%:   85-block  4
+       1*:   86:    assert(cmpTeacherandType(test1,test1)==false);
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   86-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   86-block  3
+    %%%%%:   86-block  4
+        2:   87:    Subject sbj1("Math", 4, "Mr. Jk", "History");
+        1:   87-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   87-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   87-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   87-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   87-block  4
+    $$$$$:   87-block  5
+    $$$$$:   87-block  6
+    $$$$$:   87-block  7
+    $$$$$:   87-block  8
+    $$$$$:   87-block  9
+        2:   88:    Subject sbj2("English", 3, "Mr. Jones", "History");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   88-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   88-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   88-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+    $$$$$:   88-block  5
+    $$$$$:   88-block  6
+    $$$$$:   88-block  7
+    $$$$$:   88-block  8
+       1*:   89:    assert(cmpTeacherandType(sbj1,sbj2)== true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   89-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   89-block  2
+    %%%%%:   89-block  3
+        2:   90:    Subject test4{"2",1,"1","2"};
+        1:   90-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   90-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   90-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   90-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   90-block  4
+    $$$$$:   90-block  5
+    $$$$$:   90-block  6
+    $$$$$:   90-block  7
+    $$$$$:   90-block  8
+    $$$$$:   90-block  9
+       1*:   91:    assert(cmpTeacherandType(test3,test4)== true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   91-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   91-block  2
+    %%%%%:   91-block  3
+       1*:   92:    assert(cmpTeacherandType(test4,test3)== false);
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   92-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   92-block  3
+    %%%%%:   92-block  4
+       1*:   93:    assert(cmpTeacherandType(test3,test3)== false);
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   93-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   93-block  3
+    %%%%%:   93-block  4
+        1:   94:}
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   94-block  1
+call    6 never executed
+    $$$$$:   94-block  2
+call    7 never executed
+    $$$$$:   94-block  3
+call    8 never executed
+    $$$$$:   94-block  4
+call    9 never executed
+    $$$$$:   94-block  5
+call   10 never executed
+    $$$$$:   94-block  6
+call   11 never executed
+        -:   95:
+function _ZN5Tests14testRepositoryEv called 1 returned 100% blocks executed 100%
+        1:   96:void Tests::testRepository() {
+        1:   97:    testStoreAdd_Search();
+        1:   97-block  0
+call    0 returned 1
+        1:   98:    testUpdate_Remove();
+call    0 returned 1
+        1:   99:}
+        -:  100:
+function _ZN5Tests19testStoreAdd_SearchEv called 1 returned 100% blocks executed 49%
+        1:  101:void Tests::testStoreAdd_Search() {
+        1:  102:    DynamicVector<Subject> tests;
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  103:    SubjectsRepo repo(tests);
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  104:    Subject testsubject{"1", 1, "1", "1"};
+        1:  104-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  104-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  104-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  104-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  104-block  4
+    $$$$$:  104-block  5
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+    $$$$$:  104-block  8
+    $$$$$:  104-block  9
+        1:  105:    repo.store(testsubject);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  106:    try {
+        1:  107:        repo.store(testsubject);
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  108:    }
+        1:  109:    catch (RepositoryException &mes) {
+        1:  109-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  109-block  1
+call    2 returned 1
+        1:  110:        assert(mes.getMessage() == "Subject already exists\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  110-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  110-block  2
+    $$$$$:  110-block  3
+        1:  110-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  110-block  5
+call   11 returned 1
+    $$$$$:  110-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  110-block  7
+call   14 never executed
+    $$$$$:  110-block  8
+        1:  111:    }
+        1:  111-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  111-block  1
+call    3 never executed
+       1*:  112:    assert(repo.searchForSubject("1","1") != -1);
+        1:  112-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  112-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  112-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  112-block  3
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:  112-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+        1:  112-block  5
+    %%%%%:  112-block  6
+        1:  112-block  7
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  112-block  8
+call   18 returned 1
+        1:  112-block  9
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  112-block 10
+call   21 returned 1
+        1:  112-block 11
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  112-block 12
+call   24 returned 1
+        1:  112-block 13
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  112-block 14
+call   27 returned 1
+    $$$$$:  112-block 15
+branch 28 never executed
+branch 29 never executed
+    $$$$$:  112-block 16
+call   30 never executed
+    $$$$$:  112-block 17
+    $$$$$:  112-block 18
+branch 31 never executed
+branch 32 never executed
+    $$$$$:  112-block 19
+call   33 never executed
+    $$$$$:  112-block 20
+    $$$$$:  112-block 21
+branch 34 never executed
+branch 35 never executed
+    $$$$$:  112-block 22
+call   36 never executed
+    $$$$$:  112-block 23
+    $$$$$:  112-block 24
+branch 37 never executed
+branch 38 never executed
+    $$$$$:  112-block 25
+call   39 never executed
+    $$$$$:  112-block 26
+        2:  113:    Subject test2{"2",2,"2","2"};
+        1:  113-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  113-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  113-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  113-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  113-block  4
+    $$$$$:  113-block  5
+    $$$$$:  113-block  6
+    $$$$$:  113-block  7
+    $$$$$:  113-block  8
+    $$$$$:  113-block  9
+       1*:  114:    assert(repo.searchForSubject("2","2") == -1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  114-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  114-block  1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  114-block  2
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:  114-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+        1:  114-block  4
+    %%%%%:  114-block  5
+        1:  114-block  6
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  114-block  7
+call   18 returned 1
+        1:  114-block  8
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  114-block  9
+call   21 returned 1
+        1:  114-block 10
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  114-block 11
+call   24 returned 1
+        1:  114-block 12
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  114-block 13
+call   27 returned 1
+    $$$$$:  114-block 14
+branch 28 never executed
+branch 29 never executed
+    $$$$$:  114-block 15
+call   30 never executed
+    $$$$$:  114-block 16
+    $$$$$:  114-block 17
+branch 31 never executed
+branch 32 never executed
+    $$$$$:  114-block 18
+call   33 never executed
+    $$$$$:  114-block 19
+    $$$$$:  114-block 20
+branch 34 never executed
+branch 35 never executed
+    $$$$$:  114-block 21
+call   36 never executed
+    $$$$$:  114-block 22
+    $$$$$:  114-block 23
+branch 37 never executed
+branch 38 never executed
+    $$$$$:  114-block 24
+call   39 never executed
+    $$$$$:  114-block 25
+        1:  115:    const Subject& testequality=repo.getSubject("1","1");
+        1:  115-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  115-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  115-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  115-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  115-block  4
+call   15 never executed
+    $$$$$:  115-block  5
+    $$$$$:  115-block  6
+call   16 never executed
+    $$$$$:  115-block  7
+    $$$$$:  115-block  8
+call   17 never executed
+    $$$$$:  115-block  9
+    $$$$$:  115-block 10
+call   18 never executed
+    $$$$$:  115-block 11
+       1*:  116:    assert(testsubject.operator==(testequality));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  116-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  116-block  1
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:  116-block  2
+    %%%%%:  116-block  3
+        -:  117:    try{
+       5*:  118:        repo.getSubject("3","3");
+        1:  118-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  118-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  118-block  2
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1 (throw)
+    %%%%%:  118-block  3
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  118-block  4
+call   15 returned 1
+        1:  118-block  5
+        1:  118-block  6
+call   16 returned 1
+        1:  118-block  7
+        1:  118-block  8
+call   17 returned 1
+        1:  118-block  9
+        1:  118-block 10
+call   18 returned 1
+        1:  118-block 11
+        -:  119:    }
+        1:  120:    catch (RepositoryException &mes)
+        1:  120-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  120-block  1
+call    2 returned 1
+        -:  121:    {
+        1:  122:        assert(mes.getMessage()=="Subject does not exist!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  122-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  122-block  2
+    $$$$$:  122-block  3
+        1:  122-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  122-block  5
+call   11 returned 1
+    $$$$$:  122-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  122-block  7
+call   14 never executed
+    $$$$$:  122-block  8
+        1:  123:    }
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  123-block  1
+call    3 never executed
+        1:  124:}
+        1:  124-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  124-block  1
+call    4 never executed
+    $$$$$:  124-block  2
+call    5 never executed
+    $$$$$:  124-block  3
+call    6 never executed
+    $$$$$:  124-block  4
+call    7 never executed
+        -:  125:
+function _ZN5Tests17testUpdate_RemoveEv called 1 returned 100% blocks executed 56%
+        1:  126:void Tests::testUpdate_Remove() {
+        1:  127:    DynamicVector<Subject> tests;
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128:    SubjectsRepo repo(tests);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  129:    Subject testsubject{"1", 1, "1", "1"};
+        1:  129-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  129-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  129-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  129-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  129-block  4
+    $$$$$:  129-block  5
+    $$$$$:  129-block  6
+    $$$$$:  129-block  7
+    $$$$$:  129-block  8
+    $$$$$:  129-block  9
+        1:  130:    repo.store(testsubject);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131:    const DynamicVector<Subject>& uh= repo.getAll();
+        1:  131-block  0
+call    0 returned 1
+       1*:  132:    assert(uh.getSize()==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  132-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  132-block  1
+    %%%%%:  132-block  2
+        2:  133:    Subject update{"1",2,"2","1"};
+        1:  133-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  133-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  133-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  133-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  133-block  4
+    $$$$$:  133-block  5
+    $$$$$:  133-block  6
+    $$$$$:  133-block  7
+    $$$$$:  133-block  8
+    $$$$$:  133-block  9
+        1:  134:    repo.updateSubjectRepo(update);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  135:    try{
+       8*:  136:        repo.updateSubjectRepo(Subject{"2",2,"2","2"});
+        1:  136-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  136-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  136-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  136-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  136-block  4
+call   15 returned 1
+branch 16 taken 0 (fallthrough)
+branch 17 taken 1 (throw)
+    %%%%%:  136-block  5
+call   18 never executed
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 never executed
+call   24 never executed
+        1:  136-block  6
+call   25 returned 1
+        1:  136-block  7
+        1:  136-block  8
+call   26 returned 1
+        1:  136-block  9
+        1:  136-block 10
+call   27 returned 1
+        1:  136-block 11
+        1:  136-block 12
+call   28 returned 1
+        1:  136-block 13
+        1:  136-block 14
+call   29 returned 1
+        1:  136-block 15
+        1:  136-block 16
+call   30 returned 1
+        1:  136-block 17
+        1:  136-block 18
+call   31 returned 1
+        1:  136-block 19
+        -:  137:    }
+        1:  138:    catch(RepositoryException &mes)
+        1:  138-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  138-block  1
+call    2 returned 1
+        -:  139:    {
+        1:  140:        assert(mes.getMessage()=="Subject does not exist!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  140-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  140-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  140-block  2
+    $$$$$:  140-block  3
+        1:  140-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  140-block  5
+call   11 returned 1
+    $$$$$:  140-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  140-block  7
+call   14 never executed
+    $$$$$:  140-block  8
+        1:  141:    }
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  141-block  1
+call    3 never executed
+        1:  142:    repo.removeSubjectRepo("1","1");
+        1:  142-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  142-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  142-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  142-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  142-block  4
+call   15 never executed
+    $$$$$:  142-block  5
+    $$$$$:  142-block  6
+call   16 never executed
+    $$$$$:  142-block  7
+    $$$$$:  142-block  8
+call   17 never executed
+    $$$$$:  142-block  9
+    $$$$$:  142-block 10
+call   18 never executed
+    $$$$$:  142-block 11
+        -:  143:    try{
+       5*:  144:        repo.removeSubjectRepo("1","1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  144-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  144-block  1
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1 (throw)
+    %%%%%:  144-block  2
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  144-block  3
+call   15 returned 1
+        1:  144-block  4
+        1:  144-block  5
+call   16 returned 1
+        1:  144-block  6
+        1:  144-block  7
+call   17 returned 1
+        1:  144-block  8
+        1:  144-block  9
+call   18 returned 1
+        1:  144-block 10
+        -:  145:    }
+        1:  146:    catch (RepositoryException &mes)
+        1:  146-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  146-block  1
+call    2 returned 1
+        -:  147:    {
+        1:  148:        assert(mes.getMessage()=="Subject does not exist!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  148-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  148-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  148-block  2
+    $$$$$:  148-block  3
+        1:  148-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  148-block  5
+call   11 returned 1
+    $$$$$:  148-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  148-block  7
+call   14 never executed
+    $$$$$:  148-block  8
+        1:  149:    }
+        1:  149-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  149-block  1
+call    3 never executed
+        1:  150:}
+        1:  150-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  150-block  1
+call    4 never executed
+    $$$$$:  150-block  2
+call    5 never executed
+    $$$$$:  150-block  3
+call    6 never executed
+    $$$$$:  150-block  4
+call    7 never executed
+        -:  151:
+function _ZN5Tests14testValidatorsEv called 1 returned 100% blocks executed 48%
+        1:  152:void Tests::testValidators() {
+        -:  153:    ValidatorSubject val;
+        2:  154:    Subject testsubject{"1", 1, "1", "1"};
+        1:  154-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  154-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  154-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  154-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  154-block  4
+    $$$$$:  154-block  5
+    $$$$$:  154-block  6
+    $$$$$:  154-block  7
+    $$$$$:  154-block  8
+    $$$$$:  154-block  9
+        1:  155:    Subject wrong{};
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  156:    val.validateSubject(testsubject);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  157:    try{
+        1:  158:    val.validateSubject(wrong);}
+        1:  158-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  159:    catch(ValidatorException &val)
+        1:  159-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  159-block  1
+call    2 returned 1
+        -:  160:    {
+        1:  161:        assert(val.getMessage()=="\nInvalid name \n Invalid number of hours.\nInvalid teacher.\nInvalid type ");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  161-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  161-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  161-block  2
+    $$$$$:  161-block  3
+        1:  161-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  161-block  5
+call   11 returned 1
+    $$$$$:  161-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  161-block  7
+call   14 never executed
+    $$$$$:  161-block  8
+        -:  162:
+        1:  163:    }
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  163-block  1
+call    3 never executed
+        1:  164:}
+        1:  164-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  164-block  1
+call    2 never executed
+    $$$$$:  164-block  2
+call    3 never executed
+        -:  165:
+function _ZN5Tests11testServiceEv called 1 returned 100% blocks executed 100%
+        1:  166:void Tests::testService() {
+        1:  167:    testAdd_SearchService();
+        1:  167-block  0
+call    0 returned 1
+        1:  168:    testDeleteandUpdateService();
+call    0 returned 1
+        1:  169:    testSortService();
+call    0 returned 1
+        -:  170:    //testFilterService();
+        1:  171:}
+function _ZN5Tests17testDynamicVectorEv called 1 returned 100% blocks executed 46%
+        1:  172:void Tests::testDynamicVector()
+        -:  173:{
+        1:  174:    DynamicVector<Subject> tests;
+        1:  174-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  175:    assert(tests.empty()==true);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  175-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  175-block  2
+    %%%%%:  175-block  3
+       1*:  176:    assert(tests.getSize()==0);
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  176-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  176-block  2
+    %%%%%:  176-block  3
+        2:  177:    Subject ver{"1",1,"1","1"};
+        1:  177-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  177-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  177-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  177-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  177-block  4
+    $$$$$:  177-block  5
+    $$$$$:  177-block  6
+    $$$$$:  177-block  7
+    $$$$$:  177-block  8
+    $$$$$:  177-block  9
+        1:  178:    tests.push_back(ver);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179:    tests=tests;
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  180:    DynamicVector<Subject> moved;
+        1:  180-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  181:    moved.push_back({"2",2,"2","2"});
+        1:  181-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  181-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  181-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  181-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  181-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  181-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:  181-block  6
+call   25 never executed
+    $$$$$:  181-block  7
+    $$$$$:  181-block  8
+call   26 never executed
+    $$$$$:  181-block  9
+    $$$$$:  181-block 10
+call   27 never executed
+    $$$$$:  181-block 11
+    $$$$$:  181-block 12
+call   28 never executed
+    $$$$$:  181-block 13
+    $$$$$:  181-block 14
+call   29 never executed
+    $$$$$:  181-block 15
+    $$$$$:  181-block 16
+call   30 never executed
+    $$$$$:  181-block 17
+    $$$$$:  181-block 18
+call   31 never executed
+    $$$$$:  181-block 19
+        1:  182:    moved.push_back({"3",2,"3","3"});
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  182-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  182-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  182-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  182-block  3
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  182-block  4
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:  182-block  5
+call   25 never executed
+    $$$$$:  182-block  6
+    $$$$$:  182-block  7
+call   26 never executed
+    $$$$$:  182-block  8
+    $$$$$:  182-block  9
+call   27 never executed
+    $$$$$:  182-block 10
+    $$$$$:  182-block 11
+call   28 never executed
+    $$$$$:  182-block 12
+    $$$$$:  182-block 13
+call   29 never executed
+    $$$$$:  182-block 14
+    $$$$$:  182-block 15
+call   30 never executed
+    $$$$$:  182-block 16
+    $$$$$:  182-block 17
+call   31 never executed
+    $$$$$:  182-block 18
+        -:  183:    //assert(moved.getSize()==tests.getSize());
+        1:  184:    tests=std::move(moved);
+call    0 returned 1
+call    1 returned 1
+       1*:  185:    assert(tests.getSize()==2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  185-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  185-block  1
+    %%%%%:  185-block  2
+        1:  186:    tests=std::move(tests);
+        1:  186-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  187:       tests.erase(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  188:       assert(tests.getSize()==1);
+        1:  188-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  188-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  188-block  2
+    %%%%%:  188-block  3
+        1:  189:       tests.push_back({"2",2,"3","4"});
+        1:  189-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  189-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  189-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  189-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  189-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  189-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:  189-block  6
+call   25 never executed
+    $$$$$:  189-block  7
+    $$$$$:  189-block  8
+call   26 never executed
+    $$$$$:  189-block  9
+    $$$$$:  189-block 10
+call   27 never executed
+    $$$$$:  189-block 11
+    $$$$$:  189-block 12
+call   28 never executed
+    $$$$$:  189-block 13
+    $$$$$:  189-block 14
+call   29 never executed
+    $$$$$:  189-block 15
+    $$$$$:  189-block 16
+call   30 never executed
+    $$$$$:  189-block 17
+    $$$$$:  189-block 18
+call   31 never executed
+    $$$$$:  189-block 19
+        1:  190:    tests.push_back({"4",2,"5","6"});
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  190-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  190-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  190-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  190-block  3
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  190-block  4
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:  190-block  5
+call   25 never executed
+    $$$$$:  190-block  6
+    $$$$$:  190-block  7
+call   26 never executed
+    $$$$$:  190-block  8
+    $$$$$:  190-block  9
+call   27 never executed
+    $$$$$:  190-block 10
+    $$$$$:  190-block 11
+call   28 never executed
+    $$$$$:  190-block 12
+    $$$$$:  190-block 13
+call   29 never executed
+    $$$$$:  190-block 14
+    $$$$$:  190-block 15
+call   30 never executed
+    $$$$$:  190-block 16
+    $$$$$:  190-block 17
+call   31 never executed
+    $$$$$:  190-block 18
+        1:  191:    DynamicVector<Subject> test2;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  192:    test2.push_back({"4",2,"5","6"});
+        1:  192-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  192-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  192-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  192-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  192-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  192-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:  192-block  6
+call   25 never executed
+    $$$$$:  192-block  7
+    $$$$$:  192-block  8
+call   26 never executed
+    $$$$$:  192-block  9
+    $$$$$:  192-block 10
+call   27 never executed
+    $$$$$:  192-block 11
+    $$$$$:  192-block 12
+call   28 never executed
+    $$$$$:  192-block 13
+    $$$$$:  192-block 14
+call   29 never executed
+    $$$$$:  192-block 15
+    $$$$$:  192-block 16
+call   30 never executed
+    $$$$$:  192-block 17
+    $$$$$:  192-block 18
+call   31 never executed
+    $$$$$:  192-block 19
+        1:  193:    test2=tests;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  194:    assert(tests.getSize()==3);
+        1:  194-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  194-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  194-block  2
+    %%%%%:  194-block  3
+       1*:  195:    assert(tests.getSize()==3);
+        1:  195-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  195-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  195-block  2
+    %%%%%:  195-block  3
+        -:  196:
+        -:  197:
+        -:  198:
+        -:  199:
+        -:  200:
+        1:  201:}
+        1:  201-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  201-block  1
+call    4 never executed
+    $$$$$:  201-block  2
+call    5 never executed
+    $$$$$:  201-block  3
+call    6 never executed
+    $$$$$:  201-block  4
+call    7 never executed
+function _ZN5Tests21testAdd_SearchServiceEv called 1 returned 100% blocks executed 53%
+        1:  202:void Tests::testAdd_SearchService() {
+        1:  203:    DynamicVector<Subject> tests;
+        1:  203-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  204:    SubjectsRepo repo(tests);
+        1:  204-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  205:    ValidatorSubject val;
+        1:  206:    SubjectsService serv(repo,val);
+        1:  206-block  0
+call    0 returned 1
+        2:  207:    Subject ver{"1",1,"1","1"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  207-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  207-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  207-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  207-block  3
+    $$$$$:  207-block  4
+    $$$$$:  207-block  5
+    $$$$$:  207-block  6
+    $$$$$:  207-block  7
+    $$$$$:  207-block  8
+        1:  208:    serv.addSubject("1",1,"1","1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  208-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  208-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  208-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  208-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  208-block  4
+call   21 never executed
+    $$$$$:  208-block  5
+    $$$$$:  208-block  6
+call   22 never executed
+    $$$$$:  208-block  7
+    $$$$$:  208-block  8
+call   23 never executed
+    $$$$$:  208-block  9
+    $$$$$:  208-block 10
+call   24 never executed
+    $$$$$:  208-block 11
+    $$$$$:  208-block 12
+call   25 never executed
+    $$$$$:  208-block 13
+    $$$$$:  208-block 14
+call   26 never executed
+    $$$$$:  208-block 15
+        1:  209:    const DynamicVector<Subject>& sbjs= serv.getAll();
+call    0 returned 1
+       1*:  210:    assert(sbjs.getSize()==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  210-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:  210-block  1
+    %%%%%:  210-block  2
+        -:  211:    try{
+       7*:  212:        serv.addSubject("1",1,"1","1");
+        1:  212-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  212-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  212-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  212-block  3
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:  212-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:  212-block  5
+call   21 returned 1
+        1:  212-block  6
+        1:  212-block  7
+call   22 returned 1
+        1:  212-block  8
+        1:  212-block  9
+call   23 returned 1
+        1:  212-block 10
+        1:  212-block 11
+call   24 returned 1
+        1:  212-block 12
+        1:  212-block 13
+call   25 returned 1
+        1:  212-block 14
+        1:  212-block 15
+call   26 returned 1
+        1:  212-block 16
+        -:  213:    }
+        1:  214:    catch (RepositoryException &mes)
+        1:  214-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  214-block  1
+call    2 returned 1
+        -:  215:    {
+        1:  216:        assert(mes.getMessage()=="Subject already exists\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  216-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  216-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  216-block  2
+    $$$$$:  216-block  3
+        1:  216-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  216-block  5
+call   11 returned 1
+    $$$$$:  216-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  216-block  7
+call   14 never executed
+    $$$$$:  216-block  8
+        1:  217:    }
+        1:  217-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  217-block  1
+call    3 never executed
+       1*:  218:    assert(ver.operator==(serv.searchForSubject("1","1")));
+        1:  218-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  218-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  218-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  218-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  218-block  4
+branch 14 taken 0 (fallthrough)
+branch 15 taken 1
+    %%%%%:  218-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+        1:  218-block  6
+    %%%%%:  218-block  7
+        1:  218-block  8
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  218-block  9
+call   21 returned 1
+        1:  218-block 10
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  218-block 11
+call   24 returned 1
+        1:  218-block 12
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  218-block 13
+call   27 returned 1
+        1:  218-block 14
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0
+        1:  218-block 15
+call   30 returned 1
+    $$$$$:  218-block 16
+branch 31 never executed
+branch 32 never executed
+    $$$$$:  218-block 17
+call   33 never executed
+    $$$$$:  218-block 18
+    $$$$$:  218-block 19
+branch 34 never executed
+branch 35 never executed
+    $$$$$:  218-block 20
+call   36 never executed
+    $$$$$:  218-block 21
+    $$$$$:  218-block 22
+branch 37 never executed
+branch 38 never executed
+    $$$$$:  218-block 23
+call   39 never executed
+    $$$$$:  218-block 24
+    $$$$$:  218-block 25
+branch 40 never executed
+branch 41 never executed
+    $$$$$:  218-block 26
+call   42 never executed
+    $$$$$:  218-block 27
+        -:  219:
+        1:  220:}
+        1:  220-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  220-block  1
+call    3 never executed
+    $$$$$:  220-block  2
+call    4 never executed
+    $$$$$:  220-block  3
+call    5 never executed
+        -:  221:
+function _ZN5Tests26testDeleteandUpdateServiceEv called 1 returned 100% blocks executed 53%
+        1:  222:void Tests::testDeleteandUpdateService() {
+        1:  223:    DynamicVector<Subject> tests;
+        1:  223-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  224:    SubjectsRepo repo(tests);
+        1:  224-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  225:    ValidatorSubject val;
+        1:  226:    SubjectsService serv(repo,val);
+        1:  226-block  0
+call    0 returned 1
+        2:  227:    Subject ver{"1",1,"1","1"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  227-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  227-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  227-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  227-block  3
+    $$$$$:  227-block  4
+    $$$$$:  227-block  5
+    $$$$$:  227-block  6
+    $$$$$:  227-block  7
+    $$$$$:  227-block  8
+        1:  228:    serv.addSubject("1",1,"1","1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  228-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  228-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  228-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  228-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  228-block  4
+call   21 never executed
+    $$$$$:  228-block  5
+    $$$$$:  228-block  6
+call   22 never executed
+    $$$$$:  228-block  7
+    $$$$$:  228-block  8
+call   23 never executed
+    $$$$$:  228-block  9
+    $$$$$:  228-block 10
+call   24 never executed
+    $$$$$:  228-block 11
+    $$$$$:  228-block 12
+call   25 never executed
+    $$$$$:  228-block 13
+    $$$$$:  228-block 14
+call   26 never executed
+    $$$$$:  228-block 15
+        1:  229:    serv.updateSubject("1","1",2,"2");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  229-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  229-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  229-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  229-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  229-block  4
+call   21 never executed
+    $$$$$:  229-block  5
+    $$$$$:  229-block  6
+call   22 never executed
+    $$$$$:  229-block  7
+    $$$$$:  229-block  8
+call   23 never executed
+    $$$$$:  229-block  9
+    $$$$$:  229-block 10
+call   24 never executed
+    $$$$$:  229-block 11
+    $$$$$:  229-block 12
+call   25 never executed
+    $$$$$:  229-block 13
+    $$$$$:  229-block 14
+call   26 never executed
+    $$$$$:  229-block 15
+        -:  230:    try {
+       7*:  231:        serv.updateSubject("2","2",1,"1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  231-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  231-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  231-block  2
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:  231-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:  231-block  4
+call   21 returned 1
+        1:  231-block  5
+        1:  231-block  6
+call   22 returned 1
+        1:  231-block  7
+        1:  231-block  8
+call   23 returned 1
+        1:  231-block  9
+        1:  231-block 10
+call   24 returned 1
+        1:  231-block 11
+        1:  231-block 12
+call   25 returned 1
+        1:  231-block 13
+        1:  231-block 14
+call   26 returned 1
+        1:  231-block 15
+        -:  232:
+        -:  233:    }
+        1:  234:    catch (RepositoryException &mes)
+        1:  234-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  234-block  1
+call    2 returned 1
+        -:  235:    {
+        1:  236:        assert(mes.getMessage()=="Subject does not exist!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  236-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  236-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  236-block  2
+    $$$$$:  236-block  3
+        1:  236-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  236-block  5
+call   11 returned 1
+    $$$$$:  236-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  236-block  7
+call   14 never executed
+    $$$$$:  236-block  8
+        1:  237:    }
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  237-block  1
+call    3 never executed
+        1:  238:    serv.deleteSubject("1","1");
+        1:  238-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  238-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  238-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  238-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  238-block  4
+call   15 never executed
+    $$$$$:  238-block  5
+    $$$$$:  238-block  6
+call   16 never executed
+    $$$$$:  238-block  7
+    $$$$$:  238-block  8
+call   17 never executed
+    $$$$$:  238-block  9
+    $$$$$:  238-block 10
+call   18 never executed
+    $$$$$:  238-block 11
+        -:  239:    try {
+       5*:  240:        serv.deleteSubject("1","1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  240-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  240-block  1
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1 (throw)
+    %%%%%:  240-block  2
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:  240-block  3
+call   15 returned 1
+        1:  240-block  4
+        1:  240-block  5
+call   16 returned 1
+        1:  240-block  6
+        1:  240-block  7
+call   17 returned 1
+        1:  240-block  8
+        1:  240-block  9
+call   18 returned 1
+        1:  240-block 10
+        -:  241:
+        -:  242:    }
+        1:  243:    catch (RepositoryException &mes)
+        1:  243-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  243-block  1
+call    2 returned 1
+        -:  244:    {
+        1:  245:        assert(mes.getMessage()=="Subject does not exist!");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  245-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  245-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  245-block  2
+    $$$$$:  245-block  3
+        1:  245-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  245-block  5
+call   11 returned 1
+    $$$$$:  245-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  245-block  7
+call   14 never executed
+    $$$$$:  245-block  8
+        1:  246:    }
+        1:  246-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  246-block  1
+call    3 never executed
+        1:  247:}
+        1:  247-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  247-block  1
+call    3 never executed
+    $$$$$:  247-block  2
+call    4 never executed
+    $$$$$:  247-block  3
+call    5 never executed
+        -:  248:
+function _ZN5Tests15testSortServiceEv called 1 returned 100% blocks executed 48%
+        1:  249:void Tests::testSortService() {
+        1:  250:    DynamicVector<Subject> tests;
+        1:  250-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  251:    SubjectsRepo repo(tests);
+        1:  251-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  252:    ValidatorSubject val;
+        1:  253:    SubjectsService serv(repo,val);
+        1:  253-block  0
+call    0 returned 1
+        2:  254:    Subject ver2{"1",1,"1","1"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  254-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  254-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  254-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  254-block  3
+    $$$$$:  254-block  4
+    $$$$$:  254-block  5
+    $$$$$:  254-block  6
+    $$$$$:  254-block  7
+    $$$$$:  254-block  8
+        2:  255:    Subject ver1{"2",2,"2","2"};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  255-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  255-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  255-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  255-block  3
+    $$$$$:  255-block  4
+    $$$$$:  255-block  5
+    $$$$$:  255-block  6
+    $$$$$:  255-block  7
+    $$$$$:  255-block  8
+        1:  256:    serv.addSubject("2",2,"2","2");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  256-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  256-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  256-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  256-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  256-block  4
+call   21 never executed
+    $$$$$:  256-block  5
+    $$$$$:  256-block  6
+call   22 never executed
+    $$$$$:  256-block  7
+    $$$$$:  256-block  8
+call   23 never executed
+    $$$$$:  256-block  9
+    $$$$$:  256-block 10
+call   24 never executed
+    $$$$$:  256-block 11
+    $$$$$:  256-block 12
+call   25 never executed
+    $$$$$:  256-block 13
+    $$$$$:  256-block 14
+call   26 never executed
+    $$$$$:  256-block 15
+        1:  257:    serv.addSubject("1",1,"1","1");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  257-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  257-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  257-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  257-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  257-block  4
+call   21 never executed
+    $$$$$:  257-block  5
+    $$$$$:  257-block  6
+call   22 never executed
+    $$$$$:  257-block  7
+    $$$$$:  257-block  8
+call   23 never executed
+    $$$$$:  257-block  9
+    $$$$$:  257-block 10
+call   24 never executed
+    $$$$$:  257-block 11
+    $$$$$:  257-block 12
+call   25 never executed
+    $$$$$:  257-block 13
+    $$$$$:  257-block 14
+call   26 never executed
+    $$$$$:  257-block 15
+        1:  258:    DynamicVector<Subject> sn=serv.sortByName();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  259:    assert(ver1.operator==(sn[1]));
+        1:  259-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  259-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  259-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  259-block  3
+    %%%%%:  259-block  4
+       1*:  260:    assert(ver2.operator==(sn[0]));
+        1:  260-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  260-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  260-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  260-block  3
+    %%%%%:  260-block  4
+        1:  261:    DynamicVector<Subject> sh=serv.sortByHours();
+        1:  261-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  262:    assert(ver1.operator==(sh[1]));
+        1:  262-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  262-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  262-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  262-block  3
+    %%%%%:  262-block  4
+       1*:  263:    assert(ver2.operator==(sh[0]));
+        1:  263-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  263-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  263-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  263-block  3
+    %%%%%:  263-block  4
+        1:  264:    DynamicVector<Subject> stt=serv.sortByTeacherandType();
+        1:  264-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  265:    assert(ver1.operator==(stt[1]));
+        1:  265-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  265-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  265-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  265-block  3
+    %%%%%:  265-block  4
+       1*:  266:    assert(ver2.operator==(stt[0]));
+        1:  266-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  266-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  266-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  266-block  3
+    %%%%%:  266-block  4
+        1:  267:    DynamicVector<Subject> fh=serv.filterByHours(2);
+        1:  267-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  268:    assert(ver1.operator==(fh[0]));
+        1:  268-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  268-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  268-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  268-block  3
+    %%%%%:  268-block  4
+        2:  269:    DynamicVector<Subject> ft=serv.filterByTeacher("2");
+        1:  269-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  269-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:  269-block  2
+    $$$$$:  269-block  3
+       1*:  270:    assert(ver1.operator==(ft[0]));
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  270-block  0
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  270-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  270-block  2
+    %%%%%:  270-block  3
+        1:  271:    serv.deleteSubject("1","1");
+        1:  271-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  271-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  271-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  271-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  271-block  4
+call   15 never executed
+    $$$$$:  271-block  5
+    $$$$$:  271-block  6
+call   16 never executed
+    $$$$$:  271-block  7
+    $$$$$:  271-block  8
+call   17 never executed
+    $$$$$:  271-block  9
+    $$$$$:  271-block 10
+call   18 never executed
+    $$$$$:  271-block 11
+        -:  272:
+        1:  273:    DynamicVector<Subject> s=serv.sortByName();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  274:    assert(ver1.operator==(s[0]));
+        1:  274-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  274-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  274-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:  274-block  3
+    %%%%%:  274-block  4
+        1:  275:    serv.deleteSubject("2","2");
+        1:  275-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  275-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  275-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  275-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  275-block  4
+call   15 never executed
+    $$$$$:  275-block  5
+    $$$$$:  275-block  6
+call   16 never executed
+    $$$$$:  275-block  7
+    $$$$$:  275-block  8
+call   17 never executed
+    $$$$$:  275-block  9
+    $$$$$:  275-block 10
+call   18 never executed
+    $$$$$:  275-block 11
+        1:  276:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  276-block  0
+call   10 never executed
+    $$$$$:  276-block  1
+call   11 never executed
+    $$$$$:  276-block  2
+call   12 never executed
+    $$$$$:  276-block  3
+call   13 never executed
+    $$$$$:  276-block  4
+call   14 never executed
+    $$$$$:  276-block  5
+call   15 never executed
+    $$$$$:  276-block  6
+call   16 never executed
+    $$$$$:  276-block  7
+call   17 never executed
+    $$$$$:  276-block  8
+call   18 never executed
+    $$$$$:  276-block  9
+call   19 never executed
