@@ -1,0 +1,13 @@
+{
+  "name" : "3",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "69efe9cc2df0015f0bb2d37d55acde4a75c9a25b",
+  "dependencies" : [ {
+    "name" : "gsl",
+    "version>=" : "2.7.1#1"
+  }, {
+    "name" : "gsl-lite",
+    "version>=" : "0.40.0",
+    "$comment" : "    # this is heuristically generated, and may not be correct\n\n    find_package(gsl-lite CONFIG REQUIRED)\n\n    target_link_libraries(main PRIVATE gsl::gsl-lite gsl::gsl-lite-v0 gsl::gsl-lite-v1)\n"
+  } ]
+}
