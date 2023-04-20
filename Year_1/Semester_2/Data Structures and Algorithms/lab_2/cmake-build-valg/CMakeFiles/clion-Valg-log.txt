@@ -1,0 +1,6 @@
+C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_2/cmake-build-valg' && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_2' -B '/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_2/cmake-build-valg'"
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.25 or higher is required.  You are running version 3.22.1
+
+
+-- Configuring incomplete, errors occurred!

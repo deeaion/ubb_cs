@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/lab_3.dir/main.cpp.o CMakeFiles/lab_3.dir/MDO/MDO.cpp.o CMakeFiles/lab_3.dir/IteratorMDO/IteratorMDO.cpp.o CMakeFiles/lab_3.dir/Teste/TestExtins.cpp.o CMakeFiles/lab_3.dir/Teste/TestScurt.cpp.o -o lab_3 
