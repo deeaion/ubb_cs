@@ -1,0 +1,58 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_9/main.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "domain/Subject.h"
+        -:    3://#include "repository/SubjectsRepo.h"
+        -:    4:#include "service/SubjectsService.h"
+        -:    5:#include "ui/SubjectsUi.h"
+        -:    6:#include "tests/Tests.h"
+        -:    7:#include "repository/FileRepositorySubjects.h"
+        -:    8:using std::cout;
+        -:    9:
+function main called 1 returned 100% blocks executed 69%
+        1:   10:int main() {
+        1:   11:    Tests tests;
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    tests.testAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    cout << "Program is starting\n";
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   14:    FileRepositorySubjects rep{"subjects.txt"};
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   14-block  2
+    $$$$$:   14-block  3
+        -:   15:    ValidatorSubject val;
+        1:   16:    ContractRepo contract;
+call    0 returned 1
+        1:   17:    SubjectsService ctr{rep,contract,val};
+call    0 returned 1
+        1:   18:    SubjectsUi ui{ctr};
+call    0 returned 1
+        -:   19:
+        -:   20:    //ui.start();
+        -:   21:
+        1:   22:    return 0;
+        1:   23:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   23-block  0
+call    4 never executed

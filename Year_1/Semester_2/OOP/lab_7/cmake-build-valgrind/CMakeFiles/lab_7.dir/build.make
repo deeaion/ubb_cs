@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7"
+CMAKE_SOURCE_DIR = /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind"
+CMAKE_BINARY_DIR = /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab_7.dir/depend.make
@@ -72,100 +72,100 @@ include CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/main.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/main.cpp.o: ../main.cpp
 CMakeFiles/lab_7.dir/main.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab_7.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/main.cpp.o -MF CMakeFiles/lab_7.dir/main.cpp.o.d -o CMakeFiles/lab_7.dir/main.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab_7.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/main.cpp.o -MF CMakeFiles/lab_7.dir/main.cpp.o.d -o CMakeFiles/lab_7.dir/main.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/main.cpp
 
 CMakeFiles/lab_7.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/main.cpp" > CMakeFiles/lab_7.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/main.cpp > CMakeFiles/lab_7.dir/main.cpp.i
 
 CMakeFiles/lab_7.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/main.cpp" -o CMakeFiles/lab_7.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/main.cpp -o CMakeFiles/lab_7.dir/main.cpp.s
 
 CMakeFiles/lab_7.dir/domain/Subject.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/domain/Subject.cpp.o: ../domain/Subject.cpp
 CMakeFiles/lab_7.dir/domain/Subject.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab_7.dir/domain/Subject.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/domain/Subject.cpp.o -MF CMakeFiles/lab_7.dir/domain/Subject.cpp.o.d -o CMakeFiles/lab_7.dir/domain/Subject.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/domain/Subject.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab_7.dir/domain/Subject.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/domain/Subject.cpp.o -MF CMakeFiles/lab_7.dir/domain/Subject.cpp.o.d -o CMakeFiles/lab_7.dir/domain/Subject.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/domain/Subject.cpp
 
 CMakeFiles/lab_7.dir/domain/Subject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/domain/Subject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/domain/Subject.cpp" > CMakeFiles/lab_7.dir/domain/Subject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/domain/Subject.cpp > CMakeFiles/lab_7.dir/domain/Subject.cpp.i
 
 CMakeFiles/lab_7.dir/domain/Subject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/domain/Subject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/domain/Subject.cpp" -o CMakeFiles/lab_7.dir/domain/Subject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/domain/Subject.cpp -o CMakeFiles/lab_7.dir/domain/Subject.cpp.s
 
 CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o: ../repository/SubjectsRepo.cpp
 CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o -MF CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o.d -o CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/repository/SubjectsRepo.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o -MF CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o.d -o CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/repository/SubjectsRepo.cpp
 
 CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/repository/SubjectsRepo.cpp" > CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/repository/SubjectsRepo.cpp > CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.i
 
 CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/repository/SubjectsRepo.cpp" -o CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/repository/SubjectsRepo.cpp -o CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.s
 
 CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o: ../service/SubjectsService.cpp
 CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o -MF CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o.d -o CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o -MF CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o.d -o CMakeFiles/lab_7.dir/service/SubjectsService.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/service/SubjectsService.cpp
 
 CMakeFiles/lab_7.dir/service/SubjectsService.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/service/SubjectsService.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.cpp" > CMakeFiles/lab_7.dir/service/SubjectsService.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/service/SubjectsService.cpp > CMakeFiles/lab_7.dir/service/SubjectsService.cpp.i
 
 CMakeFiles/lab_7.dir/service/SubjectsService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/service/SubjectsService.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.cpp" -o CMakeFiles/lab_7.dir/service/SubjectsService.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/service/SubjectsService.cpp -o CMakeFiles/lab_7.dir/service/SubjectsService.cpp.s
 
 CMakeFiles/lab_7.dir/tests/Tests.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/tests/Tests.cpp.o: ../tests/Tests.cpp
 CMakeFiles/lab_7.dir/tests/Tests.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab_7.dir/tests/Tests.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/tests/Tests.cpp.o -MF CMakeFiles/lab_7.dir/tests/Tests.cpp.o.d -o CMakeFiles/lab_7.dir/tests/Tests.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab_7.dir/tests/Tests.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/tests/Tests.cpp.o -MF CMakeFiles/lab_7.dir/tests/Tests.cpp.o.d -o CMakeFiles/lab_7.dir/tests/Tests.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/tests/Tests.cpp
 
 CMakeFiles/lab_7.dir/tests/Tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/tests/Tests.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.cpp" > CMakeFiles/lab_7.dir/tests/Tests.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/tests/Tests.cpp > CMakeFiles/lab_7.dir/tests/Tests.cpp.i
 
 CMakeFiles/lab_7.dir/tests/Tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/tests/Tests.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.cpp" -o CMakeFiles/lab_7.dir/tests/Tests.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/tests/Tests.cpp -o CMakeFiles/lab_7.dir/tests/Tests.cpp.s
 
 CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o: ../ui/SubjectsUi.cpp
 CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o -MF CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o.d -o CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o -MF CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o.d -o CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/ui/SubjectsUi.cpp
 
 CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.cpp" > CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/ui/SubjectsUi.cpp > CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.i
 
 CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.cpp" -o CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/ui/SubjectsUi.cpp -o CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.s
 
 CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o: CMakeFiles/lab_7.dir/flags.make
 CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o: ../validator/ValidatorSubject.cpp
 CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o: CMakeFiles/lab_7.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o -MF CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o.d -o CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o -c "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o -MF CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o.d -o CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o -c /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/validator/ValidatorSubject.cpp
 
 CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.cpp" > CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/validator/ValidatorSubject.cpp > CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.i
 
 CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.cpp" -o CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/validator/ValidatorSubject.cpp -o CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.s
 
 # Object files for target lab_7
 lab_7_OBJECTS = \
@@ -189,7 +189,7 @@ lab_7: CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.o
 lab_7: CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.o
 lab_7: CMakeFiles/lab_7.dir/build.make
 lab_7: CMakeFiles/lab_7.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable lab_7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable lab_7"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab_7.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -201,6 +201,6 @@ CMakeFiles/lab_7.dir/clean:
 .PHONY : CMakeFiles/lab_7.dir/clean
 
 CMakeFiles/lab_7.dir/depend:
-	cd "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles/lab_7.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7 /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7 /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles/lab_7.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab_7.dir/depend
 

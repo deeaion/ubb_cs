@@ -7,3 +7,13 @@
 872	1040	7024288750570860	lab_7.exe	aabe4c656f4ab1d3
 39	801	7024288748300328	CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.obj	de8662af649c6335
 3	710	7024288747395159	CMakeFiles/lab_7.dir/main.cpp.obj	8dafdf464245cb66
+31	857	7024833032066400	CMakeFiles/lab_7.dir/validator/ValidatorSubject.cpp.obj	8e53ebd6e50ad9bc
+15	916	7024833032656431	CMakeFiles/lab_7.dir/repository/SubjectsRepo.cpp.obj	7550212f37ca76be
+50	960	7024833033127276	CMakeFiles/lab_7.dir/domain/Subject.cpp.obj	e7cb955149d61928
+61	1002	7024833033557289	CMakeFiles/lab_7.dir/main.cpp.obj	b97fedd085ba0a52
+22	1090	7024833034438571	CMakeFiles/lab_7.dir/service/SubjectsService.cpp.obj	fc0558becb131dd6
+41	1149	7024833035029785	CMakeFiles/lab_7.dir/ui/SubjectsUi.cpp.obj	5e58f7d644977ff2
+6	1223	7024833035759794	CMakeFiles/lab_7.dir/tests/Tests.cpp.obj	3252fbb34785a17
+1223	1443	7024833037785575	lab_7.exe	aabe4c656f4ab1d3
+3	471	7029234820517348	CMakeFiles/lab_7.dir/main.cpp.obj	b97fedd085ba0a52
+471	626	7029234821932598	lab_7.exe	aabe4c656f4ab1d3

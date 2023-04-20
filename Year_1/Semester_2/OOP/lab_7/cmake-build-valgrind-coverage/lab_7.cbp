@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage"/>
+				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab_7">
-				<Option output="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/lab_7" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage"/>
+				<Option output="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/lab_7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 lab_7"/>
-					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 lab_7"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lab_7/fast">
-				<Option output="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/lab_7" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage"/>
+				<Option output="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/lab_7" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,76 +55,76 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 lab_7/fast"/>
-					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 lab_7/fast"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage"/>
+				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage"/>
+				<Option working_dir="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/DynamicVector.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/DynamicVector.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/domain/Subject.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/domain/Subject.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/domain/Subject.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/domain/Subject.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/main.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/main.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/repository/SubjectsRepo.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/repository/SubjectsRepo.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/repository/SubjectsRepo.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/repository/SubjectsRepo.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/service/SubjectsService.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/service/SubjectsService.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/service/SubjectsService.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/tests/Tests.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/tests/Tests.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/tests/Tests.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/ui/SubjectsUi.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/ui/SubjectsUi.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/ui/SubjectsUi.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.cpp">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/validator/ValidatorSubject.cpp">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/validator/ValidatorSubject.h">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/validator/ValidatorSubject.h">
 			<Option target="lab_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

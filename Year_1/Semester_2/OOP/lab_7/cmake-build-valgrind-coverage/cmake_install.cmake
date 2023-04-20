@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7
+# Install script for directory: /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind-coverage/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind-coverage/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

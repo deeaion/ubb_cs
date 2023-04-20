@@ -1,0 +1,53 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_9/tests/Tests.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/1/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_TESTS_H
+        -:    6:#define LAB_6_TESTS_H
+        -:    7:#include "../service/SubjectsService.h"
+        -:    8:#include "../repository/SubjectsRepo.h"
+        -:    9:#include "../domain/Subject.h"
+        -:   10:#include "../Exceptions/Exceptions.h"
+        -:   11:#include <assert.h>
+        -:   12:
+        -:   13:class Tests {
+        -:   14:    void testDomain();
+        -:   15:    static void testConstructorsandgetters();
+        -:   16:    static void testCopyConstructor();
+        -:   17:    static void testSetters();
+        -:   18:    void testtoString();
+        -:   19:    void testOperators();
+        -:   20:    void testComparators();
+        -:   21:
+        -:   22:
+        -:   23:    void testRepository();
+        -:   24:    void testFileRepository();
+        -:   25:    void testStoreAdd_Search();
+        -:   26:    void testUpdate_Remove();
+        -:   27://    void testGetters();
+        -:   28:
+        -:   29:    void testValidators();
+        -:   30:
+        -:   31:    void testService();
+        -:   32:    void testAdd_SearchService();
+        -:   33:    void testDeleteandUpdateService();
+        -:   34:    void testSortService();
+        -:   35:    void testContract();
+        -:   36:    void testUndo();
+        -:   37:
+        -:   38:public:
+function _ZN5TestsC1Ev called 1 returned 100% blocks executed 100%
+        1:   39:    Tests(){};
+        -:   40:    void testAll();
+function _ZN5TestsD1Ev called 1 returned 100% blocks executed 100%
+        1:   41:    ~Tests(){
+        -:   42:
+        1:   43:    };
+        -:   44:};
+        -:   45:
+        -:   46:
+        -:   47:#endif //LAB_6_TESTS_H

@@ -1,0 +1,92 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_9/Undo/Undo.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\service\SubjectsService.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\service\SubjectsService.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/18/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_9_UNDO_H
+        -:    6:#define LAB_9_UNDO_H
+        -:    7:#include "../domain/Subject.h"
+        -:    8:#include "../repository/SubjectsRepo.h"
+        -:    9:class ActiuneUndo {
+        -:   10:public:
+        -:   11:    virtual void doUndo()=0;
+        -:   12:    //destructor virtual
+function _ZN11ActiuneUndoD2Ev called 17 returned 100% blocks executed 100%
+       17:   13:    virtual ~ActiuneUndo()=default;
+        -:   14:
+        -:   15:};
+        -:   16://clasa pentru undo adauga care mosteneste metotdele lui actiuneundo
+        -:   17:class UndoAdauga:public ActiuneUndo{
+        -:   18:    Subject subject_added;
+        -:   19:    SubjectsRepo& repo;
+        -:   20:public:
+function _ZN10UndoAdaugaC1ERK7SubjectR12SubjectsRepo called 11 returned 100% blocks executed 80%
+       11:   21:    UndoAdauga(const Subject& subject,SubjectsRepo & repo) : repo{repo}, subject_added(subject){};
+       11:   21-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 11 (fallthrough)
+branch  3 taken 0 (throw)
+       11:   21-block  1
+    $$$$$:   21-block  2
+call    4 never executed
+function _ZN10UndoAdauga6doUndoEv called 5 returned 100% blocks executed 100%
+        5:   22:    void doUndo() override{
+        5:   23:        repo.removeSubjectRepo(subject_added.get_name(),subject_added.get_teacher());
+        5:   23-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+        5:   24:    }
+        -:   25:};
+        -:   26:
+        -:   27://undo delete
+        -:   28:
+        -:   29:class UndoSterge:public ActiuneUndo{
+        -:   30:    Subject to_readd;
+        -:   31:    SubjectsRepo& repo;
+        -:   32:public:
+function _ZN10UndoStergeC1ER12SubjectsRepoRK7Subject called 4 returned 100% blocks executed 80%
+        4:   33:    UndoSterge(SubjectsRepo& repo,const Subject& subject): repo {repo},to_readd{subject}{};
+        4:   33-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   33-block  1
+    $$$$$:   33-block  2
+call    4 never executed
+function _ZN10UndoSterge6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   34:    void doUndo() override{
+        1:   35:        repo.store(to_readd);
+        1:   35-block  0
+call    0 returned 1
+        1:   36:    }
+        -:   37:};
+        -:   38:
+        -:   39:class UndoModifica:public ActiuneUndo{
+        -:   40:    Subject subject_added;
+        -:   41:    SubjectsRepo& repo;
+        -:   42:public:
+function _ZN12UndoModificaC1ERK7SubjectR12SubjectsRepo called 2 returned 100% blocks executed 80%
+        2:   43:    UndoModifica(const Subject& subject,SubjectsRepo & repo) : repo{repo}, subject_added(subject){};
+        2:   43-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   43-block  1
+    $$$$$:   43-block  2
+call    4 never executed
+function _ZN12UndoModifica6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   44:    void doUndo() override{
+        1:   45:        repo.updateSubjectRepo(subject_added);
+        1:   45-block  0
+call    0 returned 1
+        1:   46:    }
+        -:   47:};
+        -:   48:
+        -:   49:#endif //LAB_9_UNDO_H

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7"
+CMAKE_SOURCE_DIR = /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind"
+CMAKE_BINARY_DIR = /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_7/cmake-build-valgrind/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/github/uni_homeworks/Year_1/Semester_2/OOP/lab_7/cmake-build-valgrind/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

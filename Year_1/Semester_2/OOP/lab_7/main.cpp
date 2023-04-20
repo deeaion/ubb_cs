@@ -16,6 +16,6 @@ int main() {
     SubjectsService ctr{rep, val};
     SubjectsUi ui{ctr};
 
-    //ui.start();
+    ui.start();
     return 0;
 }

@@ -1,0 +1,51 @@
+5 Contract de studii
+**********DID****************
+***First  changing the for s:
+***      copy_if() -> filtrare
+***            sintaxa:   copy_if(repo.getAll().begin(),   <- pozitie vector de unde copiezi begin
+                                 repo.getAll().end(),   <- end
+                                 filtered.begin(),      <iterator unde se copiaza
+                                 [hours](const Subject& sbj) noexcept {  [hours] <parameter () <- parameter type
+                             return sbj.get_hours()==hours;   <- conditie true -> se adauga
+                         });
+        find_if()-> search
+            sintaxa:
+        sort() -> sortare
+
+//Clase exceptii -> le am facut
+
+
+Introduceți
+  //  posibilitatea de a crea un contract de studi u pe un an. Utilizatorul poate
+    //crea interactiv o lista de discipline pe care dorește sa urmeze.
+//Adăugați următoarele acțiuni (elemente de meniu)
+        //• Golește contract: șterge toate disciplinele din contract.
+        //• Adaugă in contract: adaugă in contract o disciplina după denumire
+        //• Generează contract: utilizatorul introduce numărul total de discipline,
+                contractul se populează aliator cu discipline
+        //• Export. Salvează contract in fișier : CVS sau HTML . Se face salvarea in fișier
+                doar când s a selectat acest meniu , coșul nu este persistent (la repornirea
+                aplicației coșul este din nou gol) , utilizatorul introduce numele fișierului unde
+                se salvează la fiecare export
+        //După fiecare acțiune utilizator se afișează numărul total al disciplinelor din contract.
+
+
+Deci:
+        New option: //Add contract! -> will create a fake repo. That is gonna be the contract repo.
+                    //User introduces the name of discipline and the name of the teacher.
+                    //When they try to add something to the contract: They will be first asked the name of the subject
+                                                                    I will make a list of the subjects found right? (Filter by name)
+                                                                    If there are multiple names i will have to display it.
+                                                                    The user has to choose the name of the teacher or anything and if that i will just choose one at random
+                                                                            -> filter by teacher -> search object -> add to current list
+                    //Generate contract -> user introduces the number of discipline. We will populate it randomly . If there are not enough subjects a warning message will be shown !
+                    //Export -> saves contract. HTML.
+                            We must empty where we save them when we close the app
+                            The user introudces the name. They can try to add html or not. If there is no html we will add them
+                            After every user interaction there will be shown the number of disciplines in the contract
+
+
+uinewmethods: add_to_contract . -> enter name . -> calls for filter by name. Shows list if there are more than one. If there are two or more with the same name there will be shown and the user has to decide! And then that is added!
+              generate- contract -> introduce number and it will show a warning if there were not enough :)
+              export-> user enters name. And then a html will be generated
+              empty contract -> deletes all

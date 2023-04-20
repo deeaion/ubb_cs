@@ -1,0 +1,50 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_9/Exceptions/Exceptions.h
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\service\SubjectsService.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\service\SubjectsService.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/1/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB_6_7_EXCEPTIONS_H
+        -:    6:#define LAB_6_7_EXCEPTIONS_H
+        -:    7://includes
+        -:    8:#pragma once
+        -:    9:
+        -:   10:#include <exception>
+        -:   11:#include <string>
+        -:   12:#include <utility>
+        -:   13:
+        -:   14:using std::string;
+        -:   15:
+        -:   16:class RepositoryException : public std::exception {
+        -:   17:    string message;
+        -:   18:
+        -:   19:public:
+function _ZN19RepositoryExceptionC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   20:    explicit RepositoryException(string message) : message{std::move(message)} {};
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   21:
+        -:   22:    string getMessage() { return this->message; };
+        -:   23:
+        -:   24:};
+        -:   25:
+        -:   26:class ValidatorException : public std::exception {
+        -:   27:    std::string message;
+        -:   28:public:
+        -:   29:    explicit ValidatorException(string message) : message(std::move(message)) {};
+        -:   30:
+        -:   31:    std::string getMessage() { return this->message; };
+        -:   32:};
+        -:   33:class ContractException: public std::exception{
+        -:   34:    std::string message;
+        -:   35:public:
+        -:   36:    explicit ContractException(string message): message(std::move(message)){};
+        -:   37:    std::string getMessage() {return this->message;};
+        -:   38:};
+        -:   39:
+        -:   40:
+        -:   41:#endif //LAB_6_7_EXCEPTIONS_H

@@ -1,0 +1,371 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/lab_9/ContractRepository/ContractRepo.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\ContractRepository\ContractRepo.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\ContractRepository\ContractRepo.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 4/14/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "ContractRepo.h"
+        -:    6://#include "../Exceptions/Exceptions.h"
+        -:    7:using std::ifstream;
+        -:    8:using std::ofstream;
+        -:    9:
+function _ZN12ContractRepo12add_contractERK7Subject called 4 returned 75% blocks executed 78%
+        4:   10:void ContractRepo::add_contract(const Subject &sbj) {
+        -:   11:    //I will not let them add the same subject twice!
+        4:   12:    const string& name=sbj.get_name();
+        4:   12-block  0
+call    0 returned 4
+        4:   13:    const string& teacher=sbj.get_teacher();
+call    0 returned 4
+        4:   14:    if(search_subject_contract(name,teacher)!=-1)
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   15:        throw ContractException("Subject already in contract!");
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   15-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:   15-block  2
+call    9 never executed
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+call   10 never executed
+        -:   16:    else
+        -:   17:    {
+        3:   18:        this->Contract.push_back(sbj);
+        3:   18-block  0
+call    0 returned 3
+        -:   19:    }
+        3:   20:}
+function _ZN12ContractRepo23search_subject_contractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 5 returned 100% blocks executed 84%
+        5:   21:int ContractRepo::search_subject_contract(const std::string &name, const std::string &teacher) {
+function _ZZN12ContractRepo23search_subject_contractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK7SubjectE_clESA_ called 2 returned 100% blocks executed 100%
+        5:   22:    auto it=find_if(this->Contract.begin(),this->Contract.end(),[name,teacher](const Subject& sbj){
+        5:   22-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   22-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   22-block  2
+call    6 returned 5
+call    7 returned 5
+call    8 returned 5
+branch  9 taken 5 (fallthrough)
+branch 10 taken 0 (throw)
+        5:   22-block  3
+call   11 returned 5
+    $$$$$:   22-block  4
+call   12 never executed
+    $$$$$:   22-block  5
+        2:   23:        if(sbj.get_name()==name)
+        2:   23-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        1:   24:            if(sbj.get_teacher()==teacher)
+        1:   24-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   25:                return true;
+        1:   25-block  0
+        1:   26:        return false;
+        1:   26-block  0
+        -:   27:
+        -:   28:    });
+        5:   29:    long long poz= std::distance(this->Contract.begin(),it);
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   30:    if(it!=this->Contract.end())
+        5:   30-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 1 (fallthrough)
+branch  3 taken 4
+        1:   31:        return (int)poz;
+        1:   31-block  0
+        4:   32:    return -1;
+        4:   32-block  0
+        -:   33:
+        -:   34:}
+function _ZN12ContractRepo14empty_contractEv called 2 returned 100% blocks executed 100%
+        2:   35:void ContractRepo::empty_contract() noexcept {
+        2:   36:    this->Contract.clear();
+        2:   36-block  0
+call    0 returned 2
+        2:   37:}
+function _ZN12ContractRepo17generate_contractEiRKSt6vectorI7SubjectSaIS1_EE called 1 returned 100% blocks executed 88%
+        1:   38:void ContractRepo::generate_contract(int nr_subjects,const vector<Subject>& memory) {
+        1:   39:    empty_contract();
+        1:   39-block  0
+call    0 returned 1
+        1:   40:    auto to_contract=memory;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41:    shuffle(to_contract.begin(),to_contract.end(),std::default_random_engine (time(0)));
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   41-block  2
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+    $$$$$:   41-block  3
+        2:   42:    while(nr_subjects&&!to_contract.empty())
+        1:   42-block  0
+        2:   42-block  1
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   42-block  2
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:   42-block  3
+        1:   42-block  4
+        2:   42-block  5
+branch  5 taken 1
+branch  6 taken 1 (fallthrough)
+        -:   43:    {
+        1:   44:        add_contract(to_contract.back());
+        1:   44-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45:        to_contract.pop_back();
+        1:   45-block  0
+call    0 returned 1
+        1:   46:        nr_subjects--;
+        -:   47:    }
+        1:   48:}
+        1:   48-block  0
+call    0 returned 1
+    $$$$$:   48-block  1
+call    1 never executed
+function _ZN12ContractRepo12get_ContractEv called 5 returned 100% blocks executed 100%
+        5:   49:const vector<Subject>& ContractRepo::get_Contract() {
+        5:   50:    return this->Contract;
+        5:   50-block  0
+        -:   51:}
+        -:   52:
+function _ZN12ContractRepo15export_contractERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 85%
+        2:   53:string ContractRepo::export_contract(const std::string &name_file) {
+        2:   54:    string filename=name_file;
+        2:   54-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   55:    auto pos=filename.find_last_of('.');
+        2:   55-block  0
+call    0 returned 2
+        2:   56:    if(pos<filename.size())
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        -:   57:    {
+        2:   58:        auto file_extension=name_file.substr(pos);
+        2:   58-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   59:        if(file_extension!=".html")
+        2:   59-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   59-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 1
+        1:   60:            filename=filename+".html";
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+call    3 returned 1
+call    4 returned 1
+        2:   61:    }
+        2:   61-block  0
+call    0 returned 2
+    $$$$$:   61-block  1
+call    1 never executed
+        -:   62:
+        -:   63:
+        2:   64:    std::ofstream fout(filename);
+        2:   64-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   65:    fout<<"<html>\n"
+        -:   66:          "<body>\n"
+        -:   67:          "<head>\n"
+        -:   68:          "    <h3 style=\" font-family: 'Caviar Dreams',serif; color:mediumpurple; \">Contracted Subjects</h3>\n"
+        -:   69:          "    </head>\n"
+        -:   70:          "<style>\n"
+        -:   71:          "    p {\n"
+        -:   72:          "        color: #D7BDE2 ;\n"
+        -:   73:          "        background-color: #A9CCE3 ;\n"
+        -:   74:          "        border: 1px solid black; }\n"
+        -:   75:          "    table,th,td{\n"
+        -:   76:          "        border: 1px solid black;\n"
+        -:   77:          "    }\n"
+        -:   78:          "    th{\n"
+        -:   79:          "        color: darkviolet;\n"
+        -:   80:          "    }\n"
+        -:   81:          "    body{\n"
+        -:   82:          "        background-color: #CACFD2;\n"
+        -:   83:          "    }\n"
+        2:   84:          "</style>\n";
+        2:   84-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   85:    fout<<"<table>\n"
+        -:   86:          "\n"
+        -:   87:          "        <th>Name</th>\n"
+        -:   88:          "        <th>Hours</th>\n"
+        -:   89:          "        <th>Type</th>\n"
+        2:   90:          "        <th>Teacher</th>";
+        2:   90-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   91:    for(const Subject& sbj:get_Contract())
+        2:   91-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+        2:   91-block  1
+call    3 returned 2
+        2:   91-block  2
+call    4 returned 2
+        4:   91-block  3
+call    5 returned 4
+branch  6 taken 2
+branch  7 taken 2 (fallthrough)
+        -:   92:    {
+        2:   93:        fout<<"<tr>\n";
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   94:        fout<<"<th>"<<sbj.get_name()<<"</th>\n"
+        2:   95:            <<"<th>"<<sbj.get_hours()<<"</th>\n"
+        2:   95-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   95-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   95-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   95-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   95-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        4:   96:            <<"<th>"<<sbj.get_type()<<"</th>\n"
+        4:   97:            <<"<th>\n"<<sbj.get_teacher()<<"</th>\n"
+        2:   98:            <<"</tr>\n";
+        2:   98-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   98-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   98-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   98-block  3
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   98-block  4
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   98-block  5
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:   98-block  6
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:   98-block  7
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:   98-block  8
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:   98-block  9
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:   98-block 10
+call   30 returned 2
+branch 31 taken 2 (fallthrough)
+branch 32 taken 0 (throw)
+        2:   98-block 11
+call   33 returned 2
+branch 34 taken 2 (fallthrough)
+branch 35 taken 0 (throw)
+        -:   99:
+        -:  100:
+        -:  101:    }
+        -:  102:    fout<<"</table>\n"
+        -:  103:          "\n"
+        -:  104:          "\n"
+        -:  105:          "</body>\n"
+        2:  106:          "</html>";
+        2:  106-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  107:
+        4:  108:    return filename;
+        2:  108-block  0
+        2:  108-block  1
+        2:  109:}
+        2:  109-block  0
+call    0 returned 2
+    $$$$$:  109-block  1
+call    1 never executed
+    $$$$$:  109-block  2
+call    2 never executed

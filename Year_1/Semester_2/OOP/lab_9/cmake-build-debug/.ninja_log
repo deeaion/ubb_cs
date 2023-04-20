@@ -1,0 +1,12 @@
+# ninja log v5
+4	583	7035172597950930	CMakeFiles/lab_9.dir/tests/Tests.cpp.obj	d5c409e1e0487f2b
+64	527	7035085436146877	CMakeFiles/lab_9.dir/validator/ValidatorSubject.cpp.obj	4f3ff8f387d4f82d
+42	850	7035172365886299	CMakeFiles/lab_9.dir/repository/SubjectsRepo.cpp.obj	720513dfdd11a0b3
+26	710	7035172364486154	CMakeFiles/lab_9.dir/domain/Subject.cpp.obj	dcfd729cfe96e68f
+51	857	7035172365961528	CMakeFiles/lab_9.dir/repository/FileRepositorySubjects.cpp.obj	e5abb03967c32ebb
+3	607	7035172794340615	CMakeFiles/lab_9.dir/main.cpp.obj	6578ac97292662d8
+30	736	7035146075277206	CMakeFiles/lab_9.dir/ui/SubjectsUi.cpp.obj	2b3d026598557d04
+34	1202	7035172369385215	CMakeFiles/lab_9.dir/service/SubjectsService.cpp.obj	d6f48cf3097cd1ba
+11	999	7035172367377571	CMakeFiles/lab_9.dir/ContractRepository/ContractRepo.cpp.obj	7cd38fd1e0c47b8e
+607	794	7035172796108811	lab_9.exe	7c387722b5155e2a
+22	483	7035146072768319	CMakeFiles/lab_9.dir/Undo/Undo.cpp.obj	c7b2507aaca4b7db
