@@ -97,7 +97,15 @@ const vector<Subject> &SubjectsService::getAll() noexcept {
 //    }
 //    return subjects;}
 
-
+vector<Subject> SubjectsService::filterByType(const string& type) {
+    vector<Subject> filtered;
+    copy_if(repo.getAll().begin(),
+            repo.getAll().end(),
+            std::back_inserter(filtered),
+            [type](const Subject& sbj) {
+                return sbj.get_type()==type;
+            });
+    return filtered;}
 
 vector<Subject> SubjectsService::filterByHours(int hours) {
     vector<Subject> filtered;
@@ -144,3 +152,26 @@ vector<Subject> SubjectsService::sortByTeacherandType() {
     auto sorted=repo.getAll();
     sort(sorted.begin(),sorted.end(), cmpTeacherandType);
     return sorted;}
+
+
+    set <string> SubjectsService::number_of_types()
+    {  set <string> types;
+        vector<Subject> subjects=getAll();
+        for(const auto &i:subjects)
+        {       types.insert(i.get_type());
+        }
+        return types;
+    }
+
+map<string,vector<Subject>> SubjectsService:: creatingmap()
+{
+    map<string,vector<Subject>> mapFiltered;
+    set <string> types= number_of_types();
+    for(const auto& t: types)
+    {
+        vector <Subject> found_obj= filterByType(t);
+        mapFiltered[t]=found_obj;
+    }
+    return mapFiltered;
+
+}

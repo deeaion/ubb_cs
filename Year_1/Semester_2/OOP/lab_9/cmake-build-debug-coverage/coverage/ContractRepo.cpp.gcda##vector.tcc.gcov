@@ -427,8 +427,8 @@
         -:  423:  template<typename _Tp, typename _Alloc>
         -:  424:    template<typename... _Args>
         -:  425:      void
-function _ZNSt6vectorI7SubjectSaIS0_EE17_M_realloc_insertIJRKS0_EEEvN9__gnu_cxx17__normal_iteratorIPS0_S2_EEDpOT_ called 20 returned 100% blocks executed 65%
-       20:  426:      vector<_Tp, _Alloc>::
+function _ZNSt6vectorI7SubjectSaIS0_EE17_M_realloc_insertIJRKS0_EEEvN9__gnu_cxx17__normal_iteratorIPS0_S2_EEDpOT_ called 26 returned 100% blocks executed 65%
+       26:  426:      vector<_Tp, _Alloc>::
         -:  427:      _M_realloc_insert(iterator __position, _Args&&... __args)
         -:  428:#else
         -:  429:  template<typename _Tp, typename _Alloc>
@@ -438,17 +438,17 @@ function _ZNSt6vectorI7SubjectSaIS0_EE17_M_realloc_insertIJRKS0_EEEvN9__gnu_cxx1
         -:  433:#endif
         -:  434:    {
         -:  435:      const size_type __len =
-       20:  436:	_M_check_len(size_type(1), "vector::_M_realloc_insert");
-       20:  436-block  0
-call    0 returned 20
-       20:  437:      pointer __old_start = this->_M_impl._M_start;
-       20:  438:      pointer __old_finish = this->_M_impl._M_finish;
-       20:  439:      const size_type __elems_before = __position - begin();
-call    0 returned 20
-call    1 returned 20
-       20:  440:      pointer __new_start(this->_M_allocate(__len));
-call    0 returned 20
-       20:  441:      pointer __new_finish(__new_start);
+       26:  436:	_M_check_len(size_type(1), "vector::_M_realloc_insert");
+       26:  436-block  0
+call    0 returned 26
+       26:  437:      pointer __old_start = this->_M_impl._M_start;
+       26:  438:      pointer __old_finish = this->_M_impl._M_finish;
+       26:  439:      const size_type __elems_before = __position - begin();
+call    0 returned 26
+call    1 returned 26
+       26:  440:      pointer __new_start(this->_M_allocate(__len));
+call    0 returned 26
+       26:  441:      pointer __new_finish(__new_start);
         -:  442:      __try
         -:  443:	{
         -:  444:	  // The order of the three operations is dictated by the C++11
@@ -456,18 +456,18 @@ call    0 returned 20
         -:  446:	  // to the existing vector.  This is an issue only for callers
         -:  447:	  // taking the element by lvalue ref (see last bullet of C++11
         -:  448:	  // [res.on.arguments]).
-       20:  449:	  _Alloc_traits::construct(this->_M_impl,
-call    0 returned 20
-       20:  450:				   __new_start + __elems_before,
-call    0 returned 20
-branch  1 taken 20 (fallthrough)
+       26:  449:	  _Alloc_traits::construct(this->_M_impl,
+call    0 returned 26
+       26:  450:				   __new_start + __elems_before,
+call    0 returned 26
+branch  1 taken 26 (fallthrough)
 branch  2 taken 0 (throw)
         -:  451:#if __cplusplus >= 201103L
         -:  452:				   std::forward<_Args>(__args)...);
         -:  453:#else
         -:  454:				   __x);
         -:  455:#endif
-       20:  456:	  __new_finish = pointer();
+       26:  456:	  __new_finish = pointer();
         -:  457:
         -:  458:#if __cplusplus >= 201103L
         -:  459:	  if _GLIBCXX17_CONSTEXPR (_S_use_relocate())
@@ -485,27 +485,27 @@ branch  2 taken 0 (throw)
         -:  471:	    {
         -:  472:	      __new_finish
         -:  473:		= std::__uninitialized_move_if_noexcept_a
-       20:  474:		(__old_start, __position.base(),
-call    0 returned 20
-call    1 returned 20
-branch  2 taken 20 (fallthrough)
+       26:  474:		(__old_start, __position.base(),
+call    0 returned 26
+call    1 returned 26
+branch  2 taken 26 (fallthrough)
 branch  3 taken 0 (throw)
-       20:  475:		 __new_start, _M_get_Tp_allocator());
-       20:  475-block  0
-call    0 returned 20
+       26:  475:		 __new_start, _M_get_Tp_allocator());
+       26:  475-block  0
+call    0 returned 26
         -:  476:
-       20:  477:	      ++__new_finish;
+       26:  477:	      ++__new_finish;
         -:  478:
         -:  479:	      __new_finish
         -:  480:		= std::__uninitialized_move_if_noexcept_a
-       20:  481:		(__position.base(), __old_finish,
-call    0 returned 20
-call    1 returned 20
-branch  2 taken 20 (fallthrough)
+       26:  481:		(__position.base(), __old_finish,
+call    0 returned 26
+call    1 returned 26
+branch  2 taken 26 (fallthrough)
 branch  3 taken 0 (throw)
-       20:  482:		 __new_finish, _M_get_Tp_allocator());
-       20:  482-block  0
-call    0 returned 20
+       26:  482:		 __new_finish, _M_get_Tp_allocator());
+       26:  482-block  0
+call    0 returned 26
         -:  483:	    }
         -:  484:	}
     =====:  485:      __catch(...)
@@ -541,18 +541,18 @@ call    0 never executed
         -:  495:#if __cplusplus >= 201103L
         -:  496:      if _GLIBCXX17_CONSTEXPR (!_S_use_relocate())
         -:  497:#endif
-       20:  498:	std::_Destroy(__old_start, __old_finish, _M_get_Tp_allocator());
-       20:  498-block  0
-call    0 returned 20
-call    1 returned 20
+       26:  498:	std::_Destroy(__old_start, __old_finish, _M_get_Tp_allocator());
+       26:  498-block  0
+call    0 returned 26
+call    1 returned 26
         -:  499:      _GLIBCXX_ASAN_ANNOTATE_REINIT;
-       20:  500:      _M_deallocate(__old_start,
-       20:  501:		    this->_M_impl._M_end_of_storage - __old_start);
-call    0 returned 20
-       20:  502:      this->_M_impl._M_start = __new_start;
-       20:  503:      this->_M_impl._M_finish = __new_finish;
-       20:  504:      this->_M_impl._M_end_of_storage = __new_start + __len;
-       20:  505:    }
+       26:  500:      _M_deallocate(__old_start,
+       26:  501:		    this->_M_impl._M_end_of_storage - __old_start);
+call    0 returned 26
+       26:  502:      this->_M_impl._M_start = __new_start;
+       26:  503:      this->_M_impl._M_finish = __new_finish;
+       26:  504:      this->_M_impl._M_end_of_storage = __new_start + __len;
+       26:  505:    }
         -:  506:
         -:  507:  template<typename _Tp, typename _Alloc>
         -:  508:    void

@@ -50,14 +50,14 @@
         -:   46:   */
         -:   47:  template<typename _Tp>
         -:   48:    inline _GLIBCXX_CONSTEXPR _Tp*
-      105:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-      105:   50:    { return __builtin_addressof(__r); }
+      130:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+      130:   50:    { return __builtin_addressof(__r); }
 ------------------
 _ZSt11__addressofI7SubjectEPT_RS1_:
-function _ZSt11__addressofI7SubjectEPT_RS1_ called 53 returned 100% blocks executed 100%
-       53:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-       53:   50:    { return __builtin_addressof(__r); }
-       53:   50-block  0
+function _ZSt11__addressofI7SubjectEPT_RS1_ called 78 returned 100% blocks executed 100%
+       78:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+       78:   50:    { return __builtin_addressof(__r); }
+       78:   50-block  0
 ------------------
 _ZSt11__addressofISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEPT_RS5_:
 function _ZSt11__addressofISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEPT_RS5_ called 52 returned 100% blocks executed 100%

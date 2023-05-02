@@ -722,7 +722,7 @@ call    0 never executed
         -:  685:	   typename _Predicate>
         -:  686:    _GLIBCXX20_CONSTEXPR
         -:  687:    _OutputIterator
-        5:  688:    copy_if(_InputIterator __first, _InputIterator __last,
+        8:  688:    copy_if(_InputIterator __first, _InputIterator __last,
         -:  689:	    _OutputIterator __result, _Predicate __pred)
         -:  690:    {
         -:  691:      // concept requirements
@@ -733,13 +733,13 @@ call    0 never executed
         -:  696:	    typename iterator_traits<_InputIterator>::value_type>)
         -:  697:      __glibcxx_requires_valid_range(__first, __last);
         -:  698:
-       14:  699:      for (; __first != __last; ++__first)
-        9:  700:	if (__pred(*__first))
+       23:  699:      for (; __first != __last; ++__first)
+       15:  700:	if (__pred(*__first))
         -:  701:	  {
-        6:  702:	    *__result = *__first;
-        6:  703:	    ++__result;
+        9:  702:	    *__result = *__first;
+        9:  703:	    ++__result;
         -:  704:	  }
-        5:  705:      return __result;
+        8:  705:      return __result;
         -:  706:    }
 ------------------
 _ZSt7copy_ifIN9__gnu_cxx17__normal_iteratorIPK7SubjectSt6vectorIS2_SaIS2_EEEESt20back_insert_iteratorIS7_EZN15SubjectsService19filterBySubjectNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRS3_E_ET0_T_SN_SM_T1_:
@@ -860,6 +860,46 @@ call    0 returned 1
         -:  704:	  }
         1:  705:      return __result;
         1:  705-block  0
+        -:  706:    }
+------------------
+_ZSt7copy_ifIN9__gnu_cxx17__normal_iteratorIPK7SubjectSt6vectorIS2_SaIS2_EEEESt20back_insert_iteratorIS7_EZN15SubjectsService12filterByTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRS3_E_ET0_T_SN_SM_T1_:
+function _ZSt7copy_ifIN9__gnu_cxx17__normal_iteratorIPK7SubjectSt6vectorIS2_SaIS2_EEEESt20back_insert_iteratorIS7_EZN15SubjectsService12filterByTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEUlRS3_E_ET0_T_SN_SM_T1_ called 3 returned 100% blocks executed 100%
+        3:  688:    copy_if(_InputIterator __first, _InputIterator __last,
+        -:  689:	    _OutputIterator __result, _Predicate __pred)
+        -:  690:    {
+        -:  691:      // concept requirements
+        -:  692:      __glibcxx_function_requires(_InputIteratorConcept<_InputIterator>)
+        -:  693:      __glibcxx_function_requires(_OutputIteratorConcept<_OutputIterator,
+        -:  694:	    typename iterator_traits<_InputIterator>::value_type>)
+        -:  695:      __glibcxx_function_requires(_UnaryPredicateConcept<_Predicate,
+        -:  696:	    typename iterator_traits<_InputIterator>::value_type>)
+        -:  697:      __glibcxx_requires_valid_range(__first, __last);
+        -:  698:
+        9:  699:      for (; __first != __last; ++__first)
+        3:  699-block  0
+        6:  699-block  1
+call    0 returned 6
+        9:  699-block  2
+call    1 returned 9
+branch  2 taken 6
+branch  3 taken 3 (fallthrough)
+        6:  700:	if (__pred(*__first))
+        6:  700-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 3 (fallthrough)
+branch  3 taken 3
+        -:  701:	  {
+        3:  702:	    *__result = *__first;
+        3:  702-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:  703:	    ++__result;
+call    0 returned 3
+        -:  704:	  }
+        3:  705:      return __result;
+        3:  705-block  0
         -:  706:    }
 ------------------
         -:  707:

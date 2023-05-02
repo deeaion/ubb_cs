@@ -1240,9 +1240,11 @@ call    1 returned 26
         -:  995:       *  hold before needing to allocate more memory.
         -:  996:       */
         -:  997:      size_type
-        -:  998:      capacity() const _GLIBCXX_NOEXCEPT
-        -:  999:      { return size_type(this->_M_impl._M_end_of_storage
-        -: 1000:			 - this->_M_impl._M_start); }
+function _ZNKSt6vectorI7SubjectSaIS0_EE8capacityEv called 3 returned 100% blocks executed 100%
+        3:  998:      capacity() const _GLIBCXX_NOEXCEPT
+        3:  999:      { return size_type(this->_M_impl._M_end_of_storage
+        3: 1000:			 - this->_M_impl._M_start); }
+        3: 1000-block  0
         -: 1001:
         -: 1002:      /**
         -: 1003:       *  Returns true if the %vector is empty.  (Thus begin() would
@@ -1771,8 +1773,11 @@ call    0 returned 7
         -: 1495:       *  the user's responsibility.
         -: 1496:       */
         -: 1497:      void
-        -: 1498:      clear() _GLIBCXX_NOEXCEPT
-        -: 1499:      { _M_erase_at_end(this->_M_impl._M_start); }
+function _ZNSt6vectorI7SubjectSaIS0_EE5clearEv called 0 returned 0% blocks executed 0%
+    #####: 1498:      clear() _GLIBCXX_NOEXCEPT
+    #####: 1499:      { _M_erase_at_end(this->_M_impl._M_start); }
+    %%%%%: 1499-block  0
+call    0 never executed
         -: 1500:
         -: 1501:    protected:
         -: 1502:      /**
@@ -1781,20 +1786,39 @@ call    0 returned 7
         -: 1505:       */
         -: 1506:      template<typename _ForwardIterator>
         -: 1507:	pointer
-        -: 1508:	_M_allocate_and_copy(size_type __n,
+function _ZNSt6vectorI7SubjectSaIS0_EE20_M_allocate_and_copyIN9__gnu_cxx17__normal_iteratorIPKS0_S2_EEEEPS0_yT_SA_ called 2 returned 100% blocks executed 55%
+        2: 1508:	_M_allocate_and_copy(size_type __n,
         -: 1509:			     _ForwardIterator __first, _ForwardIterator __last)
         -: 1510:	{
-        -: 1511:	  pointer __result = this->_M_allocate(__n);
+        2: 1511:	  pointer __result = this->_M_allocate(__n);
+        2: 1511-block  0
+call    0 returned 2
         -: 1512:	  __try
         -: 1513:	    {
-        -: 1514:	      std::__uninitialized_copy_a(__first, __last, __result,
-        -: 1515:					  _M_get_Tp_allocator());
-        -: 1516:	      return __result;
+        2: 1514:	      std::__uninitialized_copy_a(__first, __last, __result,
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2: 1515:					  _M_get_Tp_allocator());
+call    0 returned 2
+        2: 1516:	      return __result;
+        2: 1516-block  0
+        2: 1516-block  1
         -: 1517:	    }
-        -: 1518:	  __catch(...)
+    =====: 1518:	  __catch(...)
+    $$$$$: 1518-block  0
+    $$$$$: 1518-block  1
+call    0 never executed
+    $$$$$: 1518-block  2
+call    1 never executed
         -: 1519:	    {
-        -: 1520:	      _M_deallocate(__result, __n);
-        -: 1521:	      __throw_exception_again;
+    =====: 1520:	      _M_deallocate(__result, __n);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====: 1521:	      __throw_exception_again;
+    $$$$$: 1521-block  0
+call    0 never executed
         -: 1522:	    }
         -: 1523:	}
         -: 1524:
@@ -2126,22 +2150,62 @@ call    6 never executed
       26*: 1783:	const size_t __allocmax = _Alloc_traits::max_size(__a);
       26*: 1784:	return (std::min)(__diffmax, __allocmax);
         -: 1785:      }
+------------------
+_ZNSt6vectorI7SubjectSaIS0_EE11_S_max_sizeERKS1_:
+function _ZNSt6vectorI7SubjectSaIS0_EE11_S_max_sizeERKS1_ called 0 returned 0% blocks executed 0%
+    #####: 1776:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+        -: 1777:      {
+        -: 1778:	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
+        -: 1779:	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
+        -: 1780:	// (even if std::allocator_traits::max_size says we can).
+    #####: 1781:	const size_t __diffmax
+        -: 1782:	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
+    #####: 1783:	const size_t __allocmax = _Alloc_traits::max_size(__a);
+    %%%%%: 1783-block  0
+call    0 never executed
+    #####: 1784:	return (std::min)(__diffmax, __allocmax);
+call    0 never executed
+        -: 1785:      }
+------------------
+_ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE11_S_max_sizeERKS5_:
+function _ZNSt6vectorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EESaIS4_EE11_S_max_sizeERKS5_ called 26 returned 100% blocks executed 100%
+       26: 1776:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+        -: 1777:      {
+        -: 1778:	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
+        -: 1779:	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
+        -: 1780:	// (even if std::allocator_traits::max_size says we can).
+       26: 1781:	const size_t __diffmax
+        -: 1782:	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
+       26: 1783:	const size_t __allocmax = _Alloc_traits::max_size(__a);
+       26: 1783-block  0
+call    0 returned 26
+       26: 1784:	return (std::min)(__diffmax, __allocmax);
+call    0 returned 26
+        -: 1785:      }
+------------------
         -: 1786:
         -: 1787:      // Internal erase functions follow.
         -: 1788:
         -: 1789:      // Called by erase(q1,q2), clear(), resize(), _M_fill_assign,
         -: 1790:      // _M_assign_aux.
         -: 1791:      void
-        -: 1792:      _M_erase_at_end(pointer __pos) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI7SubjectSaIS0_EE15_M_erase_at_endEPS0_ called 0 returned 0% blocks executed 0%
+    #####: 1792:      _M_erase_at_end(pointer __pos) _GLIBCXX_NOEXCEPT
         -: 1793:      {
-        -: 1794:	if (size_type __n = this->_M_impl._M_finish - __pos)
+    #####: 1794:	if (size_type __n = this->_M_impl._M_finish - __pos)
+    %%%%%: 1794-block  0
+branch  0 never executed
+branch  1 never executed
         -: 1795:	  {
-        -: 1796:	    std::_Destroy(__pos, this->_M_impl._M_finish,
-        -: 1797:			  _M_get_Tp_allocator());
-        -: 1798:	    this->_M_impl._M_finish = __pos;
+    #####: 1796:	    std::_Destroy(__pos, this->_M_impl._M_finish,
+call    0 never executed
+    #####: 1797:			  _M_get_Tp_allocator());
+    %%%%%: 1797-block  0
+call    0 never executed
+    #####: 1798:	    this->_M_impl._M_finish = __pos;
         -: 1799:	    _GLIBCXX_ASAN_ANNOTATE_SHRINK(__n);
         -: 1800:	  }
-        -: 1801:      }
+    #####: 1801:      }
         -: 1802:
         -: 1803:      iterator
         -: 1804:      _M_erase(iterator __position);

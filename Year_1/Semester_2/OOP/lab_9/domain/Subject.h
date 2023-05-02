@@ -90,6 +90,7 @@ public:
      *              only if the name of the subject and teacher are the same
      * */
     bool operator==(const Subject &other);
+    bool operator!=(const Subject &other);
     friend std::istream & operator>> (std::istream &input, Subject& subject);
 
 

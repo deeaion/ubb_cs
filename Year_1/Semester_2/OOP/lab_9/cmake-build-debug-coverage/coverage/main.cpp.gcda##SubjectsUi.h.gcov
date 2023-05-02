@@ -44,18 +44,20 @@
         -:   40:    void UiGenerateContract();
         -:   41:    void UiExportContract();
         -:   42:    void UiEmptyContract();
-        -:   43:
-        -:   44:public:
+        -:   43:    void Uimapf();
+        -:   44:
+        -:   45:
+        -:   46:public:
 function _ZN10SubjectsUiC1ER15SubjectsService called 1 returned 100% blocks executed 100%
-        1:   45:    explicit SubjectsUi(SubjectsService &ctr) : ctr{ctr} {
-        -:   46:
-        1:   47:    }
+        1:   47:    explicit SubjectsUi(SubjectsService &ctr) : ctr{ctr} {
         -:   48:
-        -:   49:    //we dont allow to copy the objects
-        -:   50:    SubjectsUi(const SubjectsUi &ot) = delete;
-        -:   51:
-        -:   52:    void start();
-        -:   53:};
-        -:   54:
-        -:   55:
-        -:   56:#endif //LAB_6_7_SUBJECTSUI_H
+        1:   49:    }
+        -:   50:
+        -:   51:    //we dont allow to copy the objects
+        -:   52:    SubjectsUi(const SubjectsUi &ot) = delete;
+        -:   53:
+        -:   54:    void start();
+        -:   55:};
+        -:   56:
+        -:   57:
+        -:   58:#endif //LAB_6_7_SUBJECTSUI_H

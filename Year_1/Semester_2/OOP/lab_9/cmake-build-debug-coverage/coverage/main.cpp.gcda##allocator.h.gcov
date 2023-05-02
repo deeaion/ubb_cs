@@ -169,13 +169,13 @@
         -:  165:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  166:      // 3035. std::allocator's constructors should be constexpr
         -:  167:      _GLIBCXX20_CONSTEXPR
-       27:  168:      allocator() _GLIBCXX_NOTHROW { }
+       32:  168:      allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaI7SubjectEC2Ev:
-function _ZNSaI7SubjectEC2Ev called 21 returned 100% blocks executed 100%
-       21:  168:      allocator() _GLIBCXX_NOTHROW { }
-       21:  168-block  0
-call    0 returned 21
+function _ZNSaI7SubjectEC2Ev called 26 returned 100% blocks executed 100%
+       26:  168:      allocator() _GLIBCXX_NOTHROW { }
+       26:  168-block  0
+call    0 returned 26
 ------------------
 _ZNSaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS0_EEEC2Ev:
 function _ZNSaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS0_EEEC2Ev called 6 returned 100% blocks executed 100%
@@ -200,13 +200,13 @@ call    0 returned 6
         -:  183:#if __cpp_constexpr_dynamic_alloc
         -:  184:      constexpr
         -:  185:#endif
-       35:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+       42:  186:      ~allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaI7SubjectED2Ev:
-function _ZNSaI7SubjectED2Ev called 29 returned 100% blocks executed 100%
-       29:  186:      ~allocator() _GLIBCXX_NOTHROW { }
-       29:  186-block  0
-call    0 returned 29
+function _ZNSaI7SubjectED2Ev called 36 returned 100% blocks executed 100%
+       36:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+       36:  186-block  0
+call    0 returned 36
 ------------------
 _ZNSaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS0_EEED2Ev:
 function _ZNSaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS0_EEED2Ev called 6 returned 100% blocks executed 100%

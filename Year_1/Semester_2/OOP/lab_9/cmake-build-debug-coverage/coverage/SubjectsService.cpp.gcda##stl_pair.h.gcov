@@ -323,8 +323,11 @@
         -:  319:	       enable_if<_PCCP::template
         -:  320:			   _MoveCopyPair<true, _U1, _T2>(),
         -:  321:                         bool>::type=true>
-        -:  322:       constexpr pair(_U1&& __x, const _T2& __y)
-        -:  323:       : first(std::forward<_U1>(__x)), second(__y) { }
+function _ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRS1_Lb1EEEOT_RKS1_ called 0 returned 0% blocks executed 0%
+    #####:  322:       constexpr pair(_U1&& __x, const _T2& __y)
+    #####:  323:       : first(std::forward<_U1>(__x)), second(__y) { }
+    %%%%%:  323-block  0
+call    0 never executed
         -:  324:
         -:  325:      template<typename _U1, typename
         -:  326:	       enable_if<_PCCP::template
@@ -337,8 +340,11 @@
         -:  333:	       enable_if<_PCCP::template
         -:  334:			   _CopyMovePair<true, _T1, _U2>(),
         -:  335:                         bool>::type=true>
-        -:  336:       constexpr pair(const _T1& __x, _U2&& __y)
-        -:  337:       : first(__x), second(std::forward<_U2>(__y)) { }
+function _ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRS1_Lb1EEERKS1_OT_ called 1 returned 100% blocks executed 100%
+        1:  336:       constexpr pair(const _T1& __x, _U2&& __y)
+        1:  337:       : first(__x), second(std::forward<_U2>(__y)) { }
+        1:  337-block  0
+call    0 returned 1
         -:  338:
         -:  339:      template<typename _U2, typename
         -:  340:	       enable_if<_PCCP::template
@@ -353,12 +359,58 @@
         -:  349:			  && _PCCP::template
         -:  350:			   _ImplicitlyMoveConvertiblePair<_U1, _U2>(),
         -:  351:                         bool>::type=true>
+      13*:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+      13*:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+------------------
+_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRPSt13_Rb_tree_nodeIS_IKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaISD_EEEERS1_Lb1EEEOT_OT0_:
+function _ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRPSt13_Rb_tree_nodeIS_IKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaISD_EEEERS1_Lb1EEEOT_OT0_ called 1 returned 100% blocks executed 100%
+        1:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+        1:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+        1:  353-block  0
+call    0 returned 1
+call    1 returned 1
+------------------
+_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRS1_S4_Lb1EEEOT_OT0_:
+function _ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRS1_S4_Lb1EEEOT_OT0_ called 0 returned 0% blocks executed 0%
+    #####:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+    #####:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+    %%%%%:  353-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRPSt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEERS1_Lb1EEEOT_OT0_:
+function _ZNSt4pairIPSt18_Rb_tree_node_baseS1_EC1IRPSt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEERS1_Lb1EEEOT_OT0_ called 4 returned 100% blocks executed 100%
+        4:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+        4:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+        4:  353-block  0
+call    0 returned 4
+call    1 returned 4
+------------------
+_ZNSt4pairIyyEC1IyyLb1EEEOT_OT0_:
 function _ZNSt4pairIyyEC1IyyLb1EEEOT_OT0_ called 0 returned 0% blocks executed 0%
     #####:  352:	constexpr pair(_U1&& __x, _U2&& __y)
     #####:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
     %%%%%:  353-block  0
 call    0 never executed
 call    1 never executed
+------------------
+_ZNSt4pairISt17_Rb_tree_iteratorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEbEC1IS7_bLb1EEEOT_OT0_:
+function _ZNSt4pairISt17_Rb_tree_iteratorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEbEC1IS7_bLb1EEEOT_OT0_ called 4 returned 100% blocks executed 100%
+        4:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+        4:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+        4:  353-block  0
+call    0 returned 4
+call    1 returned 4
+------------------
+_ZNSt4pairISt23_Rb_tree_const_iteratorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEbEC1IRSt17_Rb_tree_iteratorIS6_ERbLb1EEEOT_OT0_:
+function _ZNSt4pairISt23_Rb_tree_const_iteratorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEbEC1IRSt17_Rb_tree_iteratorIS6_ERbLb1EEEOT_OT0_ called 4 returned 100% blocks executed 100%
+        4:  352:	constexpr pair(_U1&& __x, _U2&& __y)
+        4:  353:	: first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y)) { }
+        4:  353-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+------------------
         -:  354:
         -:  355:      template<typename _U1, typename _U2, typename
         -:  356:	       enable_if<_PCCP::template

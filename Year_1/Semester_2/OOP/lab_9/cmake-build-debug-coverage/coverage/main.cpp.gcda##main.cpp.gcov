@@ -25,7 +25,7 @@ branch  2 taken 0 (throw)
 call    0 returned 1
 branch  1 taken 1 (fallthrough)
 branch  2 taken 0 (throw)
-        2:   14:    FileRepositorySubjects rep{"subjects.txt"};
+        2:   14:    FileRepositorySubjects rep{"../subjects.txt"};
         1:   14-block  0
 call    0 returned 1
 call    1 returned 1
@@ -46,7 +46,7 @@ call    0 returned 1
         1:   18:    SubjectsUi ui{ctr};
 call    0 returned 1
         -:   19:
-        -:   20:    //ui.start();
+        -:   20:   // ui.start();
         -:   21:
         1:   22:    return 0;
         1:   23:}

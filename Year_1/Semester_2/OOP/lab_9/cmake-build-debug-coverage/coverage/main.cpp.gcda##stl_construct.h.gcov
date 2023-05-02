@@ -136,27 +136,27 @@
         -:  132:   */
         -:  133:  template<typename _Tp>
         -:  134:    _GLIBCXX14_CONSTEXPR inline void
-       43:  135:    _Destroy(_Tp* __pointer)
+       59:  135:    _Destroy(_Tp* __pointer)
         -:  136:    {
         -:  137:#if __cplusplus > 201703L
         -:  138:      std::destroy_at(__pointer);
         -:  139:#else
-       43:  140:      __pointer->~_Tp();
+       59:  140:      __pointer->~_Tp();
         -:  141:#endif
-       43:  142:    }
+       59:  142:    }
 ------------------
 _ZSt8_DestroyI7SubjectEvPT_:
-function _ZSt8_DestroyI7SubjectEvPT_ called 33 returned 100% blocks executed 100%
-       33:  135:    _Destroy(_Tp* __pointer)
+function _ZSt8_DestroyI7SubjectEvPT_ called 49 returned 100% blocks executed 100%
+       49:  135:    _Destroy(_Tp* __pointer)
         -:  136:    {
         -:  137:#if __cplusplus > 201703L
         -:  138:      std::destroy_at(__pointer);
         -:  139:#else
-       33:  140:      __pointer->~_Tp();
-       33:  140-block  0
-call    0 returned 33
+       49:  140:      __pointer->~_Tp();
+       49:  140-block  0
+call    0 returned 49
         -:  141:#endif
-       33:  142:    }
+       49:  142:    }
 ------------------
 _ZSt8_DestroyISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_:
 function _ZSt8_DestroyISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvPT_ called 10 returned 100% blocks executed 100%
@@ -177,26 +177,26 @@ call    0 returned 10
         -:  146:    {
         -:  147:      template<typename _ForwardIterator>
         -:  148:	static _GLIBCXX20_CONSTEXPR void
-       57:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+       72:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  150:	{
-      100:  151:	  for (; __first != __last; ++__first)
-       43:  152:	    std::_Destroy(std::__addressof(*__first));
-       57:  153:	}
+      131:  151:	  for (; __first != __last; ++__first)
+       59:  152:	    std::_Destroy(std::__addressof(*__first));
+       72:  153:	}
 ------------------
 _ZNSt12_Destroy_auxILb0EE9__destroyIP7SubjectEEvT_S4_:
-function _ZNSt12_Destroy_auxILb0EE9__destroyIP7SubjectEEvT_S4_ called 51 returned 100% blocks executed 100%
-       51:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZNSt12_Destroy_auxILb0EE9__destroyIP7SubjectEEvT_S4_ called 66 returned 100% blocks executed 100%
+       66:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  150:	{
-       84:  151:	  for (; __first != __last; ++__first)
-       51:  151-block  0
-       84:  151-block  1
-branch  0 taken 33
-branch  1 taken 51 (fallthrough)
-       33:  152:	    std::_Destroy(std::__addressof(*__first));
-       33:  152-block  0
-call    0 returned 33
-call    1 returned 33
-       51:  153:	}
+      115:  151:	  for (; __first != __last; ++__first)
+       66:  151-block  0
+      115:  151-block  1
+branch  0 taken 49
+branch  1 taken 66 (fallthrough)
+       49:  152:	    std::_Destroy(std::__addressof(*__first));
+       49:  152-block  0
+call    0 returned 49
+call    1 returned 49
+       66:  153:	}
 ------------------
 _ZNSt12_Destroy_auxILb0EE9__destroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS3_EEEEvT_S8_:
 function _ZNSt12_Destroy_auxILb0EE9__destroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS3_EEEEvT_S8_ called 6 returned 100% blocks executed 100%
@@ -230,7 +230,7 @@ call    1 returned 10
         -:  168:   */
         -:  169:  template<typename _ForwardIterator>
         -:  170:    _GLIBCXX20_CONSTEXPR inline void
-       57:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+       72:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  172:    {
         -:  173:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  174:                       _Value_type;
@@ -244,12 +244,12 @@ call    1 returned 10
         -:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  183:#endif
         -:  184:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       57:  185:	__destroy(__first, __last);
-       57:  186:    }
+       72:  185:	__destroy(__first, __last);
+       72:  186:    }
 ------------------
 _ZSt8_DestroyIP7SubjectEvT_S2_:
-function _ZSt8_DestroyIP7SubjectEvT_S2_ called 51 returned 100% blocks executed 100%
-       51:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZSt8_DestroyIP7SubjectEvT_S2_ called 66 returned 100% blocks executed 100%
+       66:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  172:    {
         -:  173:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  174:                       _Value_type;
@@ -263,10 +263,10 @@ function _ZSt8_DestroyIP7SubjectEvT_S2_ called 51 returned 100% blocks executed 
         -:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  183:#endif
         -:  184:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       51:  185:	__destroy(__first, __last);
-       51:  185-block  0
-call    0 returned 51
-       51:  186:    }
+       66:  185:	__destroy(__first, __last);
+       66:  185-block  0
+call    0 returned 66
+       66:  186:    }
 ------------------
 _ZSt8_DestroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvT_S6_:
 function _ZSt8_DestroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEvT_S6_ called 6 returned 100% blocks executed 100%

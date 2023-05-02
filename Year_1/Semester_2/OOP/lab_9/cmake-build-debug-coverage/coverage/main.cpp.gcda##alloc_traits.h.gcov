@@ -492,15 +492,15 @@
         -:  488:       *  Calls <tt> a.deallocate(p, n) </tt>
         -:  489:      */
         -:  490:      static _GLIBCXX20_CONSTEXPR void
-       40:  491:      deallocate(allocator_type& __a, pointer __p, size_type __n)
-       40:  492:      { __a.deallocate(__p, __n); }
+       50:  491:      deallocate(allocator_type& __a, pointer __p, size_type __n)
+       50:  492:      { __a.deallocate(__p, __n); }
 ------------------
 _ZNSt16allocator_traitsISaI7SubjectEE10deallocateERS1_PS0_y:
-function _ZNSt16allocator_traitsISaI7SubjectEE10deallocateERS1_PS0_y called 27 returned 100% blocks executed 100%
-       27:  491:      deallocate(allocator_type& __a, pointer __p, size_type __n)
-       27:  492:      { __a.deallocate(__p, __n); }
-       27:  492-block  0
-call    0 returned 27
+function _ZNSt16allocator_traitsISaI7SubjectEE10deallocateERS1_PS0_y called 37 returned 100% blocks executed 100%
+       37:  491:      deallocate(allocator_type& __a, pointer __p, size_type __n)
+       37:  492:      { __a.deallocate(__p, __n); }
+       37:  492-block  0
+call    0 returned 37
 ------------------
 _ZNSt16allocator_traitsISaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEE10deallocateERS5_PS4_y:
 function _ZNSt16allocator_traitsISaISt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EEEE10deallocateERS5_PS4_y called 13 returned 100% blocks executed 100%
@@ -759,21 +759,21 @@ call    0 returned 13
         -:  740:
         -:  741:  template<typename _ForwardIterator, typename _Tp>
         -:  742:    inline void
-       57:  743:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+       72:  743:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
         -:  744:	     allocator<_Tp>&)
         -:  745:    {
-       57:  746:      _Destroy(__first, __last);
-       57:  747:    }
+       72:  746:      _Destroy(__first, __last);
+       72:  747:    }
 ------------------
 _ZSt8_DestroyIP7SubjectS0_EvT_S2_RSaIT0_E:
-function _ZSt8_DestroyIP7SubjectS0_EvT_S2_RSaIT0_E called 51 returned 100% blocks executed 100%
-       51:  743:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+function _ZSt8_DestroyIP7SubjectS0_EvT_S2_RSaIT0_E called 66 returned 100% blocks executed 100%
+       66:  743:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
         -:  744:	     allocator<_Tp>&)
         -:  745:    {
-       51:  746:      _Destroy(__first, __last);
-       51:  746-block  0
-call    0 returned 51
-       51:  747:    }
+       66:  746:      _Destroy(__first, __last);
+       66:  746-block  0
+call    0 returned 66
+       66:  747:    }
 ------------------
 _ZSt8_DestroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EES4_EvT_S6_RSaIT0_E:
 function _ZSt8_DestroyIPSt10unique_ptrI11ActiuneUndoSt14default_deleteIS1_EES4_EvT_S6_RSaIT0_E called 6 returned 100% blocks executed 100%

@@ -357,22 +357,22 @@ function _ZNSt11char_traitsIcE2ltERKcS2_ called 0 returned 0% blocks executed 0%
         -:  341:      }
         -:  342:
         -:  343:      static _GLIBCXX17_CONSTEXPR int
-function _ZNSt11char_traitsIcE7compareEPKcS2_y called 137 returned 100% blocks executed 27%
-      137:  344:      compare(const char_type* __s1, const char_type* __s2, size_t __n)
+function _ZNSt11char_traitsIcE7compareEPKcS2_y called 190 returned 100% blocks executed 27%
+      190:  344:      compare(const char_type* __s1, const char_type* __s2, size_t __n)
         -:  345:      {
-      137:  346:	if (__n == 0)
-      137:  346-block  0
+      190:  346:	if (__n == 0)
+      190:  346-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 137
+branch  1 taken 190
     #####:  347:	  return 0;
     %%%%%:  347-block  0
         -:  348:#if __cplusplus >= 201703L
-      137:  349:	if (__builtin_constant_p(__n)
+      190:  349:	if (__builtin_constant_p(__n)
         -:  350:	    && __constant_char_array_p(__s1, __n)
-      137:  351:	    && __constant_char_array_p(__s2, __n))
-      137:  351-block  0
+      190:  351:	    && __constant_char_array_p(__s2, __n))
+      190:  351-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 137
+branch  1 taken 190
         -:  352:	  {
     #####:  353:	    for (size_t __i = 0; __i < __n; ++__i)
     %%%%%:  353-block  0
@@ -398,8 +398,8 @@ branch  2 never executed
     %%%%%:  358-block  0
         -:  359:	  }
         -:  360:#endif
-      137:  361:	return __builtin_memcmp(__s1, __s2, __n);
-      137:  361-block  0
+      190:  361:	return __builtin_memcmp(__s1, __s2, __n);
+      190:  361-block  0
         -:  362:      }
         -:  363:
         -:  364:      static _GLIBCXX17_CONSTEXPR size_t

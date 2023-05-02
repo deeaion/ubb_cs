@@ -11,12 +11,17 @@
 void FileRepositorySubjects::loadRepository() {
     std::ifstream file(nameFile);
     Subject subject{};
+    Subject subjg{};
     while(file>>subject)
-    {   string name;
-        file>>name;
-        int hours;
-        file>>hours;
-        store(subject);
+    {   //string name;
+        //file>>name;
+        //int hours;
+        //file>>hours;
+
+        if(subjg!=subject)
+            store(subject);
+        subjg=subject;
+
     }
 }
 void FileRepositorySubjects::saveRepository() {
@@ -32,5 +37,6 @@ void FileRepositorySubjects::saveRepository() {
 void FileRepositorySubjects::emptyFile() {
     std::ofstream ofile(nameFile);
     ofile<<"";
+    ofile.close();
 }
 FileRepositorySubjects::~FileRepositorySubjects() = default;

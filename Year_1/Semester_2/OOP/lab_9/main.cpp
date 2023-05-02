@@ -11,13 +11,13 @@ int main() {
     Tests tests;
     tests.testAll();
     cout << "Program is starting\n";
-    FileRepositorySubjects rep{"subjects.txt"};
+    FileRepositorySubjects rep{"../subjects.txt"};
     ValidatorSubject val;
     ContractRepo contract;
     SubjectsService ctr{rep,contract,val};
     SubjectsUi ui{ctr};
 
-    //ui.start();
+   // ui.start();
 
     return 0;
 }

@@ -1077,12 +1077,12 @@ call    1 never executed
         -: 1040:       *  see at().)
         -: 1041:       */
         -: 1042:      reference
-function _ZNSt6vectorI7SubjectSaIS0_EEixEy called 29 returned 100% blocks executed 100%
-       29: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI7SubjectSaIS0_EEixEy called 31 returned 100% blocks executed 100%
+       31: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1044:      {
         -: 1045:	__glibcxx_requires_subscript(__n);
-       29: 1046:	return *(this->_M_impl._M_start + __n);
-       29: 1046-block  0
+       31: 1046:	return *(this->_M_impl._M_start + __n);
+       31: 1046-block  0
         -: 1047:      }
         -: 1048:
         -: 1049:      /**

@@ -55,8 +55,8 @@
         -:   51:  template<typename _TRet, typename _Ret = _TRet, typename _CharT,
         -:   52:	   typename... _Base>
         -:   53:    _Ret
-function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_ called 2 returned 100% blocks executed 67%
-        2:   54:    __stoa(_TRet (*__convf) (const _CharT*, _CharT**, _Base...),
+function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_ called 6 returned 100% blocks executed 67%
+        6:   54:    __stoa(_TRet (*__convf) (const _CharT*, _CharT**, _Base...),
         -:   55:	   const char* __name, const _CharT* __str, std::size_t* __idx,
         -:   56:	   _Base... __base)
         -:   57:    {
@@ -65,24 +65,24 @@ function _ZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_ called 
         -:   60:      _CharT* __endptr;
         -:   61:
         -:   62:      struct _Save_errno {
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoC1Ev called 2 returned 100% blocks executed 100%
-        2:   63:	_Save_errno() : _M_errno(errno) { errno = 0; }
-        2:   63-block  0
-call    0 returned 2
-call    1 returned 2
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoD1Ev called 2 returned 100% blocks executed 100%
-        2:   64:	~_Save_errno() { if (errno == 0) errno = _M_errno; }
-        2:   64-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoC1Ev called 6 returned 100% blocks executed 100%
+        6:   63:	_Save_errno() : _M_errno(errno) { errno = 0; }
+        6:   63-block  0
+call    0 returned 6
+call    1 returned 6
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN11_Save_errnoD1Ev called 6 returned 100% blocks executed 100%
+        6:   64:	~_Save_errno() { if (errno == 0) errno = _M_errno; }
+        6:   64-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0
-        2:   64-block  1
-call    3 returned 2
+        6:   64-block  1
+call    3 returned 6
         -:   65:	int _M_errno;
-        2:   66:      } const __save_errno;
-        2:   66-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+        6:   66:      } const __save_errno;
+        6:   66-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
         -:   67:
         -:   68:      struct _Range_chk {
@@ -90,65 +90,65 @@ branch  2 taken 0 (throw)
         -:   70:	  _S_chk(_TRet, std::false_type) { return false; }
         -:   71:
         -:   72:	  static bool
-function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE called 2 returned 100% blocks executed 100%
-        2:   73:	  _S_chk(_TRet __val, std::true_type) // only called when _Ret is int
+function _ZZN9__gnu_cxx6__stoaIlicJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb1EE called 6 returned 100% blocks executed 100%
+        6:   73:	  _S_chk(_TRet __val, std::true_type) // only called when _Ret is int
         -:   74:	  {
         -:   75:	    return __val < _TRet(__numeric_traits<int>::__min)
-        2:   76:	      || __val > _TRet(__numeric_traits<int>::__max);
-        2:   76-block  0
+        6:   76:	      || __val > _TRet(__numeric_traits<int>::__max);
+        6:   76-block  0
         -:   77:	  }
         -:   78:      };
         -:   79:
-        2:   80:      const _TRet __tmp = __convf(__str, &__endptr, __base...);
-        2:   80-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+        6:   80:      const _TRet __tmp = __convf(__str, &__endptr, __base...);
+        6:   80-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
         -:   81:
-        2:   82:      if (__endptr == __str)
-        2:   82-block  0
+        6:   82:      if (__endptr == __str)
+        6:   82-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 2
+branch  1 taken 6
     #####:   83:	std::__throw_invalid_argument(__name);
     %%%%%:   83-block  0
 call    0 never executed
-        2:   84:      else if (errno == ERANGE
-        2:   84-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+        6:   84:      else if (errno == ERANGE
+        6:   84-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
 branch  2 taken 0 (throw)
-       2*:   85:	  || _Range_chk::_S_chk(__tmp, std::is_same<_Ret, int>{}))
-        2:   85-block  0
-branch  0 taken 2 (fallthrough)
+       6*:   85:	  || _Range_chk::_S_chk(__tmp, std::is_same<_Ret, int>{}))
+        6:   85-block  0
+branch  0 taken 6 (fallthrough)
 branch  1 taken 0
-        2:   85-block  1
-call    2 returned 2
+        6:   85-block  1
+call    2 returned 6
 branch  3 taken 0 (fallthrough)
-branch  4 taken 2
+branch  4 taken 6
     %%%%%:   85-block  2
-        2:   85-block  3
-        2:   85-block  4
+        6:   85-block  3
+        6:   85-block  4
 branch  5 taken 0 (fallthrough)
-branch  6 taken 2
+branch  6 taken 6
     $$$$$:   85-block  5
     #####:   86:	std::__throw_out_of_range(__name);
     %%%%%:   86-block  0
 call    0 never executed
         -:   87:      else
-        2:   88:	__ret = __tmp;
+        6:   88:	__ret = __tmp;
         -:   89:
-        2:   90:      if (__idx)
-        2:   90-block  0
+        6:   90:      if (__idx)
+        6:   90-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 2
+branch  1 taken 6
     #####:   91:	*__idx = __endptr - __str;
     %%%%%:   91-block  0
         -:   92:
-        2:   93:      return __ret;
-        2:   93-block  0
-        2:   94:    }
-        2:   94-block  0
-call    0 returned 2
+        6:   93:      return __ret;
+        6:   93-block  0
+        6:   94:    }
+        6:   94-block  0
+call    0 returned 6
     $$$$$:   94-block  1
 call    1 never executed
         -:   95:

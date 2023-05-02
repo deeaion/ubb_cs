@@ -169,10 +169,26 @@
         -:  165:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  166:      // 3035. std::allocator's constructors should be constexpr
         -:  167:      _GLIBCXX20_CONSTEXPR
+       3*:  168:      allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEEC2Ev:
+function _ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEEC2Ev called 1 returned 100% blocks executed 100%
+        1:  168:      allocator() _GLIBCXX_NOTHROW { }
+        1:  168-block  0
+call    0 returned 1
+------------------
+_ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEC2Ev:
+function _ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEEC2Ev called 2 returned 100% blocks executed 100%
+        2:  168:      allocator() _GLIBCXX_NOTHROW { }
+        2:  168-block  0
+call    0 returned 2
+------------------
+_ZNSaI7SubjectEC2Ev:
 function _ZNSaI7SubjectEC2Ev called 0 returned 0% blocks executed 0%
     #####:  168:      allocator() _GLIBCXX_NOTHROW { }
     %%%%%:  168-block  0
 call    0 never executed
+------------------
         -:  169:
         -:  170:      _GLIBCXX20_CONSTEXPR
     #####:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
@@ -205,7 +221,19 @@ call    0 never executed
         -:  183:#if __cpp_constexpr_dynamic_alloc
         -:  184:      constexpr
         -:  185:#endif
-    #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+       3*:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+------------------
+_ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEED2Ev:
+function _ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEED2Ev called 1 returned 100% blocks executed 100%
+        1:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+        1:  186-block  0
+call    0 returned 1
+------------------
+_ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEED2Ev:
+function _ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEED2Ev called 2 returned 100% blocks executed 100%
+        2:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+        2:  186-block  0
+call    0 returned 2
 ------------------
 _ZNSaI7SubjectED1Ev:
 function _ZNSaI7SubjectED1Ev called 0 returned 0% blocks executed 0%
@@ -253,8 +281,10 @@ call    0 never executed
         -:  218:
         -:  219:#if __cpp_impl_three_way_comparison < 201907L
         -:  220:      friend _GLIBCXX20_CONSTEXPR bool
-        -:  221:      operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
-        -:  222:      { return false; }
+function _ZStneRKSaI7SubjectES2_ called 0 returned 0% blocks executed 0%
+    #####:  221:      operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+    #####:  222:      { return false; }
+    %%%%%:  222-block  0
         -:  223:#endif
         -:  224:
         -:  225:      // Inherit everything else.

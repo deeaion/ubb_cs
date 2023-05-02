@@ -99,13 +99,13 @@
         -:   95:  template<typename _RandomAccessIterator>
         -:   96:    inline _GLIBCXX14_CONSTEXPR
         -:   97:    typename iterator_traits<_RandomAccessIterator>::difference_type
-      61*:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
+      65*:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
         -:   99:               random_access_iterator_tag)
         -:  100:    {
         -:  101:      // concept requirements
         -:  102:      __glibcxx_function_requires(_RandomAccessIteratorConcept<
         -:  103:				  _RandomAccessIterator>)
-      61*:  104:      return __last - __first;
+      65*:  104:      return __last - __first;
         -:  105:    }
 ------------------
 _ZSt10__distanceIPcENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag:
@@ -133,16 +133,16 @@ function _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St
         -:  105:    }
 ------------------
 _ZSt10__distanceIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E15difference_typeES9_S9_St26random_access_iterator_tag:
-function _ZSt10__distanceIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E15difference_typeES9_S9_St26random_access_iterator_tag called 61 returned 100% blocks executed 100%
-       61:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
+function _ZSt10__distanceIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEENSt15iterator_traitsIT_E15difference_typeES9_S9_St26random_access_iterator_tag called 65 returned 100% blocks executed 100%
+       65:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
         -:   99:               random_access_iterator_tag)
         -:  100:    {
         -:  101:      // concept requirements
         -:  102:      __glibcxx_function_requires(_RandomAccessIteratorConcept<
         -:  103:				  _RandomAccessIterator>)
-       61:  104:      return __last - __first;
-       61:  104-block  0
-call    0 returned 61
+       65:  104:      return __last - __first;
+       65:  104-block  0
+call    0 returned 65
         -:  105:    }
 ------------------
         -:  106:
@@ -177,11 +177,11 @@ call    0 returned 61
         -:  135:  template<typename _InputIterator>
         -:  136:    inline _GLIBCXX17_CONSTEXPR
         -:  137:    typename iterator_traits<_InputIterator>::difference_type
-      61*:  138:    distance(_InputIterator __first, _InputIterator __last)
+      65*:  138:    distance(_InputIterator __first, _InputIterator __last)
         -:  139:    {
         -:  140:      // concept requirements -- taken care of in __distance
-      61*:  141:      return std::__distance(__first, __last,
-     122*:  142:			     std::__iterator_category(__first));
+      65*:  141:      return std::__distance(__first, __last,
+     130*:  142:			     std::__iterator_category(__first));
         -:  143:    }
         -:  144:
         -:  145:  template<typename _InputIterator, typename _Distance>

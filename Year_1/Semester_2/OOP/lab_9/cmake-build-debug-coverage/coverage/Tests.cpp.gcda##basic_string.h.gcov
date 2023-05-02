@@ -6398,10 +6398,13 @@ call    0 never executed
         -: 6336:   */
         -: 6337:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6338:    inline bool
-        -: 6339:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZStltIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 0 returned 0% blocks executed 0%
+    #####: 6339:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6340:	      const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 6341:    _GLIBCXX_NOEXCEPT
-        -: 6342:    { return __lhs.compare(__rhs) < 0; }
+    #####: 6342:    { return __lhs.compare(__rhs) < 0; }
+    %%%%%: 6342-block  0
+call    0 never executed
         -: 6343:
         -: 6344:  /**
         -: 6345:   *  @brief  Test if string precedes C string.

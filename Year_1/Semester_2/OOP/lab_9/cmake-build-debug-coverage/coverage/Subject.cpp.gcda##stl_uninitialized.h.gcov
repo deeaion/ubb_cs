@@ -987,8 +987,8 @@
         -:  983:
         -:  984:  template<typename _Tp, typename _Up, typename _Allocator>
         -:  985:    inline void
-function _ZSt19__relocate_object_aINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_SaIS5_EEvPT_PT0_RT1_ called 6 returned 100% blocks executed 100%
-        6:  986:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
+function _ZSt19__relocate_object_aINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_SaIS5_EEvPT_PT0_RT1_ called 18 returned 100% blocks executed 100%
+       18:  986:    __relocate_object_a(_Tp* __restrict __dest, _Up* __restrict __orig,
         -:  987:			_Allocator& __alloc)
         -:  988:    noexcept(noexcept(std::allocator_traits<_Allocator>::construct(__alloc,
         -:  989:			 __dest, std::move(*__orig)))
@@ -996,14 +996,14 @@ function _ZSt19__relocate_object_aINSt7__cxx1112basic_stringIcSt11char_traitsIcE
         -:  991:			    __alloc, std::__addressof(*__orig))))
         -:  992:    {
         -:  993:      typedef std::allocator_traits<_Allocator> __traits;
-        6:  994:      __traits::construct(__alloc, __dest, std::move(*__orig));
-        6:  994-block  0
-call    0 returned 6
-call    1 returned 6
-        6:  995:      __traits::destroy(__alloc, std::__addressof(*__orig));
-call    0 returned 6
-call    1 returned 6
-        6:  996:    }
+       18:  994:      __traits::construct(__alloc, __dest, std::move(*__orig));
+       18:  994-block  0
+call    0 returned 18
+call    1 returned 18
+       18:  995:      __traits::destroy(__alloc, std::__addressof(*__orig));
+call    0 returned 18
+call    1 returned 18
+       18:  996:    }
         -:  997:
         -:  998:  // This class may be specialized for specific types.
         -:  999:  // Also known as is_trivially_relocatable.
@@ -1025,8 +1025,8 @@ call    1 returned 6
         -: 1015:  template <typename _InputIterator, typename _ForwardIterator,
         -: 1016:	    typename _Allocator>
         -: 1017:    inline _ForwardIterator
-function _ZSt14__relocate_a_1IPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_SaIS5_EET0_T_S9_S8_RT1_ called 12 returned 100% blocks executed 100%
-       12: 1018:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
+function _ZSt14__relocate_a_1IPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_SaIS5_EET0_T_S9_S8_RT1_ called 36 returned 100% blocks executed 100%
+       36: 1018:    __relocate_a_1(_InputIterator __first, _InputIterator __last,
         -: 1019:		   _ForwardIterator __result, _Allocator& __alloc)
         -: 1020:    noexcept(noexcept(std::__relocate_object_a(std::addressof(*__result),
         -: 1021:					       std::addressof(*__first),
@@ -1038,40 +1038,40 @@ function _ZSt14__relocate_a_1IPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIc
         -: 1027:	_ValueType2;
         -: 1028:      static_assert(std::is_same<_ValueType, _ValueType2>::value,
         -: 1029:	  "relocation is only possible for values of the same type");
-       12: 1030:      _ForwardIterator __cur = __result;
-       18: 1031:      for (; __first != __last; ++__first, (void)++__cur)
-       12: 1031-block  0
-       18: 1031-block  1
-branch  0 taken 6
-branch  1 taken 12 (fallthrough)
-        6: 1032:	std::__relocate_object_a(std::__addressof(*__cur),
-        6: 1032-block  0
-call    0 returned 6
-call    1 returned 6
-call    2 returned 6
+       36: 1030:      _ForwardIterator __cur = __result;
+       54: 1031:      for (; __first != __last; ++__first, (void)++__cur)
+       36: 1031-block  0
+       54: 1031-block  1
+branch  0 taken 18
+branch  1 taken 36 (fallthrough)
+       18: 1032:	std::__relocate_object_a(std::__addressof(*__cur),
+       18: 1032-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
         -: 1033:				 std::__addressof(*__first), __alloc);
-       12: 1034:      return __cur;
-       12: 1034-block  0
+       36: 1034:      return __cur;
+       36: 1034-block  0
         -: 1035:    }
         -: 1036:
         -: 1037:  template <typename _InputIterator, typename _ForwardIterator,
         -: 1038:	    typename _Allocator>
         -: 1039:    inline _ForwardIterator
-function _ZSt12__relocate_aIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_SaIS5_EET0_T_S9_S8_RT1_ called 12 returned 100% blocks executed 100%
-       12: 1040:    __relocate_a(_InputIterator __first, _InputIterator __last,
+function _ZSt12__relocate_aIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_SaIS5_EET0_T_S9_S8_RT1_ called 36 returned 100% blocks executed 100%
+       36: 1040:    __relocate_a(_InputIterator __first, _InputIterator __last,
         -: 1041:		 _ForwardIterator __result, _Allocator& __alloc)
         -: 1042:    noexcept(noexcept(__relocate_a_1(std::__niter_base(__first),
         -: 1043:				     std::__niter_base(__last),
         -: 1044:				     std::__niter_base(__result), __alloc)))
         -: 1045:    {
-       12: 1046:      return __relocate_a_1(std::__niter_base(__first),
-       12: 1046-block  0
-call    0 returned 12
-call    1 returned 12
-call    2 returned 12
-call    3 returned 12
+       36: 1046:      return __relocate_a_1(std::__niter_base(__first),
+       36: 1046-block  0
+call    0 returned 36
+call    1 returned 36
+call    2 returned 36
+call    3 returned 36
         -: 1047:			    std::__niter_base(__last),
-       12: 1048:			    std::__niter_base(__result), __alloc);
+       36: 1048:			    std::__niter_base(__result), __alloc);
         -: 1049:    }
         -: 1050:
         -: 1051:  /// @endcond

@@ -21,6 +21,10 @@ using std::string;
 using std::unique_ptr;
 using std::vector;
 using std::function;
+#include <map>
+#include <set>
+using std::set;
+using std::map;
 #include "../Undo/Undo.h"
 
 class SubjectsService {
@@ -135,6 +139,9 @@ public:
      */
     vector<Subject> sortByTeacherandType();
 
+    map<string,vector<Subject>> creatingmap();
+    set<string> number_of_types();
+    vector<Subject> filterByType(const string & type);
 };
 
 

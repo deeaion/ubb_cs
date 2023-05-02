@@ -6273,27 +6273,27 @@ call    0 never executed
         -: 6230:  template<typename _CharT>
         -: 6231:    inline
         -: 6232:    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value, bool>::__type
-function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 138 returned 100% blocks executed 100%
-      138: 6233:    operator==(const basic_string<_CharT>& __lhs,
+function _ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_ called 197 returned 100% blocks executed 100%
+      197: 6233:    operator==(const basic_string<_CharT>& __lhs,
         -: 6234:	       const basic_string<_CharT>& __rhs) _GLIBCXX_NOEXCEPT
-      138: 6235:    { return (__lhs.size() == __rhs.size()
-      138: 6235-block  0
-call    0 returned 138
-call    1 returned 138
-      138: 6236:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
-branch  0 taken 137 (fallthrough)
-branch  1 taken 1
-      137: 6236-block  0
-call    2 returned 137
-call    3 returned 137
-call    4 returned 137
-call    5 returned 137
-branch  6 taken 83 (fallthrough)
-branch  7 taken 54
-       83: 6236-block  1
-       55: 6236-block  2
-      138: 6237:						    __lhs.size())); }
-      138: 6237-block  0
+      197: 6235:    { return (__lhs.size() == __rhs.size()
+      197: 6235-block  0
+call    0 returned 197
+call    1 returned 197
+      197: 6236:	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
+branch  0 taken 190 (fallthrough)
+branch  1 taken 7
+      190: 6236-block  0
+call    2 returned 190
+call    3 returned 190
+call    4 returned 190
+call    5 returned 190
+branch  6 taken 127 (fallthrough)
+branch  7 taken 63
+      127: 6236-block  1
+       70: 6236-block  2
+      197: 6237:						    __lhs.size())); }
+      197: 6237-block  0
         -: 6238:
         -: 6239:  /**
         -: 6240:   *  @brief  Test equivalence of string and C string.

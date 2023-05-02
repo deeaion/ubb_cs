@@ -12,79 +12,79 @@
         -:    8:#include <string>
         -:    9:using std::cout;
         -:   10:/**GATA SCHIMBAT*/
-function _ZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 56 returned 100% blocks executed 84%
-       56:   11:int SubjectsRepo::searchForSubject(const string &name, const string &teacher) {
+function _ZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 60 returned 100% blocks executed 84%
+       60:   11:int SubjectsRepo::searchForSubject(const string &name, const string &teacher) {
         -:   12:    //caut iteratorul
-       56:   13:    auto it=find_if(this->subjects.begin(),
-       56:   13-block  0
-call    0 returned 56
-branch  1 taken 56 (fallthrough)
+       60:   13:    auto it=find_if(this->subjects.begin(),
+       60:   13-block  0
+call    0 returned 60
+branch  1 taken 60 (fallthrough)
 branch  2 taken 0 (throw)
-       56:   13-block  1
-call    3 returned 56
-branch  4 taken 56 (fallthrough)
+       60:   13-block  1
+call    3 returned 60
+branch  4 taken 60 (fallthrough)
 branch  5 taken 0 (throw)
-       56:   13-block  2
-call    6 returned 56
-call    7 returned 56
-call    8 returned 56
-branch  9 taken 56 (fallthrough)
+       60:   13-block  2
+call    6 returned 60
+call    7 returned 60
+call    8 returned 60
+branch  9 taken 60 (fallthrough)
 branch 10 taken 0 (throw)
-       56:   13-block  3
-call   11 returned 56
+       60:   13-block  3
+call   11 returned 60
     $$$$$:   13-block  4
 call   12 never executed
     $$$$$:   13-block  5
         -:   14:                                         this->subjects.end(),
-function _ZZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK7SubjectE_clESA_ called 91 returned 100% blocks executed 100%
-       91:   15:                                         [name,teacher](const Subject& sbj)
-       91:   16:                                         { if(sbj.get_name()==name)
-       91:   16-block  0
-call    0 returned 91
-call    1 returned 91
-branch  2 taken 39 (fallthrough)
-branch  3 taken 52
-       39:   17:                                             if(sbj.get_teacher().compare(teacher)==0)
-       39:   17-block  0
-call    0 returned 39
-call    1 returned 39
+function _ZZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ENKUlRK7SubjectE_clESA_ called 97 returned 100% blocks executed 100%
+       97:   15:                                         [name,teacher](const Subject& sbj)
+       97:   16:                                         { if(sbj.get_name()==name)
+       97:   16-block  0
+call    0 returned 97
+call    1 returned 97
+branch  2 taken 42 (fallthrough)
+branch  3 taken 55
+       42:   17:                                             if(sbj.get_teacher()==teacher)
+       42:   17-block  0
+call    0 returned 42
+call    1 returned 42
 branch  2 taken 33 (fallthrough)
-branch  3 taken 6
-       91:   18:                                                 return true;return false;});
+branch  3 taken 9
+       97:   18:                                                 return true;return false;});
        33:   18-block  0
-       58:   18-block  1
-       56:   19:    auto poz= std::distance(this->subjects.begin(),it);
-call    0 returned 56
-call    1 returned 56
-branch  2 taken 56 (fallthrough)
+       64:   18-block  1
+       60:   19:    auto poz= std::distance(this->subjects.begin(),it);
+call    0 returned 60
+call    1 returned 60
+branch  2 taken 60 (fallthrough)
 branch  3 taken 0 (throw)
-       56:   20:    if(it!=this->subjects.end()) //verific daca e la sf
-       56:   20-block  0
-call    0 returned 56
-call    1 returned 56
+       60:   20:    if(it!=this->subjects.end()) //verific daca e la sf
+       60:   20-block  0
+call    0 returned 60
+call    1 returned 60
 branch  2 taken 33 (fallthrough)
-branch  3 taken 23
+branch  3 taken 27
        33:   21:        return (int)poz;
        33:   21-block  0
-       23:   22:    return -1;
-       23:   22-block  0
+       27:   22:    return -1;
+       27:   22-block  0
         -:   23:}
         -:   24:
-function _ZN12SubjectsRepo5storeERK7Subject called 18 returned 83% blocks executed 78%
-       18:   25: void SubjectsRepo::store(const Subject &SubjectToAdd) {
+function _ZN12SubjectsRepo5storeERK7Subject called 22 returned 86% blocks executed 78%
+       22:   25: void SubjectsRepo::store(const Subject &SubjectToAdd) {
         -:   26://    cout<<"\nSunt de aici?\n";
-       18:   27:    const string &name = SubjectToAdd.get_name();
-       18:   27-block  0
-call    0 returned 18
-       18:   28:    const string &teacher = SubjectToAdd.get_teacher();
-call    0 returned 18
-       18:   29:    if (searchForSubject(name, teacher) == -1) {
-call    0 returned 18
-branch  1 taken 15 (fallthrough)
+       22:   27:    const string &name = SubjectToAdd.get_name();
+       22:   27-block  0
+call    0 returned 22
+       22:   28:    const string &teacher = SubjectToAdd.get_teacher();
+call    0 returned 22
+       22:   29:    if (searchForSubject(name, teacher) == -1) {
+call    0 returned 22
+branch  1 taken 19 (fallthrough)
 branch  2 taken 3
-       15:   30:        this->subjects.push_back(SubjectToAdd);
-       15:   30-block  0
-call    0 returned 15
+       19:   30:        this->subjects.push_back(SubjectToAdd);
+       19:   30-block  0
+call    0 returned 19
         -:   31://        cout<<"\nDupa push backi?\n";
         -:   32:    } else {
         3:   33:        throw RepositoryException("Subject already exists\n");
@@ -106,12 +106,12 @@ call    9 never executed
 call   10 never executed
         -:   34:
         -:   35:    }
-       15:   36:}
+       19:   36:}
         -:   37:
-function _ZNK12SubjectsRepo6getAllEv called 53 returned 100% blocks executed 100%
-       53:   38:const vector<Subject> &SubjectsRepo::getAll() const noexcept {
-       53:   39:    return this->subjects;
-       53:   39-block  0
+function _ZNK12SubjectsRepo6getAllEv called 61 returned 100% blocks executed 100%
+       61:   38:const vector<Subject> &SubjectsRepo::getAll() const noexcept {
+       61:   39:    return this->subjects;
+       61:   39-block  0
         -:   40:}
         -:   41:
 function _ZN12SubjectsRepo17removeSubjectRepoERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ called 11 returned 91% blocks executed 70%

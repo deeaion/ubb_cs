@@ -40,6 +40,8 @@ class SubjectsUi {
     void UiGenerateContract();
     void UiExportContract();
     void UiEmptyContract();
+    void Uimapf();
+
 
 public:
     explicit SubjectsUi(SubjectsService &ctr) : ctr{ctr} {

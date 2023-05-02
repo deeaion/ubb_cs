@@ -224,7 +224,11 @@ CMakeFiles/lab_9.dir/main.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/set \
+ /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
  /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_9/service/../Undo/Undo.h \
  /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_9/ui/SubjectsUi.h \
  /mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First\ year/Semester\ 2/OOP/Labs/lab_9/tests/Tests.h \

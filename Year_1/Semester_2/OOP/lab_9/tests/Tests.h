@@ -34,6 +34,7 @@ class Tests {
     void testSortService();
     void testContract();
     void testUndo();
+    void testMap();
 
 public:
     Tests(){};

@@ -96,7 +96,7 @@ void Tests::testOperators() {
     std::ostringstream oss;
     oss<<test4;
     string output= oss.str();
-    std::cout<<output;
+    //std::cout<<output;
     assert(output=="1,1,1,1\n");
 
 
@@ -190,12 +190,14 @@ void Tests::testUpdate_Remove() {
 
 void Tests::testFileRepository() {
     FileRepositorySubjects filerepo{"../tests/test.txt"};
+    std::cout<<"!\n";
     assert(filerepo.searchForSubject("1","1")!=-1);
     assert(filerepo.getAll()[0].get_type()=="1");
     assert(filerepo.getAll()[0].get_teacher()=="1");
     assert(filerepo.getAll()[0].get_hours()==1);
     assert(filerepo.getAll()[0].get_name()=="1");
     filerepo.emptyFile();
+
     Subject test1{"1",1,"1","1"};
     try
     {filerepo.store(test1);}
@@ -239,6 +241,7 @@ void Tests::testService() {
     testAdd_SearchService();
    testDeleteandUpdateService();
   testSortService();
+//  testMap();
     //testFilterService();
 }
 void Tests::testAdd_SearchService() {
@@ -326,6 +329,15 @@ void Tests::testSortService() {
     assert(ver1.operator==(fh[0]));
     vector<Subject> ft=serv.filterByTeacher("2");
     assert(ver1.operator==(ft[0]));
+    vector<Subject> fty=serv.filterByType("2");
+    assert(fty[0]==ver1);
+    set<string> types=serv.number_of_types();
+    auto ints=types.begin();
+    assert(ver2.get_type()==*ints);
+    const auto vt=*ints;
+    auto m=serv.creatingmap();
+    auto found=m[vt][0];
+    assert(found==ver2);
     serv.deleteSubject("1","1");
 
 
@@ -423,4 +435,9 @@ void Tests::testUndo() {
     {
         assert(mes.getMessage()=="Nu mai exista operatii");
     }
+}
+
+void Tests::testMap() {
+
+
 }

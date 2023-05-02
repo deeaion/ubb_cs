@@ -80,11 +80,11 @@
         -:   76:#endif
         -:   77:
         -:   78:      _GLIBCXX20_CONSTEXPR
-      27*:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      32*:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorI7SubjectEC2Ev:
-function _ZN9__gnu_cxx13new_allocatorI7SubjectEC2Ev called 21 returned 100% blocks executed 100%
-       21:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorI7SubjectEC2Ev called 26 returned 100% blocks executed 100%
+       26:   79:      new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EEEC2Ev:
 function _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EEEC2Ev called 6 returned 100% blocks executed 100%
@@ -103,11 +103,11 @@ function _ZN9__gnu_cxx13new_allocatorIcEC2Ev called 0 returned 0% blocks execute
         -:   86:	new_allocator(const new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
         -:   87:
         -:   88:#if __cplusplus <= 201703L
-      43*:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      52*:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorI7SubjectED2Ev:
-function _ZN9__gnu_cxx13new_allocatorI7SubjectED2Ev called 37 returned 100% blocks executed 100%
-       37:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+function _ZN9__gnu_cxx13new_allocatorI7SubjectED2Ev called 46 returned 100% blocks executed 100%
+       46:   89:      ~new_allocator() _GLIBCXX_USE_NOEXCEPT { }
 ------------------
 _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EEED2Ev:
 function _ZN9__gnu_cxx13new_allocatorISt10unique_ptrI11ActiuneUndoSt14default_deleteIS2_EEED2Ev called 6 returned 100% blocks executed 100%
@@ -159,7 +159,7 @@ function _ZN9__gnu_cxx13new_allocatorIcED2Ev called 0 returned 0% blocks execute
         -:  129:
         -:  130:      // __p is not permitted to be a null pointer.
         -:  131:      void
-       40:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
+       50:  132:      deallocate(_Tp* __p, size_type __t __attribute__ ((__unused__)))
         -:  133:      {
         -:  134:#if __cpp_aligned_new
         -:  135:	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
@@ -172,7 +172,7 @@ function _ZN9__gnu_cxx13new_allocatorIcED2Ev called 0 returned 0% blocks execute
         -:  142:	    return;
         -:  143:	  }
         -:  144:#endif
-       40:  145:	::operator delete(__p
+       50:  145:	::operator delete(__p
         -:  146:#if __cpp_sized_deallocation
         -:  147:			  , __t * sizeof(_Tp)
         -:  148:#endif

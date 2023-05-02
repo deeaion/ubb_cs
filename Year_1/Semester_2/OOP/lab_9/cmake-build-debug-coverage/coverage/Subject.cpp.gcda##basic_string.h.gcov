@@ -6412,13 +6412,13 @@ branch  7 never executed
         -: 6336:   */
         -: 6337:  template<typename _CharT, typename _Traits, typename _Alloc>
         -: 6338:    inline bool
-function _ZStltIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 22 returned 100% blocks executed 100%
-       22: 6339:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+function _ZStltIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EESA_ called 31 returned 100% blocks executed 100%
+       31: 6339:    operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
         -: 6340:	      const basic_string<_CharT, _Traits, _Alloc>& __rhs)
         -: 6341:    _GLIBCXX_NOEXCEPT
-       22: 6342:    { return __lhs.compare(__rhs) < 0; }
-       22: 6342-block  0
-call    0 returned 22
+       31: 6342:    { return __lhs.compare(__rhs) < 0; }
+       31: 6342-block  0
+call    0 returned 31
         -: 6343:
         -: 6344:  /**
         -: 6345:   *  @brief  Test if string precedes C string.
@@ -6697,13 +6697,13 @@ call    0 returned 14
         -: 6615:#if _GLIBCXX_USE_C99_STDLIB
         -: 6616:  // 21.4 Numeric Conversions [string.conversions].
         -: 6617:  inline int
-function _ZNSt7__cxx114stoiERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPyi called 2 returned 100% blocks executed 100%
-        2: 6618:  stoi(const string& __str, size_t* __idx = 0, int __base = 10)
-        2: 6619:  { return __gnu_cxx::__stoa<long, int>(&std::strtol, "stoi", __str.c_str(),
-        2: 6619-block  0
-call    0 returned 2
-call    1 returned 2
-        2: 6620:					__idx, __base); }
+function _ZNSt7__cxx114stoiERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPyi called 6 returned 100% blocks executed 100%
+        6: 6618:  stoi(const string& __str, size_t* __idx = 0, int __base = 10)
+        6: 6619:  { return __gnu_cxx::__stoa<long, int>(&std::strtol, "stoi", __str.c_str(),
+        6: 6619-block  0
+call    0 returned 6
+call    1 returned 6
+        6: 6620:					__idx, __base); }
         -: 6621:
         -: 6622:  inline long
         -: 6623:  stol(const string& __str, size_t* __idx = 0, int __base = 10)

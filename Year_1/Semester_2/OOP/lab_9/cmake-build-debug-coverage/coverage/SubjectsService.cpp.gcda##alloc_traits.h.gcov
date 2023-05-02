@@ -119,8 +119,10 @@ call    0 never executed
         -:  100:    static _GLIBCXX14_CONSTEXPR void _S_on_swap(_Alloc& __a, _Alloc& __b)
         -:  101:    { std::__alloc_on_swap(__a, __b); }
         -:  102:
-        -:  103:    static constexpr bool _S_propagate_on_copy_assign()
-        -:  104:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E27_S_propagate_on_copy_assignEv called 3 returned 100% blocks executed 100%
+        3:  103:    static constexpr bool _S_propagate_on_copy_assign()
+        3:  104:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+        3:  104-block  0
         -:  105:
         -:  106:    static constexpr bool _S_propagate_on_move_assign()
         -:  107:    { return _Base_type::propagate_on_container_move_assignment::value; }
@@ -128,8 +130,10 @@ call    0 never executed
         -:  109:    static constexpr bool _S_propagate_on_swap()
         -:  110:    { return _Base_type::propagate_on_container_swap::value; }
         -:  111:
-        -:  112:    static constexpr bool _S_always_equal()
-        -:  113:    { return _Base_type::is_always_equal::value; }
+function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E15_S_always_equalEv called 0 returned 0% blocks executed 0%
+    #####:  112:    static constexpr bool _S_always_equal()
+    #####:  113:    { return _Base_type::is_always_equal::value; }
+    %%%%%:  113-block  0
         -:  114:
         -:  115:    static constexpr bool _S_nothrow_move()
         -:  116:    { return _S_propagate_on_move_assign() || _S_always_equal(); }

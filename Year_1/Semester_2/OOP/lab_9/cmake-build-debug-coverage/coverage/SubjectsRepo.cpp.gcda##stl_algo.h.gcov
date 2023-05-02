@@ -3902,8 +3902,8 @@
         -: 3898:  template<typename _InputIterator, typename _Predicate>
         -: 3899:    _GLIBCXX20_CONSTEXPR
         -: 3900:    inline _InputIterator
-function _ZSt7find_ifIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_EUlRKS2_E_ET_SK_SK_T0_ called 56 returned 100% blocks executed 64%
-       56: 3901:    find_if(_InputIterator __first, _InputIterator __last,
+function _ZSt7find_ifIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEZN12SubjectsRepo16searchForSubjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_EUlRKS2_E_ET_SK_SK_T0_ called 60 returned 100% blocks executed 64%
+       60: 3901:    find_if(_InputIterator __first, _InputIterator __last,
         -: 3902:	    _Predicate __pred)
         -: 3903:    {
         -: 3904:      // concept requirements
@@ -3912,27 +3912,27 @@ function _ZSt7find_ifIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2
         -: 3907:	      typename iterator_traits<_InputIterator>::value_type>)
         -: 3908:      __glibcxx_requires_valid_range(__first, __last);
         -: 3909:
-      112: 3910:      return std::__find_if(__first, __last,
-       56: 3910-block  0
-call    0 returned 56
-call    1 returned 56
-branch  2 taken 56 (fallthrough)
+      120: 3910:      return std::__find_if(__first, __last,
+       60: 3910-block  0
+call    0 returned 60
+call    1 returned 60
+branch  2 taken 60 (fallthrough)
 branch  3 taken 0 (throw)
-       56: 3910-block  1
-call    4 returned 56
-branch  5 taken 56 (fallthrough)
+       60: 3910-block  1
+call    4 returned 60
+branch  5 taken 60 (fallthrough)
 branch  6 taken 0 (throw)
-       56: 3910-block  2
-call    7 returned 56
-call    8 returned 56
+       60: 3910-block  2
+call    7 returned 60
+call    8 returned 60
     $$$$$: 3910-block  3
 call    9 never executed
     $$$$$: 3910-block  4
     $$$$$: 3910-block  5
 call   10 never executed
-      112: 3911:			    __gnu_cxx::__ops::__pred_iter(__pred));
-       56: 3911-block  0
-       56: 3911-block  1
+      120: 3911:			    __gnu_cxx::__ops::__pred_iter(__pred));
+       60: 3911-block  0
+       60: 3911-block  1
         -: 3912:    }
         -: 3913:
         -: 3914:  /**

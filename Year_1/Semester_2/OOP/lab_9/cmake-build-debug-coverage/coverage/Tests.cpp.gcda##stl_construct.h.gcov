@@ -206,29 +206,29 @@ call    0 never executed
         -:  146:    {
         -:  147:      template<typename _ForwardIterator>
         -:  148:	static _GLIBCXX20_CONSTEXPR void
-       1*:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+    #####:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  150:	{
-       1*:  151:	  for (; __first != __last; ++__first)
+    #####:  151:	  for (; __first != __last; ++__first)
     #####:  152:	    std::_Destroy(std::__addressof(*__first));
-       1*:  153:	}
+    #####:  153:	}
 ------------------
 _ZNSt12_Destroy_auxILb0EE9__destroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS4_SaIS4_EEEEEEvT_SA_:
-function _ZNSt12_Destroy_auxILb0EE9__destroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS4_SaIS4_EEEEEEvT_SA_ called 1 returned 100% blocks executed 50%
-        1:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZNSt12_Destroy_auxILb0EE9__destroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS4_SaIS4_EEEEEEvT_SA_ called 0 returned 0% blocks executed 0%
+    #####:  149:	__destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  150:	{
-       1*:  151:	  for (; __first != __last; ++__first)
-        1:  151-block  0
+    #####:  151:	  for (; __first != __last; ++__first)
+    %%%%%:  151-block  0
 call    0 never executed
-        1:  151-block  1
-call    1 returned 1
-branch  2 taken 0
-branch  3 taken 1 (fallthrough)
+    %%%%%:  151-block  1
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
     #####:  152:	    std::_Destroy(std::__addressof(*__first));
     %%%%%:  152-block  0
 call    0 never executed
 call    1 never executed
 call    2 never executed
-        1:  153:	}
+    #####:  153:	}
 ------------------
 _ZNSt12_Destroy_auxILb0EE9__destroyIP7SubjectEEvT_S4_:
 function _ZNSt12_Destroy_auxILb0EE9__destroyIP7SubjectEEvT_S4_ called 0 returned 0% blocks executed 0%
@@ -277,7 +277,7 @@ call    1 never executed
         -:  168:   */
         -:  169:  template<typename _ForwardIterator>
         -:  170:    _GLIBCXX20_CONSTEXPR inline void
-       1*:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+    #####:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  172:    {
         -:  173:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  174:                       _Value_type;
@@ -291,12 +291,12 @@ call    1 never executed
         -:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  183:#endif
         -:  184:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-       1*:  185:	__destroy(__first, __last);
-       1*:  186:    }
+    #####:  185:	__destroy(__first, __last);
+    #####:  186:    }
 ------------------
 _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEEvT_S8_:
-function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEEvT_S8_ called 1 returned 100% blocks executed 100%
-        1:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS2_EEEEEvT_S8_ called 0 returned 0% blocks executed 0%
+    #####:  171:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
         -:  172:    {
         -:  173:      typedef typename iterator_traits<_ForwardIterator>::value_type
         -:  174:                       _Value_type;
@@ -310,10 +310,10 @@ function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIP7SubjectSt6vectorIS2_SaIS
         -:  182:	return _Destroy_aux<false>::__destroy(__first, __last);
         -:  183:#endif
         -:  184:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
-        1:  185:	__destroy(__first, __last);
-        1:  185-block  0
-call    0 returned 1
-        1:  186:    }
+    #####:  185:	__destroy(__first, __last);
+    %%%%%:  185-block  0
+call    0 never executed
+    #####:  186:    }
 ------------------
 _ZSt8_DestroyIP7SubjectEvT_S2_:
 function _ZSt8_DestroyIP7SubjectEvT_S2_ called 0 returned 0% blocks executed 0%

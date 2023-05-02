@@ -8,19 +8,11 @@
         -:    4:#include <fstream>
         -:    5://#include <utility>
         -:    6:#include "FileRepositorySubjects.h"
-function _ZN22FileRepositorySubjectsC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 8 returned 100% blocks executed 57%
+function _ZN22FileRepositorySubjectsC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 8 returned 100% blocks executed 67%
         8:    7: FileRepositorySubjects::FileRepositorySubjects(const std::string &name) {
         8:    7-block  0
 call    0 returned 8
 call    1 returned 8
-call    2 returned 8
-branch  3 taken 8 (fallthrough)
-branch  4 taken 0 (throw)
-        8:    7-block  1
-call    5 returned 8
-    $$$$$:    7-block  2
-call    6 never executed
-    $$$$$:    7-block  3
         8:    8:    this->nameFile=name;
 call    0 returned 8
 branch  1 taken 8 (fallthrough)
@@ -36,7 +28,7 @@ branch  2 taken 0 (throw)
 call    0 never executed
     $$$$$:   10-block  2
 call    1 never executed
-function _ZN22FileRepositorySubjects14loadRepositoryEv called 8 returned 100% blocks executed 70%
+function _ZN22FileRepositorySubjects14loadRepositoryEv called 8 returned 100% blocks executed 73%
         8:   11:void FileRepositorySubjects::loadRepository() {
         8:   12:    std::ifstream file(nameFile);
         8:   12-block  0
@@ -48,42 +40,29 @@ branch  2 taken 0 (throw)
 call    0 returned 8
 branch  1 taken 8 (fallthrough)
 branch  2 taken 0 (throw)
-        9:   14:    while(file>>subject)
+       13:   14:    while(file>>subject)
         8:   14-block  0
-        9:   14-block  1
-call    0 returned 9
-branch  1 taken 9 (fallthrough)
+       13:   14-block  1
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
 branch  2 taken 0 (throw)
-        9:   14-block  2
-call    3 returned 9
-branch  4 taken 9 (fallthrough)
+       13:   14-block  2
+call    3 returned 13
+branch  4 taken 13 (fallthrough)
 branch  5 taken 0 (throw)
-        9:   14-block  3
-branch  6 taken 1
+       13:   14-block  3
+branch  6 taken 5
 branch  7 taken 8 (fallthrough)
-        1:   15:    {   string name;
-        1:   15-block  0
-call    0 returned 1
-        1:   16:        file>>name;
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
+        -:   15:    {   //string name;
+        -:   16:        //file>>name;
+        -:   17:        //int hours;
+        -:   18:        //file>>hours;
+        5:   19:        store(subject);
+        5:   19-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
 branch  2 taken 0 (throw)
-        -:   17:        int hours;
-        1:   18:        file>>hours;
-        1:   18-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   19:        store(subject);
-        1:   19-block  0
-call    0 returned 1
-branch  1 taken 1 (fallthrough)
-branch  2 taken 0 (throw)
-        1:   20:    }
-        1:   20-block  0
-call    0 returned 1
-    $$$$$:   20-block  1
-call    1 never executed
+        -:   20:    }
         8:   21:}
         8:   21-block  0
 call    0 returned 8

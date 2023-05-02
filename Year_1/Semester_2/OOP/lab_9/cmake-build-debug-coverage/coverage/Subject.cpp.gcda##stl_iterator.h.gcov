@@ -1011,9 +1011,9 @@
         -: 1007:      : _M_current(_Iterator()) { }
         -: 1008:
         -: 1009:      explicit _GLIBCXX20_CONSTEXPR
-function _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEEC1ERKS7_ called 12 returned 100% blocks executed 100%
-       12: 1010:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
-       12: 1011:      : _M_current(__i) { }
+function _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEEC1ERKS7_ called 36 returned 100% blocks executed 100%
+       36: 1010:      __normal_iterator(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+       36: 1011:      : _M_current(__i) { }
         -: 1012:
         -: 1013:      // Allow iterator to const_iterator conversion
         -: 1014:      template<typename _Iter>
@@ -1090,10 +1090,10 @@ function _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_t
         -: 1085:
         -: 1086:      _GLIBCXX20_CONSTEXPR
         -: 1087:      const _Iterator&
-function _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEE4baseEv called 24 returned 100% blocks executed 100%
-       24: 1088:      base() const _GLIBCXX_NOEXCEPT
-       24: 1089:      { return _M_current; }
-       24: 1089-block  0
+function _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEE4baseEv called 72 returned 100% blocks executed 100%
+       72: 1088:      base() const _GLIBCXX_NOEXCEPT
+       72: 1089:      { return _M_current; }
+       72: 1089-block  0
         -: 1090:    };
         -: 1091:
         -: 1092:  // Note: In what follows, the left- and right-hand-side iterators are
@@ -1238,14 +1238,14 @@ function _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_
         -: 1231:  template<typename _Iterator, typename _Container>
         -: 1232:    _GLIBCXX20_CONSTEXPR
         -: 1233:    inline typename __normal_iterator<_Iterator, _Container>::difference_type
-function _ZN9__gnu_cxxmiIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSE_SH_ called 6 returned 100% blocks executed 100%
-        6: 1234:    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+function _ZN9__gnu_cxxmiIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSE_SH_ called 18 returned 100% blocks executed 100%
+       18: 1234:    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
         -: 1235:	      const __normal_iterator<_Iterator, _Container>& __rhs)
         -: 1236:    _GLIBCXX_NOEXCEPT
-        6: 1237:    { return __lhs.base() - __rhs.base(); }
-        6: 1237-block  0
-call    0 returned 6
-call    1 returned 6
+       18: 1237:    { return __lhs.base() - __rhs.base(); }
+       18: 1237-block  0
+call    0 returned 18
+call    1 returned 18
         -: 1238:
         -: 1239:  template<typename _Iterator, typename _Container>
         -: 1240:    _GLIBCXX20_CONSTEXPR

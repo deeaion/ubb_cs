@@ -236,20 +236,20 @@ call    2 never executed
         -:  227:  template<typename _Tp>
         -:  228:    _GLIBCXX14_CONSTEXPR
         -:  229:    inline const _Tp&
-function _ZSt3minIyERKT_S2_S2_ called 78 returned 100% blocks executed 75%
-       78:  230:    min(const _Tp& __a, const _Tp& __b)
+function _ZSt3minIyERKT_S2_S2_ called 114 returned 100% blocks executed 75%
+      114:  230:    min(const _Tp& __a, const _Tp& __b)
         -:  231:    {
         -:  232:      // concept requirements
         -:  233:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  234:      //return __b < __a ? __b : __a;
-       78:  235:      if (__b < __a)
-       78:  235-block  0
+      114:  235:      if (__b < __a)
+      114:  235-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 78
+branch  1 taken 114
     #####:  236:	return __b;
     %%%%%:  236-block  0
-       78:  237:      return __a;
-       78:  237-block  0
+      114:  237:      return __a;
+      114:  237-block  0
         -:  238:    }
         -:  239:
         -:  240:  /**
@@ -266,20 +266,20 @@ branch  1 taken 78
         -:  251:  template<typename _Tp>
         -:  252:    _GLIBCXX14_CONSTEXPR
         -:  253:    inline const _Tp&
-function _ZSt3maxIyERKT_S2_S2_ called 39 returned 100% blocks executed 100%
-       39:  254:    max(const _Tp& __a, const _Tp& __b)
+function _ZSt3maxIyERKT_S2_S2_ called 57 returned 100% blocks executed 100%
+       57:  254:    max(const _Tp& __a, const _Tp& __b)
         -:  255:    {
         -:  256:      // concept requirements
         -:  257:      __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
         -:  258:      //return  __a < __b ? __b : __a;
-       39:  259:      if (__a < __b)
-       39:  259-block  0
-branch  0 taken 21 (fallthrough)
-branch  1 taken 18
-       21:  260:	return __b;
-       21:  260-block  0
-       18:  261:      return __a;
-       18:  261-block  0
+       57:  259:      if (__a < __b)
+       57:  259-block  0
+branch  0 taken 29 (fallthrough)
+branch  1 taken 28
+       29:  260:	return __b;
+       29:  260-block  0
+       28:  261:      return __a;
+       28:  261-block  0
         -:  262:    }
         -:  263:
         -:  264:  /**

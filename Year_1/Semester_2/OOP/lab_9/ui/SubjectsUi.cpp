@@ -24,7 +24,14 @@ void SubjectsUi::UiAdd() {
     ctr.addSubject(name, hours, teacher, type);
 
 }
-
+void SubjectsUi::Uimapf() {
+    const auto &found=ctr.creatingmap();
+    for (auto const& [key, val] : found)
+    {
+        cout<<"TYPE: "<<key<<"\n";
+        print_subjects(val);
+    }
+}
 void SubjectsUi::Uidelete() {
     string name, teacher;
     cout << "You chose to delete a subject!\n";
@@ -34,7 +41,6 @@ void SubjectsUi::Uidelete() {
     cin >> teacher;
     ctr.deleteSubject(name, teacher);
 }
-
 void SubjectsUi::Uifilter() {
     string option;
     cout << "You chose to filter. Please enter your option\n";
@@ -211,6 +217,9 @@ void SubjectsUi::menu() {
     cout<<"9.Add to Contract!\n";
     cout<<"10.Generate Contract!\n";
     cout<<"11.Export Contract!\n";
+    cout<<"12.Empty Contract!\n";
+    cout<<"13.Undo!\n";
+    cout<<"14.Map filtering!Filter all types\n";
     cout << "\n---------------------------------------------------------------------------------------------------\n";
 
 }
@@ -359,6 +368,21 @@ void SubjectsUi::start() {
         if (command == 13) {
             try {
                 ctr.Undo();
+            }
+            catch (RepositoryException &e) {
+                cout << e.getMessage() << std::endl;
+            }
+            catch (ValidatorException &ve) {
+                cout << ve.getMessage() << std::endl;
+            }
+            catch (ContractException &e)
+            {
+                cout << e.getMessage() << std::endl;
+            }
+        }
+        if (command == 14) {
+            try {
+                Uimapf();
             }
             catch (RepositoryException &e) {
                 cout << e.getMessage() << std::endl;

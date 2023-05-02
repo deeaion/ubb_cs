@@ -217,6 +217,18 @@ call    0 never executed
         -:  185:#endif
     #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
 ------------------
+_ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEED2Ev:
+function _ZNSaISt13_Rb_tree_nodeISt4pairIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS9_EEEEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  186-block  0
+call    0 never executed
+------------------
+_ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEED2Ev:
+function _ZNSaISt13_Rb_tree_nodeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEED2Ev called 0 returned 0% blocks executed 0%
+    #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  186-block  0
+call    0 never executed
+------------------
 _ZNSaI7SubjectED1Ev:
 function _ZNSaI7SubjectED1Ev called 0 returned 0% blocks executed 0%
     #####:  186:      ~allocator() _GLIBCXX_NOTHROW { }

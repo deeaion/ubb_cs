@@ -1338,9 +1338,9 @@ call    1 never executed
         -: 1254:  template<typename _Iterator, typename _Container>
         -: 1255:    _GLIBCXX20_CONSTEXPR
         -: 1256:    _Iterator
-       2*: 1257:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+    #####: 1257:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
         -: 1258:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-       2*: 1259:    { return __it.base(); }
+    #####: 1259:    { return __it.base(); }
 ------------------
 _ZSt12__niter_baseIP7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__normal_iteratorIS5_T0_EE:
 function _ZSt12__niter_baseIP7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__normal_iteratorIS5_T0_EE called 0 returned 0% blocks executed 0%
@@ -1351,12 +1351,12 @@ function _ZSt12__niter_baseIP7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__norm
 call    0 never executed
 ------------------
 _ZSt12__niter_baseIPK7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__normal_iteratorIS6_T0_EE:
-function _ZSt12__niter_baseIPK7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__normal_iteratorIS6_T0_EE called 2 returned 100% blocks executed 100%
-        2: 1257:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+function _ZSt12__niter_baseIPK7SubjectSt6vectorIS0_SaIS0_EEET_N9__gnu_cxx17__normal_iteratorIS6_T0_EE called 0 returned 0% blocks executed 0%
+    #####: 1257:    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
         -: 1258:    _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
-        2: 1259:    { return __it.base(); }
-        2: 1259-block  0
-call    0 returned 2
+    #####: 1259:    { return __it.base(); }
+    %%%%%: 1259-block  0
+call    0 never executed
 ------------------
         -: 1260:
         -: 1261:#if __cplusplus >= 201103L

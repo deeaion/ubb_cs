@@ -212,61 +212,123 @@ call    0 returned 17
         -:  195:
         -:  196:  template<typename _Tp, typename _Alloc>
         -:  197:    vector<_Tp, _Alloc>&
-        -:  198:    vector<_Tp, _Alloc>::
+function _ZNSt6vectorI7SubjectSaIS0_EEaSERKS2_ called 3 returned 100% blocks executed 56%
+        3:  198:    vector<_Tp, _Alloc>::
         -:  199:    operator=(const vector<_Tp, _Alloc>& __x)
         -:  200:    {
-        -:  201:      if (&__x != this)
+        3:  201:      if (&__x != this)
+        3:  201-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
         -:  202:	{
         -:  203:	  _GLIBCXX_ASAN_ANNOTATE_REINIT;
         -:  204:#if __cplusplus >= 201103L
-        -:  205:	  if (_Alloc_traits::_S_propagate_on_copy_assign())
+        3:  205:	  if (_Alloc_traits::_S_propagate_on_copy_assign())
+        3:  205-block  0
+call    0 returned 3
+branch  1 taken 0 (fallthrough)
+branch  2 taken 3
         -:  206:	    {
-        -:  207:	      if (!_Alloc_traits::_S_always_equal()
-        -:  208:	          && _M_get_Tp_allocator() != __x._M_get_Tp_allocator())
+    #####:  207:	      if (!_Alloc_traits::_S_always_equal()
+    %%%%%:  207-block  0
+call    0 never executed
+    #####:  208:	          && _M_get_Tp_allocator() != __x._M_get_Tp_allocator())
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  208-block  0
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:  208-block  1
+    %%%%%:  208-block  2
+    %%%%%:  208-block  3
+branch  7 never executed
+branch  8 never executed
         -:  209:	        {
         -:  210:		  // replacement allocator cannot free existing storage
-        -:  211:		  this->clear();
-        -:  212:		  _M_deallocate(this->_M_impl._M_start,
-        -:  213:				this->_M_impl._M_end_of_storage
-        -:  214:				- this->_M_impl._M_start);
-        -:  215:		  this->_M_impl._M_start = nullptr;
-        -:  216:		  this->_M_impl._M_finish = nullptr;
-        -:  217:		  this->_M_impl._M_end_of_storage = nullptr;
+    #####:  211:		  this->clear();
+    %%%%%:  211-block  0
+call    0 never executed
+    #####:  212:		  _M_deallocate(this->_M_impl._M_start,
+    #####:  213:				this->_M_impl._M_end_of_storage
+    #####:  214:				- this->_M_impl._M_start);
+call    0 never executed
+    #####:  215:		  this->_M_impl._M_start = nullptr;
+    #####:  216:		  this->_M_impl._M_finish = nullptr;
+    #####:  217:		  this->_M_impl._M_end_of_storage = nullptr;
         -:  218:		}
-        -:  219:	      std::__alloc_on_copy(_M_get_Tp_allocator(),
-        -:  220:				   __x._M_get_Tp_allocator());
+    #####:  219:	      std::__alloc_on_copy(_M_get_Tp_allocator(),
+call    0 never executed
+call    1 never executed
+    #####:  220:				   __x._M_get_Tp_allocator());
+    %%%%%:  220-block  0
+call    0 never executed
         -:  221:	    }
         -:  222:#endif
-        -:  223:	  const size_type __xlen = __x.size();
-        -:  224:	  if (__xlen > capacity())
+        3:  223:	  const size_type __xlen = __x.size();
+        3:  223-block  0
+call    0 returned 3
+        3:  224:	  if (__xlen > capacity())
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
         -:  225:	    {
-        -:  226:	      pointer __tmp = _M_allocate_and_copy(__xlen, __x.begin(),
+        2:  226:	      pointer __tmp = _M_allocate_and_copy(__xlen, __x.begin(),
+        2:  226-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
         -:  227:						   __x.end());
-        -:  228:	      std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-        -:  229:			    _M_get_Tp_allocator());
-        -:  230:	      _M_deallocate(this->_M_impl._M_start,
-        -:  231:			    this->_M_impl._M_end_of_storage
-        -:  232:			    - this->_M_impl._M_start);
-        -:  233:	      this->_M_impl._M_start = __tmp;
-        -:  234:	      this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __xlen;
+        2:  228:	      std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 2
+        2:  229:			    _M_get_Tp_allocator());
+call    0 returned 2
+        2:  230:	      _M_deallocate(this->_M_impl._M_start,
+        2:  231:			    this->_M_impl._M_end_of_storage
+        2:  232:			    - this->_M_impl._M_start);
+call    0 returned 2
+        2:  233:	      this->_M_impl._M_start = __tmp;
+        2:  234:	      this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __xlen;
         -:  235:	    }
-        -:  236:	  else if (size() >= __xlen)
+        1:  236:	  else if (size() >= __xlen)
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
         -:  237:	    {
-        -:  238:	      std::_Destroy(std::copy(__x.begin(), __x.end(), begin()),
-        -:  239:			    end(), _M_get_Tp_allocator());
+        1:  238:	      std::_Destroy(std::copy(__x.begin(), __x.end(), begin()),
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+        1:  239:			    end(), _M_get_Tp_allocator());
+        1:  239-block  0
+call    0 returned 1
         -:  240:	    }
         -:  241:	  else
         -:  242:	    {
-        -:  243:	      std::copy(__x._M_impl._M_start, __x._M_impl._M_start + size(),
+    #####:  243:	      std::copy(__x._M_impl._M_start, __x._M_impl._M_start + size(),
+    %%%%%:  243-block  0
+call    0 never executed
+call    1 never executed
         -:  244:			this->_M_impl._M_start);
-        -:  245:	      std::__uninitialized_copy_a(__x._M_impl._M_start + size(),
-        -:  246:					  __x._M_impl._M_finish,
+    #####:  245:	      std::__uninitialized_copy_a(__x._M_impl._M_start + size(),
+call    0 never executed
+    #####:  246:					  __x._M_impl._M_finish,
+call    0 never executed
         -:  247:					  this->_M_impl._M_finish,
-        -:  248:					  _M_get_Tp_allocator());
+    #####:  248:					  _M_get_Tp_allocator());
+call    0 never executed
         -:  249:	    }
-        -:  250:	  this->_M_impl._M_finish = this->_M_impl._M_start + __xlen;
+        3:  250:	  this->_M_impl._M_finish = this->_M_impl._M_start + __xlen;
+        3:  250-block  0
         -:  251:	}
-        -:  252:      return *this;
+        3:  252:      return *this;
+        3:  252-block  0
         -:  253:    }
         -:  254:
         -:  255:  template<typename _Tp, typename _Alloc>

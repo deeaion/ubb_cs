@@ -50,10 +50,10 @@
         -:   46:   */
         -:   47:  template<typename _Tp>
         -:   48:    inline _GLIBCXX_CONSTEXPR _Tp*
-function _ZSt11__addressofINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPT_RS6_ called 26 returned 100% blocks executed 100%
-       26:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-       26:   50:    { return __builtin_addressof(__r); }
-       26:   50-block  0
+function _ZSt11__addressofINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPT_RS6_ called 78 returned 100% blocks executed 100%
+       78:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+       78:   50:    { return __builtin_addressof(__r); }
+       78:   50-block  0
         -:   51:
         -:   52:#if __cplusplus >= 201103L
         -:   53:
@@ -80,20 +80,20 @@ function _ZSt11__addressofINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE
         -:   74:  template<typename _Tp>
         -:   75:    _GLIBCXX_NODISCARD
         -:   76:    constexpr _Tp&&
-       34:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-       34:   78:    { return static_cast<_Tp&&>(__t); }
+      134:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+      134:   78:    { return static_cast<_Tp&&>(__t); }
 ------------------
 _ZSt7forwardINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS6_E4typeE:
-function _ZSt7forwardINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS6_E4typeE called 12 returned 100% blocks executed 100%
-       12:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-       12:   78:    { return static_cast<_Tp&&>(__t); }
-       12:   78-block  0
+function _ZSt7forwardINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS6_E4typeE called 36 returned 100% blocks executed 100%
+       36:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+       36:   78:    { return static_cast<_Tp&&>(__t); }
+       36:   78-block  0
 ------------------
 _ZSt7forwardIRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS8_E4typeE:
-function _ZSt7forwardIRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS8_E4typeE called 22 returned 100% blocks executed 100%
-       22:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-       22:   78:    { return static_cast<_Tp&&>(__t); }
-       22:   78-block  0
+function _ZSt7forwardIRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS8_E4typeE called 98 returned 100% blocks executed 100%
+       98:   77:    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+       98:   78:    { return static_cast<_Tp&&>(__t); }
+       98:   78-block  0
 ------------------
         -:   79:
         -:   80:  /**

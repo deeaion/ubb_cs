@@ -98,15 +98,15 @@
         -:   94:      noexcept(noexcept(_Base_type::destroy(__a, std::__to_address(__p))))
         -:   95:      { _Base_type::destroy(__a, std::__to_address(__p)); }
         -:   96:
-       7*:   97:    static constexpr _Alloc _S_select_on_copy(const _Alloc& __a)
-       7*:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
+       9*:   97:    static constexpr _Alloc _S_select_on_copy(const _Alloc& __a)
+       9*:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
 ------------------
 _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E17_S_select_on_copyERKS2_:
-function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E17_S_select_on_copyERKS2_ called 7 returned 100% blocks executed 100%
-        7:   97:    static constexpr _Alloc _S_select_on_copy(const _Alloc& __a)
-        7:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
-        7:   98-block  0
-call    0 returned 7
+function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E17_S_select_on_copyERKS2_ called 9 returned 100% blocks executed 100%
+        9:   97:    static constexpr _Alloc _S_select_on_copy(const _Alloc& __a)
+        9:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
+        9:   98-block  0
+call    0 returned 9
 ------------------
 _ZN9__gnu_cxx14__alloc_traitsISaIcEcE17_S_select_on_copyERKS1_:
 function _ZN9__gnu_cxx14__alloc_traitsISaIcEcE17_S_select_on_copyERKS1_ called 0 returned 0% blocks executed 0%

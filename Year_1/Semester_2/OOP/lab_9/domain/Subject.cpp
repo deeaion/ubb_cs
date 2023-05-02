@@ -83,7 +83,9 @@ Subject &Subject::operator=(const Subject &other) = default;
 bool Subject::operator==(const Subject &other) {
     return this->name == other.name && this->teacher == other.teacher;
 }
-
+bool Subject::operator!=(const Subject &other) {
+    return !operator==(other);
+}
 /**COMPARATORS*/
 
 bool cmpName(const Subject &sbj_1, const Subject &sbj_2) {

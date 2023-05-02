@@ -1,0 +1,508 @@
+        -:    0:Source:C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/utility
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\ui\SubjectsUi.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\OOP\Labs\lab_9\cmake-build-debug-coverage\CMakeFiles\lab_9.dir\ui\SubjectsUi.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// <utility> -*- C++ -*-
+        -:    2:
+        -:    3:// Copyright (C) 2001-2021 Free Software Foundation, Inc.
+        -:    4://
+        -:    5:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    6:// software; you can redistribute it and/or modify it under the
+        -:    7:// terms of the GNU General Public License as published by the
+        -:    8:// Free Software Foundation; either version 3, or (at your option)
+        -:    9:// any later version.
+        -:   10:
+        -:   11:// This library is distributed in the hope that it will be useful,
+        -:   12:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   13:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   14:// GNU General Public License for more details.
+        -:   15:
+        -:   16:// Under Section 7 of GPL version 3, you are granted additional
+        -:   17:// permissions described in the GCC Runtime Library Exception, version
+        -:   18:// 3.1, as published by the Free Software Foundation.
+        -:   19:
+        -:   20:// You should have received a copy of the GNU General Public License and
+        -:   21:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   22:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   23:// <http://www.gnu.org/licenses/>.
+        -:   24:
+        -:   25:/*
+        -:   26: *
+        -:   27: * Copyright (c) 1994
+        -:   28: * Hewlett-Packard Company
+        -:   29: *
+        -:   30: * Permission to use, copy, modify, distribute and sell this software
+        -:   31: * and its documentation for any purpose is hereby granted without fee,
+        -:   32: * provided that the above copyright notice appear in all copies and
+        -:   33: * that both that copyright notice and this permission notice appear
+        -:   34: * in supporting documentation.  Hewlett-Packard Company makes no
+        -:   35: * representations about the suitability of this software for any
+        -:   36: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   37: *
+        -:   38: *
+        -:   39: * Copyright (c) 1996,1997
+        -:   40: * Silicon Graphics Computer Systems, Inc.
+        -:   41: *
+        -:   42: * Permission to use, copy, modify, distribute and sell this software
+        -:   43: * and its documentation for any purpose is hereby granted without fee,
+        -:   44: * provided that the above copyright notice appear in all copies and
+        -:   45: * that both that copyright notice and this permission notice appear
+        -:   46: * in supporting documentation.  Silicon Graphics makes no
+        -:   47: * representations about the suitability of this software for any
+        -:   48: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   49: */
+        -:   50:
+        -:   51:/** @file include/utility
+        -:   52: *  This is a Standard C++ Library header.
+        -:   53: */
+        -:   54:
+        -:   55:#ifndef _GLIBCXX_UTILITY
+        -:   56:#define _GLIBCXX_UTILITY 1
+        -:   57:
+        -:   58:#pragma GCC system_header
+        -:   59:
+        -:   60:/**
+        -:   61: * @defgroup utilities Utilities
+        -:   62: *
+        -:   63: * Components deemed generally useful. Includes pair, tuple,
+        -:   64: * forward/move helpers, ratio, function object, metaprogramming and
+        -:   65: * type traits, time, date, and memory functions.
+        -:   66: */
+        -:   67:
+        -:   68:#include <bits/c++config.h>
+        -:   69:#include <bits/stl_relops.h>
+        -:   70:#include <bits/stl_pair.h>
+        -:   71:
+        -:   72:#if __cplusplus >= 201103L
+        -:   73:
+        -:   74:#include <type_traits>
+        -:   75:#include <bits/move.h>
+        -:   76:#include <initializer_list>
+        -:   77:
+        -:   78:#if __cplusplus > 201703L
+        -:   79:#include <ext/numeric_traits.h>
+        -:   80:#endif
+        -:   81:
+        -:   82:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   83:{
+        -:   84:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   85:
+        -:   86:  /// Finds the size of a given tuple type.
+        -:   87:  template<typename _Tp>
+        -:   88:    struct tuple_size;
+        -:   89:
+        -:   90:  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:   91:  // 2313. tuple_size should always derive from integral_constant<size_t, N>
+        -:   92:  // 2770. tuple_size<const T> specialization is not SFINAE compatible
+        -:   93:
+        -:   94:  template<typename _Tp,
+        -:   95:	   typename _Up = typename remove_cv<_Tp>::type,
+        -:   96:	   typename = typename enable_if<is_same<_Tp, _Up>::value>::type,
+        -:   97:	   size_t = tuple_size<_Tp>::value>
+        -:   98:    using __enable_if_has_tuple_size = _Tp;
+        -:   99:
+        -:  100:  template<typename _Tp>
+        -:  101:    struct tuple_size<const __enable_if_has_tuple_size<_Tp>>
+        -:  102:    : public tuple_size<_Tp> { };
+        -:  103:
+        -:  104:  template<typename _Tp>
+        -:  105:    struct tuple_size<volatile __enable_if_has_tuple_size<_Tp>>
+        -:  106:    : public tuple_size<_Tp> { };
+        -:  107:
+        -:  108:  template<typename _Tp>
+        -:  109:    struct tuple_size<const volatile __enable_if_has_tuple_size<_Tp>>
+        -:  110:    : public tuple_size<_Tp> { };
+        -:  111:
+        -:  112:  /// Gives the type of the ith element of a given tuple type.
+        -:  113:  template<size_t __i, typename _Tp>
+        -:  114:    struct tuple_element;
+        -:  115:
+        -:  116:  // Duplicate of C++14's tuple_element_t for internal use in C++11 mode
+        -:  117:  template<size_t __i, typename _Tp>
+        -:  118:    using __tuple_element_t = typename tuple_element<__i, _Tp>::type;
+        -:  119:
+        -:  120:  template<size_t __i, typename _Tp>
+        -:  121:    struct tuple_element<__i, const _Tp>
+        -:  122:    {
+        -:  123:      typedef typename add_const<__tuple_element_t<__i, _Tp>>::type type;
+        -:  124:    };
+        -:  125:
+        -:  126:  template<size_t __i, typename _Tp>
+        -:  127:    struct tuple_element<__i, volatile _Tp>
+        -:  128:    {
+        -:  129:      typedef typename add_volatile<__tuple_element_t<__i, _Tp>>::type type;
+        -:  130:    };
+        -:  131:
+        -:  132:  template<size_t __i, typename _Tp>
+        -:  133:    struct tuple_element<__i, const volatile _Tp>
+        -:  134:    {
+        -:  135:      typedef typename add_cv<__tuple_element_t<__i, _Tp>>::type type;
+        -:  136:    };
+        -:  137:
+        -:  138:#if __cplusplus >= 201402L
+        -:  139:// The standard says this macro and alias template should be in <tuple>
+        -:  140:// but we define them here, to be available when the partial specializations
+        -:  141:// of tuple_element<pair<T,U>> and tuple_element<array<T,N>> are defined.
+        -:  142:#define __cpp_lib_tuple_element_t 201402L
+        -:  143:
+        -:  144:  template<size_t __i, typename _Tp>
+        -:  145:    using tuple_element_t = typename tuple_element<__i, _Tp>::type;
+        -:  146:#endif
+        -:  147:
+        -:  148:  // Various functions which give std::pair a tuple-like interface.
+        -:  149:
+        -:  150:  /// Partial specialization for std::pair
+        -:  151:  template<typename _T1, typename _T2>
+        -:  152:    struct __is_tuple_like_impl<pair<_T1, _T2>> : true_type
+        -:  153:    { };
+        -:  154:
+        -:  155:  /// Partial specialization for std::pair
+        -:  156:  template<class _Tp1, class _Tp2>
+        -:  157:    struct tuple_size<pair<_Tp1, _Tp2>>
+        -:  158:    : public integral_constant<size_t, 2> { };
+        -:  159:
+        -:  160:  /// Partial specialization for std::pair
+        -:  161:  template<class _Tp1, class _Tp2>
+        -:  162:    struct tuple_element<0, pair<_Tp1, _Tp2>>
+        -:  163:    { typedef _Tp1 type; };
+        -:  164:
+        -:  165:  /// Partial specialization for std::pair
+        -:  166:  template<class _Tp1, class _Tp2>
+        -:  167:    struct tuple_element<1, pair<_Tp1, _Tp2>>
+        -:  168:    { typedef _Tp2 type; };
+        -:  169:
+        -:  170:  template<size_t _Int>
+        -:  171:    struct __pair_get;
+        -:  172:
+        -:  173:  template<>
+        -:  174:    struct __pair_get<0>
+        -:  175:    {
+        -:  176:      template<typename _Tp1, typename _Tp2>
+        -:  177:	static constexpr _Tp1&
+        -:  178:	__get(pair<_Tp1, _Tp2>& __pair) noexcept
+        -:  179:	{ return __pair.first; }
+        -:  180:
+        -:  181:      template<typename _Tp1, typename _Tp2>
+        -:  182:	static constexpr _Tp1&&
+        -:  183:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+        -:  184:	{ return std::forward<_Tp1>(__pair.first); }
+        -:  185:
+        -:  186:      template<typename _Tp1, typename _Tp2>
+        -:  187:	static constexpr const _Tp1&
+function _ZNSt10__pair_getILy0EE11__const_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaISA_EEEERKT_RKSt4pairISD_T0_E called 0 returned 0% blocks executed 0%
+    #####:  188:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+    #####:  189:	{ return __pair.first; }
+    %%%%%:  189-block  0
+        -:  190:
+        -:  191:      template<typename _Tp1, typename _Tp2>
+        -:  192:	static constexpr const _Tp1&&
+        -:  193:	__const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
+        -:  194:	{ return std::forward<const _Tp1>(__pair.first); }
+        -:  195:    };
+        -:  196:
+        -:  197:  template<>
+        -:  198:    struct __pair_get<1>
+        -:  199:    {
+        -:  200:      template<typename _Tp1, typename _Tp2>
+        -:  201:	static constexpr _Tp2&
+        -:  202:	__get(pair<_Tp1, _Tp2>& __pair) noexcept
+        -:  203:	{ return __pair.second; }
+        -:  204:
+        -:  205:      template<typename _Tp1, typename _Tp2>
+        -:  206:	static constexpr _Tp2&&
+        -:  207:	__move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+        -:  208:	{ return std::forward<_Tp2>(__pair.second); }
+        -:  209:
+        -:  210:      template<typename _Tp1, typename _Tp2>
+        -:  211:	static constexpr const _Tp2&
+function _ZNSt10__pair_getILy1EE11__const_getIKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaISA_EEEERKT0_RKSt4pairIT_SD_E called 0 returned 0% blocks executed 0%
+    #####:  212:	__const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+    #####:  213:	{ return __pair.second; }
+    %%%%%:  213-block  0
+        -:  214:
+        -:  215:      template<typename _Tp1, typename _Tp2>
+        -:  216:	static constexpr const _Tp2&&
+        -:  217:	__const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
+        -:  218:	{ return std::forward<const _Tp2>(__pair.second); }
+        -:  219:    };
+        -:  220:
+        -:  221:  template<size_t _Int, class _Tp1, class _Tp2>
+        -:  222:    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+        -:  223:    get(pair<_Tp1, _Tp2>& ___in) noexcept
+        -:  224:    { return __pair_get<_Int>::__get(___in); }
+        -:  225:
+        -:  226:  template<size_t _Int, class _Tp1, class _Tp2>
+        -:  227:    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+        -:  228:    get(pair<_Tp1, _Tp2>&& ___in) noexcept
+        -:  229:    { return __pair_get<_Int>::__move_get(std::move(___in)); }
+        -:  230:
+        -:  231:  template<size_t _Int, class _Tp1, class _Tp2>
+        -:  232:    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+    #####:  233:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+    #####:  234:    { return __pair_get<_Int>::__const_get(___in); }
+------------------
+_ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS8_EEERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSF_:
+function _ZSt3getILy1EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS8_EEERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSF_ called 0 returned 0% blocks executed 0%
+    #####:  233:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+    #####:  234:    { return __pair_get<_Int>::__const_get(___in); }
+    %%%%%:  234-block  0
+call    0 never executed
+------------------
+_ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS8_EEERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSF_:
+function _ZSt3getILy0EKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorI7SubjectSaIS8_EEERKNSt13tuple_elementIXT_ESt4pairIT0_T1_EE4typeERKSF_ called 0 returned 0% blocks executed 0%
+    #####:  233:    get(const pair<_Tp1, _Tp2>& ___in) noexcept
+    #####:  234:    { return __pair_get<_Int>::__const_get(___in); }
+    %%%%%:  234-block  0
+call    0 never executed
+------------------
+        -:  235:
+        -:  236:  template<size_t _Int, class _Tp1, class _Tp2>
+        -:  237:    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+        -:  238:    get(const pair<_Tp1, _Tp2>&& ___in) noexcept
+        -:  239:    { return __pair_get<_Int>::__const_move_get(std::move(___in)); }
+        -:  240:
+        -:  241:#if __cplusplus >= 201402L
+        -:  242:
+        -:  243:#define __cpp_lib_tuples_by_type 201304
+        -:  244:
+        -:  245:  template <typename _Tp, typename _Up>
+        -:  246:    constexpr _Tp&
+        -:  247:    get(pair<_Tp, _Up>& __p) noexcept
+        -:  248:    { return __p.first; }
+        -:  249:
+        -:  250:  template <typename _Tp, typename _Up>
+        -:  251:    constexpr const _Tp&
+        -:  252:    get(const pair<_Tp, _Up>& __p) noexcept
+        -:  253:    { return __p.first; }
+        -:  254:
+        -:  255:  template <typename _Tp, typename _Up>
+        -:  256:    constexpr _Tp&&
+        -:  257:    get(pair<_Tp, _Up>&& __p) noexcept
+        -:  258:    { return std::move(__p.first); }
+        -:  259:
+        -:  260:  template <typename _Tp, typename _Up>
+        -:  261:    constexpr const _Tp&&
+        -:  262:    get(const pair<_Tp, _Up>&& __p) noexcept
+        -:  263:    { return std::move(__p.first); }
+        -:  264:
+        -:  265:  template <typename _Tp, typename _Up>
+        -:  266:    constexpr _Tp&
+        -:  267:    get(pair<_Up, _Tp>& __p) noexcept
+        -:  268:    { return __p.second; }
+        -:  269:
+        -:  270:  template <typename _Tp, typename _Up>
+        -:  271:    constexpr const _Tp&
+        -:  272:    get(const pair<_Up, _Tp>& __p) noexcept
+        -:  273:    { return __p.second; }
+        -:  274:
+        -:  275:  template <typename _Tp, typename _Up>
+        -:  276:    constexpr _Tp&&
+        -:  277:    get(pair<_Up, _Tp>&& __p) noexcept
+        -:  278:    { return std::move(__p.second); }
+        -:  279:
+        -:  280:  template <typename _Tp, typename _Up>
+        -:  281:    constexpr const _Tp&&
+        -:  282:    get(const pair<_Up, _Tp>&& __p) noexcept
+        -:  283:    { return std::move(__p.second); }
+        -:  284:
+        -:  285:#define __cpp_lib_exchange_function 201304
+        -:  286:
+        -:  287:  /// Assign @p __new_val to @p __obj and return its previous value.
+        -:  288:  template <typename _Tp, typename _Up = _Tp>
+        -:  289:    _GLIBCXX20_CONSTEXPR
+        -:  290:    inline _Tp
+        -:  291:    exchange(_Tp& __obj, _Up&& __new_val)
+        -:  292:    { return std::__exchange(__obj, std::forward<_Up>(__new_val)); }
+        -:  293:
+        -:  294:#endif // C++14
+        -:  295:
+        -:  296:  // Stores a tuple of indices.  Used by tuple and pair, and by bind() to
+        -:  297:  // extract the elements in a tuple.
+        -:  298:  template<size_t... _Indexes> struct _Index_tuple { };
+        -:  299:
+        -:  300:  // Builds an _Index_tuple<0, 1, 2, ..., _Num-1>.
+        -:  301:  template<size_t _Num>
+        -:  302:    struct _Build_index_tuple
+        -:  303:    {
+        -:  304:#if __has_builtin(__make_integer_seq)
+        -:  305:      template<typename, size_t... _Indices>
+        -:  306:        using _IdxTuple = _Index_tuple<_Indices...>;
+        -:  307:
+        -:  308:      // Clang defines __make_integer_seq for this purpose.
+        -:  309:      using __type = __make_integer_seq<_IdxTuple, size_t, _Num>;
+        -:  310:#else
+        -:  311:      // For GCC and other compilers, use __integer_pack instead.
+        -:  312:      using __type = _Index_tuple<__integer_pack(_Num)...>;
+        -:  313:#endif
+        -:  314:    };
+        -:  315:
+        -:  316:#if __cplusplus >= 201402L
+        -:  317:
+        -:  318:#define __cpp_lib_integer_sequence 201304
+        -:  319:
+        -:  320:  /// Class template integer_sequence
+        -:  321:  template<typename _Tp, _Tp... _Idx>
+        -:  322:    struct integer_sequence
+        -:  323:    {
+        -:  324:      typedef _Tp value_type;
+        -:  325:      static constexpr size_t size() noexcept { return sizeof...(_Idx); }
+        -:  326:    };
+        -:  327:
+        -:  328:  /// Alias template make_integer_sequence
+        -:  329:  template<typename _Tp, _Tp _Num>
+        -:  330:    using make_integer_sequence
+        -:  331:#if __has_builtin(__make_integer_seq)
+        -:  332:      = __make_integer_seq<integer_sequence, _Tp, _Num>;
+        -:  333:#else
+        -:  334:      = integer_sequence<_Tp, __integer_pack(_Num)...>;
+        -:  335:#endif
+        -:  336:
+        -:  337:  /// Alias template index_sequence
+        -:  338:  template<size_t... _Idx>
+        -:  339:    using index_sequence = integer_sequence<size_t, _Idx...>;
+        -:  340:
+        -:  341:  /// Alias template make_index_sequence
+        -:  342:  template<size_t _Num>
+        -:  343:    using make_index_sequence = make_integer_sequence<size_t, _Num>;
+        -:  344:
+        -:  345:  /// Alias template index_sequence_for
+        -:  346:  template<typename... _Types>
+        -:  347:    using index_sequence_for = make_index_sequence<sizeof...(_Types)>;
+        -:  348:#endif
+        -:  349:
+        -:  350:#if __cplusplus > 201402L
+        -:  351:
+        -:  352:  struct in_place_t {
+        -:  353:    explicit in_place_t() = default;
+        -:  354:  };
+        -:  355:
+        -:  356:  inline constexpr in_place_t in_place{};
+        -:  357:
+        -:  358:  template<typename _Tp> struct in_place_type_t
+        -:  359:  {
+        -:  360:    explicit in_place_type_t() = default;
+        -:  361:  };
+        -:  362:
+        -:  363:  template<typename _Tp>
+        -:  364:    inline constexpr in_place_type_t<_Tp> in_place_type{};
+        -:  365:
+        -:  366:  template<size_t _Idx> struct in_place_index_t
+        -:  367:  {
+        -:  368:    explicit in_place_index_t() = default;
+        -:  369:  };
+        -:  370:
+        -:  371:  template<size_t _Idx>
+        -:  372:    inline constexpr in_place_index_t<_Idx> in_place_index{};
+        -:  373:
+        -:  374:  template<typename>
+        -:  375:    struct __is_in_place_type_impl : false_type
+        -:  376:    { };
+        -:  377:
+        -:  378:  template<typename _Tp>
+        -:  379:    struct __is_in_place_type_impl<in_place_type_t<_Tp>> : true_type
+        -:  380:    { };
+        -:  381:
+        -:  382:  template<typename _Tp>
+        -:  383:    struct __is_in_place_type
+        -:  384:      : public __is_in_place_type_impl<_Tp>
+        -:  385:    { };
+        -:  386:
+        -:  387:#define  __cpp_lib_as_const 201510
+        -:  388:  template<typename _Tp>
+        -:  389:    [[nodiscard]]
+        -:  390:    constexpr add_const_t<_Tp>&
+        -:  391:    as_const(_Tp& __t) noexcept
+        -:  392:    { return __t; }
+        -:  393:
+        -:  394:  template<typename _Tp>
+        -:  395:    void as_const(const _Tp&&) = delete;
+        -:  396:
+        -:  397:#if __cplusplus > 201703L
+        -:  398:#define __cpp_lib_integer_comparison_functions 202002L
+        -:  399:
+        -:  400:  template<typename _Tp, typename _Up>
+        -:  401:    constexpr bool
+        -:  402:    cmp_equal(_Tp __t, _Up __u) noexcept
+        -:  403:    {
+        -:  404:      static_assert(__is_standard_integer<_Tp>::value);
+        -:  405:      static_assert(__is_standard_integer<_Up>::value);
+        -:  406:
+        -:  407:      if constexpr (is_signed_v<_Tp> == is_signed_v<_Up>)
+        -:  408:	return __t == __u;
+        -:  409:      else if constexpr (is_signed_v<_Tp>)
+        -:  410:	return __t >= 0 && make_unsigned_t<_Tp>(__t) == __u;
+        -:  411:      else
+        -:  412:	return __u >= 0 && __t == make_unsigned_t<_Up>(__u);
+        -:  413:    }
+        -:  414:
+        -:  415:  template<typename _Tp, typename _Up>
+        -:  416:    constexpr bool
+        -:  417:    cmp_not_equal(_Tp __t, _Up __u) noexcept
+        -:  418:    { return !std::cmp_equal(__t, __u); }
+        -:  419:
+        -:  420:  template<typename _Tp, typename _Up>
+        -:  421:    constexpr bool
+        -:  422:    cmp_less(_Tp __t, _Up __u) noexcept
+        -:  423:    {
+        -:  424:      static_assert(__is_standard_integer<_Tp>::value);
+        -:  425:      static_assert(__is_standard_integer<_Up>::value);
+        -:  426:
+        -:  427:      if constexpr (is_signed_v<_Tp> == is_signed_v<_Up>)
+        -:  428:	return __t < __u;
+        -:  429:      else if constexpr (is_signed_v<_Tp>)
+        -:  430:	return __t < 0 || make_unsigned_t<_Tp>(__t) < __u;
+        -:  431:      else
+        -:  432:	return __u >= 0 && __t < make_unsigned_t<_Up>(__u);
+        -:  433:    }
+        -:  434:
+        -:  435:  template<typename _Tp, typename _Up>
+        -:  436:    constexpr bool
+        -:  437:    cmp_greater(_Tp __t, _Up __u) noexcept
+        -:  438:    { return std::cmp_less(__u, __t); }
+        -:  439:
+        -:  440:  template<typename _Tp, typename _Up>
+        -:  441:    constexpr bool
+        -:  442:    cmp_less_equal(_Tp __t, _Up __u) noexcept
+        -:  443:    { return !std::cmp_less(__u, __t); }
+        -:  444:
+        -:  445:  template<typename _Tp, typename _Up>
+        -:  446:    constexpr bool
+        -:  447:    cmp_greater_equal(_Tp __t, _Up __u) noexcept
+        -:  448:    { return !std::cmp_less(__t, __u); }
+        -:  449:
+        -:  450:  template<typename _Up, typename _Tp>
+        -:  451:    constexpr bool
+        -:  452:    in_range(_Tp __t) noexcept
+        -:  453:    {
+        -:  454:      static_assert(__is_standard_integer<_Up>::value);
+        -:  455:      static_assert(__is_standard_integer<_Tp>::value);
+        -:  456:      using __gnu_cxx::__int_traits;
+        -:  457:
+        -:  458:      if constexpr (is_signed_v<_Tp> == is_signed_v<_Up>)
+        -:  459:	return __int_traits<_Up>::__min <= __t
+        -:  460:	  && __t <= __int_traits<_Up>::__max;
+        -:  461:      else if constexpr (is_signed_v<_Tp>)
+        -:  462:	return __t >= 0
+        -:  463:	  && make_unsigned_t<_Tp>(__t) <= __int_traits<_Up>::__max;
+        -:  464:      else
+        -:  465:	return __t <= make_unsigned_t<_Up>(__int_traits<_Up>::__max);
+        -:  466:    }
+        -:  467:
+        -:  468:#if __cplusplus > 202002L
+        -:  469:#define __cpp_lib_to_underlying 202102L
+        -:  470:  /// Convert an object of enumeration type to its underlying type.
+        -:  471:  template<typename _Tp>
+        -:  472:    [[nodiscard]]
+        -:  473:    constexpr underlying_type_t<_Tp>
+        -:  474:    to_underlying(_Tp __value) noexcept
+        -:  475:    { return static_cast<underlying_type_t<_Tp>>(__value); }
+        -:  476:#endif // C++23
+        -:  477:#endif // C++20
+        -:  478:#endif // C++17
+        -:  479:
+        -:  480:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  481:} // namespace
+        -:  482:
+        -:  483:#endif
+        -:  484:
+        -:  485:#endif /* _GLIBCXX_UTILITY */

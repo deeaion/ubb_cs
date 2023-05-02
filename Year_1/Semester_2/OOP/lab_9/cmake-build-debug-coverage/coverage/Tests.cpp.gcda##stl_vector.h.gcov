@@ -1241,11 +1241,11 @@ function _ZNKSt6vectorI7SubjectSaIS0_EE4sizeEv called 0 returned 0% blocks execu
         -:  995:       *  hold before needing to allocate more memory.
         -:  996:       */
         -:  997:      size_type
-function _ZNKSt6vectorI7SubjectSaIS0_EE8capacityEv called 1 returned 100% blocks executed 100%
-        1:  998:      capacity() const _GLIBCXX_NOEXCEPT
-        1:  999:      { return size_type(this->_M_impl._M_end_of_storage
-        1: 1000:			 - this->_M_impl._M_start); }
-        1: 1000-block  0
+function _ZNKSt6vectorI7SubjectSaIS0_EE8capacityEv called 0 returned 0% blocks executed 0%
+    #####:  998:      capacity() const _GLIBCXX_NOEXCEPT
+    #####:  999:      { return size_type(this->_M_impl._M_end_of_storage
+    #####: 1000:			 - this->_M_impl._M_start); }
+    %%%%%: 1000-block  0
         -: 1001:
         -: 1002:      /**
         -: 1003:       *  Returns true if the %vector is empty.  (Thus begin() would

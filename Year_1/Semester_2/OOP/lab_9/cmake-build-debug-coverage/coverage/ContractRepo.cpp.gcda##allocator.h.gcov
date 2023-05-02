@@ -172,22 +172,22 @@
         -:  168:      allocator() _GLIBCXX_NOTHROW { }
         -:  169:
         -:  170:      _GLIBCXX20_CONSTEXPR
-       16:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       16:  172:      : __allocator_base<_Tp>(__a) { }
+       20:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       20:  172:      : __allocator_base<_Tp>(__a) { }
 ------------------
 _ZNSaI7SubjectEC1ERKS0_:
-function _ZNSaI7SubjectEC1ERKS0_ called 8 returned 100% blocks executed 100%
-        8:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-        8:  172:      : __allocator_base<_Tp>(__a) { }
-        8:  172-block  0
-call    0 returned 8
+function _ZNSaI7SubjectEC1ERKS0_ called 10 returned 100% blocks executed 100%
+       10:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       10:  172:      : __allocator_base<_Tp>(__a) { }
+       10:  172-block  0
+call    0 returned 10
 ------------------
 _ZNSaI7SubjectEC2ERKS0_:
-function _ZNSaI7SubjectEC2ERKS0_ called 8 returned 100% blocks executed 100%
-        8:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-        8:  172:      : __allocator_base<_Tp>(__a) { }
-        8:  172-block  0
-call    0 returned 8
+function _ZNSaI7SubjectEC2ERKS0_ called 10 returned 100% blocks executed 100%
+       10:  171:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
+       10:  172:      : __allocator_base<_Tp>(__a) { }
+       10:  172-block  0
+call    0 returned 10
 ------------------
         -:  173:
         -:  174:#if __cplusplus >= 201103L
@@ -202,13 +202,13 @@ call    0 returned 8
         -:  183:#if __cpp_constexpr_dynamic_alloc
         -:  184:      constexpr
         -:  185:#endif
-       8*:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+      10*:  186:      ~allocator() _GLIBCXX_NOTHROW { }
 ------------------
 _ZNSaI7SubjectED1Ev:
-function _ZNSaI7SubjectED1Ev called 8 returned 100% blocks executed 100%
-        8:  186:      ~allocator() _GLIBCXX_NOTHROW { }
-        8:  186-block  0
-call    0 returned 8
+function _ZNSaI7SubjectED1Ev called 10 returned 100% blocks executed 100%
+       10:  186:      ~allocator() _GLIBCXX_NOTHROW { }
+       10:  186-block  0
+call    0 returned 10
 ------------------
 _ZNSaI7SubjectED2Ev:
 function _ZNSaI7SubjectED2Ev called 0 returned 0% blocks executed 0%

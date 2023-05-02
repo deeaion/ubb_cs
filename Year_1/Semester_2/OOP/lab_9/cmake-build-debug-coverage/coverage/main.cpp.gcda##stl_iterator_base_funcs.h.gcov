@@ -99,15 +99,15 @@
         -:   95:  template<typename _RandomAccessIterator>
         -:   96:    inline _GLIBCXX14_CONSTEXPR
         -:   97:    typename iterator_traits<_RandomAccessIterator>::difference_type
-function _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag called 182 returned 100% blocks executed 100%
-      182:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
+function _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St26random_access_iterator_tag called 175 returned 100% blocks executed 100%
+      175:   98:    __distance(_RandomAccessIterator __first, _RandomAccessIterator __last,
         -:   99:               random_access_iterator_tag)
         -:  100:    {
         -:  101:      // concept requirements
         -:  102:      __glibcxx_function_requires(_RandomAccessIteratorConcept<
         -:  103:				  _RandomAccessIterator>)
-      182:  104:      return __last - __first;
-      182:  104-block  0
+      175:  104:      return __last - __first;
+      175:  104-block  0
         -:  105:    }
         -:  106:
         -:  107:#if _GLIBCXX_USE_CXX11_ABI
@@ -141,15 +141,15 @@ function _ZSt10__distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_St
         -:  135:  template<typename _InputIterator>
         -:  136:    inline _GLIBCXX17_CONSTEXPR
         -:  137:    typename iterator_traits<_InputIterator>::difference_type
-function _ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_ called 182 returned 100% blocks executed 100%
-      182:  138:    distance(_InputIterator __first, _InputIterator __last)
+function _ZSt8distanceIPKcENSt15iterator_traitsIT_E15difference_typeES3_S3_ called 175 returned 100% blocks executed 100%
+      175:  138:    distance(_InputIterator __first, _InputIterator __last)
         -:  139:    {
         -:  140:      // concept requirements -- taken care of in __distance
-      182:  141:      return std::__distance(__first, __last,
-call    0 returned 182
-      364:  142:			     std::__iterator_category(__first));
-      182:  142-block  0
-call    0 returned 182
+      175:  141:      return std::__distance(__first, __last,
+call    0 returned 175
+      350:  142:			     std::__iterator_category(__first));
+      175:  142-block  0
+call    0 returned 175
         -:  143:    }
         -:  144:
         -:  145:  template<typename _InputIterator, typename _Distance>

@@ -79,38 +79,38 @@ call    1 never executed
 call    2 never executed
         -:   30:
         -:   31:/**DESTRUCTOR*/
-function _ZN7SubjectD2Ev called 122 returned 100% blocks executed 100%
-      122:   32:Subject::~Subject() = default;
-      122:   32-block  0
-call    0 returned 122
-call    1 returned 122
-call    2 returned 122
+function _ZN7SubjectD2Ev called 139 returned 100% blocks executed 100%
+      139:   32:Subject::~Subject() = default;
+      139:   32-block  0
+call    0 returned 139
+call    1 returned 139
+call    2 returned 139
         -:   33:
         -:   34:/**COPY CONSTRUCTOR*/
-function _ZN7SubjectC2ERKS_ called 73 returned 100% blocks executed 62%
-       73:   35:Subject::Subject(const Subject &subject) {
-       73:   35-block  0
-call    0 returned 73
-call    1 returned 73
-call    2 returned 73
-       73:   36:    this->name = subject.name;
-call    0 returned 73
-branch  1 taken 73 (fallthrough)
+function _ZN7SubjectC2ERKS_ called 90 returned 100% blocks executed 62%
+       90:   35:Subject::Subject(const Subject &subject) {
+       90:   35-block  0
+call    0 returned 90
+call    1 returned 90
+call    2 returned 90
+       90:   36:    this->name = subject.name;
+call    0 returned 90
+branch  1 taken 90 (fallthrough)
 branch  2 taken 0 (throw)
-       73:   37:    this->hours = subject.hours;
-       73:   38:    this->type = subject.type;
-       73:   38-block  0
-call    0 returned 73
-branch  1 taken 73 (fallthrough)
+       90:   37:    this->hours = subject.hours;
+       90:   38:    this->type = subject.type;
+       90:   38-block  0
+call    0 returned 90
+branch  1 taken 90 (fallthrough)
 branch  2 taken 0 (throw)
-       73:   39:    this->teacher = subject.teacher;
-       73:   39-block  0
-call    0 returned 73
-branch  1 taken 73 (fallthrough)
+       90:   39:    this->teacher = subject.teacher;
+       90:   39-block  0
+call    0 returned 90
+branch  1 taken 90 (fallthrough)
 branch  2 taken 0 (throw)
         -:   40://    std::cout << "copy constructing subject" << std::endl;
-       73:   41:}
-       73:   41-block  0
+       90:   41:}
+       90:   41-block  0
     $$$$$:   41-block  1
 call    0 never executed
     $$$$$:   41-block  2
@@ -128,37 +128,37 @@ function _ZNK7Subject9get_hoursEv called 88 returned 100% blocks executed 100%
        88:   48-block  0
         -:   49:}
         -:   50:
-function _ZNK7Subject8get_nameB5cxx11Ev called 215 returned 100% blocks executed 100%
-      215:   51:const string &Subject::get_name() const {
-      215:   52:    return this->name;
-      215:   52-block  0
+function _ZNK7Subject8get_nameB5cxx11Ev called 225 returned 100% blocks executed 100%
+      225:   51:const string &Subject::get_name() const {
+      225:   52:    return this->name;
+      225:   52-block  0
         -:   53:}
         -:   54:
-function _ZNK7Subject8get_typeB5cxx11Ev called 102 returned 100% blocks executed 100%
-      102:   55:const string &Subject::get_type() const {
-      102:   56:    return this->type;
-      102:   56-block  0
+function _ZNK7Subject8get_typeB5cxx11Ev called 113 returned 100% blocks executed 100%
+      113:   55:const string &Subject::get_type() const {
+      113:   56:    return this->type;
+      113:   56-block  0
         -:   57:}
         -:   58:
-function _ZNK7Subject11get_teacherB5cxx11Ev called 209 returned 100% blocks executed 100%
-      209:   59:const string &Subject::get_teacher() const {
-      209:   60:    return this->teacher;
-      209:   60-block  0
+function _ZNK7Subject11get_teacherB5cxx11Ev called 216 returned 100% blocks executed 100%
+      216:   59:const string &Subject::get_teacher() const {
+      216:   60:    return this->teacher;
+      216:   60-block  0
         -:   61:}
         -:   62:
         -:   63:/**SETTERS*/
         -:   64:
-function _ZN7Subject9set_hoursEi called 3 returned 100% blocks executed 100%
-        3:   65:[[maybe_unused]] void Subject::set_hours(int new_hours) {
-        3:   66:    this->hours = new_hours;
-        3:   67:}
+function _ZN7Subject9set_hoursEi called 7 returned 100% blocks executed 100%
+        7:   65:[[maybe_unused]] void Subject::set_hours(int new_hours) {
+        7:   66:    this->hours = new_hours;
+        7:   67:}
         -:   68:
-function _ZN7Subject8set_typeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
-        3:   69:[[maybe_unused]] void Subject::set_type(const std::string &new_type) {
-        3:   70:    this->type = new_type;
-        3:   70-block  0
-call    0 returned 3
-        3:   71:}
+function _ZN7Subject8set_typeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   69:[[maybe_unused]] void Subject::set_type(const std::string &new_type) {
+        7:   70:    this->type = new_type;
+        7:   70-block  0
+call    0 returned 7
+        7:   71:}
         -:   72:
         -:   73:/**TO STRING*/
 function _ZNK7Subject15to_string_printB5cxx11Ev called 1 returned 100% blocks executed 49%
@@ -234,20 +234,20 @@ call    0 returned 12
 call    1 returned 12
 call    2 returned 12
         -:   82:
-function _ZN7SubjecteqERKS_ called 15 returned 100% blocks executed 88%
-       15:   83:bool Subject::operator==(const Subject &other) {
-      15*:   84:    return this->name == other.name && this->teacher == other.teacher;
-       15:   84-block  0
-call    0 returned 15
-branch  1 taken 15 (fallthrough)
+function _ZN7SubjecteqERKS_ called 17 returned 100% blocks executed 88%
+       17:   83:bool Subject::operator==(const Subject &other) {
+      17*:   84:    return this->name == other.name && this->teacher == other.teacher;
+       17:   84-block  0
+call    0 returned 17
+branch  1 taken 17 (fallthrough)
 branch  2 taken 0
-       15:   84-block  1
-call    3 returned 15
-branch  4 taken 15 (fallthrough)
+       17:   84-block  1
+call    3 returned 17
+branch  4 taken 17 (fallthrough)
 branch  5 taken 0
-       15:   84-block  2
+       17:   84-block  2
     %%%%%:   84-block  3
-       15:   84-block  4
+       17:   84-block  4
         -:   85:}
         -:   86:
         -:   87:/**COMPARATORS*/
@@ -364,119 +364,119 @@ branch  4 taken 2
         2:  128:    return false;
         2:  128-block  0
         -:  129:}
-function _ZN7Subject11set_teacherERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
-        3:  130:void Subject::set_teacher(const std::string &nteacher) {
-        3:  131:    this->teacher=nteacher;
-        3:  131-block  0
-call    0 returned 3
-        3:  132:}
-function _ZN7Subject8set_nameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
-        3:  133:void Subject::set_name(const std::string &nname) {
-        3:  134:    this->name=nname;
-        3:  134-block  0
-call    0 returned 3
-        3:  135:}
+function _ZN7Subject11set_teacherERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:  130:void Subject::set_teacher(const std::string &nteacher) {
+        7:  131:    this->teacher=nteacher;
+        7:  131-block  0
+call    0 returned 7
+        7:  132:}
+function _ZN7Subject8set_nameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:  133:void Subject::set_name(const std::string &nname) {
+        7:  134:    this->name=nname;
+        7:  134-block  0
+call    0 returned 7
+        7:  135:}
         -:  136:
         -:  137:
-function _Z10splitInputRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEc called 10 returned 100% blocks executed 71%
-       10:  138:std::vector<string> splitInput(const string& inputString, char delimitator)
+function _Z10splitInputRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEc called 14 returned 100% blocks executed 71%
+       14:  138:std::vector<string> splitInput(const string& inputString, char delimitator)
         -:  139:{
-       10:  140:    std::vector<string> splited;
-       10:  140-block  0
-call    0 returned 10
-       10:  141:    std:: stringstream stream(inputString);
-call    0 returned 10
-call    1 returned 10
-branch  2 taken 10 (fallthrough)
+       14:  140:    std::vector<string> splited;
+       14:  140-block  0
+call    0 returned 14
+       14:  141:    std:: stringstream stream(inputString);
+call    0 returned 14
+call    1 returned 14
+branch  2 taken 14 (fallthrough)
 branch  3 taken 0 (throw)
-       10:  142:    std::string curent;
-       10:  142-block  0
-call    0 returned 10
-       18:  143:    while(std::getline(stream,curent,delimitator))
-       18:  143-block  0
-call    0 returned 18
-branch  1 taken 18 (fallthrough)
+       14:  142:    std::string curent;
+       14:  142-block  0
+call    0 returned 14
+       38:  143:    while(std::getline(stream,curent,delimitator))
+       38:  143-block  0
+call    0 returned 38
+branch  1 taken 38 (fallthrough)
 branch  2 taken 0 (throw)
-       18:  143-block  1
-call    3 returned 18
-branch  4 taken 18 (fallthrough)
+       38:  143-block  1
+call    3 returned 38
+branch  4 taken 38 (fallthrough)
 branch  5 taken 0 (throw)
-       18:  143-block  2
-branch  6 taken 8
-branch  7 taken 10 (fallthrough)
+       38:  143-block  2
+branch  6 taken 24
+branch  7 taken 14 (fallthrough)
         -:  144:    {
-        8:  145:        splited.push_back(curent);
-        8:  145-block  0
-call    0 returned 8
-branch  1 taken 8 (fallthrough)
+       24:  145:        splited.push_back(curent);
+       24:  145-block  0
+call    0 returned 24
+branch  1 taken 24 (fallthrough)
 branch  2 taken 0 (throw)
         -:  146:    }
-       20:  147:    return splited;
-       10:  147-block  0
-       10:  147-block  1
-       10:  148:}
-       10:  148-block  0
-call    0 returned 10
-call    1 returned 10
+       28:  147:    return splited;
+       14:  147-block  0
+       14:  147-block  1
+       14:  148:}
+       14:  148-block  0
+call    0 returned 14
+call    1 returned 14
     $$$$$:  148-block  1
 call    2 never executed
     $$$$$:  148-block  2
 call    3 never executed
     $$$$$:  148-block  3
 call    4 never executed
-function _ZrsRSiR7Subject called 10 returned 100% blocks executed 84%
-       10:  149:std::istream  & operator>>(std::istream & inputStream, Subject & subject)
+function _ZrsRSiR7Subject called 14 returned 100% blocks executed 84%
+       14:  149:std::istream  & operator>>(std::istream & inputStream, Subject & subject)
         -:  150:{
-       10:  151:    std::string line;
-       10:  151-block  0
-call    0 returned 10
-       10:  152:    std::getline(inputStream,line);
-call    0 returned 10
-branch  1 taken 10 (fallthrough)
+       14:  151:    std::string line;
+       14:  151-block  0
+call    0 returned 14
+       14:  152:    std::getline(inputStream,line);
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
 branch  2 taken 0 (throw)
-       10:  153:    std::vector<string> objects= splitInput(line,',');
-       10:  153-block  0
-call    0 returned 10
-branch  1 taken 10 (fallthrough)
+       14:  153:    std::vector<string> objects= splitInput(line,',');
+       14:  153-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
 branch  2 taken 0 (throw)
-       10:  154:    if(objects.size()!=4)
-       10:  154-block  0
-call    0 returned 10
+       14:  154:    if(objects.size()!=4)
+       14:  154-block  0
+call    0 returned 14
 branch  1 taken 8 (fallthrough)
-branch  2 taken 2
+branch  2 taken 6
         8:  155:        return inputStream;
         8:  155-block  0
-        2:  156:    subject.set_name(objects[0]);
-        2:  156-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+        6:  156:    subject.set_name(objects[0]);
+        6:  156-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  157:    subject.set_hours(std::stoi(objects[1]));
-        2:  157-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+        6:  157:    subject.set_hours(std::stoi(objects[1]));
+        6:  157-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  157-block  1
-call    4 returned 2
-        2:  158:    subject.set_type(objects[2]);
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+        6:  157-block  1
+call    4 returned 6
+        6:  158:    subject.set_type(objects[2]);
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  159:    subject.set_teacher(objects[3]);
-        2:  159-block  0
-call    0 returned 2
-call    1 returned 2
-branch  2 taken 2 (fallthrough)
+        6:  159:    subject.set_teacher(objects[3]);
+        6:  159-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
 branch  3 taken 0 (throw)
-        2:  160:    return inputStream;
-        2:  160-block  0
-       10:  161:}
-       10:  161-block  0
-call    0 returned 10
-call    1 returned 10
+        6:  160:    return inputStream;
+        6:  160-block  0
+       14:  161:}
+       14:  161-block  0
+call    0 returned 14
+call    1 returned 14
     $$$$$:  161-block  1
 call    2 never executed
     $$$$$:  161-block  2

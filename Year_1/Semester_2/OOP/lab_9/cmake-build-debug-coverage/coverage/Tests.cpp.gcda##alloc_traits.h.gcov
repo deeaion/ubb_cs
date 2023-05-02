@@ -119,10 +119,10 @@ call    0 never executed
         -:  100:    static _GLIBCXX14_CONSTEXPR void _S_on_swap(_Alloc& __a, _Alloc& __b)
         -:  101:    { std::__alloc_on_swap(__a, __b); }
         -:  102:
-function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E27_S_propagate_on_copy_assignEv called 1 returned 100% blocks executed 100%
-        1:  103:    static constexpr bool _S_propagate_on_copy_assign()
-        1:  104:    { return _Base_type::propagate_on_container_copy_assignment::value; }
-        1:  104-block  0
+function _ZN9__gnu_cxx14__alloc_traitsISaI7SubjectES1_E27_S_propagate_on_copy_assignEv called 0 returned 0% blocks executed 0%
+    #####:  103:    static constexpr bool _S_propagate_on_copy_assign()
+    #####:  104:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+    %%%%%:  104-block  0
         -:  105:
         -:  106:    static constexpr bool _S_propagate_on_move_assign()
         -:  107:    { return _Base_type::propagate_on_container_move_assignment::value; }

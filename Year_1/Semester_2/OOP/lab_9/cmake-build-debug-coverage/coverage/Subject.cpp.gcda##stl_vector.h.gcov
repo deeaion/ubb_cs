@@ -98,10 +98,10 @@
         -:   94:	pointer _M_finish;
         -:   95:	pointer _M_end_of_storage;
         -:   96:
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_Vector_impl_dataC2Ev called 10 returned 100% blocks executed 100%
-       10:   97:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
-       10:   98:	: _M_start(), _M_finish(), _M_end_of_storage()
-       10:   99:	{ }
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_Vector_impl_dataC2Ev called 14 returned 100% blocks executed 100%
+       14:   97:	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+       14:   98:	: _M_start(), _M_finish(), _M_end_of_storage()
+       14:   99:	{ }
         -:  100:
         -:  101:#if __cplusplus >= 201103L
         -:  102:	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
@@ -133,14 +133,14 @@ function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE
         -:  128:      struct _Vector_impl
         -:  129:	: public _Tp_alloc_type, public _Vector_impl_data
         -:  130:      {
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_Vector_implC1Ev called 10 returned 100% blocks executed 100%
-       10:  131:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_Vector_implC1Ev called 14 returned 100% blocks executed 100%
+       14:  131:	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
         -:  132:	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
-       10:  133:	: _Tp_alloc_type()
-       10:  133-block  0
-call    0 returned 10
-call    1 returned 10
-       10:  134:	{ }
+       14:  133:	: _Tp_alloc_type()
+       14:  133-block  0
+call    0 returned 14
+call    1 returned 14
+       14:  134:	{ }
         -:  135:
         -:  136:	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
         -:  137:	: _Tp_alloc_type(__a)
@@ -282,26 +282,26 @@ call    1 returned 10
         -:  273:      typedef _Alloc allocator_type;
         -:  274:
         -:  275:      _Tp_alloc_type&
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE19_M_get_Tp_allocatorEv called 22 returned 100% blocks executed 100%
-       22:  276:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-       22:  277:      { return this->_M_impl; }
-       22:  277-block  0
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE19_M_get_Tp_allocatorEv called 50 returned 100% blocks executed 100%
+       50:  276:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+       50:  277:      { return this->_M_impl; }
+       50:  277-block  0
         -:  278:
         -:  279:      const _Tp_alloc_type&
-function _ZNKSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE19_M_get_Tp_allocatorEv called 12 returned 100% blocks executed 100%
-       12:  280:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
-       12:  281:      { return this->_M_impl; }
-       12:  281-block  0
+function _ZNKSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE19_M_get_Tp_allocatorEv called 36 returned 100% blocks executed 100%
+       36:  280:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+       36:  281:      { return this->_M_impl; }
+       36:  281-block  0
         -:  282:
         -:  283:      allocator_type
         -:  284:      get_allocator() const _GLIBCXX_NOEXCEPT
         -:  285:      { return allocator_type(_M_get_Tp_allocator()); }
         -:  286:
         -:  287:#if __cplusplus >= 201103L
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC2Ev called 10 returned 100% blocks executed 100%
-       10:  288:      _Vector_base() = default;
-       10:  288-block  0
-call    0 returned 10
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC2Ev called 14 returned 100% blocks executed 100%
+       14:  288:      _Vector_base() = default;
+       14:  288-block  0
+call    0 returned 14
         -:  289:#else
         -:  290:      _Vector_base() { }
         -:  291:#endif
@@ -346,47 +346,47 @@ call    0 returned 10
         -:  330:      { }
         -:  331:#endif
         -:  332:
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED2Ev called 10 returned 100% blocks executed 100%
-       10:  333:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED2Ev called 14 returned 100% blocks executed 100%
+       14:  333:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  334:      {
-       10:  335:	_M_deallocate(_M_impl._M_start,
-       10:  336:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-       10:  336-block  0
-call    0 returned 10
-       10:  337:      }
-call    0 returned 10
+       14:  335:	_M_deallocate(_M_impl._M_start,
+       14:  336:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+       14:  336-block  0
+call    0 returned 14
+       14:  337:      }
+call    0 returned 14
         -:  338:
         -:  339:    public:
         -:  340:      _Vector_impl _M_impl;
         -:  341:
         -:  342:      pointer
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_M_allocateEy called 6 returned 100% blocks executed 83%
-        6:  343:      _M_allocate(size_t __n)
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_M_allocateEy called 18 returned 100% blocks executed 83%
+       18:  343:      _M_allocate(size_t __n)
         -:  344:      {
         -:  345:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-       6*:  346:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
-        6:  346-block  0
-branch  0 taken 6 (fallthrough)
+      18*:  346:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+       18:  346-block  0
+branch  0 taken 18 (fallthrough)
 branch  1 taken 0
-        6:  346-block  1
-call    2 returned 6
+       18:  346-block  1
+call    2 returned 18
     %%%%%:  346-block  2
-        6:  346-block  3
+       18:  346-block  3
         -:  347:      }
         -:  348:
         -:  349:      void
-function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE13_M_deallocateEPS5_y called 16 returned 100% blocks executed 100%
-       16:  350:      _M_deallocate(pointer __p, size_t __n)
+function _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE13_M_deallocateEPS5_y called 32 returned 100% blocks executed 100%
+       32:  350:      _M_deallocate(pointer __p, size_t __n)
         -:  351:      {
         -:  352:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-       16:  353:	if (__p)
-       16:  353-block  0
-branch  0 taken 6 (fallthrough)
-branch  1 taken 10
-        6:  354:	  _Tr::deallocate(_M_impl, __p, __n);
-        6:  354-block  0
-call    0 returned 6
-       16:  355:      }
+       32:  353:	if (__p)
+       32:  353-block  0
+branch  0 taken 18 (fallthrough)
+branch  1 taken 14
+       18:  354:	  _Tr::deallocate(_M_impl, __p, __n);
+       18:  354-block  0
+call    0 returned 18
+       32:  355:      }
         -:  356:
         -:  357:    protected:
         -:  358:      void
@@ -484,13 +484,13 @@ call    0 returned 6
         -:  450:      }
         -:  451:
         -:  452:      static pointer
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE14_S_do_relocateEPS5_S8_S8_RS6_St17integral_constantIbLb1EE called 12 returned 100% blocks executed 100%
-       12:  453:      _S_do_relocate(pointer __first, pointer __last, pointer __result,
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE14_S_do_relocateEPS5_S8_S8_RS6_St17integral_constantIbLb1EE called 36 returned 100% blocks executed 100%
+       36:  453:      _S_do_relocate(pointer __first, pointer __last, pointer __result,
         -:  454:		     _Tp_alloc_type& __alloc, true_type) noexcept
         -:  455:      {
-       12:  456:	return std::__relocate_a(__first, __last, __result, __alloc);
-       12:  456-block  0
-call    0 returned 12
+       36:  456:	return std::__relocate_a(__first, __last, __result, __alloc);
+       36:  456-block  0
+call    0 returned 36
         -:  457:      }
         -:  458:
         -:  459:      static pointer
@@ -499,14 +499,14 @@ call    0 returned 12
         -:  462:      { return __result; }
         -:  463:
         -:  464:      static pointer
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_S_relocateEPS5_S8_S8_RS6_ called 12 returned 100% blocks executed 100%
-       12:  465:      _S_relocate(pointer __first, pointer __last, pointer __result,
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_S_relocateEPS5_S8_S8_RS6_ called 36 returned 100% blocks executed 100%
+       36:  465:      _S_relocate(pointer __first, pointer __last, pointer __result,
         -:  466:		  _Tp_alloc_type& __alloc) noexcept
         -:  467:      {
         -:  468:	using __do_it = __bool_constant<_S_use_relocate()>;
-       12:  469:	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
-       12:  469-block  0
-call    0 returned 12
+       36:  469:	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
+       36:  469-block  0
+call    0 returned 36
         -:  470:      }
         -:  471:#endif // C++11
         -:  472:
@@ -524,10 +524,10 @@ call    0 returned 12
         -:  484:       *  @brief  Creates a %vector with no elements.
         -:  485:       */
         -:  486:#if __cplusplus >= 201103L
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC1Ev called 10 returned 100% blocks executed 100%
-       10:  487:      vector() = default;
-       10:  487-block  0
-call    0 returned 10
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC1Ev called 14 returned 100% blocks executed 100%
+       14:  487:      vector() = default;
+       14:  487-block  0
+call    0 returned 14
         -:  488:#else
         -:  489:      vector() { }
         -:  490:#endif
@@ -718,17 +718,17 @@ call    0 returned 10
         -:  675:       *  not touched in any way.  Managing the pointer is the user's
         -:  676:       *  responsibility.
         -:  677:       */
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED1Ev called 10 returned 100% blocks executed 100%
-       10:  678:      ~vector() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED1Ev called 14 returned 100% blocks executed 100%
+       14:  678:      ~vector() _GLIBCXX_NOEXCEPT
         -:  679:      {
-       10:  680:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-call    0 returned 10
-       10:  681:		      _M_get_Tp_allocator());
-       10:  681-block  0
-call    0 returned 10
+       14:  680:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 14
+       14:  681:		      _M_get_Tp_allocator());
+       14:  681-block  0
+call    0 returned 14
         -:  682:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
-       10:  683:      }
-call    0 returned 10
+       14:  683:      }
+call    0 returned 14
         -:  684:
         -:  685:      /**
         -:  686:       *  @brief  %Vector assignment operator.
@@ -856,11 +856,11 @@ call    0 returned 10
         -:  808:       *  element order.
         -:  809:       */
         -:  810:      iterator
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE5beginEv called 6 returned 100% blocks executed 100%
-        6:  811:      begin() _GLIBCXX_NOEXCEPT
-        6:  812:      { return iterator(this->_M_impl._M_start); }
-        6:  812-block  0
-call    0 returned 6
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE5beginEv called 18 returned 100% blocks executed 100%
+       18:  811:      begin() _GLIBCXX_NOEXCEPT
+       18:  812:      { return iterator(this->_M_impl._M_start); }
+       18:  812-block  0
+call    0 returned 18
         -:  813:
         -:  814:      /**
         -:  815:       *  Returns a read-only (constant) iterator that points to the
@@ -877,11 +877,11 @@ call    0 returned 6
         -:  826:       *  element order.
         -:  827:       */
         -:  828:      iterator
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE3endEv called 6 returned 100% blocks executed 100%
-        6:  829:      end() _GLIBCXX_NOEXCEPT
-        6:  830:      { return iterator(this->_M_impl._M_finish); }
-        6:  830-block  0
-call    0 returned 6
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE3endEv called 18 returned 100% blocks executed 100%
+       18:  829:      end() _GLIBCXX_NOEXCEPT
+       18:  830:      { return iterator(this->_M_impl._M_finish); }
+       18:  830-block  0
+call    0 returned 18
         -:  831:
         -:  832:      /**
         -:  833:       *  Returns a read-only (constant) iterator that points one past
@@ -969,19 +969,19 @@ call    0 returned 6
         -:  915:      // [23.2.4.2] capacity
         -:  916:      /**  Returns the number of elements in the %vector.  */
         -:  917:      size_type
-function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE4sizeEv called 34 returned 100% blocks executed 100%
-       34:  918:      size() const _GLIBCXX_NOEXCEPT
-       34:  919:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-       34:  919-block  0
+function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE4sizeEv called 86 returned 100% blocks executed 100%
+       86:  918:      size() const _GLIBCXX_NOEXCEPT
+       86:  919:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+       86:  919-block  0
         -:  920:
         -:  921:      /**  Returns the size() of the largest possible %vector.  */
         -:  922:      size_type
-function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE8max_sizeEv called 12 returned 100% blocks executed 100%
-       12:  923:      max_size() const _GLIBCXX_NOEXCEPT
-       12:  924:      { return _S_max_size(_M_get_Tp_allocator()); }
-       12:  924-block  0
-call    0 returned 12
-call    1 returned 12
+function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE8max_sizeEv called 36 returned 100% blocks executed 100%
+       36:  923:      max_size() const _GLIBCXX_NOEXCEPT
+       36:  924:      { return _S_max_size(_M_get_Tp_allocator()); }
+       36:  924-block  0
+call    0 returned 36
+call    1 returned 36
         -:  925:
         -:  926:#if __cplusplus >= 201103L
         -:  927:      /**
@@ -1100,12 +1100,12 @@ call    1 returned 12
         -: 1040:       *  see at().)
         -: 1041:       */
         -: 1042:      reference
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEixEy called 8 returned 100% blocks executed 100%
-        8: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEixEy called 24 returned 100% blocks executed 100%
+       24: 1043:      operator[](size_type __n) _GLIBCXX_NOEXCEPT
         -: 1044:      {
         -: 1045:	__glibcxx_requires_subscript(__n);
-        8: 1046:	return *(this->_M_impl._M_start + __n);
-        8: 1046-block  0
+       24: 1046:	return *(this->_M_impl._M_start + __n);
+       24: 1046-block  0
         -: 1047:      }
         -: 1048:
         -: 1049:      /**
@@ -1246,28 +1246,28 @@ function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_
         -: 1184:       *  available.
         -: 1185:       */
         -: 1186:      void
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE9push_backERKS5_ called 8 returned 100% blocks executed 100%
-        8: 1187:      push_back(const value_type& __x)
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE9push_backERKS5_ called 24 returned 100% blocks executed 100%
+       24: 1187:      push_back(const value_type& __x)
         -: 1188:      {
-        8: 1189:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
-        8: 1189-block  0
-branch  0 taken 2 (fallthrough)
-branch  1 taken 6
+       24: 1189:	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+       24: 1189-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 18
         -: 1190:	  {
         -: 1191:	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
-        2: 1192:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
-        2: 1192-block  0
-call    0 returned 2
+        6: 1192:	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+        6: 1192-block  0
+call    0 returned 6
         -: 1193:				     __x);
-        2: 1194:	    ++this->_M_impl._M_finish;
+        6: 1194:	    ++this->_M_impl._M_finish;
         -: 1195:	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
         -: 1196:	  }
         -: 1197:	else
-        6: 1198:	  _M_realloc_insert(end(), __x);
-        6: 1198-block  0
-call    0 returned 6
-call    1 returned 6
-        8: 1199:      }
+       18: 1198:	  _M_realloc_insert(end(), __x);
+       18: 1198-block  0
+call    0 returned 18
+call    1 returned 18
+       24: 1199:      }
         -: 1200:
         -: 1201:#if __cplusplus >= 201103L
         -: 1202:      void
@@ -1824,36 +1824,36 @@ call    1 returned 6
         -: 1753:
         -: 1754:      // Called by _M_fill_insert, _M_insert_aux etc.
         -: 1755:      size_type
-function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_M_check_lenEyPKc called 6 returned 100% blocks executed 87%
-        6: 1756:      _M_check_len(size_type __n, const char* __s) const
+function _ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_M_check_lenEyPKc called 18 returned 100% blocks executed 87%
+       18: 1756:      _M_check_len(size_type __n, const char* __s) const
         -: 1757:      {
-        6: 1758:	if (max_size() - size() < __n)
-        6: 1758-block  0
-call    0 returned 6
-call    1 returned 6
+       18: 1758:	if (max_size() - size() < __n)
+       18: 1758-block  0
+call    0 returned 18
+call    1 returned 18
 branch  2 taken 0 (fallthrough)
-branch  3 taken 6
+branch  3 taken 18
     #####: 1759:	  __throw_length_error(__N(__s));
     %%%%%: 1759-block  0
 call    0 never executed
         -: 1760:
-        6: 1761:	const size_type __len = size() + (std::max)(size(), __n);
-        6: 1761-block  0
-call    0 returned 6
-call    1 returned 6
-call    2 returned 6
-       6*: 1762:	return (__len < size() || __len > max_size()) ? max_size() : __len;
-call    0 returned 6
-branch  1 taken 6 (fallthrough)
+       18: 1761:	const size_type __len = size() + (std::max)(size(), __n);
+       18: 1761-block  0
+call    0 returned 18
+call    1 returned 18
+call    2 returned 18
+      18*: 1762:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
 branch  2 taken 0
-        6: 1762-block  0
-call    3 returned 6
+       18: 1762-block  0
+call    3 returned 18
 branch  4 taken 0 (fallthrough)
-branch  5 taken 6
+branch  5 taken 18
     %%%%%: 1762-block  1
 call    6 never executed
-        6: 1762-block  2
-        6: 1762-block  3
+       18: 1762-block  2
+       18: 1762-block  3
         -: 1763:      }
         -: 1764:
         -: 1765:      // Called by constructors to check initial size.
@@ -1867,19 +1867,19 @@ call    6 never executed
         -: 1773:      }
         -: 1774:
         -: 1775:      static size_type
-function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_S_max_sizeERKS6_ called 12 returned 100% blocks executed 100%
-       12: 1776:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_S_max_sizeERKS6_ called 36 returned 100% blocks executed 100%
+       36: 1776:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
         -: 1777:      {
         -: 1778:	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
         -: 1779:	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
         -: 1780:	// (even if std::allocator_traits::max_size says we can).
-       12: 1781:	const size_t __diffmax
+       36: 1781:	const size_t __diffmax
         -: 1782:	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
-       12: 1783:	const size_t __allocmax = _Alloc_traits::max_size(__a);
-       12: 1783-block  0
-call    0 returned 12
-       12: 1784:	return (std::min)(__diffmax, __allocmax);
-call    0 returned 12
+       36: 1783:	const size_t __allocmax = _Alloc_traits::max_size(__a);
+       36: 1783-block  0
+call    0 returned 36
+       36: 1784:	return (std::min)(__diffmax, __allocmax);
+call    0 returned 36
         -: 1785:      }
         -: 1786:
         -: 1787:      // Internal erase functions follow.

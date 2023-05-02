@@ -144,6 +144,47 @@ call    0 never executed
         -:   99:	    }
         -:  100:	}
 ------------------
+_ZNSt20__uninitialized_copyILb0EE13__uninit_copyIP7SubjectS3_EET0_T_S5_S4_:
+function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIP7SubjectS3_EET0_T_S5_S4_ called 0 returned 0% blocks executed 0%
+    #####:   85:        __uninit_copy(_InputIterator __first, _InputIterator __last,
+        -:   86:		      _ForwardIterator __result)
+        -:   87:        {
+    #####:   88:	  _ForwardIterator __cur = __result;
+        -:   89:	  __try
+        -:   90:	    {
+    #####:   91:	      for (; __first != __last; ++__first, (void)++__cur)
+    %%%%%:   91-block  0
+    %%%%%:   91-block  1
+    %%%%%:   91-block  2
+branch  0 never executed
+branch  1 never executed
+    #####:   92:		std::_Construct(std::__addressof(*__cur), *__first);
+    %%%%%:   92-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:   93:	      return __cur;
+    %%%%%:   93-block  0
+    %%%%%:   93-block  1
+        -:   94:	    }
+    =====:   95:	  __catch(...)
+    $$$$$:   95-block  0
+    $$$$$:   95-block  1
+call    0 never executed
+    $$$$$:   95-block  2
+call    1 never executed
+        -:   96:	    {
+    =====:   97:	      std::_Destroy(__result, __cur);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    =====:   98:	      __throw_exception_again;
+    $$$$$:   98-block  0
+call    0 never executed
+        -:   99:	    }
+        -:  100:	}
+------------------
 _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPK7SubjectSt6vectorIS4_SaIS4_EEEEPS4_EET0_T_SD_SC_:
 function _ZNSt20__uninitialized_copyILb0EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPK7SubjectSt6vectorIS4_SaIS4_EEEEPS4_EET0_T_SD_SC_ called 0 returned 0% blocks executed 0%
     #####:   85:        __uninit_copy(_InputIterator __first, _InputIterator __last,
@@ -243,6 +284,38 @@ call    0 never executed
 ------------------
 _ZSt18uninitialized_copyIPK7SubjectPS0_ET0_T_S5_S4_:
 function _ZSt18uninitialized_copyIPK7SubjectPS0_ET0_T_S5_S4_ called 0 returned 0% blocks executed 0%
+    #####:  126:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
+        -:  127:		       _ForwardIterator __result)
+        -:  128:    {
+        -:  129:      typedef typename iterator_traits<_InputIterator>::value_type
+        -:  130:	_ValueType1;
+        -:  131:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  132:	_ValueType2;
+        -:  133:#if __cplusplus < 201103L
+        -:  134:      const bool __assignable = true;
+        -:  135:#else
+        -:  136:      // Trivial types can have deleted copy constructor, but the std::copy
+        -:  137:      // optimization that uses memmove would happily "copy" them anyway.
+        -:  138:      static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+        -:  139:	  "result type must be constructible from value type of input range");
+        -:  140:
+        -:  141:      typedef typename iterator_traits<_InputIterator>::reference _RefType1;
+        -:  142:      typedef typename iterator_traits<_ForwardIterator>::reference _RefType2;
+        -:  143:      // Trivial types can have deleted assignment, so using std::copy
+        -:  144:      // would be ill-formed. Require assignability before using std::copy:
+    #####:  145:      const bool __assignable = is_assignable<_RefType2, _RefType1>::value;
+        -:  146:#endif
+        -:  147:
+        -:  148:      return std::__uninitialized_copy<__is_trivial(_ValueType1)
+        -:  149:				       && __is_trivial(_ValueType2)
+        -:  150:				       && __assignable>::
+    #####:  151:	__uninit_copy(__first, __last, __result);
+    %%%%%:  151-block  0
+call    0 never executed
+        -:  152:    }
+------------------
+_ZSt18uninitialized_copyIP7SubjectS1_ET0_T_S3_S2_:
+function _ZSt18uninitialized_copyIP7SubjectS1_ET0_T_S3_S2_ called 0 returned 0% blocks executed 0%
     #####:  126:    uninitialized_copy(_InputIterator __first, _InputIterator __last,
         -:  127:		       _ForwardIterator __result)
         -:  128:    {
@@ -489,6 +562,14 @@ call    0 never executed
 ------------------
 _ZSt22__uninitialized_copy_aIPK7SubjectPS0_S0_ET0_T_S5_S4_RSaIT1_E:
 function _ZSt22__uninitialized_copy_aIPK7SubjectPS0_S0_ET0_T_S5_S4_RSaIT1_E called 0 returned 0% blocks executed 0%
+    #####:  331:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+        -:  332:			   _ForwardIterator __result, allocator<_Tp>&)
+    #####:  333:    { return std::uninitialized_copy(__first, __last, __result); }
+    %%%%%:  333-block  0
+call    0 never executed
+------------------
+_ZSt22__uninitialized_copy_aIP7SubjectS1_S0_ET0_T_S3_S2_RSaIT1_E:
+function _ZSt22__uninitialized_copy_aIP7SubjectS1_S0_ET0_T_S3_S2_RSaIT1_E called 0 returned 0% blocks executed 0%
     #####:  331:    __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
         -:  332:			   _ForwardIterator __result, allocator<_Tp>&)
     #####:  333:    { return std::uninitialized_copy(__first, __last, __result); }

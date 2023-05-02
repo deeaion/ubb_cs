@@ -25,124 +25,131 @@
         -:   21:using std::unique_ptr;
         -:   22:using std::vector;
         -:   23:using std::function;
-        -:   24:#include "../Undo/Undo.h"
-        -:   25:
-        -:   26:class SubjectsService {
-        -:   27:     FileRepositorySubjects &repo;
-        -:   28:     ValidatorSubject &val;
-        -:   29:     ContractRepo &contract;
-        -:   30:     std::vector<unique_ptr<ActiuneUndo>> undoActions;
-        -:   31:
-        -:   32:    /*
-        -:   33:     *Function that sorts the list it is given of Subjects
-        -:   34:     * it compares two Subjects
-        -:   35:     * it is given a key tehnically which is one of the functions that the file subject
-        -:   36:     * has
-        -:   37:     * returns: a copied list of the subjects but sorted
-        -:   38:     *
-        -:   39:     */
-        -:   40://    vector<Subject> generalSort(bool(*cmpKey)(const Subject &, const Subject &));
-        -:   41:
-        -:   42:    /*
-        -:   43:     * Generic Function
-        -:   44:     * fct-> can be a function or lambda ( function <> allows lambda functions!)
-        -:   45:     * returns: only the subjects that satisfy the criteria
-        -:   46:     *
-        -:   47:     */
-        -:   48://    vector<Subject> filter(const function<bool(const Subject &)> &fct);
-        -:   49:
-        -:   50:public:
-        -:   51:    /*
-        -:   52:     * Contract
-        -:   53:     */
-        -:   54:    /*
-        -:   55:     * get contract
-        -:   56:     */
-        -:   57:    void Undo();
-        -:   58:    const vector<Subject> & getAllContract() noexcept;
-        -:   59:    /*
-        -:   60:     * get contract size -> to not get reference every time
-        -:   61:     */
-        -:   62:    int getContractSize();
-        -:   63:     /*
-        -:   64:      * add to contract!
-        -:   65:      */
-        -:   66:     void add_to_contract(const string& name, const string& teacher,const vector<Subject>& filtered);
-        -:   67:
-        -:   68:     void generateContract(int nrSubjects);
-        -:   69:
-        -:   70:     void exportContract(const string& name);
+        -:   24:#include <map>
+        -:   25:#include <set>
+        -:   26:using std::set;
+        -:   27:using std::map;
+        -:   28:#include "../Undo/Undo.h"
+        -:   29:
+        -:   30:class SubjectsService {
+        -:   31:     FileRepositorySubjects &repo;
+        -:   32:     ValidatorSubject &val;
+        -:   33:     ContractRepo &contract;
+        -:   34:     std::vector<unique_ptr<ActiuneUndo>> undoActions;
+        -:   35:
+        -:   36:    /*
+        -:   37:     *Function that sorts the list it is given of Subjects
+        -:   38:     * it compares two Subjects
+        -:   39:     * it is given a key tehnically which is one of the functions that the file subject
+        -:   40:     * has
+        -:   41:     * returns: a copied list of the subjects but sorted
+        -:   42:     *
+        -:   43:     */
+        -:   44://    vector<Subject> generalSort(bool(*cmpKey)(const Subject &, const Subject &));
+        -:   45:
+        -:   46:    /*
+        -:   47:     * Generic Function
+        -:   48:     * fct-> can be a function or lambda ( function <> allows lambda functions!)
+        -:   49:     * returns: only the subjects that satisfy the criteria
+        -:   50:     *
+        -:   51:     */
+        -:   52://    vector<Subject> filter(const function<bool(const Subject &)> &fct);
+        -:   53:
+        -:   54:public:
+        -:   55:    /*
+        -:   56:     * Contract
+        -:   57:     */
+        -:   58:    /*
+        -:   59:     * get contract
+        -:   60:     */
+        -:   61:    void Undo();
+        -:   62:    const vector<Subject> & getAllContract() noexcept;
+        -:   63:    /*
+        -:   64:     * get contract size -> to not get reference every time
+        -:   65:     */
+        -:   66:    int getContractSize();
+        -:   67:     /*
+        -:   68:      * add to contract!
+        -:   69:      */
+        -:   70:     void add_to_contract(const string& name, const string& teacher,const vector<Subject>& filtered);
         -:   71:
-        -:   72:     void emptyContract();
+        -:   72:     void generateContract(int nrSubjects);
         -:   73:
-        -:   74:
+        -:   74:     void exportContract(const string& name);
         -:   75:
-function _ZN15SubjectsServiceC1ER22FileRepositorySubjectsR12ContractRepoR16ValidatorSubject called 6 returned 100% blocks executed 100%
-        6:   76:    SubjectsService(FileRepositorySubjects &repo, ContractRepo &contract ,ValidatorSubject &val) : repo{repo}, val{val},contract{contract} {}
-        6:   76-block  0
-call    0 returned 6
+        -:   76:     void emptyContract();
         -:   77:
-        -:   78:    //we don't allow the copy of objects in SubjectsService
-        -:   79:    SubjectsService(const SubjectsService &ot) = delete;
-        -:   80:
-        -:   81:    /*
-        -:   82:     * returns: all the subjects in the order they were added
-        -:   83:     */
-        -:   84:    const vector<Subject> &getAll() noexcept;
-        -:   85:
-        -:   86:    /*
-        -:   87:     * Add the Subjects
-        -:   88:     * Throws Exception if: it already exists or is not valid
-        -:   89:     */
-        -:   90:    void addSubject(const string &name, int hours, const string &teacher, const string &type);
-        -:   91:
-        -:   92:    /*
-        -:   93:     * Delete the subject
-        -:   94:     * Throws Exception if : subject does not exist
-        -:   95:     */
-        -:   96:    void deleteSubject(const string &name, const string &teacher);
-        -:   97:
-        -:   98:    /*
-        -:   99:     * Update the subject
-        -:  100:     * Throws Exception if: the subject does not exist
-        -:  101:     *                      the new parameters are not valid
-        -:  102:     */
-        -:  103:    void updateSubject(const string &name, const string &teacher, int hours, const string &type);
-        -:  104:
-        -:  105:    /*
-        -:  106:     * Search for the subject by name and teacher
-        -:  107:     * Throws Exception if : the subject does not exist
-        -:  108:     *
-        -:  109:     */
-        -:  110:    const Subject &searchForSubject(const string &name, const string &teacher);
-        -:  111:
-        -:  112:    /**FILTERS*/
-        -:  113:
-        -:  114:    /*Filter by number of hours*/
-        -:  115:    vector<Subject> filterByHours(int hours);
-        -:  116:
-        -:  117:    /*Filter by teacher's name*/
-        -:  118:    vector<Subject> filterByTeacher(const string &teacher);
-        -:  119:
-        -:  120:    [[maybe_unused]] vector<Subject> filterBySubjectName(const string &name);
-        -:  121:
-        -:  122:    /** SORT*/
-        -:  123:    /*
-        -:  124:     * Sort by name of subject
-        -:  125:     */
-        -:  126:    vector<Subject> sortByName();
-        -:  127:
-        -:  128:    /*
-        -:  129:     * Sort by number of hours
-        -:  130:     */
-        -:  131:    vector<Subject> sortByHours();
-        -:  132:
-        -:  133:    /*
-        -:  134:     * Sort by teacher and type
-        -:  135:     */
-        -:  136:    vector<Subject> sortByTeacherandType();
-        -:  137:
-        -:  138:};
-        -:  139:
-        -:  140:
-        -:  141:#endif //LAB_6_7_SUBJECTSSERVICE_H
+        -:   78:
+        -:   79:
+function _ZN15SubjectsServiceC1ER22FileRepositorySubjectsR12ContractRepoR16ValidatorSubject called 6 returned 100% blocks executed 100%
+        6:   80:    SubjectsService(FileRepositorySubjects &repo, ContractRepo &contract ,ValidatorSubject &val) : repo{repo}, val{val},contract{contract} {}
+        6:   80-block  0
+call    0 returned 6
+        -:   81:
+        -:   82:    //we don't allow the copy of objects in SubjectsService
+        -:   83:    SubjectsService(const SubjectsService &ot) = delete;
+        -:   84:
+        -:   85:    /*
+        -:   86:     * returns: all the subjects in the order they were added
+        -:   87:     */
+        -:   88:    const vector<Subject> &getAll() noexcept;
+        -:   89:
+        -:   90:    /*
+        -:   91:     * Add the Subjects
+        -:   92:     * Throws Exception if: it already exists or is not valid
+        -:   93:     */
+        -:   94:    void addSubject(const string &name, int hours, const string &teacher, const string &type);
+        -:   95:
+        -:   96:    /*
+        -:   97:     * Delete the subject
+        -:   98:     * Throws Exception if : subject does not exist
+        -:   99:     */
+        -:  100:    void deleteSubject(const string &name, const string &teacher);
+        -:  101:
+        -:  102:    /*
+        -:  103:     * Update the subject
+        -:  104:     * Throws Exception if: the subject does not exist
+        -:  105:     *                      the new parameters are not valid
+        -:  106:     */
+        -:  107:    void updateSubject(const string &name, const string &teacher, int hours, const string &type);
+        -:  108:
+        -:  109:    /*
+        -:  110:     * Search for the subject by name and teacher
+        -:  111:     * Throws Exception if : the subject does not exist
+        -:  112:     *
+        -:  113:     */
+        -:  114:    const Subject &searchForSubject(const string &name, const string &teacher);
+        -:  115:
+        -:  116:    /**FILTERS*/
+        -:  117:
+        -:  118:    /*Filter by number of hours*/
+        -:  119:    vector<Subject> filterByHours(int hours);
+        -:  120:
+        -:  121:    /*Filter by teacher's name*/
+        -:  122:    vector<Subject> filterByTeacher(const string &teacher);
+        -:  123:
+        -:  124:    [[maybe_unused]] vector<Subject> filterBySubjectName(const string &name);
+        -:  125:
+        -:  126:    /** SORT*/
+        -:  127:    /*
+        -:  128:     * Sort by name of subject
+        -:  129:     */
+        -:  130:    vector<Subject> sortByName();
+        -:  131:
+        -:  132:    /*
+        -:  133:     * Sort by number of hours
+        -:  134:     */
+        -:  135:    vector<Subject> sortByHours();
+        -:  136:
+        -:  137:    /*
+        -:  138:     * Sort by teacher and type
+        -:  139:     */
+        -:  140:    vector<Subject> sortByTeacherandType();
+        -:  141:
+        -:  142:    map<string,vector<Subject>> creatingmap();
+        -:  143:    set<string> number_of_types();
+        -:  144:    vector<Subject> filterByType(const string & type);
+        -:  145:};
+        -:  146:
+        -:  147:
+        -:  148:#endif //LAB_6_7_SUBJECTSSERVICE_H

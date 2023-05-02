@@ -38,16 +38,17 @@
         -:   34:    void testSortService();
         -:   35:    void testContract();
         -:   36:    void testUndo();
-        -:   37:
-        -:   38:public:
+        -:   37:    void testMap();
+        -:   38:
+        -:   39:public:
 function _ZN5TestsC1Ev called 1 returned 100% blocks executed 100%
-        1:   39:    Tests(){};
-        -:   40:    void testAll();
+        1:   40:    Tests(){};
+        -:   41:    void testAll();
 function _ZN5TestsD1Ev called 1 returned 100% blocks executed 100%
-        1:   41:    ~Tests(){
-        -:   42:
-        1:   43:    };
-        -:   44:};
-        -:   45:
+        1:   42:    ~Tests(){
+        -:   43:
+        1:   44:    };
+        -:   45:};
         -:   46:
-        -:   47:#endif //LAB_6_TESTS_H
+        -:   47:
+        -:   48:#endif //LAB_6_TESTS_H
