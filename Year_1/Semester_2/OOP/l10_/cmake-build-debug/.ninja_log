@@ -1,0 +1,66 @@
+# ninja log v5
+151	918	7050627941541940	CMakeFiles/l10_.dir/validator/ValidatorSubject.cpp.obj	80f6f15f3ad76354
+3	564	7050646671813984	build.ninja	b0c4eb28e89522c2
+5	120	7050928511801970	l10__autogen/timestamp	bc5b7129555b4438
+5	120	7050928511801970	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+233	315	7050625517403105	CMakeFiles/l10_.dir/l10__autogen/mocs_compilation.cpp.obj	196ff76d732f6fac
+5	120	7050928511801970	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+124	2050	7050928531108446	CMakeFiles/l10_.dir/main.cpp.obj	5b3b998126a44fce
+5	120	7050928511801970	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+2149	2825	7050928535940259	l10_.exe	4c7d1fc5ab27a639
+170	1305	7050627945435883	CMakeFiles/l10_.dir/repository/FileRepositorySubjects.cpp.obj	eb9e84e4fb81fbf0
+141	1099	7050627943346311	CMakeFiles/l10_.dir/Undo/Undo.cpp.obj	73aa5076a8e893c1
+179	1179	7050627944155433	CMakeFiles/l10_.dir/domain/Subject.cpp.obj	8d67fb034db5d1d5
+201	1347	7050627945849469	CMakeFiles/l10_.dir/repository/SubjectsRepo.cpp.obj	f8934a8f03759e33
+189	1608	7050627948469825	CMakeFiles/l10_.dir/ContractRepository/ContractRepo.cpp.obj	f22b593ba93098b3
+226	1703	7050627949413216	CMakeFiles/l10_.dir/ui/SubjectsUi.cpp.obj	a872b8abc964b2b0
+160	1873	7050627951117485	CMakeFiles/l10_.dir/tests/Tests.cpp.obj	137d29a28cde8eec
+212	2034	7050627952719861	CMakeFiles/l10_.dir/service/SubjectsService.cpp.obj	98b7cb1eeb0edfb6
+143	2149	7050928532080101	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+6	132	7050932117637113	l10__autogen/timestamp	bc5b7129555b4438
+6	132	7050932117637113	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+6	132	7050932117637113	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+6	132	7050932117637113	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+137	2488	7050932141163602	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2488	3247	7050932145183022	l10_.exe	4c7d1fc5ab27a639
+8	139	7050935268740038	l10__autogen/timestamp	bc5b7129555b4438
+8	139	7050935268740038	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+8	139	7050935268740038	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+8	139	7050935268740038	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+242	983	7050935277128337	CMakeFiles/l10_.dir/validator/ValidatorSubject.cpp.obj	80f6f15f3ad76354
+164	1088	7050935278171163	CMakeFiles/l10_.dir/domain/Subject.cpp.obj	8d67fb034db5d1d5
+229	1174	7050935279036478	CMakeFiles/l10_.dir/Undo/Undo.cpp.obj	73aa5076a8e893c1
+154	1181	7050935279126505	CMakeFiles/l10_.dir/repository/FileRepositorySubjects.cpp.obj	eb9e84e4fb81fbf0
+191	1184	7050935279166473	CMakeFiles/l10_.dir/repository/SubjectsRepo.cpp.obj	f8934a8f03759e33
+173	1496	7050935282307171	CMakeFiles/l10_.dir/ContractRepository/ContractRepo.cpp.obj	f22b593ba93098b3
+216	1654	7050935283877972	CMakeFiles/l10_.dir/ui/SubjectsUi.cpp.obj	a872b8abc964b2b0
+182	1833	7050935285663196	CMakeFiles/l10_.dir/tests/Tests.cpp.obj	137d29a28cde8eec
+202	1968	7050935287015668	CMakeFiles/l10_.dir/service/SubjectsService.cpp.obj	98b7cb1eeb0edfb6
+144	2785	7050935295209720	CMakeFiles/l10_.dir/main.cpp.obj	5b3b998126a44fce
+255	2957	7050935296934504	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2957	3611	7050935300657673	l10_.exe	4c7d1fc5ab27a639
+6	128	7050943586738944	l10__autogen/timestamp	bc5b7129555b4438
+6	128	7050943586738944	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+6	128	7050943586738944	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+6	128	7050943586738944	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+132	2085	7050943606303536	CMakeFiles/l10_.dir/main.cpp.obj	5b3b998126a44fce
+139	2207	7050943607504454	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2207	2848	7050943611211986	l10_.exe	4c7d1fc5ab27a639
+6	125	7050944364563976	l10__autogen/timestamp	bc5b7129555b4438
+6	125	7050944364563976	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+6	125	7050944364563976	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+6	125	7050944364563976	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+129	2405	7050944387363377	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2405	3047	7050944391006206	l10_.exe	4c7d1fc5ab27a639
+10	145	7050944860951495	l10__autogen/timestamp	bc5b7129555b4438
+10	145	7050944860951495	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+10	145	7050944860951495	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+10	145	7050944860951495	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+149	2157	7050944881092965	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2157	2803	7050944884721961	l10_.exe	4c7d1fc5ab27a639
+7	114	7050946612033801	l10__autogen/timestamp	bc5b7129555b4438
+7	114	7050946612033801	l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+7	114	7050946612033801	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/timestamp	bc5b7129555b4438
+7	114	7050946612033801	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/l10__autogen/mocs_compilation.cpp	bc5b7129555b4438
+118	2081	7050946631693550	CMakeFiles/l10_.dir/APPGUI.cpp.obj	692319c36095e300
+2081	2712	7050946635352515	l10_.exe	4c7d1fc5ab27a639
