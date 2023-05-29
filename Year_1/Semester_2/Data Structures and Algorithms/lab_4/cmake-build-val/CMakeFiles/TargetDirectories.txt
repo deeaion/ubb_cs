@@ -1,0 +1,3 @@
+/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_4/cmake-build-val/CMakeFiles/lab_4.dir
+/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_4/cmake-build-val/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_4/cmake-build-val/CMakeFiles/rebuild_cache.dir

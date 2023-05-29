@@ -1,0 +1,576 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_4/Teste/TestScurt.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_4\cmake-build-debug-coverage\CMakeFiles\lab_4.dir\Teste\TestScurt.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_4\cmake-build-debug-coverage\CMakeFiles\lab_4.dir\Teste\TestScurt.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "TestScurt.h"
+        -:    2:#include "../MD/MD.h"
+        -:    3:#include "../Iterator/IteratorMD.h"
+        -:    4:#include <assert.h>
+        -:    5:#include <vector>
+        -:    6:#include<iostream>
+        -:    7:#include <string.h>
+function _Z7testAllv called 1 returned 100% blocks executed 71%
+        1:    8:void testAll() {
+        1:    9:	MD m;
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:	m.adauga(1, 100);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:	m.adauga(2, 200);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:	m.adauga(3, 300);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:	m.adauga(1, 500);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14:	m.adauga(2, 600);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15:	m.adauga(4, 800);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16:    IteratorMD im2 = m.iterator();
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   17:    assert(im2.valid() == true);
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   17-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   17-block  3
+    %%%%%:   17-block  4
+        7:   18:    while (im2.valid()) {
+        1:   18-block  0
+        7:   18-block  1
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   18-block  2
+branch  3 taken 6
+branch  4 taken 1 (fallthrough)
+        6:   19:        im2.element();
+        6:   19-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:       // cout<<im2.element().second<<endl;
+        6:   21:        im2.urmator();
+        6:   21-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   22:
+        -:   23:    }
+       1*:   24:	assert(m.dim() == 6);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   24-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   24-block  3
+    %%%%%:   24-block  4
+        -:   25:
+       1*:   26:	assert(m.sterge(5, 600) == false);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   26-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   26-block  3
+    %%%%%:   26-block  4
+       1*:   27:	assert(m.sterge(1, 500) == true);
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   27-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   27-block  3
+    %%%%%:   27-block  4
+        -:   28:
+       1*:   29:	assert(m.dim() == 5);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   29-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   29-block  3
+    %%%%%:   29-block  4
+        -:   30:
+        1:   31:    vector<TValoare> v;
+        1:   31-block  0
+call    0 returned 1
+        1:   32:	v=m.cauta(6);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  0
+call    3 returned 1
+call    4 returned 1
+       1*:   33:	assert(v.size()==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   33-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   33-block  1
+    %%%%%:   33-block  2
+        -:   34:
+        1:   35:	v=m.cauta(1);
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+call    4 returned 1
+       1*:   36:	assert(v.size()==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   36-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   36-block  1
+    %%%%%:   36-block  2
+        -:   37:
+       1*:   38:	assert(m.vid() == false);
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   38-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   38-block  3
+    %%%%%:   38-block  4
+        -:   39:
+        1:   40:	IteratorMD im = m.iterator();
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   41:	assert(im.valid() == true);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   41-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   41-block  3
+    %%%%%:   41-block  4
+        6:   42:	while (im.valid()) {
+        1:   42-block  0
+        6:   42-block  1
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   42-block  2
+branch  3 taken 5
+branch  4 taken 1 (fallthrough)
+        5:   43:		im.element();
+        5:   43-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   44:		im.urmator();
+        5:   44-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   45:
+        -:   46:	}
+       1*:   47:	assert(im.valid() == false);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   47-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   47-block  3
+    %%%%%:   47-block  4
+        1:   48:	im.prim();
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   49:	assert(im.valid() == true);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   49-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   49-block  3
+    %%%%%:   49-block  4
+        1:   50:    testRevinoPasi();
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:}
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   51-block  1
+call    2 never executed
+    $$$$$:   51-block  2
+call    3 never executed
+function _Z14testRevinoPasiv called 1 returned 100% blocks executed 77%
+        1:   52:void testRevinoPasi()
+        -:   53:{
+        1:   54:    MD m;
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55:    m.adauga(2, 200);
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56:    m.adauga(2,400);
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57:    m.adauga(2, 600);
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58:    m.adauga(3, 300);
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   59:    m.adauga(6, 800);
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60:    IteratorMD im = m.iterator();
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61:    IteratorMD im2 = m.iterator();
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   62:    assert(im2.valid() == true);
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   62-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   62-block  3
+    %%%%%:   62-block  4
+        6:   63:    while (im2.valid()) {
+        1:   63-block  0
+        6:   63-block  1
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   63-block  2
+branch  3 taken 5
+branch  4 taken 1 (fallthrough)
+        5:   64:        im2.element();
+        5:   64-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   65:        cout<<im2.element().second<<endl;
+        5:   65-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   65-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   65-block  2
+call    6 returned 5
+branch  7 taken 5 (fallthrough)
+branch  8 taken 0 (throw)
+        5:   66:        im2.urmator();
+        5:   66-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   67:
+        -:   68:    }
+       1*:   69:    assert(im.valid() == true);
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   69-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   69-block  3
+    %%%%%:   69-block  4
+        1:   70:    im.urmator();
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71:    cout<<im.element().second;
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:   72:    assert(im.element().second==400);
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   72-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   72-block  3
+    %%%%%:   72-block  4
+        1:   73:    im.revinoKPasi(1);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74:    cout<<im.element().second;
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:   75:    assert(im.element().second==200);
+        1:   75-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   75-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   75-block  3
+    %%%%%:   75-block  4
+        1:   76:    im.urmator();
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   77:    assert(im.element().second==400);
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   77-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   77-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   77-block  3
+    %%%%%:   77-block  4
+        1:   78:    im.urmator();
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   79:    im.urmator();
+        1:   79-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80:    cout<<im.element().second;
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   81:    im.revinoKPasi(3);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   82:    assert(im.element().second==200);
+        1:   82-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   82-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   82-block  3
+    %%%%%:   82-block  4
+        -:   83:    try
+        1:   84:    {im.revinoKPasi(1);}
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   85:    catch (std::invalid_argument &m)
+        1:   85-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   85-block  1
+call    2 returned 1
+        -:   86:    {
+        1:   87:        assert(strcmp(m.what(),"Invalid number")==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:   87-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   87-block  1
+    $$$$$:   87-block  2
+        1:   88:    }
+        1:   88-block  0
+call    0 returned 1
+    $$$$$:   88-block  1
+call    1 never executed
+        6:   89:    while(im.valid())
+        1:   89-block  0
+        6:   89-block  1
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   89-block  2
+branch  3 taken 5
+branch  4 taken 1 (fallthrough)
+        -:   90:    {
+        5:   91:        cout<<im.element().second<<endl<<"!";
+        5:   91-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   91-block  1
+call    3 returned 5
+branch  4 taken 5 (fallthrough)
+branch  5 taken 0 (throw)
+        5:   91-block  2
+call    6 returned 5
+branch  7 taken 5 (fallthrough)
+branch  8 taken 0 (throw)
+        5:   91-block  3
+call    9 returned 5
+branch 10 taken 5 (fallthrough)
+branch 11 taken 0 (throw)
+        5:   92:        im.urmator();
+        5:   92-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   93:
+        -:   94:    }
+        -:   95:    
+        -:   96:
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+    $$$$$:   97-block  1
+call    1 never executed

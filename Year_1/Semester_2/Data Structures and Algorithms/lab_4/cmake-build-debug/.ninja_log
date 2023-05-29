@@ -1,0 +1,10 @@
+# ninja log v5
+4	294	7067820811129093	CMakeFiles/lab_4.dir/main.cpp.obj	16abfd54ad6eb0dc
+3	273	7067836300220020	CMakeFiles/lab_4.dir/Iterator/IteratorMD.cpp.obj	4f975237662ae5e6
+4	229	7067836422043136	build.ninja	c6b4fba9f676665e
+11	349	7067836300952925	CMakeFiles/lab_4.dir/Teste/TestScurt.cpp.obj	d539fb4a52286e6
+349	500	7067836302363694	lab_4.exe	c2fea2b493d96f21
+52	881	7067820501739463	CMakeFiles/lab_4.dir/Teste/TestExtins.cpp.obj	d0f09ec2bac12440
+40	943	7067820502343198	CMakeFiles/lab_4.dir/MD/MD.cpp.obj	76cf4d9071d276c7
+5	293	7067836464466423	CMakeFiles/lab_4.dir/main.cpp.obj	16abfd54ad6eb0dc
+293	530	7067836466686542	lab_4.exe	c2fea2b493d96f21

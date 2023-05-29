@@ -1,0 +1,392 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_4/MD/MD.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_4\cmake-build-debug-coverage\CMakeFiles\lab_4.dir\MD\MD.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_4\cmake-build-debug-coverage\CMakeFiles\lab_4.dir\MD\MD.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "MD.h"
+        -:    2:#include "../Iterator/IteratorMD.h"
+        -:    3:#include <exception>
+        -:    4:#include <iostream>
+        -:    5:#define len 200000
+        -:    6:#define NULL_TVALUE -1
+        -:    7:using namespace std;
+        -:    8:/* Time Complexity: theta(1)
+        -:    9:   Creeare nod cu cheie noua
+        -:   10:*/
+function _ZN3NodC2EiRSt6vectorISt4pairIiiESaIS2_EE called 7 returned 100% blocks executed 100%
+        7:   11:Nod::Nod(TCheie key, vector<TElem> &vals) :vals{vals}{
+        7:   11-block  0
+call    0 returned 7
+        7:   12:    cheie=key;
+        -:   13:   // vals=vals;
+        7:   14:}
+        -:   15:/* Time Complexity: theta(m)
+        -:   16:  Constructor MD. Creeam un MD cu m poz pt table
+        -:   17:*/
+function _ZN2MDC2Ev called 2 returned 100% blocks executed 88%
+        2:   18:MD::MD() {
+        2:   19:	n=0;
+        2:   20:    m=len;
+        -:   21:    //urm.resize(m,-1);
+       2*:   22:    keys=new PNod[m];
+        2:   22-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   22-block  1
+    %%%%%:   22-block  2
+call    2 never executed
+        2:   22-block  3
+call    3 returned 2
+   400002:   23:    for(int i=0;i<m;i++)
+   400002:   23-block  0
+branch  0 taken 400000
+branch  1 taken 2 (fallthrough)
+        -:   24:    {
+   400000:   25:        this->keys[i]= NULL;
+   400000:   25-block  0
+        -:   26:    }
+        -:   27:    //primLiber=0;
+        2:   28:}
+        -:   29:
+        -:   30:/* Time Complexity: theta(1)
+        -:   31:   Calculator for dispertion function 2(+*/
+function _ZNK2MD2d2Ei called 200026 returned 100% blocks executed 100%
+   200026:   32:int MD::d2(TCheie c) const {
+   200026:   33:    return 1+c%(m-1);
+   200026:   33-block  0
+        -:   34:}
+        -:   35:
+        -:   36:/* Time Complexity: theta(1)
+        -:   37:   Calculator for dispertion function 1(+*/
+function _ZNK2MD2d1Ei called 200026 returned 100% blocks executed 100%
+   200026:   38:int MD::d1(TCheie c) const {
+   200026:   39:    return c%m;
+   200026:   39-block  0
+        -:   40:}
+        -:   41:/* Time Complexity: theta(1)
+        -:   42:   Calculator for dispertion function */
+function _ZNK2MD1dEii called 200026 returned 100% blocks executed 100%
+   200026:   43:int MD::d(TCheie c, int i) const {
+   200026:   44:    return  (d1(abs(c))+i* d2(abs(c)))%m;
+   200026:   44-block  0
+call    0 returned 200026
+call    1 returned 200026
+        -:   45:}
+        -:   46:/* Time Complexity: thata(1) - Average case (amortizata) //cand sunt toate dispersate normal
+        -:   47: *                  O(m) - Worst case //cand exista lupte pentru a o cauta poz
+        -:   48:
+        -:   49:*/
+        -:   50:
+function _ZN2MD6adaugaEii called 11 returned 100% blocks executed 72%
+       11:   51:void MD::adauga(TCheie c, TValoare v) {
+       11:   52:	int i=0;
+        -:   53:
+       11:   54:    int index=-2;
+       11:   55:    int pos=d(c,i);
+       11:   55-block  0
+call    0 returned 11
+       11:   56:    while(i!=m)
+       11:   56-block  0
+branch  0 taken 11
+branch  1 taken 0 (fallthrough)
+        -:   57:    {
+       11:   58:        pos=d(c,i);
+       11:   58-block  0
+call    0 returned 11
+        -:   59:        //inseamna ca nu exista nimic aia
+       11:   60:        if(keys[pos]== nullptr)
+branch  0 taken 7 (fallthrough)
+branch  1 taken 4
+        7:   61:        {   vector<TElem> elems;
+        7:   61-block  0
+call    0 returned 7
+        7:   62:            PNod value=new Nod(c,elems);
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   62-block  0
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   62-block  1
+call    6 never executed
+        7:   63:            keys[pos]=value;
+        7:   64:            n++;
+        7:   65:            value->vals.push_back(make_pair(c,v));
+        7:   65-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   65-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   65-block  2
+        7:   66:            return;
+        7:   67:        }
+        7:   67-block  0
+call    0 returned 7
+    $$$$$:   67-block  1
+call    1 never executed
+        4:   68:        if(keys[pos]->cheie==c)
+        4:   68-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        -:   69:        {
+        4:   70:            keys[pos]->vals.push_back(make_pair(c,v));
+        4:   70-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   71:            n++;
+        4:   72:            return;
+        4:   72-block  0
+        -:   73:
+        -:   74:        }
+    #####:   75:        i++;
+    %%%%%:   75-block  0
+        -:   76:
+        -:   77:    }
+        -:   78:
+        -:   79:}
+        -:   80:
+        -:   81:
+function _ZN2MD6stergeEii called 2 returned 100% blocks executed 76%
+        2:   82:bool MD::sterge(TCheie c, TValoare v) {
+        2:   83:    int i = 0;
+        2:   84:    int pos = d(c, i);
+        2:   84-block  0
+call    0 returned 2
+   200002:   85:    while (i < m) {
+   200002:   85-block  0
+branch  0 taken 200001
+branch  1 taken 1 (fallthrough)
+   200001:   86:        if (keys[pos] != nullptr)
+   200001:   86-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 199996
+        5:   87:            if (keys[pos]->cheie == c)
+        5:   87-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:   88:                break;
+        1:   88-block  0
+   200000:   89:        i++;
+   200000:   90:        pos = d(c, i);
+   200000:   90-block  0
+call    0 returned 200000
+        -:   91:    }
+        2:   92:    bool found = false;
+        2:   93:    if (i == m)
+        2:   93-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:   94:        return false;
+        1:   94-block  0
+        2:   95:    for (int i = 0; i < keys[pos]->vals.size(); i++) {
+        1:   95-block  0
+        1:   95-block  1
+        2:   95-block  2
+call    0 returned 2
+branch  1 taken 2
+branch  2 taken 0 (fallthrough)
+        2:   96:        if (keys[pos]->vals[i].second == v) {
+        2:   96-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   97:            keys[pos]->vals.erase(keys[pos]->vals.begin() + i);
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   97-block  1
+    $$$$$:   97-block  2
+        1:   98:            n--;
+        1:   99:            found = true;
+        1:  100:            break;
+        1:  100-block  0
+        -:  101:        }
+        -:  102:    }
+        1:  103:    if (found) {
+        1:  103-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  104:        if (keys[pos]->vals.size() == 0) {
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:  105:            keys[pos]->vals.clear();
+    %%%%%:  105-block  0
+call    0 never executed
+    #####:  106:            delete keys[pos];
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  106-block  0
+call    2 never executed
+call    3 never executed
+    #####:  107:            keys[pos] = nullptr;
+    %%%%%:  107-block  0
+        -:  108:        }
+        1:  109:        return true;
+        1:  109-block  0
+        -:  110:    }
+    #####:  111:    return false;
+    %%%%%:  111-block  0
+        -:  112:}
+        -:  113:
+        -:  114:/* Time Complexity: O(k) - Average case, O(k + m) - Worst case
+        -:  115:        Dat hash table ului avem o cautare amortizata cand vine vorba de cautarea cheii in average case.
+        -:  116:                Ce ar fi theta(1). Insa cautam si toate val de la cheie. Asa ca avem O(1+k)=O(k)
+        -:  117:                Worst case cand nu ajuta amortiz e O(k+m)
+        -:  118:*/
+function _ZNK2MD5cautaEi called 2 returned 100% blocks executed 81%
+        2:  119:vector<TValoare> MD::cauta(TCheie c) const {
+        2:  120:    vector<TValoare> vals;
+        2:  120-block  0
+call    0 returned 2
+        2:  121:    int i=0;
+        -:  122:    int pos;
+        2:  123:    pos=d(c,i);
+call    0 returned 2
+        2:  124:    if(pos>n)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  125:        return vals;
+        1:  125-block  0
+       1*:  126:    while(i<m||pos>m)
+        1:  126-block  0
+        1:  126-block  1
+branch  0 taken 1
+branch  1 taken 0 (fallthrough)
+    %%%%%:  126-block  2
+branch  2 never executed
+branch  3 never executed
+        1:  127:    {   if(keys[pos]!= NULL)
+        1:  127-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  128:            if(keys[pos]->cheie==c)
+        1:  128-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  129:                break;
+        1:  129-block  0
+    #####:  130:        i++;
+    #####:  131:        pos= d(c,i);
+    %%%%%:  131-block  0
+call    0 never executed
+        -:  132:    }
+        1:  133:    if(i==m||pos>m)
+        1:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  133-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    #####:  134:        return vals;
+    %%%%%:  134-block  0
+        2:  135:    for(auto j:keys[pos]->vals)
+        1:  135-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  135-block  1
+call    2 returned 1
+        1:  135-block  2
+call    3 returned 1
+        2:  135-block  3
+call    4 returned 2
+branch  5 taken 1
+branch  6 taken 1 (fallthrough)
+        -:  136:    {
+        1:  137:        vals.push_back(j.second);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  138:    }
+        1:  139:	return vals;
+        1:  139-block  0
+    =====:  140:}
+    $$$$$:  140-block  0
+call    0 never executed
+        -:  141:
+        -:  142:
+        -:  143:/*
+        -:  144: * Time complexity: theta(1)
+        -:  145: * Dimension of MD
+        -:  146: */
+function _ZNK2MD3dimEv called 6 returned 100% blocks executed 100%
+        6:  147:int MD::dim() const {
+        -:  148:
+        6:  149:	return n;
+        6:  149-block  0
+        -:  150:}
+        -:  151:
+        -:  152:/*
+        -:  153: * Time complexity: theta(1)
+        -:  154: * See if MD is empt
+        -:  155: */
+function _ZNK2MD3vidEv called 5 returned 100% blocks executed 75%
+        5:  156:bool MD::vid() const {
+        5:  157:	if(n==0)
+        5:  157-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+    #####:  158:        return true;
+    %%%%%:  158-block  0
+        5:  159:    return false;
+        5:  159-block  0
+        -:  160:}
+        -:  161:
+        -:  162:/*
+        -:  163: * Time complexity: theta(1)
+        -:  164: * Reference to our iterator
+        -:  165: */
+function _ZNK2MD8iteratorEv called 4 returned 100% blocks executed 100%
+        4:  166:IteratorMD MD::iterator() const {
+        4:  167:	return IteratorMD(*this);
+        4:  167-block  0
+call    0 returned 4
+        -:  168:}
+        -:  169:
+        -:  170:/* Time Complexity: O(m)
+        -:  171:    Avem odata parcurgerea pe el tabloului O(m). Stergerea in el se face in Theta(1) constant. Asa ca avem BC=WC=AC
+        -:  172:    ->O(m)
+        -:  173:*/
+function _ZN2MDD2Ev called 2 returned 100% blocks executed 100%
+        2:  174:MD::~MD() {
+   400002:  175:	for(int i=0;i<m;i++)
+        2:  175-block  0
+   400000:  175-block  1
+   400002:  175-block  2
+branch  0 taken 400000
+branch  1 taken 2 (fallthrough)
+        -:  176:    {
+   400000:  177:        if(keys[i]!= NULL)
+   400000:  177-block  0
+branch  0 taken 7 (fallthrough)
+branch  1 taken 399993
+        -:  178:        {
+        7:  179:            keys[i]->vals.clear();
+        7:  179-block  0
+call    0 returned 7
+        7:  180:            delete keys[i];
+branch  0 taken 7 (fallthrough)
+branch  1 taken 0
+        7:  180-block  0
+call    2 returned 7
+call    3 returned 7
+        -:  181:        }
+        -:  182:    }
+        2:  183:    delete [] keys;
+        2:  183-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  183-block  1
+call    2 returned 2
+        2:  184:}
+        -:  185:

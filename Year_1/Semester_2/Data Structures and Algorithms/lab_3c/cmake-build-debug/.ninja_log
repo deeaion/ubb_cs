@@ -1,0 +1,10 @@
+# ninja log v5
+3	541	7055723531796820	CMakeFiles/lab_3c.dir/Tests/TestExtins.cpp.obj	6e81ed87b070d3c1
+3	348	7055724489979398	CMakeFiles/lab_3c.dir/main.cpp.obj	79e5dd3a543a2621
+10	408	7055723530455579	CMakeFiles/lab_3c.dir/Iterator/IteratorMDO.cpp.obj	1bccf1de8cf1132e
+3	412	7055731544474139	CMakeFiles/lab_3c.dir/Tests/TestScurt.cpp.obj	6ca5b671d4a80e2d
+3	429	7055730225378993	CMakeFiles/lab_3c.dir/MDO/MDO.cpp.obj	3d4b1ae64ad42043
+421	568	7055731545944668	lab_3c.exe	36dc3951b6e3693e
+1	230	7055731652939757	build.ninja	77fb1d455196a6db
+3	459	7055735282153508	CMakeFiles/lab_3c.dir/MDO/MDO.cpp.obj	3d4b1ae64ad42043
+459	587	7055735283306014	lab_3c.exe	36dc3951b6e3693e

@@ -1,0 +1,723 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_3c/Tests/TestExtins.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\Tests\TestExtins.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\Tests\TestExtins.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <exception>
+        -:    2:#include <assert.h>
+        -:    3:#include <algorithm>
+        -:    4:#include <vector>
+        -:    5:#include "../Iterator/IteratorMDO.h"
+        -:    6:#include "../MDO/MDO.h"
+        -:    7:#include "TestExtins.h"
+        -:    8:
+        -:    9:using namespace std;
+        -:   10:
+function _Z5crescii called 15974 returned 100% blocks executed 100%
+    15974:   11:bool cresc(TCheie c1, TCheie c2) {
+    15974:   12:	if (c1 <= c2) {
+    15974:   12-block  0
+branch  0 taken 15582 (fallthrough)
+branch  1 taken 392
+    15582:   13:		return true;
+    15582:   13-block  0
+        -:   14:	} else {
+      392:   15:		return false;
+      392:   15-block  0
+        -:   16:	}
+        -:   17:}
+        -:   18:
+function _Z4descii called 14898 returned 100% blocks executed 100%
+    14898:   19:bool desc(TCheie c1, TCheie c2) {
+    14898:   20:	if (c1 >= c2) {
+    14898:   20-block  0
+branch  0 taken 14455 (fallthrough)
+branch  1 taken 443
+    14455:   21:		return true;
+    14455:   21-block  0
+        -:   22:	} else {
+      443:   23:		return false;
+      443:   23-block  0
+        -:   24:	}
+        -:   25:}
+        -:   26:
+function _Z11testCreeazav called 1 returned 100% blocks executed 62%
+        1:   27:void testCreeaza() {
+        1:   28:	MDO d = MDO(cresc);
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   29:	assert(d.dim() == 0);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   29-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   29-block  3
+    %%%%%:   29-block  4
+       1*:   30:	assert(d.vid());
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   30-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        1:   30-block  3
+    %%%%%:   30-block  4
+        -:   31:
+        -:   32:	//IteratorMDO it = d.iterator();
+        -:   33:	//it.prim();
+        -:   34:	//assert(!it.valid());
+        -:   35:
+       11:   36:	for (int i = 0; i < 10; i++) {
+        1:   36-block  0
+       11:   36-block  1
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       10:   37:        vector<TValoare> v= d.cauta(i);
+       10:   37-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+      10*:   38:        assert(v.size()==0);
+       10:   38-block  0
+call    0 returned 10
+branch  1 taken 0 (fallthrough)
+branch  2 taken 10
+    %%%%%:   38-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+       10:   38-block  2
+    %%%%%:   38-block  3
+       10:   39:	}
+       10:   39-block  0
+call    0 returned 10
+    $$$$$:   39-block  1
+call    1 never executed
+        -:   40:
+       21:   41:	for (int i = -10; i < 10; i++) {
+        1:   41-block  0
+       21:   41-block  1
+branch  0 taken 20
+branch  1 taken 1 (fallthrough)
+       20:   42:		vector<TValoare> v= d.cauta(i);
+       20:   42-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+      20*:   43:        assert(v.size()==0);
+       20:   43-block  0
+call    0 returned 20
+branch  1 taken 0 (fallthrough)
+branch  2 taken 20
+    %%%%%:   43-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+       20:   43-block  2
+    %%%%%:   43-block  3
+       20:   44:	}
+       20:   44-block  0
+call    0 returned 20
+    $$$$$:   44-block  1
+call    1 never executed
+        1:   45:}
+        1:   45-block  0
+call    0 returned 1
+    $$$$$:   45-block  1
+call    1 never executed
+function _Z8relatie6ii called 0 returned 0% blocks executed 0%
+    #####:   46:bool relatie6(TCheie cheie1, TCheie cheie2) {
+    #####:   47:    if (cheie1 <= cheie2) {
+    %%%%%:   47-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   48:        return true;
+    %%%%%:   48-block  0
+        -:   49:    }
+        -:   50:    else {
+    #####:   51:        return false;
+    %%%%%:   51-block  0
+        -:   52:    }
+        -:   53:}
+function _Z5print3MDO called 0 returned 0% blocks executed 0%
+    #####:   54:void print(MDO dictOrd)
+        -:   55:{
+        -:   56://    cout<<"\n!!\n";
+        -:   57://    int p=dictOrd.prim;
+        -:   58://    while (p!=-1){
+        -:   59://        int l=dictOrd.elems[p].prim;
+        -:   60://        while(l!=-1)
+        -:   61://        {TElem e = dictOrd.elems[p].vals[l];
+        -:   62://            cout<<e.first<<":"<<e.second<<" \n";
+        -:   63://            l=dictOrd.elems[p].urm[l];
+        -:   64://            }
+        -:   65://        p=dictOrd.urm[p];
+        -:   66:
+    #####:   67:}
+function _Z9testCautaPFbiiE called 2 returned 100% blocks executed 71%
+        2:   68:void testCauta(Relatie r) {
+        2:   69:	MDO d = MDO(r);
+        2:   69-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   70:	int cMin = 0;
+        2:   71:	int cMax = 10;
+       24:   72:	for (int i = cMin; i <= cMax; i++) {
+        2:   72-block  0
+       22:   72-block  1
+       24:   72-block  2
+branch  0 taken 22
+branch  1 taken 2 (fallthrough)
+       22:   73:			d.adauga(i, i + 1);
+       22:   73-block  0
+call    0 returned 22
+branch  1 taken 22 (fallthrough)
+branch  2 taken 0 (throw)
+       22:   74:			d.adauga(i, i + 2);
+       22:   74-block  0
+call    0 returned 22
+branch  1 taken 22 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   75://            print(d);
+        -:   76:
+        -:   77:	}
+        -:   78:
+        2:   79:	int intervalDim = 10;
+       24:   80:	for (int i = cMin; i <= cMax; i++) {
+        2:   80-block  0
+       24:   80-block  1
+branch  0 taken 22
+branch  1 taken 2 (fallthrough)
+       22:   81:        vector<TValoare> v= d.cauta(i);
+       22:   81-block  0
+call    0 returned 22
+branch  1 taken 22 (fallthrough)
+branch  2 taken 0 (throw)
+       22:   82:        cout<<"---\nCHEIE "<<i<<"\n";
+       22:   82-block  0
+call    0 returned 22
+branch  1 taken 22 (fallthrough)
+branch  2 taken 0 (throw)
+       22:   82-block  1
+call    3 returned 22
+branch  4 taken 22 (fallthrough)
+branch  5 taken 0 (throw)
+       22:   82-block  2
+call    6 returned 22
+branch  7 taken 22 (fallthrough)
+branch  8 taken 0 (throw)
+       66:   83:        for(auto t:v)
+       22:   83-block  0
+call    0 returned 22
+call    1 returned 22
+       44:   83-block  1
+call    2 returned 44
+       44:   83-block  2
+call    3 returned 44
+       66:   83-block  3
+call    4 returned 66
+branch  5 taken 44
+branch  6 taken 22 (fallthrough)
+        -:   84:        {
+       44:   85:            cout<<t<<" ";
+call    0 returned 44
+branch  1 taken 44 (fallthrough)
+branch  2 taken 0 (throw)
+       44:   85-block  0
+call    3 returned 44
+branch  4 taken 44 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   86:        }
+      22*:   87:        assert(v.size()==2);
+       22:   87-block  0
+call    0 returned 22
+branch  1 taken 0 (fallthrough)
+branch  2 taken 22
+    %%%%%:   87-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+       22:   87-block  2
+    %%%%%:   87-block  3
+       22:   88:	}
+       22:   88-block  0
+call    0 returned 22
+    $$$$$:   88-block  1
+call    1 never executed
+       22:   89:	for (int i = cMin - intervalDim; i < cMin; i++) {
+        2:   89-block  0
+       22:   89-block  1
+branch  0 taken 20
+branch  1 taken 2 (fallthrough)
+       20:   90:        vector<TValoare> v= d.cauta(i);
+       20:   90-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+      20*:   91:        assert(v.size()==0);
+       20:   91-block  0
+call    0 returned 20
+branch  1 taken 0 (fallthrough)
+branch  2 taken 20
+    %%%%%:   91-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+       20:   91-block  2
+    %%%%%:   91-block  3
+       20:   92:	}
+       20:   92-block  0
+call    0 returned 20
+    $$$$$:   92-block  1
+call    1 never executed
+       20:   93:	for (int i = cMax + 1; i < cMax + intervalDim; i++) {
+        2:   93-block  0
+       20:   93-block  1
+branch  0 taken 18
+branch  1 taken 2 (fallthrough)
+       18:   94:        vector<TValoare> v= d.cauta(i);
+       18:   94-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+      18*:   95:        assert(v.size()==0);
+       18:   95-block  0
+call    0 returned 18
+branch  1 taken 0 (fallthrough)
+branch  2 taken 18
+    %%%%%:   95-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+       18:   95-block  2
+    %%%%%:   95-block  3
+       18:   96:	}
+       18:   96-block  0
+call    0 returned 18
+    $$$$$:   96-block  1
+call    1 never executed
+        2:   97:}
+        2:   97-block  0
+call    0 returned 2
+    $$$$$:   97-block  1
+call    1 never executed
+        -:   98:
+function _Z9testCautav called 1 returned 100% blocks executed 100%
+        1:   99:void testCauta() {
+        1:  100:	testCauta(cresc);
+        1:  100-block  0
+call    0 returned 1
+        1:  101:	testCauta(desc);
+call    0 returned 1
+        1:  102:}
+        -:  103:
+function _Z22populeazaMDOVidIdenticR3MDOii called 2 returned 100% blocks executed 100%
+        2:  104:void populeazaMDOVidIdentic(MDO& mdo, int min, int max) {
+       24:  105:	for (int i = min; i <= max; i++) {
+        2:  105-block  0
+       22:  105-block  1
+       24:  105-block  2
+branch  0 taken 22
+branch  1 taken 2 (fallthrough)
+       22:  106:        mdo.adauga(i, i);
+       22:  106-block  0
+call    0 returned 22
+       22:  107:		if (i%2 ==0)
+branch  0 taken 12 (fallthrough)
+branch  1 taken 10
+       12:  108:            mdo.adauga(i, i+2); //cheile pare le adaug de 2 ori
+       12:  108-block  0
+call    0 returned 12
+        -:  109:	}
+        2:  110:}
+        -:  111:
+function _Z15testStergeCautaPFbiiE called 2 returned 100% blocks executed 70%
+        2:  112:void testStergeCauta(Relatie r) {
+        2:  113:	MDO d = MDO(r);
+        2:  113-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  114:	int min = 10;
+        2:  115:	int max = 20;
+        2:  116:	populeazaMDOVidIdentic(d, min, max);
+        2:  116-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+       24:  117:	for (int c = min; c <= max; c++) {
+        2:  117-block  0
+       22:  117-block  1
+       24:  117-block  2
+branch  0 taken 22
+branch  1 taken 2 (fallthrough)
+      22*:  118:		assert(d.sterge(c, c+1) == false);
+       22:  118-block  0
+call    0 returned 22
+branch  1 taken 22 (fallthrough)
+branch  2 taken 0 (throw)
+       22:  118-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 22
+    %%%%%:  118-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+       22:  118-block  3
+    %%%%%:  118-block  4
+       22:  119:		if (c%2==0)
+       22:  119-block  0
+branch  0 taken 12 (fallthrough)
+branch  1 taken 10
+      12*:  120:            assert(d.sterge(c,c) == true);
+       12:  120-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:  120-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 12
+    %%%%%:  120-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+       12:  120-block  3
+    %%%%%:  120-block  4
+        -:  121:	}
+        -:  122:	//raman doar cheile impare, o singura data
+       24:  123:	for (int c = min; c <= max; c++) {
+        2:  123-block  0
+       22:  123-block  1
+       24:  123-block  2
+branch  0 taken 22
+branch  1 taken 2 (fallthrough)
+       22:  124:		if (c%2==1){
+       22:  124-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 12
+      10*:  125:            assert(d.sterge(c,c+1) == false);
+       10:  125-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:  125-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 10
+    %%%%%:  125-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+       10:  125-block  3
+    %%%%%:  125-block  4
+      10*:  126:            assert(d.sterge(c,c) == true);
+       10:  126-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:  126-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 10
+    %%%%%:  126-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+       10:  126-block  3
+    %%%%%:  126-block  4
+        -:  127:		}
+        -:  128:        else{
+      12*:  129:              assert(d.sterge(c,c+2) == true);
+       12:  129-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:  129-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 12
+    %%%%%:  129-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+       12:  129-block  3
+    %%%%%:  129-block  4
+        -:  130:        }
+        -:  131:	}
+        -:  132:    //MDO devine vid
+       2*:  133:	assert(d.dim() == 0);
+        2:  133-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  133-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    %%%%%:  133-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        2:  133-block  3
+    %%%%%:  133-block  4
+        2:  134:}
+        2:  134-block  0
+call    0 returned 2
+    $$$$$:  134-block  1
+call    1 never executed
+        -:  135:
+function _Z10testStergev called 1 returned 100% blocks executed 100%
+        1:  136:void testSterge() {
+        1:  137:	testStergeCauta(cresc);
+        1:  137-block  0
+call    0 returned 1
+        1:  138:	testStergeCauta(desc);
+call    0 returned 1
+        1:  139:}
+        -:  140:
+        -:  141://genereaza un vector continand in ordine aleatoare valorile naturale din intervalul inchis [cMin, cMax]
+function _Z21cheiInOrdineAleatoareii called 2 returned 100% blocks executed 89%
+        2:  142:vector<int> cheiInOrdineAleatoare(int cMin, int cMax) {
+        2:  143:	vector<int> chei;
+        2:  143-block  0
+call    0 returned 2
+      404:  144:	for (int c = cMin; c <= cMax; c++) {
+      402:  144-block  0
+      404:  144-block  1
+branch  0 taken 402
+branch  1 taken 2 (fallthrough)
+      402:  145:		chei.push_back(c);
+      402:  145-block  0
+call    0 returned 402
+branch  1 taken 402 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  146:	}
+        2:  147:	int n = chei.size();
+        2:  147-block  0
+call    0 returned 2
+      402:  148:	for (int i = 0; i < n - 1; i++) {
+      402:  148-block  0
+branch  0 taken 400
+branch  1 taken 2 (fallthrough)
+      400:  149:		int j = i + rand() % (n - i);
+      400:  149-block  0
+call    0 returned 400
+      400:  150:		swap(chei[i], chei[j]);
+call    0 returned 400
+call    1 returned 400
+call    2 returned 400
+        -:  151:	}
+        2:  152:	return chei;
+        2:  152-block  0
+        2:  152-block  1
+    =====:  153:}
+    $$$$$:  153-block  0
+call    0 never executed
+        -:  154:
+        -:  155:
+function _Z12testIteratorPFbiiE called 2 returned 100% blocks executed 75%
+        2:  156:void testIterator(Relatie r) {
+        2:  157:	MDO d = MDO(r);
+        2:  157-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  158:	IteratorMDO it = d.iterator();
+        2:  158-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  159:	assert(!it.valid());
+        2:  159-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  159-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    %%%%%:  159-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        2:  159-block  3
+    %%%%%:  159-block  4
+        2:  160:	it.prim();
+        2:  160-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  161:	assert(!it.valid());
+        2:  161-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  161-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    %%%%%:  161-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        2:  161-block  3
+    %%%%%:  161-block  4
+        2:  162:	int cMin = 100;
+        2:  163:	int cMax = 300;
+        2:  164:	vector<int> chei = cheiInOrdineAleatoare(cMin, cMax);
+        2:  164-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  165:	int n = chei.size();
+        2:  165-block  0
+call    0 returned 2
+      404:  166:	for (int i = 0; i < n; i++) {
+      402:  166-block  0
+      404:  166-block  1
+branch  0 taken 402
+branch  1 taken 2 (fallthrough)
+      402:  167:      d.adauga(chei[i], 100);
+      402:  167-block  0
+call    0 returned 402
+call    1 returned 402
+branch  2 taken 402 (fallthrough)
+branch  3 taken 0 (throw)
+      402:  168:	  if (chei[i]%2==0)	{
+      402:  168-block  0
+call    0 returned 402
+branch  1 taken 202 (fallthrough)
+branch  2 taken 200
+      202:  169:		d.adauga(chei[i], 200);
+      202:  169-block  0
+call    0 returned 202
+call    1 returned 202
+branch  2 taken 202 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  170:	  }
+        -:  171:	}
+        -:  172:
+        2:  173:	IteratorMDO itD = d.iterator();
+        2:  173-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  174:	assert(itD.valid());
+        2:  174-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  174-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    %%%%%:  174-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        2:  174-block  3
+    %%%%%:  174-block  4
+        2:  175:	itD.prim();
+        2:  175-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  176:	assert(itD.valid());
+        2:  176-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  176-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+    %%%%%:  176-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        2:  176-block  3
+    %%%%%:  176-block  4
+        -:  177:
+        2:  178:	TCheie cPrec = itD.element().first;
+        2:  178-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  179:
+        2:  180:    itD.urmator();
+        2:  180-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+      604:  181:	while (itD.valid()) {
+        2:  181-block  0
+      604:  181-block  1
+call    0 returned 604
+branch  1 taken 604 (fallthrough)
+branch  2 taken 0 (throw)
+      604:  181-block  2
+branch  3 taken 602
+branch  4 taken 2 (fallthrough)
+      602:  182:		TCheie c = itD.element().first;
+      602:  182-block  0
+call    0 returned 602
+branch  1 taken 602 (fallthrough)
+branch  2 taken 0 (throw)
+     602*:  183:		assert(r(cPrec, c));
+      602:  183-block  0
+call    0 returned 602
+branch  1 taken 602 (fallthrough)
+branch  2 taken 0 (throw)
+      602:  183-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 602
+    %%%%%:  183-block  2
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+      602:  183-block  3
+    %%%%%:  183-block  4
+      602:  184:		cPrec = c;
+      602:  185:		itD.urmator();
+      602:  185-block  0
+call    0 returned 602
+branch  1 taken 602 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  186:	}
+        2:  187:}
+        2:  187-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:  187-block  1
+call    2 never executed
+    $$$$$:  187-block  2
+call    3 never executed
+        -:  188:
+function _Z12testIteratorv called 1 returned 100% blocks executed 100%
+        1:  189:void testIterator() {
+        1:  190:	testIterator(cresc);
+        1:  190-block  0
+call    0 returned 1
+        1:  191:	testIterator(desc);
+call    0 returned 1
+        1:  192:}
+        -:  193:
+function _Z13testAllExtinsv called 1 returned 100% blocks executed 100%
+        1:  194:void testAllExtins() {
+        -:  195:    //print();
+        1:  196:	testCreeaza();
+        1:  196-block  0
+call    0 returned 1
+        1:  197:	testCauta();
+call    0 returned 1
+        1:  198:	testSterge();
+call    0 returned 1
+        1:  199:	testIterator();
+call    0 returned 1
+        1:  200:}

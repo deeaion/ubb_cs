@@ -1,0 +1,924 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_3c/MDO/MDO.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\MDO\MDO.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\MDO\MDO.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../Iterator/IteratorMDO.h"
+        -:    2:#include "MDO.h"
+        -:    3:#include <iostream>
+        -:    4:#include <vector>
+        -:    5:
+        -:    6:#include <exception>
+        -:    7:using namespace std;
+        -:    8:/**LISTA !*/
+        -:    9:/**
+        -:   10: * CREATING LIST NORMALLY
+        -:   11: * @COMPLEXTIY: θ(1)
+        -:   12: */
+function _ZN9SmallListC2Ev called 1146 returned 100% blocks executed 100%
+     1146:   13:SmallList::SmallList() {
+     1146:   14:    prim=-1;
+     1146:   15:    primLiber=-1;
+     1146:   16:    cp=0;
+     1146:   17:    len=0;
+     1146:   18:    initialized=0;
+        -:   19:
+     1146:   20:}
+        -:   21:/**LISTA !*/
+        -:   22:/**
+        -:   23: * CREATING LIST for a certain key
+        -:   24: * @COMPLEXTIY: θ(1)
+        -:   25: */
+function _ZN9SmallListC2Ei called 449 returned 100% blocks executed 88%
+      449:   26:SmallList::SmallList(TCheie c) {
+      449:   27:    len=0;
+      449:   28:    initialized=1;
+      449:   29:    cheie=c;
+      449:   30:    this->prim=-1;
+      449:   31:    this->primLiber=0;
+      449:   32:    this->cp=CAPACITY;
+    1347*:   33:    this->vals=new TElem [cp];//trebuie dealocat. Am construit 2 liste
+      449:   33-block  0
+branch  0 taken 449 (fallthrough)
+branch  1 taken 0
+      449:   33-block  1
+    %%%%%:   33-block  2
+call    2 never executed
+      449:   33-block  3
+call    3 returned 449
+      898:   33-block  4
+call    4 returned 898
+     1347:   33-block  5
+branch  5 taken 898
+branch  6 taken 449 (fallthrough)
+     449*:   34:    urm=new int[cp];
+      449:   34-block  0
+branch  0 taken 449 (fallthrough)
+branch  1 taken 0
+      449:   34-block  1
+    %%%%%:   34-block  2
+call    2 never executed
+      449:   34-block  3
+call    3 returned 449
+     1347:   35:    for(int i=0;i<=cp-1;i++)
+     1347:   35-block  0
+branch  0 taken 898
+branch  1 taken 449 (fallthrough)
+        -:   36:    {
+      898:   37:        urm[i]=i+1;
+      898:   37-block  0
+        -:   38:    }
+      449:   39:    urm[cp-1]=-1;// gata nu mai ai unde
+      449:   40:}
+        -:   41:/**LISTA !*/
+        -:   42:/**
+        -:   43: * Alocate node to a certain key
+        -:   44: * @COMPLEXTIY: θ(1)
+        -:   45: */
+function _ZN9SmallList5alocaEv called 687 returned 100% blocks executed 100%
+      687:   46:int SmallList::aloca() {
+      687:   47:    int i=primLiber;//ocupam poz prim Liber
+      687:   48:    primLiber=urm[primLiber];//urm de prim Liber devine noul liber
+      687:   49:    return i;
+      687:   49-block  0
+        -:   50:}
+        -:   51:/**Dealocate node of a certain position
+        -:   52:@COMPLEXTIY: θ(1)*/
+function _ZN9SmallList7dealocaEi called 39 returned 100% blocks executed 100%
+       39:   53:void SmallList::dealoca(int i) {
+       39:   54:    urm[i]=primLiber;//Cum acest nod va deveni liber el va deveni prim Liber
+        -:   55:    //asa ca noul prim liber va pointa la vechiul prim liber
+       39:   56:    primLiber=i;
+       39:   57:}
+        -:   58:/**Create new node for values
+        -:   59:@COMPLEXTIY: θ(1)<-amortizata*/
+function _ZN9SmallList10creeazaNodESt4pairIiiE called 687 returned 100% blocks executed 83%
+      687:   60:int SmallList::creeazaNod(TElem el) {
+      687:   61:    if(primLiber==-1)//daca nu exista noduri libere
+      687:   61-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 687
+    #####:   62:        redim();
+    %%%%%:   62-block  0
+call    0 never executed
+      687:   63:    int i=aloca();//alocam spatiul
+      687:   63-block  0
+call    0 returned 687
+      687:   64:    vals[i]=el;
+call    0 returned 687
+      687:   65:    urm[i]=prim;
+      687:   66:    prim=i;
+      687:   67:    len++;
+      687:   68:    return i;//poz nod
+        -:   69:}
+        -:   70:/**Redimension of vector
+        -:   71:@COMPLEXTIY: θ(cp*2/n)*/
+function _ZN9SmallList5redimEv called 0 returned 0% blocks executed 0%
+    #####:   72:void SmallList::redim() {
+    #####:   73:    int cp_nou=cp*2;
+    #####:   74:    TElem * elems_nou=new TElem [cp_nou];
+    %%%%%:   74-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   74-block  1
+    %%%%%:   74-block  2
+call    2 never executed
+    %%%%%:   74-block  3
+call    3 never executed
+    %%%%%:   74-block  4
+call    4 never executed
+    %%%%%:   74-block  5
+branch  5 never executed
+branch  6 never executed
+    #####:   75:    int *urm_nou=new int[cp_nou];
+    %%%%%:   75-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   75-block  1
+    %%%%%:   75-block  2
+call    2 never executed
+    %%%%%:   75-block  3
+call    3 never executed
+        -:   76:    //copiem el
+    #####:   77:    for (int i = 0; i < cp; ++i)
+    %%%%%:   77-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   78:    {
+    #####:   79:        elems_nou[i] = vals[i];
+    %%%%%:   79-block  0
+call    0 never executed
+    #####:   80:        urm_nou[i] = urm[i];
+        -:   81:    }
+        -:   82:    //marcam restul de poz ca si goale
+    #####:   83:    for (int i = cp; i < cp_nou - 1; ++i)
+    %%%%%:   83-block  0
+    %%%%%:   83-block  1
+branch  0 never executed
+branch  1 never executed
+        -:   84:    {
+    #####:   85:        urm_nou[i] = i + 1;
+    %%%%%:   85-block  0
+        -:   86:    }
+    #####:   87:    urm_nou[cp_nou-1]=-1;
+    #####:   88:    primLiber=cp;
+        -:   89:    //stergem vectorul vechi
+    #####:   90:    delete[] urm;
+    %%%%%:   90-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   90-block  1
+call    2 never executed
+    #####:   91:    delete[] vals;
+    %%%%%:   91-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   91-block  1
+call    2 never executed
+        -:   92:
+    #####:   93:    this->vals=elems_nou;
+    #####:   94:    this->urm=urm_nou;
+    #####:   95:    this->cp=cp_nou;
+    #####:   96:}
+        -:   97:/**PRIVATE PART OF MDO*/
+        -:   98:/**
+        -:   99: * Marcheaza un nod ca fiind ocupat
+        -:  100: * @COMPLEXITY: THETA(1)
+        -:  101: */
+function _ZN3MDO5alocaEv called 449 returned 100% blocks executed 100%
+      449:  102:int MDO::aloca() {
+      449:  103:    int i=primLiber;//ocupam poz prim Liber
+      449:  104:    primLiber=urm[primLiber];//urm de prim Liber devine noul liber
+      449:  105:    return i;
+      449:  105-block  0
+        -:  106:}
+        -:  107:/**
+        -:  108: * MARCHEAZA UN NOD CA FIIND LIBER
+        -:  109: * @COMPLEXITY: Theta(1)
+        -:  110: */
+function _ZN3MDO7dealocaEi called 25 returned 100% blocks executed 100%
+       25:  111:void MDO::dealoca(int i) {
+       25:  112:    urm[i]=primLiber;//Cum acest nod va deveni liber el va deveni prim Liber
+        -:  113:    //asa ca noul prim liber va pointa la vechiul prim liber
+       25:  114:    primLiber=i;
+       25:  115:}
+        -:  116:/**
+        -:  117: * CREEAZA UN NOD PT CHEIE SI VALORIILE LUI.
+        -:  118: * Complexitate:Theta(1) - amortizata (din cauza redimensionarii)
+        -:  119: *returns: poz nodului
+        -:  120: */
+function _ZN3MDO10creeazaNodESt4pairIiiE called 449 returned 100% blocks executed 100%
+      449:  121: int MDO::creeazaNod(TElem el) {
+      449:  122:     if(primLiber==-1)//daca nu exista noduri libere
+      449:  122-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 423
+       26:  123:         redim();
+       26:  123-block  0
+call    0 returned 26
+branch  1 taken 26 (fallthrough)
+branch  2 taken 0 (throw)
+      449:  124:     int i=aloca();//alocam spatiul
+      449:  124-block  0
+call    0 returned 449
+      449:  125:     SmallList list(el.first);
+call    0 returned 449
+branch  1 taken 449 (fallthrough)
+branch  2 taken 0 (throw)
+      449:  126:     elems[i]=list;
+      449:  127:     elems[i].creeazaNod(el);
+      449:  127-block  0
+call    0 returned 449
+branch  1 taken 449 (fallthrough)
+branch  2 taken 0 (throw)
+      449:  128:     return i;//poz nod
+      449:  128-block  0
+      449:  128-block  1
+        -:  129: }
+        -:  130:/**Redimensiune lista principala
+        -:  131:@COMPLEXTIY: θ(cp*2/n)*/
+function _ZN3MDO5redimEv called 26 returned 100% blocks executed 91%
+       26:  132: void MDO::redim() {
+       26:  133:     int cp_nou=cp*2;
+      26*:  134:     int *urm_nou=new int[cp_nou];
+       26:  134-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       26:  134-block  1
+    %%%%%:  134-block  2
+call    2 never executed
+       26:  134-block  3
+call    3 returned 26
+    1154*:  135:     SmallList *elems_nou= new SmallList[cp_nou];
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       26:  135-block  0
+    %%%%%:  135-block  1
+call    2 never executed
+       26:  135-block  2
+call    3 returned 26
+     1128:  135-block  3
+call    4 returned 1128
+     1154:  135-block  4
+branch  5 taken 1128
+branch  6 taken 26 (fallthrough)
+        -:  136:     //copiem el
+      590:  137:    for (int i = 0; i < cp; ++i)
+       26:  137-block  0
+      590:  137-block  1
+branch  0 taken 564
+branch  1 taken 26 (fallthrough)
+        -:  138:    {
+      564:  139:        urm_nou[i] = urm[i];
+      564:  140:        elems_nou[i]=elems[i];
+      564:  140-block  0
+        -:  141:      //  cout<<urm_nou[i]<<"\n";
+        -:  142:    }
+        -:  143:
+        -:  144:    //marcam restul de poz ca si goale
+      564:  145:    for (int i = cp; i < cp_nou - 1; ++i)
+       26:  145-block  0
+      564:  145-block  1
+branch  0 taken 538
+branch  1 taken 26 (fallthrough)
+        -:  146:    {
+      538:  147:        urm_nou[i] = i + 1;
+      538:  147-block  0
+        -:  148:      //  cout<<urm_nou[i]<<"\n";
+        -:  149:    }
+        -:  150:    //cout<<"----\n";
+       26:  151:    urm_nou[cp_nou-1]=-1;
+       26:  152:    primLiber=cp;
+        -:  153:    //stergem vectorul vechi
+        -:  154:   // delete [] elems;
+       26:  155:   int * to_del=urm;
+       26:  156:   delete [] elems;
+       26:  156-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       26:  156-block  1
+call    2 returned 26
+       26:  157:   delete [] urm;
+       26:  157-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       26:  157-block  1
+call    2 returned 26
+       26:  158:   this->elems=elems_nou;
+       26:  159:    this->urm=urm_nou;
+       26:  160:    this->cp=cp_nou;
+       26:  161: }
+        -:  162:/** Creeare MDO
+        -:  163: * @COMPLEXITY: THETA(1);
+        -:  164: */
+function _ZN3MDOC2EPFbiiE called 9 returned 100% blocks executed 88%
+        9:  165:MDO::MDO(Relatie r) {
+        9:  166:    len=0;
+        9:  167:    this->rel=r;
+        9:  168:    this->prim=-1;
+        9:  169:    this->primLiber=0;
+        9:  170:    this->cp=CAPACITY;
+      27*:  171:    this->elems=new SmallList[cp];//trebuie dealocat. Am construit 2 liste
+        9:  171-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  171-block  1
+    %%%%%:  171-block  2
+call    2 never executed
+        9:  171-block  3
+call    3 returned 9
+       18:  171-block  4
+call    4 returned 18
+       27:  171-block  5
+branch  5 taken 18
+branch  6 taken 9 (fallthrough)
+       9*:  172:    urm=new int[cp];
+        9:  172-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  172-block  1
+    %%%%%:  172-block  2
+call    2 never executed
+        9:  172-block  3
+call    3 returned 9
+       18:  173:    for(int i=0;i<cp-1;i++)
+       18:  173-block  0
+branch  0 taken 9
+branch  1 taken 9 (fallthrough)
+        -:  174:    {
+        9:  175:        urm[i]=i+1;
+        9:  175-block  0
+        -:  176:    }
+        9:  177:    urm[cp-1]=-1;// gata nu mai ai unde
+        -:  178:
+        9:  179:}
+        -:  180:/**Adding node
+        -:  181: * BC-> MDO empty θ(1)
+        -:  182: * WC->Add at the end of MDO: θ(n)
+        -:  183: * AC-> It is somewhere in the list
+        -:  184:@COMPLEXTIY: O(n)*/
+function _ZN3MDO6adaugaEii called 687 returned 100% blocks executed 90%
+      687:  185:void MDO::adauga(TCheie c, TValoare v) {
+        -:  186:	//dictionarul este vid-> θ(1) amortizata
+      687:  187:    if(prim==-1)
+      687:  187-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 679
+        -:  188:    {
+        8:  189:        TElem el;
+        8:  190:        el.first=c;
+        8:  191:        el.second=v;
+        8:  192:        int poz= creeazaNod(el);
+        8:  192-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  193:        urm[poz]=prim;
+        8:  194:        prim=poz;
+        8:  195:        len=1;
+        -:  196:        //elems[c].len++;
+        -:  197:        //printare();
+        8:  198:        return;
+        8:  198-block  0
+        -:  199:    }
+        -:  200:    //LISTA NU E VIDA.
+        -:  201:    //Time complexity: O(n)<- nr el
+      679:  202:    int pre=-1;
+      679:  203:    int curent=prim;
+    29243:  204:    while(curent>-1&&rel(elems[curent].cheie,c))
+      679:  204-block  0
+    29243:  204-block  1
+branch  0 taken 29210 (fallthrough)
+branch  1 taken 33
+    29210:  204-block  2
+call    2 returned 29210
+branch  3 taken 28802 (fallthrough)
+branch  4 taken 408
+    28802:  204-block  3
+      441:  204-block  4
+    29243:  204-block  5
+branch  5 taken 28802
+branch  6 taken 441 (fallthrough)
+        -:  205:    {
+        -:  206:        //daca am gasit elementul cat timp am parcurs eu lista
+    28802:  207:        if(elems[curent].cheie==c)
+    28802:  207-block  0
+branch  0 taken 238 (fallthrough)
+branch  1 taken 28564
+        -:  208:        {
+      238:  209:            TElem el;
+      238:  210:            el.first=c;
+      238:  211:            el.second=v;
+        -:  212:            //adaugam elementul in lista
+      238:  213:            elems[curent].creeazaNod(el);
+      238:  213-block  0
+call    0 returned 238
+branch  1 taken 238 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  214:            //elems[c].len++;
+        -:  215:           // elems[curent].len++;
+      238:  216:            len++;
+        -:  217:            //printare();
+      238:  218:            return;
+      238:  218-block  0
+        -:  219:
+        -:  220:        }
+    28564:  221:        pre=curent;
+    28564:  222:        curent=urm[curent];
+    28564:  222-block  0
+        -:  223:      //  cout<<"!"<<curent<<"P";
+        -:  224:    }
+        -:  225:    //daca suntem la sf
+        -:  226:    //θ(1)
+      441:  227:    if(curent<=-1)
+      441:  227-block  0
+branch  0 taken 33 (fallthrough)
+branch  1 taken 408
+        -:  228:    {
+       33:  229:        TElem el;
+       33:  230:        el.first=c;
+       33:  231:        el.second=v;
+       33:  232:        int i=this->creeazaNod(el);
+       33:  232-block  0
+call    0 returned 33
+branch  1 taken 33 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  233:    //    elems[c].len++;
+       33:  234:        len++;
+       33:  235:        urm[pre]=i;
+       33:  236:        urm[i]=-1;
+        -:  237:        //printare();
+       33:  238:        return;
+       33:  238-block  0
+        -:  239:    }
+        -:  240:    //DACA S-A OPRIT DIN CAUZA RELATIEI! θ(1)
+      408:  241:    if(!rel(elems[curent].cheie,c))
+      408:  241-block  0
+call    0 returned 408
+branch  1 taken 408 (fallthrough)
+branch  2 taken 0
+        -:  242:    {
+      408:  243:        TElem element_auxiliar;
+      408:  244:        element_auxiliar.first = c;
+      408:  245:        element_auxiliar.second = v;
+      408:  246:        int i = this->creeazaNod(element_auxiliar);
+      408:  246-block  0
+call    0 returned 408
+branch  1 taken 408 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  247:
+      408:  248:        if(pre> -1)
+      408:  248-block  0
+branch  0 taken 377 (fallthrough)
+branch  1 taken 31
+      377:  249:        {urm[pre] = i;}
+      377:  249-block  0
+      408:  250:        urm[i] = curent;
+      408:  251:        if (pre == -1)
+      408:  251-block  0
+branch  0 taken 31 (fallthrough)
+branch  1 taken 377
+       31:  252:            this->prim = i;
+       31:  252-block  0
+      408:  253:        this->len++;
+        -:  254:
+        -:  255:        //printare();
+        -:  256:        //elems[c].len++;
+      408:  257:        return;
+      408:  257-block  0
+        -:  258:    }
+        -:  259:}
+        -:  260:/** Returning values for A KEY
+        -:  261: * @COMPLEXITY: O(lungime lsi princ*lungime lsi pt cheie) deci O(n^2);
+        -:  262: */
+function _ZNK3MDO5cautaEi called 92 returned 100% blocks executed 95%
+       92:  263:vector<TValoare> MDO::cauta(TCheie c) const {
+       92:  264:	vector<TValoare> v;
+       92:  264-block  0
+call    0 returned 92
+       92:  265:    int curent=prim;
+      412:  266:    while(curent!=-1&&rel(this->elems[curent].cheie,c))
+      412:  266-block  0
+branch  0 taken 362 (fallthrough)
+branch  1 taken 50
+      362:  266-block  1
+call    2 returned 362
+branch  3 taken 362 (fallthrough)
+branch  4 taken 0 (throw)
+      362:  266-block  2
+branch  5 taken 343 (fallthrough)
+branch  6 taken 19
+      343:  266-block  3
+       69:  266-block  4
+      412:  266-block  5
+branch  7 taken 343
+branch  8 taken 69 (fallthrough)
+        -:  267:    {
+      343:  268:        if(this->elems[curent].cheie==c)
+      343:  268-block  0
+branch  0 taken 23 (fallthrough)
+branch  1 taken 320
+        -:  269:        {
+       23:  270:            int f_el=elems[curent].prim;
+       23:  271:            TElem* vals=elems[curent].vals;
+       23:  272:            int* urm_e=elems[curent].urm;
+       69:  273:            while(f_el!=-1)
+       23:  273-block  0
+       69:  273-block  1
+branch  0 taken 46
+branch  1 taken 23 (fallthrough)
+        -:  274:            {
+       46:  275:                v.push_back(vals[f_el].second);
+       46:  275-block  0
+call    0 returned 46
+branch  1 taken 46 (fallthrough)
+branch  2 taken 0 (throw)
+       46:  276:                f_el=urm_e[f_el];
+       46:  276-block  0
+        -:  277:            }
+       23:  278:            return v;
+       23:  278-block  0
+        -:  279:        }
+      320:  280:        curent=urm[curent];
+      320:  280-block  0
+        -:  281:    }
+        -:  282:
+        -:  283:
+       69:  284:    return v;
+       69:  284-block  0
+    =====:  285:}
+    $$$$$:  285-block  0
+call    0 never executed
+        -:  286:/** Deletes val from key lsi.
+        -:  287: * @COMPLEXITY: O(len(key_LSI))/O(n);
+        -:  288: */
+function _ZN3MDO10sterge_valEiii called 71 returned 100% blocks executed 100%
+       71:  289:bool MDO::sterge_val(TCheie c,TValoare v,int poz) {
+       71:  290:    TElem* val=this->elems[poz].vals;
+       71:  291:    int anterior=-1;
+       71:  292:    int prim_v=this->elems[poz].prim;
+       71:  293:    int* urm_v=this->elems[poz].urm;
+      129:  294:    while(prim_v!=-1)
+       71:  294-block  0
+      129:  294-block  1
+branch  0 taken 97
+branch  1 taken 32 (fallthrough)
+        -:  295:    {
+       97:  296:        if(val[prim_v].second==v)
+       97:  296-block  0
+branch  0 taken 39 (fallthrough)
+branch  1 taken 58
+       39:  297:        {break;}
+       39:  297-block  0
+       58:  298:        anterior=prim_v;
+       58:  299:        prim_v=urm_v[prim_v];
+       58:  299-block  0
+        -:  300:    }
+        -:  301:    //s-a parcurs dar nu mai ai unde
+       71:  302:    if(prim_v==-1)
+       71:  302-block  0
+branch  0 taken 32 (fallthrough)
+branch  1 taken 39
+       32:  303:        return false;
+       32:  303-block  0
+       39:  304:    if(prim_v==elems[poz].prim)
+       39:  304-block  0
+branch  0 taken 25 (fallthrough)
+branch  1 taken 14
+        -:  305:    {
+        -:  306:        //daca sunt la primul el doar schimb prim
+       25:  307:        elems[poz].prim=elems[poz].urm[prim_v];
+       25:  308:        elems[poz].len--;
+       25:  308-block  0
+        -:  309:       // //printare();
+        -:  310:    }
+        -:  311:    else
+        -:  312:    {
+       14:  313:        urm_v[anterior]=urm_v[prim_v];
+       14:  313-block  0
+        -:  314:        ////printare();
+        -:  315:    }
+       39:  316:    elems[poz].dealoca(prim_v);
+       39:  316-block  0
+call    0 returned 39
+       39:  317:    elems[poz].len--;
+        -:  318:    //printare();
+       39:  319:    return true;
+        -:  320:}
+        -:  321:/** Deleting Value for Key.
+        -:  322: ** If There are no values left for deleting i will just delete the key
+        -:  323: **
+        -:  324: * @COMPLEXITY O(lungime lsi princ*lungime lsi pt cheie) deci O(n^2);
+        -:  325: * Best Case: Theta(1) -> first el
+        -:  326: * WORST CASE: THETA(len(lsi_m)*len(lsi(key)) -> daca nu exista valoarea pt cheia care e pe ult poz
+        -:  327: *
+        -:  328: */
+function _ZN3MDO6stergeEii called 72 returned 100% blocks executed 97%
+       72:  329:bool MDO::sterge(TCheie c, TValoare v) {
+        -:  330:	//stergerea aka cea mai complicata
+       72:  331:    if(prim==-1)
+       72:  331-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 71
+        1:  332:        return false;
+        1:  332-block  0
+       71:  333:    int curent=prim;
+       71:  334:    int anterior=-1;
+       71:  335:    if(c==elems[curent].cheie)
+       71:  335-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 45
+        -:  336:    {
+       26:  337:        bool result= sterge_val(c,v,curent);
+       26:  337-block  0
+call    0 returned 26
+       26:  338:        if(!result)
+branch  0 taken 7 (fallthrough)
+branch  1 taken 19
+        7:  339:            return false;
+        7:  339-block  0
+        -:  340:
+       19:  341:        if(elems[curent].prim==-1)
+       19:  341-block  0
+branch  0 taken 15 (fallthrough)
+branch  1 taken 4
+       15:  342:        {   prim=urm[prim];
+       15:  343:            dealoca(curent);
+       15:  343-block  0
+call    0 returned 15
+       15:  344:            this->len--;}
+        -:  345:        else
+        -:  346:        {
+        4:  347:            this->len--;
+        4:  347-block  0
+        -:  348:        }
+        -:  349:        //printare();
+       19:  350:        return true;
+       19:  350-block  0
+        -:  351:    }
+        -:  352:    else{
+       45:  353:        while(curent!=-1&&
+       45:  353-block  0
+      295:  354:        rel(elems[curent].cheie,c)
+      295:  354-block  0
+call    0 returned 295
+branch  1 taken 295 (fallthrough)
+branch  2 taken 0
+      590:  355:        &&elems[curent].cheie!=c)
+      295:  355-block  0
+branch  0 taken 295 (fallthrough)
+branch  1 taken 0
+      295:  355-block  1
+branch  2 taken 250 (fallthrough)
+branch  3 taken 45
+      250:  355-block  2
+       45:  355-block  3
+      295:  355-block  4
+branch  4 taken 250
+branch  5 taken 45 (fallthrough)
+        -:  356:        {
+      250:  357:            anterior=curent;
+      250:  358:            curent=urm[curent];
+      250:  358-block  0
+        -:  359:        }
+       45:  360:        if(this->elems[curent].cheie==c)
+       45:  360-block  0
+branch  0 taken 45 (fallthrough)
+branch  1 taken 0
+        -:  361:            {
+       45:  362:                bool res=sterge_val(c,v,curent);
+       45:  362-block  0
+call    0 returned 45
+       45:  363:                if(!res)
+branch  0 taken 25 (fallthrough)
+branch  1 taken 20
+       25:  364:                    return false;
+       25:  364-block  0
+        -:  365:                else
+        -:  366:                {
+       20:  367:                    if(elems[curent].prim==-1)
+       20:  367-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 10
+        -:  368:                    {
+       10:  369:                        if(urm[anterior]==urm[len-2])
+       10:  369-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 9
+        -:  370:                        {
+        -:  371:                            //sunt la sf
+        -:  372:                            //so i just dealocate it
+        1:  373:                            dealoca(curent);
+        1:  373-block  0
+call    0 returned 1
+        -:  374:                        }
+        -:  375:                        else
+        -:  376:                        {
+        9:  377:                            urm[anterior]=urm[curent];
+        9:  378:                            dealoca(curent);
+        9:  378-block  0
+call    0 returned 9
+        -:  379:
+        -:  380:                        }
+        -:  381:                    }
+       20:  382:                    len--;
+        -:  383:                    //printare();
+       20:  384:                    return true;
+       20:  384-block  0
+        -:  385:
+        -:  386:                }
+        -:  387:            }
+    #####:  388:        return false;
+    %%%%%:  388-block  0
+        -:  389:    }
+        -:  390:    //daca primul el este 0
+        -:  391:	return false;
+        -:  392:}
+        -:  393:/** DIM
+        -:  394: * @COMPLEXITY: THETA(1)
+        -:  395: */
+function _ZNK3MDO3dimEv called 5 returned 100% blocks executed 100%
+        5:  396:int MDO::dim() const {
+        5:  397:    return this->len;
+        5:  397-block  0
+        -:  398:}
+        -:  399:/** Is MDO empty?
+        -:  400: * @COMPLEXITY: THETA(1)
+        -:  401: */
+function _ZNK3MDO3vidEv called 10 returned 100% blocks executed 100%
+       10:  402:bool MDO::vid() const {
+        -:  403:   // cout<<"!!!!"<<len<<"!!!!";
+       10:  404:	if(len==0)
+       10:  404-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 5
+        5:  405:        return true;
+        5:  405-block  0
+        -:  406:    else
+        5:  407:        return false;
+        5:  407-block  0
+        -:  408:}
+        -:  409:/** Iterator for MDO
+        -:  410: * @COMPLEXITY: THETA(1)
+        -:  411: */
+        -:  412:
+function _ZNK3MDO8iteratorEv called 5 returned 100% blocks executed 100%
+        5:  413:IteratorMDO MDO::iterator() const {
+        5:  414:	return IteratorMDO(*this);
+        5:  414-block  0
+call    0 returned 5
+        -:  415:}
+function _ZNK3MDO22ceaMaiFrecventaValoareEv called 6 returned 100% blocks executed 86%
+        6:  416:TValoare MDO::ceaMaiFrecventaValoare() const {
+        6:  417:    if(vid())
+        6:  417-block  0
+call    0 returned 6
+branch  1 taken 2 (fallthrough)
+branch  2 taken 4
+        -:  418:    {
+        2:  419:        return NULL_TVALOARE;
+        2:  419-block  0
+        -:  420:    }
+        4:  421:    vector<pair<TValoare,int>> frecvente;
+        4:  421-block  0
+call    0 returned 4
+        4:  422:    int curent=prim;
+       10:  423:    while(curent!=-1)
+       10:  423-block  0
+branch  0 taken 6
+branch  1 taken 4 (fallthrough)
+        -:  424:    {
+        6:  425:        int curent_val=elems[curent].prim;
+       14:  426:        while(curent_val!=-1)
+        6:  426-block  0
+       14:  426-block  1
+branch  0 taken 8
+branch  1 taken 6 (fallthrough)
+        8:  427:        {   bool found=false;
+       13:  428:            for(int i=0;i<frecvente.size();i++)
+        8:  428-block  0
+        5:  428-block  1
+       13:  428-block  2
+call    0 returned 13
+branch  1 taken 5
+branch  2 taken 8 (fallthrough)
+        -:  429:            {
+        5:  430:                if(frecvente[i].first==elems[curent].vals[curent_val].second)
+        5:  430-block  0
+call    0 returned 5
+branch  1 taken 1 (fallthrough)
+branch  2 taken 4
+        -:  431:                {
+        1:  432:                    frecventa t= make_pair(elems[curent].vals[curent_val].second,frecvente[i].second+1);
+        1:  432-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:  432-block  1
+        1:  433:                    frecvente[i]= t;
+        1:  433-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  434:                    found=true;
+        -:  435:                }
+        -:  436:            }
+        8:  437:            if(!found)
+        8:  437-block  0
+branch  0 taken 7 (fallthrough)
+branch  1 taken 1
+        -:  438:            {
+        7:  439:                frecvente.push_back(make_pair(elems[curent].vals[curent_val].second,1));
+        7:  439-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:  439-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:  439-block  2
+    $$$$$:  439-block  3
+    $$$$$:  439-block  4
+        -:  440:            }
+        8:  441:            curent_val=elems[curent].urm[curent_val];
+        8:  441-block  0
+        -:  442:        }
+        6:  443:        curent=urm[curent];
+        6:  443-block  0
+        -:  444:    }
+        4:  445:    int max=-1;
+        4:  446:    int maxVal=0;
+       11:  447:    for(auto j:frecvente)
+        4:  447-block  0
+call    0 returned 4
+call    1 returned 4
+        7:  447-block  1
+call    2 returned 7
+        7:  447-block  2
+call    3 returned 7
+       11:  447-block  3
+call    4 returned 11
+branch  5 taken 7
+branch  6 taken 4 (fallthrough)
+        -:  448:    {
+        7:  449:        if(j.second>max)
+branch  0 taken 5 (fallthrough)
+branch  1 taken 2
+        -:  450:        {
+        5:  451:            max=j.second;
+        5:  452:            maxVal=j.first;
+        5:  452-block  0
+        -:  453:        }
+        -:  454:    }
+        4:  455:    return maxVal;
+        -:  456:
+        4:  457:}
+        4:  457-block  0
+call    0 returned 4
+    $$$$$:  457-block  1
+call    1 never executed
+        -:  458:/** Destructor
+        -:  459: * @COMPLEXITY: THETA(cp)
+        -:  460: */
+function _ZN3MDOD2Ev called 9 returned 100% blocks executed 100%
+        9:  461:MDO::~MDO() {
+      591:  462:    for (int p = 0; p < cp; p++) {
+        9:  462-block  0
+      582:  462-block  1
+      591:  462-block  2
+branch  0 taken 582
+branch  1 taken 9 (fallthrough)
+      582:  463:        if (elems[p].initialized== 1) {
+      582:  463-block  0
+branch  0 taken 449 (fallthrough)
+branch  1 taken 133
+      449:  464:            delete[] elems[p].vals;
+      449:  464-block  0
+branch  0 taken 449 (fallthrough)
+branch  1 taken 0
+      449:  464-block  1
+call    2 returned 449
+      449:  465:            delete[] elems[p].urm;
+      449:  465-block  0
+branch  0 taken 449 (fallthrough)
+branch  1 taken 0
+      449:  465-block  1
+call    2 returned 449
+        -:  466:        }
+        -:  467:
+        -:  468:
+        -:  469:        //delete elems[p];
+        -:  470:    }
+        9:  471:    delete []elems;
+        9:  471-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  471-block  1
+call    2 returned 9
+        9:  472:    delete[] urm;
+        9:  472-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:  472-block  1
+call    2 returned 9
+        9:  473:}

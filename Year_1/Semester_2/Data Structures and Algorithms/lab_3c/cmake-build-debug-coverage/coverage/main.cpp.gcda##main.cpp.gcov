@@ -1,0 +1,23 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_3c/main.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:
+        -:    3:#include "Tests/TestScurt.h"
+        -:    4:#include "Tests/TestExtins.h"
+        -:    5:
+function main called 1 returned 100% blocks executed 100%
+        1:    6:int main(){
+        1:    7:   testAll();
+        1:    7-block  0
+call    0 returned 1
+        1:    8:    testFrecventaValoare();
+call    0 returned 1
+        1:    9: testAllExtins();
+call    0 returned 1
+        -:   10:
+        1:   11:    std::cout<<"Finished Tests!"<<std::endl;
+call    0 returned 1
+call    1 returned 1
+        1:   12:}

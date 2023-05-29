@@ -1,0 +1,128 @@
+        -:    0:Source:C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Data Structures and Algorithms/lab_3c/Iterator/IteratorMDO.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\Iterator\IteratorMDO.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\DOCUMENTS\UNI\First year\Semester 2\Data Structures and Algorithms\lab_3c\cmake-build-debug-coverage\CMakeFiles\lab_3c.dir\Iterator\IteratorMDO.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "IteratorMDO.h"
+        -:    2:#include "../MDO/MDO.h"
+        -:    3:/** INITIALIZER
+        -:    4: * @COMPLEXITY: THETA(1)
+        -:    5: */
+function _ZN11IteratorMDOC2ERK3MDO called 5 returned 100% blocks executed 100%
+        5:    6:IteratorMDO::IteratorMDO(const MDO& d) : dict(d){
+        5:    7:	prim();
+        5:    7-block  0
+call    0 returned 5
+        5:    8:}
+        -:    9:/** FIRST ELEMENT OF MDO
+        -:   10: * @COMPLEXITY: THETA(1)
+        -:   11: */
+function _ZN11IteratorMDO4primEv called 10 returned 100% blocks executed 100%
+       10:   12:void IteratorMDO::prim(){
+       10:   13:	i_l=dict.prim;
+       10:   14:    if(i_l!=-1)
+       10:   14-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 4
+        6:   15:        i_m=this->dict.elems[i_l].prim;
+        6:   15-block  0
+       10:   16:}
+        -:   17:/** NEXT ELEMENT TO POINT AT AT.
+        -:   18: * @COMPLEXITY: THETA(1)
+        -:   19: */
+function _ZN11IteratorMDO7urmatorEv called 606 returned 100% blocks executed 70%
+      606:   20:void IteratorMDO::urmator(){
+      606:   21:    if (!this->valid())
+      606:   21-block  0
+call    0 returned 606
+branch  1 taken 0 (fallthrough)
+branch  2 taken 606
+        -:   22:    {
+    #####:   23:        throw exception();
+    %%%%%:   23-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   24:
+        -:   25:    }
+        -:   26:
+      606:   27:    i_m = this->dict.elems[i_l].urm[i_m];
+        -:   28:
+      606:   29:    if (i_m == -1 || i_m == this->dict.elems[i_l].primLiber) // daca ajungem la finalul listei mici
+      606:   29-block  0
+branch  0 taken 203 (fallthrough)
+branch  1 taken 403
+      203:   29-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 203
+        -:   30:    {
+      403:   31:        i_l = this->dict.urm[i_l];
+      403:   32:        if(i_l != -1)
+      403:   32-block  0
+branch  0 taken 400 (fallthrough)
+branch  1 taken 3
+      400:   33:            i_m = this->dict.elems[i_l].prim;
+      400:   33-block  0
+        -:   34:    }
+      606:   35:}
+        -:   36:/** is iterator valid?
+        -:   37: * @COMPLEXITY: THETA(1)
+        -:   38: */
+function _ZNK11IteratorMDO5validEv called 1827 returned 100% blocks executed 92%
+     1827:   39:bool IteratorMDO::valid() const{
+        -:   40:	/* de adaugat */
+     1827:   41:    if(i_l==-1||i_m==-1)
+     1827:   41-block  0
+branch  0 taken 1820 (fallthrough)
+branch  1 taken 7
+     1820:   41-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1820
+        7:   42:	return false;
+        7:   42-block  0
+     1820:   43:    if(i_l>=0&&i_m>=0 &&dict.cp>i_l&&dict.elems[i_l].cp>i_m
+     1820:   43-block  0
+branch  0 taken 1820 (fallthrough)
+branch  1 taken 0
+     1820:   43-block  1
+branch  2 taken 1820 (fallthrough)
+branch  3 taken 0
+     1820:   43-block  2
+branch  4 taken 1820 (fallthrough)
+branch  5 taken 0
+     1820:   43-block  3
+branch  6 taken 1820 (fallthrough)
+branch  7 taken 0
+     1820:   44:                    &&i_l!=dict.primLiber&&i_m!=dict.elems[i_l].primLiber)
+     1820:   44-block  0
+branch  0 taken 1820 (fallthrough)
+branch  1 taken 0
+     1820:   44-block  1
+branch  2 taken 1820 (fallthrough)
+branch  3 taken 0
+     1820:   45:        return true;
+     1820:   45-block  0
+    #####:   46:    return false;
+    %%%%%:   46-block  0
+        -:   47:}
+        -:   48:/** Element found at iterator
+        -:   49: * @COMPLEXITY: THETA(1)
+        -:   50: */
+function _ZNK11IteratorMDO7elementEv called 606 returned 100% blocks executed 57%
+      606:   51:TElem IteratorMDO::element() const{
+      606:   52:    if (!this->valid())
+      606:   52-block  0
+call    0 returned 606
+branch  1 taken 0 (fallthrough)
+branch  2 taken 606
+    #####:   53:        throw exception();
+    %%%%%:   53-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   54:
+      606:   55:    return this->dict.elems[i_l].vals[i_m];
+      606:   55-block  0
+        -:   56:	//return pair <TCheie, TValoare>  (-1, -1);
+        -:   57:}
+        -:   58:
+        -:   59:
