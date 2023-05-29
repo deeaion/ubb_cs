@@ -1,0 +1,55 @@
+# ninja log v5
+1	186	7057816170468034	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+1	186	7057816170468034	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+1	186	7057816170468034	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+1	186	7057816170468034	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+186	267	7057816171625663	CMakeFiles/untitled1.dir/untitled1_autogen/mocs_compilation.cpp.obj	55c0b556692f86b5
+203	283	7057816171780808	CMakeFiles/untitled1.dir/Domain.cpp.obj	41457a43a6d83f7b
+211	293	7057816171875976	CMakeFiles/untitled1.dir/Repository.cpp.obj	5fa2e5d708be696c
+221	301	7057816171981183	CMakeFiles/untitled1.dir/Controlor.cpp.obj	e67468ebc07b27d4
+194	1784	7057816186792232	CMakeFiles/untitled1.dir/main.cpp.obj	1406dbc1fcbfc7c9
+229	2185	7057816190800072	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+2185	2599	7057816192347897	untitled1.exe	5adb9ff6ad81d0f9
+4	103	7057816986727906	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	103	7057816986727906	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+4	103	7057816986727906	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	103	7057816986727906	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+112	2016	7057817005859391	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+106	2033	7057817006031404	CMakeFiles/untitled1.dir/main.cpp.obj	1406dbc1fcbfc7c9
+2033	2441	7057817007545849	untitled1.exe	5adb9ff6ad81d0f9
+5	111	7057817249144439	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	111	7057817249144439	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+5	111	7057817249144439	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	111	7057817249144439	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+115	1697	7057817265012839	CMakeFiles/untitled1.dir/main.cpp.obj	1406dbc1fcbfc7c9
+1697	2087	7057817266369016	untitled1.exe	5adb9ff6ad81d0f9
+5	116	7057818063163082	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	116	7057818063163082	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+5	116	7057818063163082	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	116	7057818063163082	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+120	1727	7057818079281902	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+1728	2111	7057818080630679	untitled1.exe	5adb9ff6ad81d0f9
+4	115	7057819556890489	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	115	7057819556890489	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+4	115	7057819556890489	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	115	7057819556890489	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+127	1898	7057819574706845	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+5	118	7057819818716514	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	118	7057819818716514	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+5	118	7057819818716514	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	118	7057819818716514	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+129	1893	7057819836465253	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+122	1917	7057819836710750	CMakeFiles/untitled1.dir/main.cpp.obj	1406dbc1fcbfc7c9
+5	118	7057819963891631	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	118	7057819963891631	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+5	118	7057819963891631	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+5	118	7057819963891631	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+128	1895	7057819981670599	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+121	1934	7057819982059365	CMakeFiles/untitled1.dir/main.cpp.obj	1406dbc1fcbfc7c9
+1934	2356	7057819983666725	untitled1.exe	5adb9ff6ad81d0f9
+4	101	7057820572966565	untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	101	7057820572966565	untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+4	101	7057820572966565	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/timestamp	ed4ae21dddaf7bcc
+4	101	7057820572966565	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/Graphs Algorithmic/lab_4/Rezolvari/untitled1/cmake-build-debug/untitled1_autogen/mocs_compilation.cpp	ed4ae21dddaf7bcc
+105	1659	7057820588543308	CMakeFiles/untitled1.dir/GUI.cpp.obj	fc98d34fb62ddd60
+1659	2056	7057820589899286	untitled1.exe	5adb9ff6ad81d0f9
