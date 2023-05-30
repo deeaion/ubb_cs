@@ -1,0 +1,5 @@
+C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/CMakeFiles/l10_.dir
+C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/CMakeFiles/l10__autogen_timestamp_deps.dir
+C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/l10_/cmake-build-debug/CMakeFiles/l10__autogen.dir
