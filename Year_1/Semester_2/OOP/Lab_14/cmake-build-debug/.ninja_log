@@ -1,0 +1,100 @@
+# ninja log v5
+4	541	7073176256362445	build.ninja	e069faea1a2219e7
+5	122	7073218337061507	Lab_14_autogen/timestamp	cd53a7e905982bd8
+5	122	7073218337061507	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+5	122	7073218337061507	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+199	1307	7073176093757457	CMakeFiles/Lab_14.dir/repository/FileRepositorySubjects.cpp.obj	bce474f309352cc9
+209	1172	7073176092410120	CMakeFiles/Lab_14.dir/Undo/Undo.cpp.obj	5e737581e03daaf7
+5	122	7073218337061507	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+306	424	7073176084934487	CMakeFiles/Lab_14.dir/Lab_14_autogen/mocs_compilation.cpp.obj	75ae41905b87f516
+218	984	7073176090513105	CMakeFiles/Lab_14.dir/validator/ValidatorSubject.cpp.obj	297221bcd77637b2
+243	2032	7073176101033357	CMakeFiles/Lab_14.dir/tests/Tests.cpp.obj	427e50698d769389
+264	1213	7073176092842160	CMakeFiles/Lab_14.dir/Observer.cpp.obj	cbc102af079582ff
+185	1336	7073176094072865	CMakeFiles/Lab_14.dir/repository/SubjectsRepo.cpp.obj	1831021234b52b55
+321	1381	7073176094530240	CMakeFiles/Lab_14.dir/domain/Subject.cpp.obj	43fe3eab9dc71fd2
+276	1787	7073176098603594	CMakeFiles/Lab_14.dir/ContractRepository/ContractRepo.cpp.obj	5acad94ee7c7e49a
+226	1801	7073176098743713	CMakeFiles/Lab_14.dir/ui/SubjectsUi.cpp.obj	febebcce547392cf
+193	2093	7073176101644431	CMakeFiles/Lab_14.dir/service/SubjectsService.cpp.obj	f9eddff5c0796890
+253	2424	7073176104988618	CMakeFiles/Lab_14.dir/MyListModel.cpp.obj	dac613df7d093870
+126	2337	7073218359189363	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+137	2779	7073218363596312	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2779	3651	7073218369424454	Lab_14.exe	da28ee01774fad1d
+6	118	7073219442625496	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	118	7073219442625496	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	118	7073219442625496	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	118	7073219442625496	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+122	2861	7073219470039438	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2862	3708	7073219475669179	Lab_14.exe	da28ee01774fad1d
+6	121	7073219639640356	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	121	7073219639640356	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	121	7073219639640356	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	121	7073219639640356	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+125	2848	7073219666896287	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2848	3772	7073219673046685	Lab_14.exe	da28ee01774fad1d
+7	127	7073219867957298	Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	127	7073219867957298	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+7	127	7073219867957298	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	127	7073219867957298	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+131	3177	7073219898418260	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3177	4054	7073219904117485	Lab_14.exe	da28ee01774fad1d
+6	120	7073220158591992	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	120	7073220158591992	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	120	7073220158591992	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	120	7073220158591992	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+124	2881	7073220186186894	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2881	3764	7073220192032395	Lab_14.exe	da28ee01774fad1d
+6	128	7073220456761560	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	128	7073220456761560	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	128	7073220456761560	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	128	7073220456761560	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+132	2857	7073220484013019	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2857	3736	7073220489788644	Lab_14.exe	da28ee01774fad1d
+6	117	7073220738606359	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	117	7073220738606359	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	117	7073220738606359	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	117	7073220738606359	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+121	2896	7073220766363093	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+2896	3762	7073220772123850	Lab_14.exe	da28ee01774fad1d
+13	160	7073298725681658	Lab_14_autogen/timestamp	cd53a7e905982bd8
+13	160	7073298725681658	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+13	160	7073298725681658	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+13	160	7073298725681658	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+166	3200	7073298756088816	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+176	3598	7073298760053921	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3598	4570	7073298766631995	Lab_14.exe	da28ee01774fad1d
+7	137	7073300213319659	Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	137	7073300213319659	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+7	137	7073300213319659	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	137	7073300213319659	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+141	3594	7073300247863189	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3594	4553	7073300254409360	Lab_14.exe	da28ee01774fad1d
+7	128	7073301557926981	Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	128	7073301557926981	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+7	128	7073301557926981	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	128	7073301557926981	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+140	2267	7073301579317161	CMakeFiles/Lab_14.dir/MyListModel.cpp.obj	dac613df7d093870
+133	3433	7073301590949822	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+149	3871	7073301595331149	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+9	148	7073301850891744	Lab_14_autogen/timestamp	cd53a7e905982bd8
+9	148	7073301850891744	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+9	148	7073301850891744	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+9	148	7073301850891744	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+161	2266	7073301872062609	CMakeFiles/Lab_14.dir/MyListModel.cpp.obj	dac613df7d093870
+152	3108	7073301880479710	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+170	3675	7073301886151612	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3675	4615	7073301892555428	Lab_14.exe	da28ee01774fad1d
+7	119	7073302217945700	Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	119	7073302217945700	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+7	119	7073302217945700	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+7	119	7073302217945700	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+130	1767	7073302234415592	CMakeFiles/Lab_14.dir/MyListModel.cpp.obj	dac613df7d093870
+123	2645	7073302243182993	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+138	3110	7073302247806600	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3110	4090	7073302254538189	Lab_14.exe	da28ee01774fad1d
+6	130	7073304149184681	Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	130	7073304149184681	Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+6	130	7073304149184681	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/timestamp	cd53a7e905982bd8
+6	130	7073304149184681	C:/Users/Deea/Desktop/DOCUMENTS/UNI/First year/Semester 2/OOP/Labs/Lab_14/cmake-build-debug/Lab_14_autogen/mocs_compilation.cpp	cd53a7e905982bd8
+135	2601	7073304173875226	CMakeFiles/Lab_14.dir/main.cpp.obj	d60372e470ceb03d
+143	3068	7073304178509227	CMakeFiles/Lab_14.dir/APPGUI.cpp.obj	70a6e523a1418035
+3068	4122	7073304185450793	Lab_14.exe	da28ee01774fad1d
