@@ -1,0 +1,19 @@
+# ninja log v5
+2	266	7073949989524514	CMakeFiles/lab_7.dir/IteratorMDO.cpp.obj	4a2f0065c1b07311
+266	408	7073949990803249	lab_7.exe	7e859bcfcf741891
+9	499	7073948565848454	CMakeFiles/lab_7.dir/main.cpp.obj	10ba257275d665fc
+3	449	7073948480776457	CMakeFiles/lab_7.dir/Teste/TestScurt.cpp.obj	a1b453bea01b8615
+3	493	7073947958159657	CMakeFiles/lab_7.dir/MDO.cpp.obj	17cc0e3641de0c55
+5	544	7073949421522476	CMakeFiles/lab_7.dir/Teste/TestExtins.cpp.obj	5ccb0f2d191be3c2
+1	212	7073950904218329	build.ninja	cf74fa4b2866c084
+3	380	7073955417871269	CMakeFiles/lab_7.dir/IteratorMDO.cpp.obj	4a2f0065c1b07311
+30	500	7073955419066456	CMakeFiles/lab_7.dir/Teste/TestScurt.cpp.obj	a1b453bea01b8615
+14	516	7073955419236454	CMakeFiles/lab_7.dir/MDO.cpp.obj	17cc0e3641de0c55
+21	596	7073955420027223	CMakeFiles/lab_7.dir/Teste/TestExtins.cpp.obj	5ccb0f2d191be3c2
+596	750	7073955421483361	lab_7.exe	7e859bcfcf741891
+3	296	7073956613353619	CMakeFiles/lab_7.dir/IteratorMDO.cpp.obj	4a2f0065c1b07311
+296	444	7073956614682861	lab_7.exe	7e859bcfcf741891
+2	306	7073958271229384	CMakeFiles/lab_7.dir/IteratorMDO.cpp.obj	4a2f0065c1b07311
+307	464	7073958272661045	lab_7.exe	7e859bcfcf741891
+4	284	7073958475209514	CMakeFiles/lab_7.dir/IteratorMDO.cpp.obj	4a2f0065c1b07311
+284	425	7073958476520705	lab_7.exe	7e859bcfcf741891
