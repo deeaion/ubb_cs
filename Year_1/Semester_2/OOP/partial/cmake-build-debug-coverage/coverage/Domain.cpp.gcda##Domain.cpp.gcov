@@ -1,0 +1,184 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Domain.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Domain.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Domain.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Domain.h"
+function _Z9splitLineRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEc called 4 returned 100% blocks executed 71%
+        4:    6:vector<string> splitLine(const string &line,char del)
+        -:    7:{
+        4:    8:    vector<string> atr;
+        4:    8-block  0
+call    0 returned 4
+        4:    9:    stringstream stream(line);
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   10:    string obj;
+        4:   10-block  0
+call    0 returned 4
+       20:   11:    while(getline(stream,obj,del))
+       20:   11-block  0
+call    0 returned 20
+branch  1 taken 20 (fallthrough)
+branch  2 taken 0 (throw)
+       20:   11-block  1
+call    3 returned 20
+branch  4 taken 20 (fallthrough)
+branch  5 taken 0 (throw)
+       20:   11-block  2
+branch  6 taken 16
+branch  7 taken 4 (fallthrough)
+        -:   12:    {
+       16:   13:        atr.push_back(obj);
+       16:   13-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   14:    }
+        8:   15:    return atr;
+        4:   15-block  0
+        4:   15-block  1
+        -:   16:
+        4:   17:}
+        4:   17-block  0
+call    0 returned 4
+call    1 returned 4
+    $$$$$:   17-block  1
+call    2 never executed
+    $$$$$:   17-block  2
+call    3 never executed
+    $$$$$:   17-block  3
+call    4 never executed
+function _ZrsRSiR8Cutremur called 6 returned 100% blocks executed 84%
+        6:   18:istream &operator>>(istream &input, Cutremur &cut) {
+        6:   19:    string line;
+        6:   19-block  0
+call    0 returned 6
+        6:   20:    getline(input, line);
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   21:    if (line.empty())
+        6:   21-block  0
+call    0 returned 6
+branch  1 taken 2 (fallthrough)
+branch  2 taken 4
+        2:   22:        return input;
+        2:   22-block  0
+        4:   23:    vector<string> atr = splitLine(line, ',');
+        4:   23-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   24:    cut.set_locatie(atr[0]);
+        4:   24-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   25:    cut.set_data(atr[1]);
+        4:   25-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   26:    cut.set_intensitate(stoi(atr[2]));
+        4:   26-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   26-block  1
+call    4 returned 4
+        4:   27:    cut.set_adancime(stoi(atr[3]));
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   27-block  0
+call    4 returned 4
+        4:   28:    return input;
+        6:   29:}
+call    0 returned 4
+        6:   29-block  0
+call    1 returned 6
+    $$$$$:   29-block  1
+call    2 never executed
+    $$$$$:   29-block  2
+call    3 never executed
+        -:   30:
+function _ZNK8Cutremur5printB5cxx11Ev called 2 returned 100% blocks executed 48%
+        2:   31:string Cutremur::print() const {
+        4:   32:    return locatie+","+data+","+ to_string(intensitate)+","+ to_string(adancime)+"\n";
+        2:   32-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   32-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   32-block  2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   32-block  3
+call   10 returned 2
+branch 11 taken 2 (fallthrough)
+branch 12 taken 0 (throw)
+        2:   32-block  4
+call   13 returned 2
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0 (throw)
+        2:   32-block  5
+call   16 returned 2
+branch 17 taken 2 (fallthrough)
+branch 18 taken 0 (throw)
+        2:   32-block  6
+call   19 returned 2
+branch 20 taken 2 (fallthrough)
+branch 21 taken 0 (throw)
+        2:   32-block  7
+call   22 returned 2
+branch 23 taken 2 (fallthrough)
+branch 24 taken 0 (throw)
+        2:   32-block  8
+call   25 returned 2
+call   26 returned 2
+call   27 returned 2
+call   28 returned 2
+call   29 returned 2
+call   30 returned 2
+call   31 returned 2
+call   32 returned 2
+        2:   32-block  9
+    $$$$$:   32-block 10
+call   33 never executed
+    $$$$$:   32-block 11
+    $$$$$:   32-block 12
+call   34 never executed
+    $$$$$:   32-block 13
+    $$$$$:   32-block 14
+call   35 never executed
+    $$$$$:   32-block 15
+    $$$$$:   32-block 16
+call   36 never executed
+    $$$$$:   32-block 17
+    $$$$$:   32-block 18
+call   37 never executed
+    $$$$$:   32-block 19
+    $$$$$:   32-block 20
+call   38 never executed
+    $$$$$:   32-block 21
+    $$$$$:   32-block 22
+call   39 never executed
+    $$$$$:   32-block 23
+    $$$$$:   32-block 24
+call   40 never executed
+        -:   33:}

@@ -1,0 +1,33 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Controler.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Gui.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Gui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PARTIAL_IONANDREEA_CONTROLER_H
+        -:    6:#define PARTIAL_IONANDREEA_CONTROLER_H
+        -:    7:#include "Repo.h"
+        -:    8:#include "Exceptions.h"
+        -:    9:#include "Validator.h"
+        -:   10:#include <set>
+        -:   11:
+        -:   12:class Controler {
+        -:   13:    Repo &repo;
+        -:   14:    Validator &val;
+        -:   15:public:
+        -:   16:    Controler (Repo &r,Validator &val): repo(r),val(val){};
+        -:   17:    Controler(Controler& o)=delete;
+        -:   18:    void store_Cut(const string &loc,const string &d,int inten,int adancime);
+        -:   19:    vector<Cutremur> filter_loc_int(const string &loc,int inten);
+function _ZN9Controler13get_cutremureEv called 0 returned 0% blocks executed 0%
+    #####:   20:    const vector<Cutremur> get_cutremure(){return repo.get_all();};
+    %%%%%:   20-block  0
+call    0 never executed
+        -:   21:    set<string> get_locatii();
+        -:   22:
+        -:   23:};
+        -:   24:
+        -:   25:
+        -:   26:#endif //PARTIAL_IONANDREEA_CONTROLER_H

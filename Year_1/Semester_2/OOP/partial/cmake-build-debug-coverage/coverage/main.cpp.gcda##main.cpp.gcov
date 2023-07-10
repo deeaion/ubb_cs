@@ -1,0 +1,51 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/main.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <QApplication>
+        -:    2:#include <QPushButton>
+        -:    3:#include "Controler.h"
+        -:    4:#include "Domain.h"
+        -:    5:#include "Repo.h"
+        -:    6:#include "Gui.h"
+        -:    7:#include "Teste.h"
+function main called 1 returned 100% blocks executed 57%
+        1:    8:int main(int argc, char *argv[]) {
+        1:    9:    QApplication a(argc, argv);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   10:    Repo repo{"../cutremure.txt"};
+        1:   10-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   10-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   10-block  2
+    $$$$$:   10-block  3
+        -:   11:    Validator val;
+        1:   12:    Controler ctr{repo,val};
+call    0 returned 1
+        -:   13:    Teste test;
+        1:   14:    test.testAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15:    return 0;
+        -:   16:    Gui gui(ctr);
+        -:   17:    gui.show();
+        -:   18:    return QApplication::exec();
+        1:   19:}
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   19-block  1
+call    2 never executed
+    $$$$$:   19-block  2
+call    3 never executed

@@ -1,0 +1,254 @@
+        -:    0:Source:C:/Qt/6.5.0/mingw_64/include/QtWidgets/qcombobox.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Gui.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Gui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// Copyright (C) 2020 The Qt Company Ltd.
+        -:    2:// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+        -:    3:
+        -:    4:#ifndef QCOMBOBOX_H
+        -:    5:#define QCOMBOBOX_H
+        -:    6:
+        -:    7:#include <QtWidgets/qtwidgetsglobal.h>
+        -:    8:#include <QtWidgets/qwidget.h>
+        -:    9:#include <QtWidgets/qabstractitemdelegate.h>
+        -:   10:#include <QtCore/qabstractitemmodel.h>
+        -:   11:#include <QtCore/qvariant.h>
+        -:   12:#include <QtGui/qvalidator.h>
+        -:   13:
+        -:   14:QT_REQUIRE_CONFIG(combobox);
+        -:   15:
+        -:   16:QT_BEGIN_NAMESPACE
+        -:   17:
+        -:   18:class QAbstractItemView;
+        -:   19:class QLineEdit;
+        -:   20:class QComboBoxPrivate;
+        -:   21:class QCompleter;
+        -:   22:
+        -:   23:class Q_WIDGETS_EXPORT QComboBox : public QWidget
+        -:   24:{
+        -:   25:    Q_OBJECT
+        -:   26:
+        -:   27:    Q_PROPERTY(bool editable READ isEditable WRITE setEditable)
+        -:   28:    Q_PROPERTY(int count READ count)
+        -:   29:    Q_PROPERTY(QString currentText READ currentText WRITE setCurrentText NOTIFY currentTextChanged
+        -:   30:               USER true)
+        -:   31:    Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+        -:   32:    Q_PROPERTY(QVariant currentData READ currentData)
+        -:   33:    Q_PROPERTY(int maxVisibleItems READ maxVisibleItems WRITE setMaxVisibleItems)
+        -:   34:    Q_PROPERTY(int maxCount READ maxCount WRITE setMaxCount)
+        -:   35:    Q_PROPERTY(InsertPolicy insertPolicy READ insertPolicy WRITE setInsertPolicy)
+        -:   36:    Q_PROPERTY(SizeAdjustPolicy sizeAdjustPolicy READ sizeAdjustPolicy WRITE setSizeAdjustPolicy)
+        -:   37:    Q_PROPERTY(int minimumContentsLength READ minimumContentsLength WRITE setMinimumContentsLength)
+        -:   38:    Q_PROPERTY(QSize iconSize READ iconSize WRITE setIconSize)
+        -:   39:    Q_PROPERTY(QString placeholderText READ placeholderText WRITE setPlaceholderText)
+        -:   40:    Q_PROPERTY(bool duplicatesEnabled READ duplicatesEnabled WRITE setDuplicatesEnabled)
+        -:   41:    Q_PROPERTY(bool frame READ hasFrame WRITE setFrame)
+        -:   42:    Q_PROPERTY(int modelColumn READ modelColumn WRITE setModelColumn)
+        -:   43:
+        -:   44:public:
+        -:   45:    explicit QComboBox(QWidget *parent = nullptr);
+        -:   46:    ~QComboBox();
+        -:   47:
+        -:   48:    int maxVisibleItems() const;
+        -:   49:    void setMaxVisibleItems(int maxItems);
+        -:   50:
+        -:   51:    int count() const;
+        -:   52:    void setMaxCount(int max);
+        -:   53:    int maxCount() const;
+        -:   54:
+        -:   55:    bool duplicatesEnabled() const;
+        -:   56:    void setDuplicatesEnabled(bool enable);
+        -:   57:
+        -:   58:    void setFrame(bool);
+        -:   59:    bool hasFrame() const;
+        -:   60:
+        -:   61:    inline int findText(const QString &text,
+        -:   62:                        Qt::MatchFlags flags = static_cast<Qt::MatchFlags>(Qt::MatchExactly|Qt::MatchCaseSensitive)) const
+        -:   63:        { return findData(text, Qt::DisplayRole, flags); }
+        -:   64:    int findData(const QVariant &data, int role = Qt::UserRole,
+        -:   65:                 Qt::MatchFlags flags = static_cast<Qt::MatchFlags>(Qt::MatchExactly|Qt::MatchCaseSensitive)) const;
+        -:   66:
+        -:   67:    enum InsertPolicy {
+        -:   68:        NoInsert,
+        -:   69:        InsertAtTop,
+        -:   70:        InsertAtCurrent,
+        -:   71:        InsertAtBottom,
+        -:   72:        InsertAfterCurrent,
+        -:   73:        InsertBeforeCurrent,
+        -:   74:        InsertAlphabetically
+        -:   75:    };
+        -:   76:    Q_ENUM(InsertPolicy)
+        -:   77:
+        -:   78:    InsertPolicy insertPolicy() const;
+        -:   79:    void setInsertPolicy(InsertPolicy policy);
+        -:   80:
+        -:   81:    enum SizeAdjustPolicy {
+        -:   82:        AdjustToContents,
+        -:   83:        AdjustToContentsOnFirstShow,
+        -:   84:        AdjustToMinimumContentsLengthWithIcon
+        -:   85:    };
+        -:   86:    Q_ENUM(SizeAdjustPolicy)
+        -:   87:
+        -:   88:    SizeAdjustPolicy sizeAdjustPolicy() const;
+        -:   89:    void setSizeAdjustPolicy(SizeAdjustPolicy policy);
+        -:   90:    int minimumContentsLength() const;
+        -:   91:    void setMinimumContentsLength(int characters);
+        -:   92:    QSize iconSize() const;
+        -:   93:    void setIconSize(const QSize &size);
+        -:   94:
+        -:   95:    void setPlaceholderText(const QString &placeholderText);
+        -:   96:    QString placeholderText() const;
+        -:   97:
+        -:   98:    bool isEditable() const;
+        -:   99:    void setEditable(bool editable);
+        -:  100:    void setLineEdit(QLineEdit *edit);
+        -:  101:    QLineEdit *lineEdit() const;
+        -:  102:#ifndef QT_NO_VALIDATOR
+        -:  103:    void setValidator(const QValidator *v);
+        -:  104:    const QValidator *validator() const;
+        -:  105:#endif
+        -:  106:
+        -:  107:#if QT_CONFIG(completer)
+        -:  108:    void setCompleter(QCompleter *c);
+        -:  109:    QCompleter *completer() const;
+        -:  110:#endif
+        -:  111:
+        -:  112:    QAbstractItemDelegate *itemDelegate() const;
+        -:  113:    void setItemDelegate(QAbstractItemDelegate *delegate);
+        -:  114:
+        -:  115:    QAbstractItemModel *model() const;
+        -:  116:    virtual void setModel(QAbstractItemModel *model);
+        -:  117:
+        -:  118:    QModelIndex rootModelIndex() const;
+        -:  119:    void setRootModelIndex(const QModelIndex &index);
+        -:  120:
+        -:  121:    int modelColumn() const;
+        -:  122:    void setModelColumn(int visibleColumn);
+        -:  123:
+        -:  124:    int currentIndex() const;
+        -:  125:    QString currentText() const;
+        -:  126:    QVariant currentData(int role = Qt::UserRole) const;
+        -:  127:
+        -:  128:    QString itemText(int index) const;
+        -:  129:    QIcon itemIcon(int index) const;
+        -:  130:    QVariant itemData(int index, int role = Qt::UserRole) const;
+        -:  131:
+        -:  132:    inline void addItem(const QString &text, const QVariant &userData = QVariant());
+        -:  133:    inline void addItem(const QIcon &icon, const QString &text,
+        -:  134:                        const QVariant &userData = QVariant());
+        -:  135:    inline void addItems(const QStringList &texts)
+        -:  136:        { insertItems(count(), texts); }
+        -:  137:
+        -:  138:    inline void insertItem(int index, const QString &text, const QVariant &userData = QVariant());
+        -:  139:    void insertItem(int index, const QIcon &icon, const QString &text,
+        -:  140:                    const QVariant &userData = QVariant());
+        -:  141:    void insertItems(int index, const QStringList &texts);
+        -:  142:    void insertSeparator(int index);
+        -:  143:
+        -:  144:    void removeItem(int index);
+        -:  145:
+        -:  146:    void setItemText(int index, const QString &text);
+        -:  147:    void setItemIcon(int index, const QIcon &icon);
+        -:  148:    void setItemData(int index, const QVariant &value, int role = Qt::UserRole);
+        -:  149:
+        -:  150:    QAbstractItemView *view() const;
+        -:  151:    void setView(QAbstractItemView *itemView);
+        -:  152:
+        -:  153:    QSize sizeHint() const override;
+        -:  154:    QSize minimumSizeHint() const override;
+        -:  155:
+        -:  156:    virtual void showPopup();
+        -:  157:    virtual void hidePopup();
+        -:  158:
+        -:  159:    bool event(QEvent *event) override;
+        -:  160:    QVariant inputMethodQuery(Qt::InputMethodQuery) const override;
+        -:  161:    Q_INVOKABLE QVariant inputMethodQuery(Qt::InputMethodQuery query, const QVariant &argument) const;
+        -:  162:
+        -:  163:public Q_SLOTS:
+        -:  164:    void clear();
+        -:  165:    void clearEditText();
+        -:  166:    void setEditText(const QString &text);
+        -:  167:    void setCurrentIndex(int index);
+        -:  168:    void setCurrentText(const QString &text);
+        -:  169:
+        -:  170:Q_SIGNALS:
+        -:  171:    void editTextChanged(const QString &);
+        -:  172:    void activated(int index);
+        -:  173:    void textActivated(const QString &);
+        -:  174:    void highlighted(int index);
+        -:  175:    void textHighlighted(const QString &);
+        -:  176:    void currentIndexChanged(int index);
+        -:  177:    void currentTextChanged(const QString &);
+        -:  178:
+        -:  179:protected:
+        -:  180:    void focusInEvent(QFocusEvent *e) override;
+        -:  181:    void focusOutEvent(QFocusEvent *e) override;
+        -:  182:    void changeEvent(QEvent *e) override;
+        -:  183:    void resizeEvent(QResizeEvent *e) override;
+        -:  184:    void paintEvent(QPaintEvent *e) override;
+        -:  185:    void showEvent(QShowEvent *e) override;
+        -:  186:    void hideEvent(QHideEvent *e) override;
+        -:  187:    void mousePressEvent(QMouseEvent *e) override;
+        -:  188:    void mouseReleaseEvent(QMouseEvent *e) override;
+        -:  189:    void keyPressEvent(QKeyEvent *e) override;
+        -:  190:    void keyReleaseEvent(QKeyEvent *e) override;
+        -:  191:#if QT_CONFIG(wheelevent)
+        -:  192:    void wheelEvent(QWheelEvent *e) override;
+        -:  193:#endif
+        -:  194:#ifndef QT_NO_CONTEXTMENU
+        -:  195:    void contextMenuEvent(QContextMenuEvent *e) override;
+        -:  196:#endif // QT_NO_CONTEXTMENU
+        -:  197:    void inputMethodEvent(QInputMethodEvent *) override;
+        -:  198:    virtual void initStyleOption(QStyleOptionComboBox *option) const;
+        -:  199:
+        -:  200:
+        -:  201:protected:
+        -:  202:    QComboBox(QComboBoxPrivate &, QWidget *);
+        -:  203:
+        -:  204:private:
+        -:  205:    Q_DECLARE_PRIVATE(QComboBox)
+        -:  206:    Q_DISABLE_COPY(QComboBox)
+        -:  207:    Q_PRIVATE_SLOT(d_func(), void _q_itemSelected(const QModelIndex &item))
+        -:  208:    Q_PRIVATE_SLOT(d_func(), void _q_emitHighlighted(const QModelIndex &))
+        -:  209:    Q_PRIVATE_SLOT(d_func(), void _q_emitCurrentIndexChanged(const QModelIndex &index))
+        -:  210:    Q_PRIVATE_SLOT(d_func(), void _q_editingFinished())
+        -:  211:    Q_PRIVATE_SLOT(d_func(), void _q_returnPressed())
+        -:  212:    Q_PRIVATE_SLOT(d_func(), void _q_resetButton())
+        -:  213:    Q_PRIVATE_SLOT(d_func(), void _q_dataChanged(const QModelIndex &, const QModelIndex &))
+        -:  214:    Q_PRIVATE_SLOT(d_func(), void _q_updateIndexBeforeChange())
+        -:  215:    Q_PRIVATE_SLOT(d_func(), void _q_rowsInserted(const QModelIndex & parent, int start, int end))
+        -:  216:    Q_PRIVATE_SLOT(d_func(), void _q_rowsRemoved(const QModelIndex & parent, int start, int end))
+        -:  217:    Q_PRIVATE_SLOT(d_func(), void _q_modelDestroyed())
+        -:  218:    Q_PRIVATE_SLOT(d_func(), void _q_modelReset())
+        -:  219:#if QT_CONFIG(completer)
+        -:  220:    Q_PRIVATE_SLOT(d_func(), void _q_completerActivated(const QModelIndex &index))
+        -:  221:#endif
+        -:  222:};
+        -:  223:
+function _ZN9QComboBox7addItemERK7QStringRK8QVariant called 0 returned 0% blocks executed 0%
+    #####:  224:inline void QComboBox::addItem(const QString &atext, const QVariant &auserData)
+    #####:  225:{ insertItem(count(), atext, auserData); }
+    %%%%%:  225-block  0
+call    0 never executed
+call    1 never executed
+        -:  226:inline void QComboBox::addItem(const QIcon &aicon, const QString &atext,
+        -:  227:                               const QVariant &auserData)
+        -:  228:{ insertItem(count(), aicon, atext, auserData); }
+        -:  229:
+function _ZN9QComboBox10insertItemEiRK7QStringRK8QVariant called 0 returned 0% blocks executed 0%
+    #####:  230:inline void QComboBox::insertItem(int aindex, const QString &atext,
+        -:  231:                                  const QVariant &auserData)
+    #####:  232:{ insertItem(aindex, QIcon(), atext, auserData); }
+    %%%%%:  232-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:  232-block  1
+call    4 never executed
+    $$$$$:  232-block  2
+call    5 never executed
+        -:  233:
+        -:  234:QT_END_NAMESPACE
+        -:  235:
+        -:  236:#endif // QCOMBOBOX_H

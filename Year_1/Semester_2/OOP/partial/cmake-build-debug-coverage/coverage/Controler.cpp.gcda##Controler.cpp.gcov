@@ -1,0 +1,139 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Controler.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Controler.h"
+        -:    6:
+function _ZN9Controler9store_CutERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_ii called 2 returned 50% blocks executed 100%
+        2:    7:void Controler::store_Cut(const std::string &loc, const std::string &d, int inten, int adancime) {
+        2:    8:    Cutremur to_add(loc,d,inten,adancime);
+        2:    8-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:    9:    val.validate(to_add);
+        2:    9-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   10:    repo.store(to_add);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        -:   12:
+        2:   13:}
+        1:   13-block  0
+call    0 returned 1
+        1:   13-block  1
+call    1 returned 1
+        -:   14:
+function _ZN9Controler14filter_loc_intERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 3 returned 100% blocks executed 72%
+        3:   15:vector<Cutremur> Controler::filter_loc_int(const std::string &loc, int inten) {
+        3:   16:    vector<Cutremur> filtered;
+        3:   16-block  0
+call    0 returned 3
+        3:   17:    const auto &cutre=repo.get_all();
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   18:    if(loc=="None")
+        3:   18-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   19:        return repo.get_all();
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+function _ZZN9Controler14filter_loc_intERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiENKUlRK8CutremurE_clESA_ called 6 returned 100% blocks executed 100%
+        2:   20:    copy_if(cutre.begin(),cutre.end(), back_inserter(filtered),[loc,inten]
+        2:   20-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   20-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   20-block  2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:   20-block  3
+call   11 returned 2
+    $$$$$:   20-block  4
+call   12 never executed
+    $$$$$:   20-block  5
+        1:   21:    (const Cutremur &cut){
+        -:   22:
+        6:   23:        if(cut.get_locatie()==loc)
+        6:   23-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 1 (fallthrough)
+branch  3 taken 5
+        1:   24:            if(cut.get_intensitate()>=inten)
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   25:                return true;
+        1:   25-block  0
+        5:   26:        return false;
+        5:   26-block  0
+        -:   27:    });
+        2:   28:    return filtered;
+call    0 returned 2
+        3:   29:}
+        3:   29-block  0
+call    0 returned 3
+call    1 returned 3
+    $$$$$:   29-block  1
+call    2 never executed
+    $$$$$:   29-block  2
+call    3 never executed
+        -:   30:
+function _ZN9Controler11get_locatiiB5cxx11Ev called 1 returned 100% blocks executed 78%
+        1:   31:set<string> Controler::get_locatii() {
+        1:   32:    set<string> locatii;
+        1:   32-block  0
+call    0 returned 1
+        4:   33:    for(const auto &cut:repo.get_all())
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  0
+call    3 returned 1
+call    4 returned 1
+        3:   33-block  1
+call    5 returned 3
+        4:   33-block  2
+call    6 returned 4
+branch  7 taken 3
+branch  8 taken 1 (fallthrough)
+        -:   34:    {
+        3:   35:        locatii.insert(cut.get_locatie());
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   35-block  0
+call    4 returned 3
+        1:   36:    }
+        1:   36-block  0
+call    0 returned 1
+    $$$$$:   36-block  1
+call    1 never executed
+        1:   37:    return locatii;}
+        1:   37-block  0
+    $$$$$:   37-block  1
+call    0 never executed

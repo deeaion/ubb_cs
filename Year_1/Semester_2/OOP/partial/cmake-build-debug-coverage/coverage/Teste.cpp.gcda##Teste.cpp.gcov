@@ -1,0 +1,526 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Teste.cpp
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Teste.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Teste.h"
+        -:    6:#include "Controler.h"
+        -:    7:#include "Domain.h"
+        -:    8:#include "Repo.h"
+        -:    9:#include "Exceptions.h"
+        -:   10:#include <cassert>
+function _ZN5Teste7testAllEv called 1 returned 100% blocks executed 52%
+        1:   11:void Teste::testAll() {
+        2:   12:    Repo repo{"../test.txt"};
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+        -:   13:    Validator val;
+        1:   14:    Controler ctr{repo,val};
+call    0 returned 1
+        3:   15:    for(const auto &cut:repo.get_all())
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+call    4 returned 1
+        2:   15-block  1
+call    5 returned 2
+        3:   15-block  2
+call    6 returned 3
+branch  7 taken 2
+branch  8 taken 1 (fallthrough)
+        -:   16:    {
+        2:   17:        cout<<cut.print();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   17-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   17-block  1
+call    6 returned 2
+call    7 returned 2
+    $$$$$:   17-block  2
+call    8 never executed
+    $$$$$:   17-block  3
+        1:   18:    }
+        1:   18-block  0
+call    0 returned 1
+    $$$$$:   18-block  1
+call    1 never executed
+       1*:   19:    assert(repo.get_all().size()==2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   19-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   19-block  2
+    %%%%%:   19-block  3
+        1:   19-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   19-block  5
+call   11 returned 1
+    $$$$$:   19-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   19-block  7
+call   14 never executed
+    $$$$$:   19-block  8
+        1:   20:    Cutremur c1=repo.get_all()[0];
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   20-block  2
+       1*:   21:    assert(c1.get_locatie()=="Here");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   21-block  0
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        1:   21-block  1
+    %%%%%:   21-block  2
+       1*:   22:    assert(c1.get_data()=="23.02.2022");
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:   22-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        1:   22-block  2
+    %%%%%:   22-block  3
+       1*:   23:    assert(c1.get_intensitate()==8);
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   23-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   23-block  2
+    %%%%%:   23-block  3
+       1*:   24:    assert(c1.get_adancime()==9);
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   24-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        1:   24-block  2
+    %%%%%:   24-block  3
+        1:   25:    ctr.store_Cut("Nou","23.01.2022",7,8);
+        1:   25-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   25-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   25-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   25-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   25-block  4
+call   15 never executed
+    $$$$$:   25-block  5
+    $$$$$:   25-block  6
+call   16 never executed
+    $$$$$:   25-block  7
+    $$$$$:   25-block  8
+call   17 never executed
+    $$$$$:   25-block  9
+    $$$$$:   25-block 10
+call   18 never executed
+    $$$$$:   25-block 11
+       1*:   26:    assert(ctr.get_cutremure().size()==3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   26-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   26-block  2
+    %%%%%:   26-block  3
+        1:   26-block  4
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   26-block  5
+call   11 returned 1
+    $$$$$:   26-block  6
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   26-block  7
+call   14 never executed
+    $$$$$:   26-block  8
+        -:   27:    try {
+       5*:   28:        ctr.store_Cut("Nou","23.01.2022",-1,-1);
+        1:   28-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   28-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   28-block  2
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1 (throw)
+    %%%%%:   28-block  3
+call   11 never executed
+call   12 never executed
+call   13 never executed
+call   14 never executed
+        1:   28-block  4
+call   15 returned 1
+        1:   28-block  5
+        1:   28-block  6
+call   16 returned 1
+        1:   28-block  7
+        1:   28-block  8
+call   17 returned 1
+        1:   28-block  9
+        1:   28-block 10
+call   18 returned 1
+        1:   28-block 11
+        -:   29:    }
+        1:   30:    catch (ValidException &m)
+        1:   30-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   30-block  1
+call    2 returned 1
+        -:   31:    {
+        1:   32:        assert(m.get_message()=="Adancime invalida\nIntensitate invalida\n");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    $$$$$:   32-block  0
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+        1:   32-block  1
+    $$$$$:   32-block  2
+        1:   33:    }
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   33-block  1
+call    3 never executed
+       1*:   34:    assert(ctr.filter_loc_int("Here",8).size()==1);
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   34-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   34-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   34-block  3
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+        1:   34-block  4
+    %%%%%:   34-block  5
+        1:   34-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   34-block  7
+call   15 returned 1
+        1:   34-block  8
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   34-block  9
+call   18 returned 1
+        1:   34-block 10
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   34-block 11
+call   21 returned 1
+    $$$$$:   34-block 12
+branch 22 never executed
+branch 23 never executed
+    $$$$$:   34-block 13
+call   24 never executed
+    $$$$$:   34-block 14
+    $$$$$:   34-block 15
+branch 25 never executed
+branch 26 never executed
+    $$$$$:   34-block 16
+call   27 never executed
+    $$$$$:   34-block 17
+    $$$$$:   34-block 18
+branch 28 never executed
+branch 29 never executed
+    $$$$$:   34-block 19
+call   30 never executed
+    $$$$$:   34-block 20
+       1*:   35:    assert(ctr.filter_loc_int("dsda",1).size()==0);
+        1:   35-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   35-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   35-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   35-block  3
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+        1:   35-block  4
+    %%%%%:   35-block  5
+        1:   35-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:   35-block  7
+call   15 returned 1
+        1:   35-block  8
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:   35-block  9
+call   18 returned 1
+        1:   35-block 10
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:   35-block 11
+call   21 returned 1
+    $$$$$:   35-block 12
+branch 22 never executed
+branch 23 never executed
+    $$$$$:   35-block 13
+call   24 never executed
+    $$$$$:   35-block 14
+    $$$$$:   35-block 15
+branch 25 never executed
+branch 26 never executed
+    $$$$$:   35-block 16
+call   27 never executed
+    $$$$$:   35-block 17
+    $$$$$:   35-block 18
+branch 28 never executed
+branch 29 never executed
+    $$$$$:   35-block 19
+call   30 never executed
+    $$$$$:   35-block 20
+       1*:   36:    assert(ctr.get_locatii().size()==3);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   36-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   36-block  3
+    %%%%%:   36-block  4
+        1:   36-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   36-block  6
+call   11 returned 1
+    $$$$$:   36-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   36-block  8
+call   14 never executed
+    $$$$$:   36-block  9
+        2:   37:    Cutremur c2{"HEre","fef",2,10};
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   37-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+    $$$$$:   37-block  3
+    $$$$$:   37-block  4
+    $$$$$:   37-block  5
+    $$$$$:   37-block  6
+        1:   38:    repo.store(c2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   39:    assert(repo.get_all().size()==4);
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   39-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+        1:   39-block  3
+    %%%%%:   39-block  4
+        1:   39-block  5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:   39-block  6
+call   11 returned 1
+    $$$$$:   39-block  7
+branch 12 never executed
+branch 13 never executed
+    $$$$$:   39-block  8
+call   14 never executed
+    $$$$$:   39-block  9
+       1*:   40:    assert(ctr.filter_loc_int("None",9).size()==ctr.get_cutremure().size());
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   40-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   40-block  2
+call    7 returned 1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   40-block  3
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   40-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+        1:   40-block  5
+    %%%%%:   40-block  6
+        1:   40-block  7
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0
+        1:   40-block  8
+call   19 returned 1
+        1:   40-block  9
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:   40-block 10
+call   22 returned 1
+        1:   40-block 11
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0
+        1:   40-block 12
+call   25 returned 1
+        1:   40-block 13
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0
+        1:   40-block 14
+call   28 returned 1
+    $$$$$:   40-block 15
+branch 29 never executed
+branch 30 never executed
+    $$$$$:   40-block 16
+call   31 never executed
+    $$$$$:   40-block 17
+    $$$$$:   40-block 18
+branch 32 never executed
+branch 33 never executed
+    $$$$$:   40-block 19
+call   34 never executed
+    $$$$$:   40-block 20
+    $$$$$:   40-block 21
+branch 35 never executed
+branch 36 never executed
+    $$$$$:   40-block 22
+call   37 never executed
+    $$$$$:   40-block 23
+    $$$$$:   40-block 24
+branch 38 never executed
+branch 39 never executed
+    $$$$$:   40-block 25
+call   40 never executed
+    $$$$$:   40-block 26
+        1:   41:}
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   41-block  1
+call    3 never executed
+    $$$$$:   41-block  2
+call    4 never executed
+    $$$$$:   41-block  3
+call    5 never executed

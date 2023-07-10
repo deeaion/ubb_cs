@@ -1,0 +1,31 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Exceptions.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PARTIAL_IONANDREEA_EXCEPTIONS_H
+        -:    6:#define PARTIAL_IONANDREEA_EXCEPTIONS_H
+        -:    7:#include <iostream>
+        -:    8:#include <exception>
+        -:    9:using namespace std;
+        -:   10:class ValidException : public exception{
+        -:   11:    string message;
+        -:   12:public:
+function _ZN14ValidExceptionC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 80%
+        1:   13:    ValidException(const string & m):message(m){};
+        1:   13-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  1
+    $$$$$:   13-block  2
+call    4 never executed
+        -:   14:    const string &get_message(){return message;};
+        -:   15:};
+        -:   16:
+        -:   17:
+        -:   18:#endif //PARTIAL_IONANDREEA_EXCEPTIONS_H

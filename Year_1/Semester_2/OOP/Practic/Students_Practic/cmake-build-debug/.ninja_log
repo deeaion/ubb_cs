@@ -1,0 +1,19 @@
+# ninja log v5
+5	106	7088764150709928	IonAndreeaMarina_autogen/timestamp	fd96b72ad411f79d
+5	106	7088764150709928	IonAndreeaMarina_autogen/mocs_compilation.cpp	fd96b72ad411f79d
+888	1525	7088764161991718	IonAndreeaMarina.exe	c106805179807612
+2	154	7106038302073953	Students_Practic_autogen/timestamp	f876cc7f52099413
+2	154	7106038302073953	Students_Practic_autogen/mocs_compilation.cpp	f876cc7f52099413
+2	154	7106038302073953	C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/Students_Practic_autogen/timestamp	f876cc7f52099413
+2	154	7106038302073953	C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/Students_Practic_autogen/mocs_compilation.cpp	f876cc7f52099413
+155	227	7106038302960186	CMakeFiles/Students_Practic.dir/Students_Practic_autogen/mocs_compilation.cpp.obj	96ce104f7c3cb1e2
+208	683	7106038307636566	CMakeFiles/Students_Practic.dir/Exceptii.cpp.obj	dde59942cf003bfb
+185	757	7106038308383015	CMakeFiles/Students_Practic.dir/Undo.cpp.obj	d4511df92dbc77f9
+165	860	7106038309397893	CMakeFiles/Students_Practic.dir/Domain.cpp.obj	5e1d6e4121eaed08
+160	876	7106038309557896	CMakeFiles/Students_Practic.dir/Repo.cpp.obj	5c06d58e9e092ac4
+201	965	7106038310459947	CMakeFiles/Students_Practic.dir/Teste.cpp.obj	7181a914ba6935b1
+179	1274	7106038313543740	CMakeFiles/Students_Practic.dir/Service.cpp.obj	b7efe5fa3f0c167e
+192	1783	7106038318658161	CMakeFiles/Students_Practic.dir/MyTable.cpp.obj	df671b1d2b652fa0
+171	2223	7106038323047369	CMakeFiles/Students_Practic.dir/main.cpp.obj	36dee1e7e6fdb2e9
+217	2361	7106038324433126	CMakeFiles/Students_Practic.dir/Ui.cpp.obj	2fdf165eb792f7b
+2362	3017	7106038327793082	Students_Practic.exe	cc9edeced4116689

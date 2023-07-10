@@ -1,0 +1,73 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Validator.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Controler.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PARTIAL_IONANDREEA_VALIDATOR_H
+        -:    6:#define PARTIAL_IONANDREEA_VALIDATOR_H
+        -:    7:#include "Exceptions.h"
+        -:    8:#include "Domain.h"
+        -:    9:
+        -:   10:class Validator {
+        -:   11:public:
+function _ZN9Validator8validateERK8Cutremur called 2 returned 50% blocks executed 92%
+        2:   12:    void validate(const Cutremur &cut)
+        -:   13:    {
+        2:   14:        string errors;
+        2:   14-block  0
+call    0 returned 2
+        2:   15:        if(cut.get_adancime()<0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   16:            errors+="Adancime invalida\n";
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   17:        if(cut.get_intensitate()<0||cut.get_intensitate()>10)
+        2:   17-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+        1:   17-block  2
+        1:   17-block  3
+        2:   17-block  4
+branch  6 taken 1 (fallthrough)
+branch  7 taken 1
+        1:   18:            errors+="Intensitate invalida\n";
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   19:        if(!errors.empty())
+        2:   19-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   20:            throw ValidException(errors);
+        1:   20-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   20-block  1
+call    4 returned 1
+    $$$$$:   20-block  2
+call    5 never executed
+        2:   21:    }
+        1:   21-block  0
+call    0 returned 1
+        1:   21-block  1
+call    1 returned 1
+        -:   22:};
+        -:   23:
+        -:   24:
+        -:   25:#endif //PARTIAL_IONANDREEA_VALIDATOR_H

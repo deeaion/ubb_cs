@@ -1,0 +1,37 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Repo.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PARTIAL_IONANDREEA_REPO_H
+        -:    6:#define PARTIAL_IONANDREEA_REPO_H
+        -:    7:#include "Domain.h"
+        -:    8:#include <fstream>
+        -:    9:class Repo {
+        -:   10:    string path;
+        -:   11:    vector<Cutremur> cutremure;
+        -:   12:    void loadRepo();
+        -:   13:public:
+function _ZN4RepoC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 62%
+        2:   14:    Repo(const string &p):path(p){loadRepo();};
+        2:   14-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   14-block  1
+    $$$$$:   14-block  2
+call    5 never executed
+    $$$$$:   14-block  3
+call    6 never executed
+        -:   15:    Repo(Repo &other)=delete;
+        -:   16:    void store(const Cutremur &cut);
+        -:   17:    const vector<Cutremur> get_all(){return cutremure;}
+        -:   18:};
+        -:   19:
+        -:   20:
+        -:   21:#endif //PARTIAL_IONANDREEA_REPO_H

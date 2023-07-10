@@ -1,0 +1,3 @@
+C:/Users/Deea/Desktop/Uni/github/uni_homeworks/Year_1/Semester_2/OOP/lab_01/17/cmake-build-debug/CMakeFiles/17.dir
+C:/Users/Deea/Desktop/Uni/github/uni_homeworks/Year_1/Semester_2/OOP/lab_01/17/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Deea/Desktop/Uni/github/uni_homeworks/Year_1/Semester_2/OOP/lab_01/17/cmake-build-debug/CMakeFiles/rebuild_cache.dir

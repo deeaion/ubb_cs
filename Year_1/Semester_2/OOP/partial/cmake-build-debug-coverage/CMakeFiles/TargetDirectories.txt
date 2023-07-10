@@ -1,0 +1,5 @@
+C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/CMakeFiles/partial.dir
+C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/CMakeFiles/partial_autogen_timestamp_deps.dir
+C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/CMakeFiles/partial_autogen.dir

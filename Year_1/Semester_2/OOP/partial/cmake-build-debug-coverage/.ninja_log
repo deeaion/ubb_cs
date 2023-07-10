@@ -1,0 +1,18 @@
+# ninja log v5
+2151	2701	7067008292738972	Partial_IonAndreea.exe	c624a5b1c73d20cc
+6	129	7067008269795070	Partial_IonAndreea_autogen/timestamp	6804c2991fa9fde3
+6	129	7067008269795070	Partial_IonAndreea_autogen/mocs_compilation.cpp	6804c2991fa9fde3
+8	176	7107023513140947	partial_autogen/timestamp	1f5e9eefb3bc56d1
+8	176	7107023513140947	partial_autogen/mocs_compilation.cpp	1f5e9eefb3bc56d1
+8	176	7107023513140947	C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/partial_autogen/timestamp	1f5e9eefb3bc56d1
+8	176	7107023513140947	C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage/partial_autogen/mocs_compilation.cpp	1f5e9eefb3bc56d1
+179	248	7107023514179882	CMakeFiles/partial.dir/partial_autogen/mocs_compilation.cpp.obj	b53bcc4691303e9b
+220	1157	7107023523280057	CMakeFiles/partial.dir/Exceptions.cpp.obj	460c0d732168506c
+237	1246	7107023524172052	CMakeFiles/partial.dir/Validator.cpp.obj	94c0596d2a02aeff
+204	1412	7107023525805917	CMakeFiles/partial.dir/Repo.cpp.obj	c6dd017017ccc6c1
+185	1429	7107023525991314	CMakeFiles/partial.dir/Domain.cpp.obj	4a2fe64f9fc0724a
+228	1484	7107023526527587	CMakeFiles/partial.dir/Teste.cpp.obj	a4c85effe252f45d
+191	1561	7107023527317906	CMakeFiles/partial.dir/Controler.cpp.obj	c93a77ed84808b29
+197	3015	7107023541783890	CMakeFiles/partial.dir/main.cpp.obj	c7e13cda02f25cc2
+211	3104	7107023542730136	CMakeFiles/partial.dir/Gui.cpp.obj	d8aa68274be4a1a9
+3104	3673	7107023545622953	partial.exe	226a493576d64c9

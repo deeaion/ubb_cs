@@ -1,0 +1,65 @@
+        -:    0:Source:C:/Users/Deea/Desktop/Partial_IonAndreea/Domain.h
+        -:    0:Graph:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Domain.cpp.gcno
+        -:    0:Data:C:\Users\Deea\Desktop\Partial_IonAndreea\cmake-build-debug-coverage\CMakeFiles\Partial_IonAndreea.dir\Domain.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Deea on 5/23/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PARTIAL_IONANDREEA_DOMAIN_H
+        -:    6:#define PARTIAL_IONANDREEA_DOMAIN_H
+        -:    7:#include<iostream>
+        -:    8:using namespace std;
+        -:    9:#include <sstream>
+        -:   10:#include <vector>
+        -:   11:vector<string> splitLine(const string &line,char del);
+        -:   12:class Cutremur{
+        -:   13:    string locatie;
+        -:   14:    string data;
+        -:   15:    int intensitate;
+        -:   16:    int adancime;
+        -:   17:public:
+        -:   18:    //constructor
+        -:   19:    Cutremur()
+        -:   20:    {
+        -:   21:        locatie="";
+        -:   22:        data="";
+        -:   23:        intensitate=-1;
+        -:   24:        adancime=0;
+        -:   25:    }
+        -:   26:
+        -:   27:    Cutremur(const string &l,const string &d,int i,int a):locatie(l),data(d),intensitate(i),adancime(a){};
+        -:   28:    //copy constructor
+        -:   29:    Cutremur(const Cutremur&other)
+        -:   30:    {
+        -:   31:        locatie=other.locatie;
+        -:   32:        data=other.data;
+        -:   33:        intensitate=other.intensitate;
+        -:   34:        adancime=other.adancime;
+        -:   35:    }
+        -:   36:    Cutremur &operator=(const Cutremur &other)=default;
+        -:   37:    //getters
+        -:   38:    const string&get_locatie() const{return locatie;};
+        -:   39:    const string&get_data() const{return data;};
+        -:   40:    int get_intensitate() const{return intensitate;};
+        -:   41:    int get_adancime() const{return adancime;}
+        -:   42:    //setters
+function _ZN8Cutremur11set_locatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:   43:    void set_locatie(const string &l){locatie=l;};
+        4:   43-block  0
+call    0 returned 4
+function _ZN8Cutremur8set_dataERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:   44:    void set_data(const string &d){data=d;};
+        4:   44-block  0
+call    0 returned 4
+function _ZN8Cutremur15set_intensitateEi called 4 returned 100% blocks executed 100%
+        4:   45:    void set_intensitate(int i){intensitate=i;};
+function _ZN8Cutremur12set_adancimeEi called 4 returned 100% blocks executed 100%
+        4:   46:    void set_adancime(int a){adancime=a;};
+        -:   47:    friend istream &operator>>(istream &input, Cutremur &cut);
+        -:   48:    string print() const;
+        -:   49:
+        -:   50:};
+        -:   51:
+        -:   52:
+        -:   53:#endif //PARTIAL_IONANDREEA_DOMAIN_H

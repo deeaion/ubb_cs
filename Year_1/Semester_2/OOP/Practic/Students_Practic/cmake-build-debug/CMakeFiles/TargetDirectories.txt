@@ -1,0 +1,5 @@
+C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/CMakeFiles/Students_Practic.dir
+C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/CMakeFiles/Students_Practic_autogen_timestamp_deps.dir
+C:/Users/Deea/Desktop/DOCUMENTS/Students_Practic/cmake-build-debug/CMakeFiles/Students_Practic_autogen.dir

@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "partial",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "partial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-partial-Debug-fa52af08cefb129d67fd.json",
+					"name" : "partial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "partial_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-partial_autogen-Debug-185bed774511d05f9bd6.json",
+					"name" : "partial_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "partial_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-partial_autogen_timestamp_deps-Debug-77d94612357c178c96cf.json",
+					"name" : "partial_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial/cmake-build-debug-coverage",
+		"source" : "C:/Users/Deea/Desktop/Uni/First year/Semester 2/OOP/Partial/partial"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
