@@ -1,0 +1,1 @@
+10.Creati doua procese A si B. A genereaza un numar aleator intre 50 si 200. Daca este par, il trimite procesului B, daca nu, il incrementeaza si apoi il trimite procesului B. B imparte numarul la 2 si il trimite inapoi procesului A. Procesele repeta pana cand m este mai mic decat 5. Procesele vor afisa valoarea lui n la fiecare step.

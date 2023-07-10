@@ -1,0 +1,15 @@
+Scrieti 2 programe c, A si B. Programul A va citi un numar intreg de la
+tastatura si va scrie intr-un fifo toti divizorii numarului citit. Programul
+B va crea 2 procese P1 si P2, P1 va citi divizorii din fifo-ul mentionat
+anterior si va calcula suma lor. Suma respectiva va fi transmis printr-un
+pipe procesului P2 care o va afisa pe ecran.
+Numele fifo-ului va fi dat ca argument in linia de comanda in ambele
+programe. Programul A va creea fifo-ul si programul B va sterge fifo-ul. 
+
+
+A-> citeste un nr si scrie in fifo divizorii
+B-> P1,P2
+	P1-> citeste div
+	Calculeaza suma
+	P2 afiseasa
+

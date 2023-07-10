@@ -1,0 +1,26 @@
+	
+Write 2 c programs, A and B. A will create 2 prcesses p1 and p2. p1 will
+have provided (by any means (necessary)) a file containing only numbers (as
+many as you like) then it will read from the standard input (keyboard)
+a number (n). p1 will send the first n numbers from the file to p2 via pipe.
+p2 will send the sum of al the odd numbers received to B, via fifo.
+B will display on the standard output (the console) the number received.
+The source file must be compiled using gcc with -Wall -g options WITHOUT WARNINGS OR SYNTAX ERRORS!!!
+Memory leacks and zombie processes are not allowed.
+
+
+
+A-> -pipe and fifo
+	-gets file name
+	-tries to open it
+	-creates fifo
+	-and then creates pipe!
+	-and then fork
+	in p1: reads the first n numbers from the file and writes them to p2
+		-> cat timp n>0 si not at feof(file). Also sends first n and how many numbers were sent
+	in p2: sends sum of odd numbers to B
+		 -> cat timp n-leftover
+B-> only prints out
+
+		
+	

@@ -1,0 +1,18 @@
+Scrieti 2 programe c, A si B. Programul A va citi doua numare intregi
+de la tastatura si va scrie intr-un fifo cel mai mic multiplu comun al
+acestora. Programul B va creea 2 procese P1 si P2, P1 va citi multiplul
+din fifo-ul mentionat anterior si va calcula divizorii acestuia.
+Divizorii vor fi transmis printr-un pipe procesului P2 care ii va afisa
+pe ecran.
+Numele fifo-ului va fi dat ca argument in linia de comanda in ambele
+programe. Programul A va creea fifo-ul si programul B va sterge fifo-ul.
+Ambele programe terbuie compilate cu gcc -Wall -g fara erori sau warninguri.
+Ambele programe trebuie sa ruleze fara memory leaks, erori de context sau
+procese zombie.
+
+
+A-> citeste 2 nr tastatura si trimite cmmdc prin fifo la B
+	creeaza fifo
+B-> in p1 : citeste multiplu si calculeaza divizorii .
+	in p2: printeaza divizorii
+

@@ -1,0 +1,15 @@
+Write 2 c programs, A and B. A will create 2 prcesses p1 and p2. p1 will
+read from the standard input (keyboard) the path to a file f, f can have any number of characters any number of times.
+p1 will send to p2, via pipe, the path.
+p2 will send to B, via fifo, 5 numbers, each representing the frequency of a large
+vowel (A,E,I,O,U) found in the file. B will display the numbers on the
+standard output (the console). 
+
+
+A-> p1, p2
+	P1: filepath
+	P2: get the path through pipe. 
+P2-> B:  via fifo gets nr of A 
+		       nr of E
+		       nr of I
+		       nr of U
