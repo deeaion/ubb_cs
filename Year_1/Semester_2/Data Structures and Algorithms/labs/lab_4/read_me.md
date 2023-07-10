@@ -1,0 +1,3 @@
+<h4>Cerinta</h4>
+<h5>Să se implementeze în C++ un anumit container de date (TAD) folosind o anumită reprezentare (indicată) și o listă înlănțuită (LSI – lista simplu înlănțuită, LDI – lista dublu înlănțuită) ca structură de date, cu reprezentarea înlănțuirilor pe <em>tablou dinamic.</em></h5>
+    TAD MultiDictionar ordonat - reprezentare sub forma unei LSI de chei distincte ordonate în raport cu o relație de ordine  între chei. Fiecare cheie va memora o LSI cu valorile asociate cheii.

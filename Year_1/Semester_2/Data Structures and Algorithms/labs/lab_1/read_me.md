@@ -1,0 +1,3 @@
+<h4>Cerinta</h4>
+<h5>Să se implementeze în C++ un anumit container de date (TAD) folosind o anumită reprezentare (indicată) și un vector dinamic ca structură de date. Se va folosi implementare proprie pentru vectorul dinamic.</h5>
+    8. TAD Colecție cu elemente de tip comparabil (TElement=TComparabil)– reprezentare folosind un vector dinamic de perechi de forma (element, frecvență) ordonate în raport cu relația de ordine R=<= între elemente.
