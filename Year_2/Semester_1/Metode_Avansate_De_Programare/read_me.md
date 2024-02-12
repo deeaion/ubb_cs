@@ -36,7 +36,7 @@ During the third semester of UNI, I've worked on the following projects:
 
 ### Week 14 ###
 
-🧾 [Household Expenses App]()
+🧾 [Household Expenses App](https://github.com/deeaion/HouseHoldExpenses-C-)
 
 **Short description:**
 
