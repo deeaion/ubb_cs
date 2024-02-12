@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Server6.dir/main.c.o -o Server6 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Server7.dir/main.c.o -o Server7 

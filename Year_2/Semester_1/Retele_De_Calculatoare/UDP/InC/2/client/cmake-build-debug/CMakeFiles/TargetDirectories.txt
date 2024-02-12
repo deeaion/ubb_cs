@@ -1,0 +1,3 @@
+C:/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-debug/CMakeFiles/client.dir
+C:/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-debug/CMakeFiles/rebuild_cache.dir

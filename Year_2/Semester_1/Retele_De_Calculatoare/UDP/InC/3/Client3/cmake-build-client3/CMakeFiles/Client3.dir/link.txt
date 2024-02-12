@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/Client3.dir/main.c.o -o Client3 

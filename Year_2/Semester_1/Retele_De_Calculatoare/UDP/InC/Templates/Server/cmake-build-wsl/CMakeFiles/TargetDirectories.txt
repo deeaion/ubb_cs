@@ -1,0 +1,3 @@
+/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/Templates/Server/cmake-build-wsl/CMakeFiles/Server.dir
+/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/Templates/Server/cmake-build-wsl/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/Templates/Server/cmake-build-wsl/CMakeFiles/rebuild_cache.dir

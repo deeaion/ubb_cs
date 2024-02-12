@@ -1,0 +1,4 @@
+C:\Windows\system32\wsl.exe --distribution Ubuntu --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd '/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-wsl-mode' && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S '/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client' -B '/mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-wsl-mode'"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/Deea/Desktop/Uni/Second year/Semester 1/Computer networks/Labs/UDP/InC/2/client/cmake-build-wsl-mode
