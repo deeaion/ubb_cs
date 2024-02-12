@@ -13,7 +13,7 @@ During the third semester of UNI, I've worked on the following projects:
 
 ### Week 2 ###
 
-✉ [Message Task]()
+✉ [Message Task](https://github.com/deeaion/ubb_cs/tree/main/Year_2/Semester_1/Metode_Avansate_De_Programare/Lab_2)
 
 **Short description:**
 
