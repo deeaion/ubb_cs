@@ -4,7 +4,7 @@ During the third semester of UNI, I've worked on the following projects:
 
 ### Week 1 ###
 
-➕➖ [Arithmetic Expression Calculator]()
+➕➖ [Arithmetic Expression Calculator](https://github.com/deeaion/ubb_cs/tree/main/Year_2/Semester_1/Metode_Avansate_De_Programare/Lab_1/untitled)
 
 **Short description:**
 
