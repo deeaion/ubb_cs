@@ -22,7 +22,7 @@ During the third semester of UNI, I've worked on the following projects:
 
 ### Week 3-13 ###
 
-👥 [Social Network App]()
+👥 [Social Network App](https://github.com/deeaion/SocialMediaNetwork)
 
 **Short description:**
 
@@ -30,7 +30,7 @@ During the third semester of UNI, I've worked on the following projects:
 - Made continuous changes to the project each week.
 - Created to learn JavaFX and improve Java knowledge.
 - Multiple projects created during the semester, sometimes with fundamental changes, especially when working with a database.
-- [SocialNetworkFinal]() is the full project.
+- [SocialNetworkFinal](https://github.com/deeaion/SocialMediaNetwork/tree/main/Laborator%2011%20-%2013) is the full project.
 - There are still areas for improvement.
 - Explored JavaFX features.
 
