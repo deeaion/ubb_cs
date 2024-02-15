@@ -1,0 +1,58 @@
+B
+is_empty([]).
+
+create(I, VPos, [], V, [V]) :-
+    I =:= VPos,
+    !.
+create(_, _, List, _, []):-
+    is_empty(List).
+
+
+create(I, VPos, List, V, [V|Result]) :-
+    I =:= VPos,
+    NewVPos is VPos * 2,
+    create(I, NewVPos, List, V, Result).
+
+create(I, VPos, [H|T], V, [H|Result]) :-
+    I =\= VPos,
+    NewI is I + 1,
+    create(NewI, VPos, T, V, Result).
+
+insertValue([], _, []).
+
+insertValue(List, V, Result) :-
+    create(0, 1, List, V, Result).
+
+
+
+
+
+
+
+
+A
+
+
+is_empty([]).
+%gcd(_,_,_).%A-a,B-b,R-Result
+gcd(A,0,A):-!.
+gcd(A,B,R):-
+    NewB is A mod B,
+    gcd(B,NewB,R).
+%lcm(A,0,A).
+%lcm(A,A,0).
+lcm(A,B,R):-
+    gcd(A,B,GCD),
+    R is (A*B)/GCD.
+
+%lcm_list([],_).
+lcm_list([],1):-!.
+lcm_list([H|T],Result):-
+
+    lcm_list(T,Result1),
+    lcm(H,Result1,Result).
+
+find_lcm([],_).
+find_lcm(List,Result):-
+    lcm_list(List,Result).
+

@@ -1,0 +1,11 @@
+submul([],[],0).
+submul(_,_,2).
+submul([H|L],[H|T],Nr):-
+    submul(L,T,Nr1),
+    Nr is Nr1+1.
+
+submul([_|L],S,Nr):-
+    submul(L,S,Nr1),
+    Nr is Nr1+1.
+det_sub(List,Rez):-
+    submul(List,Rez,Nr).

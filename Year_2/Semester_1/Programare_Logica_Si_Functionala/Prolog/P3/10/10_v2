@@ -1,0 +1,25 @@
+candidat([H|_],H).
+candidat([_|T],E):-
+    candidat(T,E).
+
+len([],0):-!.
+len([_|T],N):-
+    len(T,NNou),
+    N is NNou+1.
+
+suma([],0).
+suma([H|T],R):- suma(T,R1), R is R1+H.
+
+subsets([],[]).
+subsets([H|L],[H|T):-subsets(L,T).
+
+subsets([_|L],S):-subsets(L,S).
+
+
+generare_main(List,Rez):-
+    len(List,N),
+    subsets(List,Rez),
+    sum(Rez,S),
+    S mod N =:=0.
+generare_M(List,Rez):-
+    findall(AUX,generare_main(List,AUX),Rez).

@@ -1,0 +1,17 @@
+suma([],0,0):-!.
+suma([H],H,1):-!.
+
+
+suma([H|T],Suma,Poz):-
+    Poz mod 2 =:= 0,!,
+    Suma1 is Suma-H,
+    Poz1 is Poz+1,
+    suma(T,Suma1,Poz1).
+
+suma([H|T],Suma,Poz):-
+    Suma1 is Suma+H,
+    Poz1 is Poz+1,
+    suma(T,Suma1,Poz1).
+
+suma_alt(List,Rez):-
+    suma(List,Rez,0).
