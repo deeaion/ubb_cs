@@ -1,0 +1,14 @@
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\bin\Debug\net8.0\FestivalTicketSale.exe
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\bin\Debug\net8.0\FestivalTicketSale.deps.json
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\bin\Debug\net8.0\FestivalTicketSale.runtimeconfig.json
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\bin\Debug\net8.0\FestivalTicketSale.dll
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\bin\Debug\net8.0\FestivalTicketSale.pdb
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.AssemblyInfoInputs.cache
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.AssemblyInfo.cs
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.csproj.CoreCompileInputs.cache
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.dll
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\refint\FestivalTicketSale.dll
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.pdb
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\FestivalTicketSale.genruntimeconfig.cache
+C:\Users\Deea\Desktop\Uni\`By Year\Second year\Semester 2\Systems for Design and Implementation\Labs\MPP-C#-Project-Ticket-Sales\FestivalTicketSale\obj\Debug\net8.0\ref\FestivalTicketSale.dll
