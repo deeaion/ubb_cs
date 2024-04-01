@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "TK0ivpf6aUwDv7nXdSeOm2k42d8ZcGGiCSs7jIeQR2mlezbRDcKxGV1gRmiO0u6d9KY3RDlRAEPbx2nm4lAyZw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Deea\\Desktop\\Uni\\FestivalTicketSales\\FestivalTicketSales\\FestivalTicketSales.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Deea\\.nuget\\packages\\log4net\\2.0.16\\log4net.2.0.16.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\mono.data.sqlite.portable\\1.0.3.5\\mono.data.sqlite.portable.1.0.3.5.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Deea\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Mono.Data.Sqlite.Portable 1.0.3.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Mono.Data.Sqlite.Portable",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

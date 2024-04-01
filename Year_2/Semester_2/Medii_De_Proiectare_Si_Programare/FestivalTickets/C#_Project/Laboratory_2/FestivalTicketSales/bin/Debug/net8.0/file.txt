@@ -1,0 +1,10 @@
+2024-03-18 11:10:25,751 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBAngajatRepository - Creating DBAngajatRepository
+2024-03-18 11:10:25,756 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBBiletRepository - Creating DBSpectacolRepository
+2024-03-18 11:10:25,756 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBSpectacolRepository - Creating DBSpectacolRepository
+2024-03-18 11:10:25,757 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBAngajatRepository - Entering findAll
+2024-03-18 11:10:25,780 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBAngajatRepository - Exiting Find All!
+2024-03-18 11:10:25,781 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBSpectacolRepository - Entering findAll
+2024-03-18 11:10:25,782 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBSpectacolRepository - Exiting Find All!
+2024-03-18 11:10:25,788 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBSpectacolRepository - Entering findAll
+2024-03-18 11:10:25,789 [1] INFO FestivalTicketSale.Repository.DBRepositories.DBSpectacolRepository - Exiting Find All!
+2024-03-18 11:10:25,790 [1] INFO FestivalTicketSale.Program - Hello logging world
