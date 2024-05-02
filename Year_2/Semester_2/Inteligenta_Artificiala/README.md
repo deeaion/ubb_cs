@@ -1,6 +1,6 @@
 # AI Laboratories
 
-### Laboratory 01: [Simple Algorithms] (https://github.com/deeaion/AI--Homeworks/tree/main/Laboratory01-%20Simple%20Algorithms)
+### Laboratory 01: [Simple Algorithms](https://github.com/deeaion/AI--Homeworks/tree/main/Laboratory01-%20Simple%20Algorithms)
 ### Laboratory 02: [Data Manipulation](https://github.com/deeaion/AI--Homeworks/tree/main/Laboratory02-%20Data%20Manipulation)
 ### Laboratory 03: [OCR](https://github.com/deeaion/AI--Homeworks/tree/main/Laboratory03-%20OCR)
 ### Laboratory 04: [Object Detection](https://github.com/deeaion/AI--Homeworks/tree/main/Laboratory04-%20Object%20Detection)
