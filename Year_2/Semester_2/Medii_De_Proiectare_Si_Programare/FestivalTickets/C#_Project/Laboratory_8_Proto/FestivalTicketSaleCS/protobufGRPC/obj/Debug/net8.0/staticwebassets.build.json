@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QYkTQH3mMX4eY8gnE3fnU7qgydzQc+eaQpBAnLeVayU=",
+  "Source": "protobufGRPC",
+  "BasePath": "_content/protobufGRPC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

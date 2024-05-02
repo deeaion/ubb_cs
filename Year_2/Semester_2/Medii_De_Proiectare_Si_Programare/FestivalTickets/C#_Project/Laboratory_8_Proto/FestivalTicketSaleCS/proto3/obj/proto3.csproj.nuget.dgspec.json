@@ -1,0 +1,195 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\proto3\\proto3.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\connectionUtils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\connectionUtils.csproj",
+        "projectName": "connectionUtils",
+        "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\connectionUtils.csproj",
+        "packagesPath": "C:\\Users\\Deea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\obj\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\Deea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "packagesConfigPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\packages.config"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\model.csproj",
+        "projectName": "model",
+        "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\model.csproj",
+        "packagesPath": "C:\\Users\\Deea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\obj\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\Deea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "packagesConfigPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\packages.config"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\persistance.csproj",
+        "projectName": "persistance",
+        "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\persistance.csproj",
+        "packagesPath": "C:\\Users\\Deea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\obj\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\Deea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\connectionUtils.csproj": {
+                "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\connectionUtils\\connectionUtils.csproj"
+              },
+              "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\model.csproj": {
+                "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\model\\model.csproj"
+              }
+            }
+          }
+        },
+        "packagesConfigPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\packages.config"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\proto3\\proto3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\proto3\\proto3.csproj",
+        "projectName": "proto3",
+        "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\proto3\\proto3.csproj",
+        "packagesPath": "C:\\Users\\Deea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\proto3\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Deea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\persistance.csproj": {
+                "projectPath": "C:\\Users\\Deea\\Desktop\\Uni\\By Year\\mpp-C#\\FestivalTicketSaleCS\\persistance\\persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Grpc": {
+              "target": "Package",
+              "version": "[2.46.6, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.57.0, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.46.6, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.62.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

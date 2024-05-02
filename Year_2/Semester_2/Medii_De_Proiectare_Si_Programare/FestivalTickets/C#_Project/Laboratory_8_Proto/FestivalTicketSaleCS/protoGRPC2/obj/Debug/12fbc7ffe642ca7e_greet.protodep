@@ -1,0 +1,3 @@
+obj\Debug\net48\Protos/Greet.cs \
+obj\Debug\net48\Protos/GreetGrpc.cs: C:/Users/Deea/Desktop/Uni/By Year/mpp-C#/FestivalTicketSaleCS/packages/Grpc.Tools.2.62.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/greet.proto

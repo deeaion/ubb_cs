@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+option csharp_namespace = "proto3";
+
+package festivalServ;
+
+service FestivalSv{
+  rpc login(Angajat) returns(LogInResponse);
+  rpc logout(Angajat) returns(FestivalResponse);
+  rpc sellTicket(Bilet) returns(FestivalResponse);
+  rpc getSpectacole(SpectacolDTO) returns(FestivalResponse);
+  rpc getArtisti(FestivalRequest) returns(FestivalResponse);
+  rpc NotifyStream(stream StreamRequest) returns( stream FestivalResponse);
+}
+
+
+message LogInResponse{
+  string token=1;
+  string error=2;
+  bool success=3;
+  Angajat angajat=4;
+}
+message Angajat{
+  string token=1;
+  string password=2;
+}
+message StreamRequest{
+  string angajat_id=1;
+  string token=2;
+}
+
+
+
+message SpectacolDTO{
+  string locatie=1;
+  string id_spec=2;
+  string data=3;
+  string artist=4;
+  string nrLocuriVandute=5;
+  string nrLocuriDisponibile=6;
+}
+
+message Bilet{
+  string nume_cump=1;
+  SpectacolDTO spectacol=2;
+  string serie=3;
+  string nr_locuri=4;
+}
+
+message FestivalRequest{
+  enum RequestType{
+    LOGIN=0;
+    LOGOUT=1;
+    SELL_TICKET=2;
+    GET_SPECTACOLE=3;
+    GET_ARTISTI=4;
+
+  }
+  RequestType requestType=1;
+  oneof payload{
+    Angajat angajat=2;
+    SpectacolDTO spectacol=3;
+    Bilet bilet=4;
+  }
+}
+
+
+message FestivalResponse{
+  enum ResponseType{
+    OK=0;
+    ERROR=1;
+    GOT_FESTIVAL_UPDATED=2;
+    GET_FESTIVAL_LIST=3;
+    GOT_FESTIVAL_LIST_UPDATED=4;
+    USER_LOGGED_IN=5;
+    USER_LOGGED_OUT=6;
+    GET_ARTISTI=7;
+
+  }
+  ResponseType responseType=1;
+  SpectacolDTO spectacol=2;
+  string message=6;
+  repeated SpectacolDTO spectacole=3;
+  string error=4;
+  repeated string artist=5;
+  Angajat angajat=7;
+
+
+
+
+}
