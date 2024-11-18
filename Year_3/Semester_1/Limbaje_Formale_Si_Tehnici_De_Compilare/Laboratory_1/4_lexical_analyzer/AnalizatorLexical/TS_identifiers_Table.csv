@@ -1,0 +1,10 @@
+Index,Value,CodAtom,Atom
+0,2,1,CONST
+1,23,1,CONST
+2,3.14,1,CONST
+3,b,0,ID
+4,c,0,ID
+5,circle,0,ID
+6,pi,0,ID
+7,pi23,0,ID
+8,r,0,ID

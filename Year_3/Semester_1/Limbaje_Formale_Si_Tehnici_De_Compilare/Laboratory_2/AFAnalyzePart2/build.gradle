@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application' // Add the application plugin
+}
+
+group = 'org.convolutionMatrix'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Use Jackson BOM for version consistency
+    implementation platform('com.fasterxml.jackson:jackson-bom:2.13.0')
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17 // or specify your Java version
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+application {
+    mainClass = 'org.convolutionMatrix.Main' // Specify the main class
+}
+
+test {
+    useJUnitPlatform()
+}
