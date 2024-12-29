@@ -11,8 +11,8 @@ Labs:
 - Native (Android)
   - [Main Repository](https://github.com/deeaion/Album-Store-Mobile-App-Android)
     - [Native 1](https://github.com/deeaion/Album-Store-Mobile-App-Android/tree/Android-1)
-    - [Native 2]()
-    - [Native 3]()
+    - [Native 2](https://github.com/deeaion/Album-Store-Mobile-App-Android/tree/Android-2)
+    - [Native 3](https://github.com/deeaion/Album-Store-Mobile-App-Android/tree/Android-3)
 
 ## App description:
 
