@@ -1,0 +1,14 @@
+%{
+#include "ex7_exp.tab.h"
+%}
+
+%option noyywrap
+
+%%
+[0-9] 	yylval = atoi(yytext); return DIGIT;
+[+]   	return '+';
+[*]   	return '*';
+[\n]  	return '\n';
+.     	return 0;
+
+%%

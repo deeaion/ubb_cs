@@ -1,0 +1,1552 @@
+Terminals unused in grammar
+
+    CONST_STRING
+    REL_OP
+    UMINUS
+
+
+Grammar
+
+    0 $accept: program $end
+
+    1 program: header declaration_or_function_list
+
+    2 header: library_inclusions
+
+    3 library_inclusions: INCLUDE IO_STREAM
+    4                   | INCLUDE MATH_H
+
+    5 declaration_or_function_list: declaration_or_function_list declaration_or_function
+    6                             | declaration_or_function
+
+    7 declaration_or_function: function
+    8                        | variable_declaration
+    9                        | standalone_struct_declaration
+   10                        | inline_struct_variable_declaration
+
+   11 standalone_struct_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE SEMICOLON
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE ID SEMICOLON
+   13                                   | STRUCT struct_name ID SEMICOLON
+
+   14 variable_declaration_list: variable_declaration_list variable_declaration
+   15                          | variable_declaration
+
+   16 variable_declaration: simple_type ID SEMICOLON
+
+   17 function: simple_type ID LPAREN parameter_list RPAREN body
+
+   18 parameter_list: parameter_list ',' parameter
+   19               | parameter
+   20               | ε
+
+   21 parameter: type ID
+
+   22 body: LBRACE instruction_list RBRACE
+
+   23 instruction_list: instruction_list instruction
+   24                 | ε
+
+   25 instruction: variable_declaration
+   26            | inline_struct_variable_declaration
+   27            | assignment
+   28            | input_instruction
+   29            | output_instruction
+   30            | while_loop
+   31            | do_while_loop
+   32            | if_statement
+   33            | return_statement
+
+   34 assignment: ID ASSIGN arithmetic_expression SEMICOLON
+   35           | ID DOT ID ASSIGN arithmetic_expression SEMICOLON
+
+   36 input_instruction: CIN RSHIFT ID SEMICOLON
+   37                  | CIN RSHIFT ID DOT ID SEMICOLON
+
+   38 output_instruction: COUT LSHIFT arithmetic_expression SEMICOLON
+   39                   | COUT LSHIFT ENDL SEMICOLON
+
+   40 while_loop: WHILE LPAREN condition RPAREN body
+
+   41 do_while_loop: DO body WHILE LPAREN condition RPAREN SEMICOLON
+
+   42 if_statement: IF LPAREN condition RPAREN body
+   43             | IF LPAREN condition RPAREN body ELSE body
+
+   44 return_statement: RETURN arithmetic_expression SEMICOLON
+   45                 | RETURN SEMICOLON
+
+   46 condition: arithmetic_expression relational_operator arithmetic_expression
+   47          | arithmetic_expression
+
+   48 relational_operator: GT
+   49                    | LT
+   50                    | GE
+   51                    | LE
+   52                    | EQ
+   53                    | NE
+
+   54 arithmetic_expression: arithmetic_expression PLUS arithmetic_expression
+   55                      | arithmetic_expression MINUS arithmetic_expression
+   56                      | arithmetic_expression MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression DIVIDE arithmetic_expression
+   58                      | arithmetic_expression MODULO arithmetic_expression
+   59                      | CONST_FLOAT
+   60                      | CONST_INT
+   61                      | ID
+   62                      | ID DOT ID
+
+   63 type: simple_type
+   64     | struct_type
+
+   65 simple_type: INT
+   66            | FLOAT
+   67            | STRING
+   68            | CHAR
+   69            | VOID
+
+   70 struct_type: STRUCT struct_name
+
+   71 struct_name: ID
+
+
+Terminals, with rules where they appear
+
+    $end (0) 0
+    ',' (44) 18
+    error (256)
+    ID <strval> (258) 12 13 16 17 21 34 35 36 37 61 62 71
+    CONST_STRING <strval> (259)
+    CONST_INT <intval> (260) 60
+    CONST_FLOAT <floatval> (261) 59
+    REL_OP (262)
+    CIN (263) 36 37
+    COUT (264) 38 39
+    IF (265) 42 43
+    ELSE (266) 43
+    WHILE (267) 40 41
+    DO (268) 41
+    RETURN (269) 44 45
+    ENDL (270) 39
+    INT (271) 65
+    FLOAT (272) 66
+    STRING (273) 67
+    CHAR (274) 68
+    STRUCT (275) 11 12 13 70
+    VOID (276) 69
+    ASSIGN (277) 34 35
+    LBRACE (278) 11 12 22
+    RBRACE (279) 11 12 22
+    LPAREN (280) 17 40 41 42 43
+    RPAREN (281) 17 40 41 42 43
+    SEMICOLON (282) 11 12 13 16 34 35 36 37 38 39 41 44 45
+    PLUS (283) 54
+    MINUS (284) 55
+    MULTIPLY (285) 56
+    DIVIDE (286) 57
+    MODULO (287) 58
+    GT (288) 48
+    LT (289) 49
+    GE (290) 50
+    LE (291) 51
+    EQ (292) 52
+    NE (293) 53
+    INCLUDE (294) 3 4
+    IO_STREAM (295) 3
+    MATH_H (296) 4
+    DOT (297) 35 37 62
+    RSHIFT (298) 36 37
+    LSHIFT (299) 38 39
+    UMINUS (300)
+    NO_ELSE (301)
+
+
+Nonterminals, with rules where they appear
+
+    $accept (48)
+        on left: 0
+    program (49)
+        on left: 1
+        on right: 0
+    header (50)
+        on left: 2
+        on right: 1
+    library_inclusions (51)
+        on left: 3 4
+        on right: 2
+    declaration_or_function_list (52)
+        on left: 5 6
+        on right: 1 5
+    declaration_or_function (53)
+        on left: 7 8 9 10
+        on right: 5 6
+    standalone_struct_declaration (54)
+        on left: 11
+        on right: 9
+    inline_struct_variable_declaration (55)
+        on left: 12 13
+        on right: 10 26
+    variable_declaration_list (56)
+        on left: 14 15
+        on right: 11 12 14
+    variable_declaration (57)
+        on left: 16
+        on right: 8 14 15 25
+    function (58)
+        on left: 17
+        on right: 7
+    parameter_list (59)
+        on left: 18 19 20
+        on right: 17 18
+    parameter (60)
+        on left: 21
+        on right: 18 19
+    body (61)
+        on left: 22
+        on right: 17 40 41 42 43
+    instruction_list (62)
+        on left: 23 24
+        on right: 22 23
+    instruction (63)
+        on left: 25 26 27 28 29 30 31 32 33
+        on right: 23
+    assignment (64)
+        on left: 34 35
+        on right: 27
+    input_instruction (65)
+        on left: 36 37
+        on right: 28
+    output_instruction (66)
+        on left: 38 39
+        on right: 29
+    while_loop (67)
+        on left: 40
+        on right: 30
+    do_while_loop (68)
+        on left: 41
+        on right: 31
+    if_statement (69)
+        on left: 42 43
+        on right: 32
+    return_statement (70)
+        on left: 44 45
+        on right: 33
+    condition (71)
+        on left: 46 47
+        on right: 40 41 42 43
+    relational_operator (72)
+        on left: 48 49 50 51 52 53
+        on right: 46
+    arithmetic_expression (73)
+        on left: 54 55 56 57 58 59 60 61 62
+        on right: 34 35 38 44 46 47 54 55 56 57 58
+    type (74)
+        on left: 63 64
+        on right: 21
+    simple_type (75)
+        on left: 65 66 67 68 69
+        on right: 16 17 63
+    struct_type (76)
+        on left: 70
+        on right: 64
+    struct_name <strval> (77)
+        on left: 71
+        on right: 11 12 13 70
+
+
+State 0
+
+    0 $accept: • program $end
+
+    INCLUDE  shift, and go to state 1
+
+    program             go to state 2
+    header              go to state 3
+    library_inclusions  go to state 4
+
+
+State 1
+
+    3 library_inclusions: INCLUDE • IO_STREAM
+    4                   | INCLUDE • MATH_H
+
+    IO_STREAM  shift, and go to state 5
+    MATH_H     shift, and go to state 6
+
+
+State 2
+
+    0 $accept: program • $end
+
+    $end  shift, and go to state 7
+
+
+State 3
+
+    1 program: header • declaration_or_function_list
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    STRUCT  shift, and go to state 12
+    VOID    shift, and go to state 13
+
+    declaration_or_function_list        go to state 14
+    declaration_or_function             go to state 15
+    standalone_struct_declaration       go to state 16
+    inline_struct_variable_declaration  go to state 17
+    variable_declaration                go to state 18
+    function                            go to state 19
+    simple_type                         go to state 20
+
+
+State 4
+
+    2 header: library_inclusions •
+
+    $default  reduce using rule 2 (header)
+
+
+State 5
+
+    3 library_inclusions: INCLUDE IO_STREAM •
+
+    $default  reduce using rule 3 (library_inclusions)
+
+
+State 6
+
+    4 library_inclusions: INCLUDE MATH_H •
+
+    $default  reduce using rule 4 (library_inclusions)
+
+
+State 7
+
+    0 $accept: program $end •
+
+    $default  accept
+
+
+State 8
+
+   65 simple_type: INT •
+
+    $default  reduce using rule 65 (simple_type)
+
+
+State 9
+
+   66 simple_type: FLOAT •
+
+    $default  reduce using rule 66 (simple_type)
+
+
+State 10
+
+   67 simple_type: STRING •
+
+    $default  reduce using rule 67 (simple_type)
+
+
+State 11
+
+   68 simple_type: CHAR •
+
+    $default  reduce using rule 68 (simple_type)
+
+
+State 12
+
+   11 standalone_struct_declaration: STRUCT • struct_name LBRACE variable_declaration_list RBRACE SEMICOLON
+   12 inline_struct_variable_declaration: STRUCT • struct_name LBRACE variable_declaration_list RBRACE ID SEMICOLON
+   13                                   | STRUCT • struct_name ID SEMICOLON
+
+    ID  shift, and go to state 21
+
+    struct_name  go to state 22
+
+
+State 13
+
+   69 simple_type: VOID •
+
+    $default  reduce using rule 69 (simple_type)
+
+
+State 14
+
+    1 program: header declaration_or_function_list •
+    5 declaration_or_function_list: declaration_or_function_list • declaration_or_function
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    STRUCT  shift, and go to state 12
+    VOID    shift, and go to state 13
+
+    $default  reduce using rule 1 (program)
+
+    declaration_or_function             go to state 23
+    standalone_struct_declaration       go to state 16
+    inline_struct_variable_declaration  go to state 17
+    variable_declaration                go to state 18
+    function                            go to state 19
+    simple_type                         go to state 20
+
+
+State 15
+
+    6 declaration_or_function_list: declaration_or_function •
+
+    $default  reduce using rule 6 (declaration_or_function_list)
+
+
+State 16
+
+    9 declaration_or_function: standalone_struct_declaration •
+
+    $default  reduce using rule 9 (declaration_or_function)
+
+
+State 17
+
+   10 declaration_or_function: inline_struct_variable_declaration •
+
+    $default  reduce using rule 10 (declaration_or_function)
+
+
+State 18
+
+    8 declaration_or_function: variable_declaration •
+
+    $default  reduce using rule 8 (declaration_or_function)
+
+
+State 19
+
+    7 declaration_or_function: function •
+
+    $default  reduce using rule 7 (declaration_or_function)
+
+
+State 20
+
+   16 variable_declaration: simple_type • ID SEMICOLON
+   17 function: simple_type • ID LPAREN parameter_list RPAREN body
+
+    ID  shift, and go to state 24
+
+
+State 21
+
+   71 struct_name: ID •
+
+    $default  reduce using rule 71 (struct_name)
+
+
+State 22
+
+   11 standalone_struct_declaration: STRUCT struct_name • LBRACE variable_declaration_list RBRACE SEMICOLON
+   12 inline_struct_variable_declaration: STRUCT struct_name • LBRACE variable_declaration_list RBRACE ID SEMICOLON
+   13                                   | STRUCT struct_name • ID SEMICOLON
+
+    ID      shift, and go to state 25
+    LBRACE  shift, and go to state 26
+
+
+State 23
+
+    5 declaration_or_function_list: declaration_or_function_list declaration_or_function •
+
+    $default  reduce using rule 5 (declaration_or_function_list)
+
+
+State 24
+
+   16 variable_declaration: simple_type ID • SEMICOLON
+   17 function: simple_type ID • LPAREN parameter_list RPAREN body
+
+    LPAREN     shift, and go to state 27
+    SEMICOLON  shift, and go to state 28
+
+
+State 25
+
+   13 inline_struct_variable_declaration: STRUCT struct_name ID • SEMICOLON
+
+    SEMICOLON  shift, and go to state 29
+
+
+State 26
+
+   11 standalone_struct_declaration: STRUCT struct_name LBRACE • variable_declaration_list RBRACE SEMICOLON
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE • variable_declaration_list RBRACE ID SEMICOLON
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    VOID    shift, and go to state 13
+
+    variable_declaration_list  go to state 30
+    variable_declaration       go to state 31
+    simple_type                go to state 32
+
+
+State 27
+
+   17 function: simple_type ID LPAREN • parameter_list RPAREN body
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    STRUCT  shift, and go to state 33
+    VOID    shift, and go to state 13
+
+    $default  reduce using rule 20 (parameter_list)
+
+    parameter_list  go to state 34
+    parameter       go to state 35
+    type            go to state 36
+    simple_type     go to state 37
+    struct_type     go to state 38
+
+
+State 28
+
+   16 variable_declaration: simple_type ID SEMICOLON •
+
+    $default  reduce using rule 16 (variable_declaration)
+
+
+State 29
+
+   13 inline_struct_variable_declaration: STRUCT struct_name ID SEMICOLON •
+
+    $default  reduce using rule 13 (inline_struct_variable_declaration)
+
+
+State 30
+
+   11 standalone_struct_declaration: STRUCT struct_name LBRACE variable_declaration_list • RBRACE SEMICOLON
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list • RBRACE ID SEMICOLON
+   14 variable_declaration_list: variable_declaration_list • variable_declaration
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    VOID    shift, and go to state 13
+    RBRACE  shift, and go to state 39
+
+    variable_declaration  go to state 40
+    simple_type           go to state 32
+
+
+State 31
+
+   15 variable_declaration_list: variable_declaration •
+
+    $default  reduce using rule 15 (variable_declaration_list)
+
+
+State 32
+
+   16 variable_declaration: simple_type • ID SEMICOLON
+
+    ID  shift, and go to state 41
+
+
+State 33
+
+   70 struct_type: STRUCT • struct_name
+
+    ID  shift, and go to state 21
+
+    struct_name  go to state 42
+
+
+State 34
+
+   17 function: simple_type ID LPAREN parameter_list • RPAREN body
+   18 parameter_list: parameter_list • ',' parameter
+
+    RPAREN  shift, and go to state 43
+    ','     shift, and go to state 44
+
+
+State 35
+
+   19 parameter_list: parameter •
+
+    $default  reduce using rule 19 (parameter_list)
+
+
+State 36
+
+   21 parameter: type • ID
+
+    ID  shift, and go to state 45
+
+
+State 37
+
+   63 type: simple_type •
+
+    $default  reduce using rule 63 (type)
+
+
+State 38
+
+   64 type: struct_type •
+
+    $default  reduce using rule 64 (type)
+
+
+State 39
+
+   11 standalone_struct_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE • SEMICOLON
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE • ID SEMICOLON
+
+    ID         shift, and go to state 46
+    SEMICOLON  shift, and go to state 47
+
+
+State 40
+
+   14 variable_declaration_list: variable_declaration_list variable_declaration •
+
+    $default  reduce using rule 14 (variable_declaration_list)
+
+
+State 41
+
+   16 variable_declaration: simple_type ID • SEMICOLON
+
+    SEMICOLON  shift, and go to state 28
+
+
+State 42
+
+   70 struct_type: STRUCT struct_name •
+
+    $default  reduce using rule 70 (struct_type)
+
+
+State 43
+
+   17 function: simple_type ID LPAREN parameter_list RPAREN • body
+
+    LBRACE  shift, and go to state 48
+
+    body  go to state 49
+
+
+State 44
+
+   18 parameter_list: parameter_list ',' • parameter
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    STRUCT  shift, and go to state 33
+    VOID    shift, and go to state 13
+
+    parameter    go to state 50
+    type         go to state 36
+    simple_type  go to state 37
+    struct_type  go to state 38
+
+
+State 45
+
+   21 parameter: type ID •
+
+    $default  reduce using rule 21 (parameter)
+
+
+State 46
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE ID • SEMICOLON
+
+    SEMICOLON  shift, and go to state 51
+
+
+State 47
+
+   11 standalone_struct_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE SEMICOLON •
+
+    $default  reduce using rule 11 (standalone_struct_declaration)
+
+
+State 48
+
+   22 body: LBRACE • instruction_list RBRACE
+
+    $default  reduce using rule 24 (instruction_list)
+
+    instruction_list  go to state 52
+
+
+State 49
+
+   17 function: simple_type ID LPAREN parameter_list RPAREN body •
+
+    $default  reduce using rule 17 (function)
+
+
+State 50
+
+   18 parameter_list: parameter_list ',' parameter •
+
+    $default  reduce using rule 18 (parameter_list)
+
+
+State 51
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE ID SEMICOLON •
+
+    $default  reduce using rule 12 (inline_struct_variable_declaration)
+
+
+State 52
+
+   22 body: LBRACE instruction_list • RBRACE
+   23 instruction_list: instruction_list • instruction
+
+    ID      shift, and go to state 53
+    CIN     shift, and go to state 54
+    COUT    shift, and go to state 55
+    IF      shift, and go to state 56
+    WHILE   shift, and go to state 57
+    DO      shift, and go to state 58
+    RETURN  shift, and go to state 59
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    STRUCT  shift, and go to state 60
+    VOID    shift, and go to state 13
+    RBRACE  shift, and go to state 61
+
+    inline_struct_variable_declaration  go to state 62
+    variable_declaration                go to state 63
+    instruction                         go to state 64
+    assignment                          go to state 65
+    input_instruction                   go to state 66
+    output_instruction                  go to state 67
+    while_loop                          go to state 68
+    do_while_loop                       go to state 69
+    if_statement                        go to state 70
+    return_statement                    go to state 71
+    simple_type                         go to state 32
+
+
+State 53
+
+   34 assignment: ID • ASSIGN arithmetic_expression SEMICOLON
+   35           | ID • DOT ID ASSIGN arithmetic_expression SEMICOLON
+
+    ASSIGN  shift, and go to state 72
+    DOT     shift, and go to state 73
+
+
+State 54
+
+   36 input_instruction: CIN • RSHIFT ID SEMICOLON
+   37                  | CIN • RSHIFT ID DOT ID SEMICOLON
+
+    RSHIFT  shift, and go to state 74
+
+
+State 55
+
+   38 output_instruction: COUT • LSHIFT arithmetic_expression SEMICOLON
+   39                   | COUT • LSHIFT ENDL SEMICOLON
+
+    LSHIFT  shift, and go to state 75
+
+
+State 56
+
+   42 if_statement: IF • LPAREN condition RPAREN body
+   43             | IF • LPAREN condition RPAREN body ELSE body
+
+    LPAREN  shift, and go to state 76
+
+
+State 57
+
+   40 while_loop: WHILE • LPAREN condition RPAREN body
+
+    LPAREN  shift, and go to state 77
+
+
+State 58
+
+   41 do_while_loop: DO • body WHILE LPAREN condition RPAREN SEMICOLON
+
+    LBRACE  shift, and go to state 48
+
+    body  go to state 78
+
+
+State 59
+
+   44 return_statement: RETURN • arithmetic_expression SEMICOLON
+   45                 | RETURN • SEMICOLON
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+    SEMICOLON    shift, and go to state 82
+
+    arithmetic_expression  go to state 83
+
+
+State 60
+
+   12 inline_struct_variable_declaration: STRUCT • struct_name LBRACE variable_declaration_list RBRACE ID SEMICOLON
+   13                                   | STRUCT • struct_name ID SEMICOLON
+
+    ID  shift, and go to state 21
+
+    struct_name  go to state 84
+
+
+State 61
+
+   22 body: LBRACE instruction_list RBRACE •
+
+    $default  reduce using rule 22 (body)
+
+
+State 62
+
+   26 instruction: inline_struct_variable_declaration •
+
+    $default  reduce using rule 26 (instruction)
+
+
+State 63
+
+   25 instruction: variable_declaration •
+
+    $default  reduce using rule 25 (instruction)
+
+
+State 64
+
+   23 instruction_list: instruction_list instruction •
+
+    $default  reduce using rule 23 (instruction_list)
+
+
+State 65
+
+   27 instruction: assignment •
+
+    $default  reduce using rule 27 (instruction)
+
+
+State 66
+
+   28 instruction: input_instruction •
+
+    $default  reduce using rule 28 (instruction)
+
+
+State 67
+
+   29 instruction: output_instruction •
+
+    $default  reduce using rule 29 (instruction)
+
+
+State 68
+
+   30 instruction: while_loop •
+
+    $default  reduce using rule 30 (instruction)
+
+
+State 69
+
+   31 instruction: do_while_loop •
+
+    $default  reduce using rule 31 (instruction)
+
+
+State 70
+
+   32 instruction: if_statement •
+
+    $default  reduce using rule 32 (instruction)
+
+
+State 71
+
+   33 instruction: return_statement •
+
+    $default  reduce using rule 33 (instruction)
+
+
+State 72
+
+   34 assignment: ID ASSIGN • arithmetic_expression SEMICOLON
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 85
+
+
+State 73
+
+   35 assignment: ID DOT • ID ASSIGN arithmetic_expression SEMICOLON
+
+    ID  shift, and go to state 86
+
+
+State 74
+
+   36 input_instruction: CIN RSHIFT • ID SEMICOLON
+   37                  | CIN RSHIFT • ID DOT ID SEMICOLON
+
+    ID  shift, and go to state 87
+
+
+State 75
+
+   38 output_instruction: COUT LSHIFT • arithmetic_expression SEMICOLON
+   39                   | COUT LSHIFT • ENDL SEMICOLON
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+    ENDL         shift, and go to state 88
+
+    arithmetic_expression  go to state 89
+
+
+State 76
+
+   42 if_statement: IF LPAREN • condition RPAREN body
+   43             | IF LPAREN • condition RPAREN body ELSE body
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    condition              go to state 90
+    arithmetic_expression  go to state 91
+
+
+State 77
+
+   40 while_loop: WHILE LPAREN • condition RPAREN body
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    condition              go to state 92
+    arithmetic_expression  go to state 91
+
+
+State 78
+
+   41 do_while_loop: DO body • WHILE LPAREN condition RPAREN SEMICOLON
+
+    WHILE  shift, and go to state 93
+
+
+State 79
+
+   61 arithmetic_expression: ID •
+   62                      | ID • DOT ID
+
+    DOT  shift, and go to state 94
+
+    $default  reduce using rule 61 (arithmetic_expression)
+
+
+State 80
+
+   60 arithmetic_expression: CONST_INT •
+
+    $default  reduce using rule 60 (arithmetic_expression)
+
+
+State 81
+
+   59 arithmetic_expression: CONST_FLOAT •
+
+    $default  reduce using rule 59 (arithmetic_expression)
+
+
+State 82
+
+   45 return_statement: RETURN SEMICOLON •
+
+    $default  reduce using rule 45 (return_statement)
+
+
+State 83
+
+   44 return_statement: RETURN arithmetic_expression • SEMICOLON
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    SEMICOLON  shift, and go to state 95
+    PLUS       shift, and go to state 96
+    MINUS      shift, and go to state 97
+    MULTIPLY   shift, and go to state 98
+    DIVIDE     shift, and go to state 99
+    MODULO     shift, and go to state 100
+
+
+State 84
+
+   12 inline_struct_variable_declaration: STRUCT struct_name • LBRACE variable_declaration_list RBRACE ID SEMICOLON
+   13                                   | STRUCT struct_name • ID SEMICOLON
+
+    ID      shift, and go to state 25
+    LBRACE  shift, and go to state 101
+
+
+State 85
+
+   34 assignment: ID ASSIGN arithmetic_expression • SEMICOLON
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    SEMICOLON  shift, and go to state 102
+    PLUS       shift, and go to state 96
+    MINUS      shift, and go to state 97
+    MULTIPLY   shift, and go to state 98
+    DIVIDE     shift, and go to state 99
+    MODULO     shift, and go to state 100
+
+
+State 86
+
+   35 assignment: ID DOT ID • ASSIGN arithmetic_expression SEMICOLON
+
+    ASSIGN  shift, and go to state 103
+
+
+State 87
+
+   36 input_instruction: CIN RSHIFT ID • SEMICOLON
+   37                  | CIN RSHIFT ID • DOT ID SEMICOLON
+
+    SEMICOLON  shift, and go to state 104
+    DOT        shift, and go to state 105
+
+
+State 88
+
+   39 output_instruction: COUT LSHIFT ENDL • SEMICOLON
+
+    SEMICOLON  shift, and go to state 106
+
+
+State 89
+
+   38 output_instruction: COUT LSHIFT arithmetic_expression • SEMICOLON
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    SEMICOLON  shift, and go to state 107
+    PLUS       shift, and go to state 96
+    MINUS      shift, and go to state 97
+    MULTIPLY   shift, and go to state 98
+    DIVIDE     shift, and go to state 99
+    MODULO     shift, and go to state 100
+
+
+State 90
+
+   42 if_statement: IF LPAREN condition • RPAREN body
+   43             | IF LPAREN condition • RPAREN body ELSE body
+
+    RPAREN  shift, and go to state 108
+
+
+State 91
+
+   46 condition: arithmetic_expression • relational_operator arithmetic_expression
+   47          | arithmetic_expression •
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    PLUS      shift, and go to state 96
+    MINUS     shift, and go to state 97
+    MULTIPLY  shift, and go to state 98
+    DIVIDE    shift, and go to state 99
+    MODULO    shift, and go to state 100
+    GT        shift, and go to state 109
+    LT        shift, and go to state 110
+    GE        shift, and go to state 111
+    LE        shift, and go to state 112
+    EQ        shift, and go to state 113
+    NE        shift, and go to state 114
+
+    $default  reduce using rule 47 (condition)
+
+    relational_operator  go to state 115
+
+
+State 92
+
+   40 while_loop: WHILE LPAREN condition • RPAREN body
+
+    RPAREN  shift, and go to state 116
+
+
+State 93
+
+   41 do_while_loop: DO body WHILE • LPAREN condition RPAREN SEMICOLON
+
+    LPAREN  shift, and go to state 117
+
+
+State 94
+
+   62 arithmetic_expression: ID DOT • ID
+
+    ID  shift, and go to state 118
+
+
+State 95
+
+   44 return_statement: RETURN arithmetic_expression SEMICOLON •
+
+    $default  reduce using rule 44 (return_statement)
+
+
+State 96
+
+   54 arithmetic_expression: arithmetic_expression PLUS • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 119
+
+
+State 97
+
+   55 arithmetic_expression: arithmetic_expression MINUS • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 120
+
+
+State 98
+
+   56 arithmetic_expression: arithmetic_expression MULTIPLY • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 121
+
+
+State 99
+
+   57 arithmetic_expression: arithmetic_expression DIVIDE • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 122
+
+
+State 100
+
+   58 arithmetic_expression: arithmetic_expression MODULO • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 123
+
+
+State 101
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE • variable_declaration_list RBRACE ID SEMICOLON
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    VOID    shift, and go to state 13
+
+    variable_declaration_list  go to state 124
+    variable_declaration       go to state 31
+    simple_type                go to state 32
+
+
+State 102
+
+   34 assignment: ID ASSIGN arithmetic_expression SEMICOLON •
+
+    $default  reduce using rule 34 (assignment)
+
+
+State 103
+
+   35 assignment: ID DOT ID ASSIGN • arithmetic_expression SEMICOLON
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 125
+
+
+State 104
+
+   36 input_instruction: CIN RSHIFT ID SEMICOLON •
+
+    $default  reduce using rule 36 (input_instruction)
+
+
+State 105
+
+   37 input_instruction: CIN RSHIFT ID DOT • ID SEMICOLON
+
+    ID  shift, and go to state 126
+
+
+State 106
+
+   39 output_instruction: COUT LSHIFT ENDL SEMICOLON •
+
+    $default  reduce using rule 39 (output_instruction)
+
+
+State 107
+
+   38 output_instruction: COUT LSHIFT arithmetic_expression SEMICOLON •
+
+    $default  reduce using rule 38 (output_instruction)
+
+
+State 108
+
+   42 if_statement: IF LPAREN condition RPAREN • body
+   43             | IF LPAREN condition RPAREN • body ELSE body
+
+    LBRACE  shift, and go to state 48
+
+    body  go to state 127
+
+
+State 109
+
+   48 relational_operator: GT •
+
+    $default  reduce using rule 48 (relational_operator)
+
+
+State 110
+
+   49 relational_operator: LT •
+
+    $default  reduce using rule 49 (relational_operator)
+
+
+State 111
+
+   50 relational_operator: GE •
+
+    $default  reduce using rule 50 (relational_operator)
+
+
+State 112
+
+   51 relational_operator: LE •
+
+    $default  reduce using rule 51 (relational_operator)
+
+
+State 113
+
+   52 relational_operator: EQ •
+
+    $default  reduce using rule 52 (relational_operator)
+
+
+State 114
+
+   53 relational_operator: NE •
+
+    $default  reduce using rule 53 (relational_operator)
+
+
+State 115
+
+   46 condition: arithmetic_expression relational_operator • arithmetic_expression
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    arithmetic_expression  go to state 128
+
+
+State 116
+
+   40 while_loop: WHILE LPAREN condition RPAREN • body
+
+    LBRACE  shift, and go to state 48
+
+    body  go to state 129
+
+
+State 117
+
+   41 do_while_loop: DO body WHILE LPAREN • condition RPAREN SEMICOLON
+
+    ID           shift, and go to state 79
+    CONST_INT    shift, and go to state 80
+    CONST_FLOAT  shift, and go to state 81
+
+    condition              go to state 130
+    arithmetic_expression  go to state 91
+
+
+State 118
+
+   62 arithmetic_expression: ID DOT ID •
+
+    $default  reduce using rule 62 (arithmetic_expression)
+
+
+State 119
+
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   54                      | arithmetic_expression PLUS arithmetic_expression •
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    MULTIPLY  shift, and go to state 98
+    DIVIDE    shift, and go to state 99
+    MODULO    shift, and go to state 100
+
+    $default  reduce using rule 54 (arithmetic_expression)
+
+
+State 120
+
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   55                      | arithmetic_expression MINUS arithmetic_expression •
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    MULTIPLY  shift, and go to state 98
+    DIVIDE    shift, and go to state 99
+    MODULO    shift, and go to state 100
+
+    $default  reduce using rule 55 (arithmetic_expression)
+
+
+State 121
+
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   56                      | arithmetic_expression MULTIPLY arithmetic_expression •
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    $default  reduce using rule 56 (arithmetic_expression)
+
+
+State 122
+
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   57                      | arithmetic_expression DIVIDE arithmetic_expression •
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    $default  reduce using rule 57 (arithmetic_expression)
+
+
+State 123
+
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+   58                      | arithmetic_expression MODULO arithmetic_expression •
+
+    $default  reduce using rule 58 (arithmetic_expression)
+
+
+State 124
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list • RBRACE ID SEMICOLON
+   14 variable_declaration_list: variable_declaration_list • variable_declaration
+
+    INT     shift, and go to state 8
+    FLOAT   shift, and go to state 9
+    STRING  shift, and go to state 10
+    CHAR    shift, and go to state 11
+    VOID    shift, and go to state 13
+    RBRACE  shift, and go to state 131
+
+    variable_declaration  go to state 40
+    simple_type           go to state 32
+
+
+State 125
+
+   35 assignment: ID DOT ID ASSIGN arithmetic_expression • SEMICOLON
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    SEMICOLON  shift, and go to state 132
+    PLUS       shift, and go to state 96
+    MINUS      shift, and go to state 97
+    MULTIPLY   shift, and go to state 98
+    DIVIDE     shift, and go to state 99
+    MODULO     shift, and go to state 100
+
+
+State 126
+
+   37 input_instruction: CIN RSHIFT ID DOT ID • SEMICOLON
+
+    SEMICOLON  shift, and go to state 133
+
+
+State 127
+
+   42 if_statement: IF LPAREN condition RPAREN body •
+   43             | IF LPAREN condition RPAREN body • ELSE body
+
+    ELSE  shift, and go to state 134
+
+    $default  reduce using rule 42 (if_statement)
+
+
+State 128
+
+   46 condition: arithmetic_expression relational_operator arithmetic_expression •
+   54 arithmetic_expression: arithmetic_expression • PLUS arithmetic_expression
+   55                      | arithmetic_expression • MINUS arithmetic_expression
+   56                      | arithmetic_expression • MULTIPLY arithmetic_expression
+   57                      | arithmetic_expression • DIVIDE arithmetic_expression
+   58                      | arithmetic_expression • MODULO arithmetic_expression
+
+    PLUS      shift, and go to state 96
+    MINUS     shift, and go to state 97
+    MULTIPLY  shift, and go to state 98
+    DIVIDE    shift, and go to state 99
+    MODULO    shift, and go to state 100
+
+    $default  reduce using rule 46 (condition)
+
+
+State 129
+
+   40 while_loop: WHILE LPAREN condition RPAREN body •
+
+    $default  reduce using rule 40 (while_loop)
+
+
+State 130
+
+   41 do_while_loop: DO body WHILE LPAREN condition • RPAREN SEMICOLON
+
+    RPAREN  shift, and go to state 135
+
+
+State 131
+
+   12 inline_struct_variable_declaration: STRUCT struct_name LBRACE variable_declaration_list RBRACE • ID SEMICOLON
+
+    ID  shift, and go to state 46
+
+
+State 132
+
+   35 assignment: ID DOT ID ASSIGN arithmetic_expression SEMICOLON •
+
+    $default  reduce using rule 35 (assignment)
+
+
+State 133
+
+   37 input_instruction: CIN RSHIFT ID DOT ID SEMICOLON •
+
+    $default  reduce using rule 37 (input_instruction)
+
+
+State 134
+
+   43 if_statement: IF LPAREN condition RPAREN body ELSE • body
+
+    LBRACE  shift, and go to state 48
+
+    body  go to state 136
+
+
+State 135
+
+   41 do_while_loop: DO body WHILE LPAREN condition RPAREN • SEMICOLON
+
+    SEMICOLON  shift, and go to state 137
+
+
+State 136
+
+   43 if_statement: IF LPAREN condition RPAREN body ELSE body •
+
+    $default  reduce using rule 43 (if_statement)
+
+
+State 137
+
+   41 do_while_loop: DO body WHILE LPAREN condition RPAREN SEMICOLON •
+
+    $default  reduce using rule 41 (do_while_loop)
