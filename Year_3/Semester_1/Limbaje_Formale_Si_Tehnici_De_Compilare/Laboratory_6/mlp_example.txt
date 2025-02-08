@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+	int a;
+	cin >> a;
+	int b;
+	b=a+2;
+	cout << a;
+	cout << b ;
+}

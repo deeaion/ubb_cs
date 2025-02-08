@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main()
+{
+	int a;
+	int b;
+	cin >> a;
+	b=a*2+6;
+	cout<<b;
+
+
+}

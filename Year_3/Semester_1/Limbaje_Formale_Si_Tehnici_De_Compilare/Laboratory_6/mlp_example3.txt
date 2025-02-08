@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main()
+{
+	int a;
+	int b;
+	cin>>a;
+	if(a==2)
+	{
+		b=a*2+5;
+	}
+	else
+	{
+	
+		b=5;
+	}
+	cout<<b;
+
+}
