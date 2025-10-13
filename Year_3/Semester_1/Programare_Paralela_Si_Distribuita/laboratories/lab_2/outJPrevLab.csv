@@ -1,0 +1,13 @@
+MatrixType,File,Threads,ExecutionTime
+sequential,date10x10.txt,4,1.14033
+horizontal,date10x10.txt,4,2.12516
+sequential,date1000x1000.txt,2,43.6416
+horizontal,date1000x1000.txt,2,58.65987
+horizontal,date1000x1000.txt,4,61.09741
+horizontal,date1000x1000.txt,8,105.91711
+horizontal,date1000x1000.txt,16,112.42419
+sequential,date10000x10000.txt,2,2614.33724
+horizontal,date10000x10000.txt,2,1360.84651
+horizontal,date10000x10000.txt,4,727.26704
+horizontal,date10000x10000.txt,8,539.4715
+horizontal,date10000x10000.txt,16,479.9715

@@ -1,0 +1,91 @@
+File,AllocationType,NumThreads,ExecutionTime,PartitionType
+date10x10.txt,static,4,0,sequential
+date1000x1000.txt,static,2,116.4,sequential
+date10x10000.txt,static,2, 11.2,sequential
+date10000x10.txt,static,2, 10.9,sequential
+date10000x10000.txt,static,2, Stack OverFlow,sequential
+date10x10.txt,static,4, 1.3683,horizontal
+date10x10.txt,static,4, 1.41759,vertical
+date10x10.txt,static,4, 1.34017,block
+date10x10.txt,static,4,1.43329,cyclic
+date10x10.txt,static,4,1.56024,linear
+date1000x1000.txt,static, 2, 58.13079,horizontal
+date1000x1000.txt,static, 2, 60.58627,vertical
+date1000x1000.txt,static, 2, 46.53646,block
+date1000x1000.txt,static, 2, 67.29911,linear
+date1000x1000.txt,static, 2, 62.22432,cyclic
+date1000x1000.txt,static, 4, 33.19655,horizontal
+date1000x1000.txt,static, 4, 35.07388,vertical
+date1000x1000.txt,static, 4, 31.81388,block
+date1000x1000.txt,static, 4, 38.0802,linear
+date1000x1000.txt,static, 4, 36.02956,cyclic
+date1000x1000.txt,static, 8, 25.54046,horizontal
+date1000x1000.txt,static, 8, 27.84835,vertical
+date1000x1000.txt,static, 8, 20.50895,block
+date1000x1000.txt,static, 8, 31.69048,linear
+date1000x1000.txt,static, 8, 29.50214,cyclic
+date1000x1000.txt,static, 16, 20.92686,horizontal
+date1000x1000.txt,static, 16, 20.39796,vertical
+date1000x1000.txt,static, 16, 22.34153,block
+date1000x1000.txt,static, 16, 24.85021,linear
+date1000x1000.txt,static, 16, 20.60588,cyclic
+date10x10000.txt,static, 2, 7.79833,horizontal
+date10x10000.txt,static, 2, 6.90878,vertical
+date10x10000.txt,static, 2, 4.68907,block
+date10x10000.txt,static, 2, 8.08945,linear
+date10x10000.txt,static, 2, 8.14815,cyclic
+date10x10000.txt,static, 4, 4.99749,horizontal
+date10x10000.txt,static, 4, 4.40623,vertical
+date10x10000.txt,static, 4, 5.01065,block
+date10x10000.txt,static, 4, 5.18442,linear
+date10x10000.txt,static, 4, 5.1016,cyclic
+date10x10000.txt,static, 8, 4.34789,horizontal
+date10x10000.txt,static, 8, 4.73467,vertical
+date10x10000.txt,static, 8, 4.4799,block
+date10x10000.txt,static, 8, 4.70726,linear
+date10x10000.txt,static, 8, 5.4891,cyclic
+date10x10000.txt,static, 16, 4.62014,horizontal
+date10x10000.txt,static, 16, 4.61343,vertical
+date10x10000.txt,static, 16, 5.21067,block
+date10x10000.txt,static, 16, 4.53139,linear
+date10x10000.txt,static, 16, 4.605,cyclic
+date10000x10.txt,static, 2, 7.43278,horizontal
+date10000x10.txt,static, 2, 7.21573,vertical
+date10000x10.txt,static, 2, 4.69343,block
+date10000x10.txt,static, 2, 8.00169,linear
+date10000x10.txt,static, 2, 7.98432,cyclic
+date10000x10.txt,static, 4, 4.6085,horizontal
+date10000x10.txt,static, 4, 4.93194,vertical
+date10000x10.txt,static, 4, 4.92879,block
+date10000x10.txt,static, 4, 5.36537,linear
+date10000x10.txt,static, 4, 5.36591,cyclic
+date10000x10.txt,static, 8, 4.89587,horizontal
+date10000x10.txt,static, 8, 4.55117,vertical
+date10000x10.txt,static, 8, 5.23147,block
+date10000x10.txt,static, 8, 4.8903,linear
+date10000x10.txt,static, 8, 4.98633,cyclic
+date10000x10.txt,static, 16, 4.7936,horizontal
+date10000x10.txt,static, 16, 4.32835,vertical
+date10000x10.txt,static, 16, 5.42034,linear
+date10000x10.txt,static, 16, 5.27635,cyclic
+date10000x10.txt,static, 16, 9.32469,block
+date10000x10000.txt,static, 2, ,horizontal
+date10000x10000.txt,static, 2, ,vertical
+date10000x10000.txt,static, 2, ,block
+date10000x10000.txt,static, 2, ,linear
+date10000x10000.txt,static, 2, ,cyclic
+date10000x10000.txt,static, 4, ,horizontal
+date10000x10000.txt,static, 4, ,vertical
+date10000x10000.txt,static, 4, ,block
+date10000x10000.txt,static, 4, ,linear
+date10000x10000.txt,static, 4, ,cyclic
+date10000x10000.txt,static, 8, ,horizontal
+date10000x10000.txt,static, 8, ,vertical
+date10000x10000.txt,static, 8, ,block
+date10000x10000.txt,static, 8, ,linear
+date10000x10000.txt,static, 8, ,cyclic
+date10000x10000.txt,static,16, ,horizontal
+date10000x10000.txt,static,16, ,vertical
+date10000x10000.txt,static,16, ,block
+date10000x10000.txt,static, 16, ,linear
+date10000x10000.txt,static, 16, ,cyclic

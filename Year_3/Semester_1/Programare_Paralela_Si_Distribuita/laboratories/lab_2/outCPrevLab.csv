@@ -1,0 +1,13 @@
+File,NumThreads,ExecutionTime,PartitionType
+date10x10.txt,4, 0,sequential
+date10x10.txt,4, 1.04778,horizontal
+date1000x1000.txt,2, 173.4,sequential
+date1000x1000.txt,2, 97.04014,horizontal
+date1000x1000.txt,4, 63.08092,horizontal
+date1000x1000.txt, 8, 58.82502,horizontal
+date1000x1000.txt, 16, 30.3774,horizontal
+date10000x10000.txt, 2, 16651,sequential
+date10000x10000.txt, 2, 8768.913,horizontal
+date10000x10000.txt, 4, 4854.574,horizontal
+date10000x10000.txt, 8, 2817.28,horizontal
+date10000x10000.txt, 16, 1896.998,horizontal

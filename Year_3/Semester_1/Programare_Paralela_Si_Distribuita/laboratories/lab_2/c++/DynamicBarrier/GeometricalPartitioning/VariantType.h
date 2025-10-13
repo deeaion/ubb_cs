@@ -1,0 +1,17 @@
+//
+// Created by Deea on 10/30/2024.
+//
+
+#ifndef DYNAMICBARRIER_VARIANTTYPE_H
+#define DYNAMICBARRIER_VARIANTTYPE_H
+
+
+enum VariantType {
+    VARIANTA_1B,
+    VARIANTA_1F,
+    VARIANTA_2B,
+    VARIANTA_2F,
+};
+
+
+#endif //DYNAMICBARRIER_VARIANTTYPE_H
